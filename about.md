@@ -9,4 +9,4 @@ permalink: /about/
 - A freeline skating lover
 
 
-Open terminal and execute: dc -e  36218105788986052264101060322087675063562P
+Contact me: dc -e  36218105788986052264101060322087675063562P
