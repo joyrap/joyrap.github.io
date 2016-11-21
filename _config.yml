@@ -9,7 +9,7 @@
 title: Life is a bug
 email: 
 description: > # this means to ignore newlines until "baseurl:"
-               所谓“时尚”，本质上就是自己看不见自己的样子 - 黑客与画家.
+所谓“时尚”，本质上就是自己看不见自己的样子 - 黑客与画家.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://posts.xiebiao.com" # the base hostname & protocol for your site
 twitter_username: joyrap    
