@@ -7,7 +7,7 @@ categories: project management
 
 > 在你读到这篇牢骚的时候，无数个项目正在慢慢变烂。
 
-![图片来源于网络 - 2008汶川大地震](http://static.oschina.net/uploads/img/201608/31112219_WPy3.jpg "图片来源于网络 - 2008汶川大地震")
+![图片来源于网络 - 2008汶川大地震](http://posts.xiebiao.com/images/wenchuan_512.jpg "图片来源于网络 - 2008汶川大地震")
 
 既然标题都用到了"烂"这个词，那什么才是烂呢？
 
