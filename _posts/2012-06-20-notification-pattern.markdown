@@ -75,7 +75,7 @@ public class User extends IDomainValidator {
 	 * 校验领域模型
 	 */
 	public void validate() {
-		if (age &lt; 18) {
+		if (age < 18) {
 			notification.errors().add(notification.new Error("年龄小于18岁"));
 		}
 		if (name.equals("xiaog")) {
