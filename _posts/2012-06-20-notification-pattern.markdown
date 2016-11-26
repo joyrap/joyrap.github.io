@@ -6,9 +6,10 @@ categories: pattern
 ---
 
 ## 场景
-在MVC的架构中，我们想从Model层传递一些错误信息到View层，比如用户注册这个功能，用户填写了密码，邮箱，然后提交注册，这时候我们后端需要对前端的数据做校验，同时将校验的结果返回给View层，这时候就能用到Notification模式.
+在MVC的架构中，我们想从Model层传递一些错误信息到View层，比如用户注册这个功能，用户填写了密码，邮箱，然后提交注册，
+这时候我们后端需要对前端的数据做校验，同时将校验的结果返回给View层，这时候就能用到Notification模式.
 
-## 使用
+## 思路
 先定义Notification:
 
 {% highlight java %}
@@ -22,7 +23,7 @@ public class Notification {
 		_errors.clear();
 	}
 	public boolean hasError() {
-		if (this._errors != null && this.errors().size() &gt; 0) {
+		if (this._errors != null && this.errors().size() > 0) {
 			return true;
 		}
 		return false;
@@ -98,22 +99,25 @@ public class User extends IDomainValidator {
 }
 {% endhighlight %}
 
- 测试: 
+测试: 
 
 {% highlight java %}
 public static void main(String[] args) {
-		User user = new User("xiaog", 17);
-		user.validate();
-		if (user.notification.hasError()) {
-			for (Notification.Error error : 
-                                 user.notification.errors()) {
-				System.out.println(error.getMessage());
-			}
-		}
+      User user = new User("xiaog", 17);
+      user.validate();
+      if (user.notification.hasError()) {
+        for (Notification.Error error : user.notification.errors()) {
+		  System.out.println(error.getMessage());
         }
+      }
+     }
 }
 {% endhighlight %}
 
-Notification模式的好处是： 1.一次处理多条信息 2.消耗更少的系统资源（也就是尽量在系统中少抛出Exception，少一些catch) 你还可以对这个模式进行扩展，将错误信息进一步封装。
+Notification模式的好处是： 
+
+- 一次处理多条信息 
+- 消耗更少的系统资源（也就是尽量在系统中少抛出Exception，少一些catch) 你还可以对这个模式进行扩展，将错误信息进一步封装。
+
 ## 参考
 [Notification](http://martinfowler.com/eaaDev/Notification.html) 
