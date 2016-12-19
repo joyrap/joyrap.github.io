@@ -4,6 +4,7 @@ title: About
 permalink: /about/
 ---
 
+- A father.
 - A programmer.
 - A linux user.
 - A freeline skating lover
