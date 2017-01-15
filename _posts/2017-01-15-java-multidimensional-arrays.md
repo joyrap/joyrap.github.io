@@ -43,7 +43,7 @@ type arrayName[][[]...];
 ```
 type[][[]...] arrayName;
 ```
-Java中的数组可以用矩阵来表示,比如 *int[][] a[]* 则可以看成:
+其实Java中的数组可以用矩阵来表示,比如 *int[][] a[]* 则可以看成:
 
 ![矩阵](http://posts.xiebiao.com/images/2017-01-15-java-multidimensional-arrays/matrix.png "矩阵")
 
