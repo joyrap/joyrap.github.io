@@ -5,10 +5,6 @@ date:   2017-01-15 20:24:47
 categories: java
 ---
 
-http://docs.oracle.com/javase/specs/jls/se7/html/jls-10.html
-
-## 一切看起来挺不错的
-
 说多维数组之前，说说简单的数组定义:
 
 {% highlight java %}
