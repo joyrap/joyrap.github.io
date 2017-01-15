@@ -1,12 +1,9 @@
 ---
 layout: post
-title:  "Java multidimensional arrays"
+title:  "Java多维数组"
 date:   2017-01-15 20:24:47
 categories: java
 ---
-
-Java 多维数组
--------------------------------------
 
 http://docs.oracle.com/javase/specs/jls/se7/html/jls-10.html
 
@@ -18,7 +15,7 @@ http://docs.oracle.com/javase/specs/jls/se7/html/jls-10.html
 int[] a;
 {% endhighlight %}
 
-或则
+或者
 
 {% highlight java %}
 int a[];
@@ -39,8 +36,8 @@ int[][] a[][][];
 {% endhighlight %}
 
 这是个几维数组?
-恕我愚钝，尽管搞了这没多年java，还是第一次遇到这样的定义。
-其实这是一个5维数组，因为[Java language specification](http://docs.oracle.com/javase/specs/jls/se7/html/jls-10.html) 有明确的定义.
+恕我愚钝，尽管搞了这没多年java，还是第一次遇到这样的定义(因为工作中很少遇到这样的使用场景)。
+先看看[Java language specification](http://docs.oracle.com/javase/specs/jls/se7/html/jls-10.html) 中的定义.
 
 ```
 type arrayName[][[]...];
@@ -50,3 +47,4 @@ type arrayName[][[]...];
 ```
 type[][[]...] arrayName;
 ```
+所以int[][] a[][][] 的意思是a的类型是一个二维
