@@ -33,7 +33,7 @@ int[][] a[][][];
 
 这是个几维数组?
 恕我愚钝，尽管搞了这没多年java，还是第一次遇到这样的定义(因为工作中很少遇到这样的使用场景)。
-先看看[Java language specification](http://docs.oracle.com/javase/specs/jls/se7/html/jls-10.html) 中的定义.
+先看看[Java language specification](http://docs.oracle.com/javase/specs/jls/se7/html/jls-10.html) 中对数组变量声明的定义.
 
 ```
 type arrayName[][[]...];
