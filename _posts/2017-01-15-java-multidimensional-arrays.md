@@ -43,6 +43,12 @@ type arrayName[][[]...];
 ```
 type[][[]...] arrayName;
 ```
-Java中的数组可以用矩阵来表示,比如 int[][] a[]则可以看成:
+Java中的数组可以用矩阵来表示,比如 *int[][] a[]* 则可以看成:
 
 ![矩阵](http://posts.xiebiao.com/images/2017-01-15-java-multidimensional-arrays/matrix.png "矩阵")
+
+*int[][] a[]*  等同于 *int[][][] a* ，你可以叫为三维数组，
+所以 *int[][] a[][][]* 也同于 *int[][][][][] a*，叫为五维数组。
+
+其实从[Java language specification](http://docs.oracle.com/javase/specs/jls/se7/html/jls-10.html)中可以看出
+*int[][]* 其实就是后面对应变量的type。
