@@ -43,4 +43,6 @@ type arrayName[][[]...];
 ```
 type[][[]...] arrayName;
 ```
-所以int[][] a[][][] 的意思是a的类型是一个二维
+Java中的数组可以用矩阵来表示,比如 int[][] a[]则可以看成:
+
+![矩阵](http://posts.xiebiao.com/images/2017-01-15-java-multidimensional-arrays/matrix.png "矩阵")

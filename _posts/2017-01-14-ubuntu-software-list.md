@@ -6,4 +6,5 @@ categories: Ubuntu
 ---
 
 - sudo apt-get install trimage (图片压缩)  
-- apt-get install imagemagick (图片缩放)
+- sudo apt-get install imagemagick (图片缩放)
+- sudo apt-get install graphviz(代码画图)
