@@ -51,4 +51,4 @@ type[][[]...] arrayName;
 所以 *int[][] a[][][]* 也同于 *int[][][][][] a*，叫为五维数组。
 
 其实从[Java language specification](http://docs.oracle.com/javase/specs/jls/se7/html/jls-10.html)中可以看出
-*int[][]* 可以理解为 *type*，尽管定义中指出不推荐 *mixed notation*,  但不影响这种表达式合法。
+*int[][]* 可以理解为 *type*，尽管定义中指出不推荐 *mixed notation* 方式来声明多维数组,  但不影响这种表达式合法。
