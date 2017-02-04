@@ -10,13 +10,13 @@ categories: security
 
 所以，如果你确定要暴露你的邮箱到互联网上，那么你至少应该使用一种加密方式。
 
-下面介绍两种简单加密方法：
+下面介绍两种简单加密方法。
 
 ## 使用Linux xxd,bc,dc加密解密
 
-- 1. echo "xxxxx@gmail.com" | xxd -ps -u 得到：787878787840676D61696C2E636F6D0A (将文本转换为16进制)
+第一步:  `echo "xxxxx@gmail.com" | xxd -ps -u` 得到：`787878787840676D61696C2E636F6D0A` (将文本转换为16进制)
 
-- 2. echo "ibase=16; 787878787840676D61696C2E636F6D0A" | bc 得到: 160132878550962084828530736251255352586(将16进制换为10进制)
+第二步: `echo "ibase=16; 787878787840676D61696C2E636F6D0A" | bc` 得到: `160132878550962084828530736251255352586` (将16进制换为10进制)
 
 `160132878550962084828530736251255352586` 就是我们加密的结果
 
@@ -24,13 +24,14 @@ categories: security
 
 ## 使用base64编码
 
-- 1. `echo "xxxxx@gmail.com" | base64 -i` 得到: eHh4eHhAZ21haWwuY29tCg==
+第一步:  `echo "xxxxx@gmail.com" | base64 -i` 得到: eHh4eHhAZ21haWwuY29tCg==
 
-- 2. `echo "eHh4eHhAZ21haWwuY29tCg==" | base64 -d` 得到:  xxxxx@gmail.com
+第二步: `echo "eHh4eHhAZ21haWwuY29tCg==" | base64 -d` 得到:  xxxxx@gmail.com
 
 ## 图片
 
 直接将文本生成图片（当然图片识别也不会那么复杂）
 
-记住：`道高一尺，魔高一丈`
+记住：
 
+> 道高一尺，魔高一丈
