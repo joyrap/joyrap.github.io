@@ -12,7 +12,7 @@ categories: security
 
 下面介绍两种简单加密方法。
 
-## 使用Linux xxd,bc,dc加密解密
+## 使用xxd,bc,dc命令加密解密
 
 第一步(将文本转换为16进制):
 
