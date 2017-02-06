@@ -14,29 +14,32 @@ categories: security
 
 ## 使用Linux xxd,bc,dc加密解密
 
-第一步:
+第一步(将文本转换为16进制):
 
-`echo "xxxxx@gmail.com" | xxd -ps -u` 得到：`787878787840676D61696C2E636F6D0A` (将文本转换为16进制)
+> `echo "xxxxx@gmail.com" | xxd -ps -u` 
+> `787878787840676D61696C2E636F6D0A` (将文本转换为16进制)
 
-第二步:
+第二步(将16进制转换为10进制):
 
-`echo "ibase=16; 787878787840676D61696C2E636F6D0A" | bc` 得到: `160132878550962084828530736251255352586` (将16进制换为10进制)
+> `echo "ibase=16; 787878787840676D61696C2E636F6D0A" | bc`
+> `160132878550962084828530736251255352586`
 
-`160132878550962084828530736251255352586` 就是我们加密的结果
 
 解密:
 
-`dc -e 160132878550962084828530736251255352586P` 即可。
+> `dc -e 160132878550962084828530736251255352586P`
 
 ## 使用base64编码
 
 第一步: 
 
-`echo "xxxxx@gmail.com" | base64 -i` 得到: eHh4eHhAZ21haWwuY29tCg==
+> `echo "xxxxx@gmail.com" | base64 -i`
+> eHh4eHhAZ21haWwuY29tCg==
 
 第二步:
 
-`echo "eHh4eHhAZ21haWwuY29tCg==" | base64 -d` 得到:  xxxxx@gmail.com
+> `echo "eHh4eHhAZ21haWwuY29tCg==" | base64 -d` 
+> `xxxxx@gmail.com`
 
 ## 总结
 
