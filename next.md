@@ -5,3 +5,4 @@
 - http://github.com/eclipse/vert.x
 - https://github.com/ReactiveX/RxJava
 - https://github.com/LMAX-Exchange/disruptor
+- http://docs.paralleluniverse.co/quasar/
