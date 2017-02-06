@@ -16,34 +16,34 @@ categories: security
 
 第一步(将文本转换为16进制):
 
-> >`echo "xxxxx@gmail.com" | xxd -ps -u` 
+> $ echo "xxxxx@gmail.com" | xxd -ps -u 
 
-> >`787878787840676D61696C2E636F6D0A`
+> $ 787878787840676D61696C2E636F6D0A
 
 第二步(将16进制转换为10进制):
 
-> >`echo "ibase=16; 787878787840676D61696C2E636F6D0A" | bc`
+> $ echo "ibase=16; 787878787840676D61696C2E636F6D0A" | bc
 
-> >`160132878550962084828530736251255352586`
+> $ 160132878550962084828530736251255352586`
 
 
 解密:
 
-> `dc -e 160132878550962084828530736251255352586P`
+> $ dc -e 160132878550962084828530736251255352586P
 
 ## 使用base64编码
 
 第一步: 
 
-> `echo "xxxxx@gmail.com" | base64 -i`
+> $ echo "xxxxx@gmail.com" | base64 -i
 
-> `eHh4eHhAZ21haWwuY29tCg==`
+> $ eHh4eHhAZ21haWwuY29tCg==
 
 第二步:
 
-> `echo "eHh4eHhAZ21haWwuY29tCg==" | base64 -d` 
+> $ echo "eHh4eHhAZ21haWwuY29tCg==" | base64 -d
 
-> `xxxxx@gmail.com`
+> $ xxxxx@gmail.com
 
 ## 总结
 
