@@ -24,5 +24,5 @@ categories: methodology
 
 ## 参考
 
-[TED-图像记录人类知识的进化](http://open.163.com/movie/2016/2/A/4/MBBGRFU9A_MBBIHU0A4.html)
-[TED-如何教计算机理解图片](http://open.163.com/movie/2015/3/Q/R/MAKN9A24M_MAKN9QAQR.html)
+- [TED-图像记录人类知识的进化](http://open.163.com/movie/2016/2/A/4/MBBGRFU9A_MBBIHU0A4.html)
+- [TED-如何教计算机理解图片](http://open.163.com/movie/2015/3/Q/R/MAKN9A24M_MAKN9QAQR.html)
