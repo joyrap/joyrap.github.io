@@ -11,4 +11,7 @@
 
 ## 如何用图形表达意图
 
+### fork/join 
 
+http://www.cnblogs.com/suxuan/p/4970498.html
+http://gee.cs.oswego.edu/dl/papers/fj.pdf
