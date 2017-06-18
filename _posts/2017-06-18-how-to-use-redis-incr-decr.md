@@ -18,9 +18,9 @@ DECR KEY
 
 如果通过redis的原子加减来控制库存数量，则上面的业务的正常流程为：
 
-- 1. SET STOCK 100
-- 2. DECR STOCK 
-- 3. INCR STOCK
+- 1.SET STOCK 100
+- 2.DECR STOCK 
+- 3.INCR STOCK
 
 第一步,初始化商品库存为100，第二步用户购买一个商品则DECR STOCK,
 当DECR 返回值小于等于0时，则表示无库存。
@@ -30,9 +30,9 @@ DECR KEY
 
 解决方案：
 
-- 1. SET STOCK (Long.MAX_VALUE - 100)
-- 2. INCR STOCK 
-- 3. DECR STOCK
+- 1.SET STOCK (Long.MAX_VALUE - 100)
+- 2.INCR STOCK 
+- 3.DECR STOCK
 
 第一步,初始化商品库存为Long的最大值减去100，第二步用户购买一个商品，则INCR STOCK
 当INCR超过Long最大值，redis会抛出ERR increment or decrement would overflow,*最重要的是不修改缓存中现有的值*，提示用户无库存
