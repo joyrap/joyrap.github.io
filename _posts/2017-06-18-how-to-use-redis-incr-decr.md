@@ -35,7 +35,7 @@ DECR KEY
 - 3.DECR STOCK
 
 第一步,初始化商品库存为Long的最大值减去100，第二步用户购买一个商品，则INCR STOCK
-当INCR超过Long最大值，redis会抛出ERR increment or decrement would overflow,**最重要的是不修改缓存中现有的值**，提示用户无库存
+当INCR超过Long最大值，redis会抛出ERR increment or decrement would overflow,** 最重要的是不修改缓存中现有的值 **，提示用户无库存
 ，这时候就算有退库存（DECR STOCK）也不会影响STOCK的数据正确性。
 
 但该方案还是存在缺陷，就是取消订单回退库存，因为库存回退操作没有唯一凭证，不具备幂等性。
