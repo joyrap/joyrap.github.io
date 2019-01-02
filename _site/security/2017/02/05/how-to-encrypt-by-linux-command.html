@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Life is a bug</title>
-  <meta name="description" content="来自山川湖海，却囿于昼夜，厨房与爱。">
+  <title>如何利用Linux命令简单加密文本</title>
+  <meta name="description" content="在web上无论企业还是个人网站，总会发布一些邮箱的联系方式，由于邮箱地址置于html页面中，很容易被爬虫获取，导致邮箱被垃圾邮件挤满。">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/">
+  <link rel="canonical" href="http://localhost:4000/security/2017/02/05/how-to-encrypt-by-linux-command.html">
   <link rel="alternate" type="application/rss+xml" title="Life is a bug" href="http://localhost:4000/feed.xml">
 </head>
 
@@ -54,57 +54,78 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">如何利用Linux命令简单加密文本</h1>
+    <p class="post-meta"><time datetime="2017-02-05T02:24:47+08:00" itemprop="datePublished">Feb 5, 2017</time></p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Feb 19, 2017</span>
+  <div class="post-content" itemprop="articleBody">
+    <p>在web上无论企业还是个人网站，总会发布一些邮箱的联系方式，由于邮箱地址置于html页面中，很容易被
+爬虫获取，导致邮箱被垃圾邮件挤满。</p>
 
-        <h2>
-          <a class="post-link" href="/half-marathons/2017/02/19/how-to-run-half-marathons.html">如何跑半程马拉松</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 5, 2017</span>
+<p>所以，如果你确定要暴露你的邮箱到互联网上，那么你至少应该使用一种加密方式。</p>
 
-        <h2>
-          <a class="post-link" href="/security/2017/02/05/how-to-encrypt-by-linux-command.html">如何利用Linux命令简单加密文本</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 16, 2017</span>
+<p>下面介绍两种简单加密方法。</p>
 
-        <h2>
-          <a class="post-link" href="/java/2017/01/16/java-multidimensional-arrays.html">Java多维数组</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 8, 2016</span>
+<h2 id="使用xxdbcdc命令加密解密">使用xxd,bc,dc命令加密解密</h2>
 
-        <h2>
-          <a class="post-link" href="/project/management/2016/08/08/how-to-make-projects-failed.html">我们是如何将一个项目做烂的</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jun 20, 2012</span>
+<p>第一步(将文本转换为16进制):</p>
 
-        <h2>
-          <a class="post-link" href="/pattern/2012/06/20/notification-pattern.html">Notification Pattern理解</a>
-        </h2>
-      </li>
-    
-  </ul>
+<blockquote>
+  <p><code class="highlighter-rouge">$ echo "xxxxx@gmail.com"|xxd -ps -u</code></p>
+</blockquote>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<blockquote>
+  <p><code class="highlighter-rouge">$ 787878787840676D61696C2E636F6D0A</code></p>
+</blockquote>
 
-</div>
+<p>第二步(将16进制转换为10进制):</p>
+
+<blockquote>
+  <p><code class="highlighter-rouge">$ echo "ibase=16; 787878787840676D61696C2E636F6D0A"|bc</code></p>
+</blockquote>
+
+<blockquote>
+  <p><code class="highlighter-rouge">$ 160132878550962084828530736251255352586</code></p>
+</blockquote>
+
+<p>解密:</p>
+
+<blockquote>
+  <p><code class="highlighter-rouge">$ dc -e 160132878550962084828530736251255352586P</code></p>
+</blockquote>
+
+<h2 id="使用base64编码">使用base64编码</h2>
+
+<p>第一步:</p>
+
+<blockquote>
+  <p><code class="highlighter-rouge">$ echo "xxxxx@gmail.com"|base64 -i</code></p>
+</blockquote>
+
+<blockquote>
+  <p><code class="highlighter-rouge">$ eHh4eHhAZ21haWwuY29tCg==</code></p>
+</blockquote>
+
+<p>第二步:</p>
+
+<blockquote>
+  <p><code class="highlighter-rouge">$ echo "eHh4eHhAZ21haWwuY29tCg=="|base64 -d</code></p>
+</blockquote>
+
+<blockquote>
+  <p><code class="highlighter-rouge">$ xxxxx@gmail.com</code></p>
+</blockquote>
+
+<h2 id="总结">总结</h2>
+
+<p>上面的方法只是防止人和机器直接识别出文本，并算不上真正意义上的加密。</p>
+
+  </div>
+
+</article>
 
       </div>
     </div>
