@@ -2,7 +2,7 @@
 layout: post
 title:  我们是如何将一个项目做烂的
 date:   2016-08-08 01:24:47
-categories: project management
+categories: Engineering
 tag: 
 ---
 
