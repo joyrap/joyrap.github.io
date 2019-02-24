@@ -18,3 +18,5 @@ github_username:  xiebiao
 
 # Build settings
 markdown: kramdown
+plugins:
+  - jekyll-archives
