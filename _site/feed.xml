@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Life is a bug</title>
-    <description>来自山川湖海，却囿于昼夜，厨房与爱。</description>
+    <title>活在低处</title>
+    <description>“来自山川湖海，却囿于昼夜，厨房与爱。”</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 30 Dec 2018 17:46:58 +0800</pubDate>
-    <lastBuildDate>Sun, 30 Dec 2018 17:46:58 +0800</lastBuildDate>
+    <pubDate>Sun, 24 Feb 2019 19:31:36 +0800</pubDate>
+    <lastBuildDate>Sun, 24 Feb 2019 19:31:36 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
-        <title>如何跑半程马拉松</title>
+        <title>如何跑完半程马拉松</title>
         <description>&lt;p&gt;是的。&lt;/p&gt;
 
 &lt;p&gt;如果你想先喝一碗高质量鸡汤，来加强跑马拉松的决心，那么你可以读读村上春树的&lt;a href=&quot;https://item.jd.com/11754532.html&quot;&gt;《当我谈跑步时,我谈些什么》&lt;/a&gt;。&lt;/p&gt;
@@ -151,11 +151,11 @@
 &lt;p&gt;如果你迟迟不能迈出 &lt;em&gt;内心激励&lt;/em&gt; 这一步，那么对着镜子 &lt;strong&gt;看看你那坨放眼望去满是占尽生活便宜的身材&lt;/strong&gt;，沉默三分钟，然后该干嘛干嘛。&lt;/p&gt;
 </description>
         <pubDate>Sun, 19 Feb 2017 02:24:47 +0800</pubDate>
-        <link>http://localhost:4000/half-marathons/2017/02/19/how-to-run-half-marathons.html</link>
-        <guid isPermaLink="true">http://localhost:4000/half-marathons/2017/02/19/how-to-run-half-marathons.html</guid>
+        <link>http://localhost:4000/marathon/2017/02/19/how-to-run-half-marathons.html</link>
+        <guid isPermaLink="true">http://localhost:4000/marathon/2017/02/19/how-to-run-half-marathons.html</guid>
         
         
-        <category>half-marathons</category>
+        <category>Marathon</category>
         
       </item>
     
@@ -223,11 +223,13 @@
 &lt;p&gt;上面的方法只是防止人和机器直接识别出文本，并算不上真正意义上的加密。&lt;/p&gt;
 </description>
         <pubDate>Sun, 05 Feb 2017 02:24:47 +0800</pubDate>
-        <link>http://localhost:4000/security/2017/02/05/how-to-encrypt-by-linux-command.html</link>
-        <guid isPermaLink="true">http://localhost:4000/security/2017/02/05/how-to-encrypt-by-linux-command.html</guid>
-        
+        <link>http://localhost:4000/programming/2017/02/05/how-to-encrypt-by-linux-command.html</link>
+        <guid isPermaLink="true">http://localhost:4000/programming/2017/02/05/how-to-encrypt-by-linux-command.html</guid>
         
         <category>security</category>
+        
+        
+        <category>Programming</category>
         
       </item>
     
@@ -272,11 +274,13 @@
 &lt;em&gt;int[][]&lt;/em&gt; 可以理解为 &lt;em&gt;type&lt;/em&gt;，尽管定义中指出不推荐 &lt;em&gt;mixed notation&lt;/em&gt; 方式来声明多维数组,  但不影响这种表达式合法。&lt;/p&gt;
 </description>
         <pubDate>Mon, 16 Jan 2017 04:24:47 +0800</pubDate>
-        <link>http://localhost:4000/java/2017/01/16/java-multidimensional-arrays.html</link>
-        <guid isPermaLink="true">http://localhost:4000/java/2017/01/16/java-multidimensional-arrays.html</guid>
-        
+        <link>http://localhost:4000/programming/2017/01/16/java-multidimensional-arrays.html</link>
+        <guid isPermaLink="true">http://localhost:4000/programming/2017/01/16/java-multidimensional-arrays.html</guid>
         
         <category>java</category>
+        
+        
+        <category>Programming</category>
         
       </item>
     
@@ -286,7 +290,7 @@
   &lt;p&gt;在你读到这篇牢骚的时候，无数个项目正在慢慢变烂。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://posts.xiebiao.com/images/2016-08-08-how-to-make-projects-failed/wenchuan_512.jpg&quot; alt=&quot;图片来源于网络 - 2008汶川大地震&quot; title=&quot;图片来源于网络 - 2008汶川大地震&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://blog.xiebiao.com/images/2016-08-08-how-to-make-projects-failed/wenchuan_512.jpg&quot; alt=&quot;图片来源于网络 - 2008汶川大地震&quot; title=&quot;图片来源于网络 - 2008汶川大地震&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;既然标题都用到了”烂”这个词，那什么才是烂呢？&lt;/p&gt;
 
@@ -475,13 +479,11 @@
 &lt;p&gt;不要让保持现状的思维腐蚀了项目，让项目慢慢变烂。&lt;/p&gt;
 </description>
         <pubDate>Mon, 08 Aug 2016 09:24:47 +0800</pubDate>
-        <link>http://localhost:4000/project/management/2016/08/08/how-to-make-projects-failed.html</link>
-        <guid isPermaLink="true">http://localhost:4000/project/management/2016/08/08/how-to-make-projects-failed.html</guid>
+        <link>http://localhost:4000/engineering/2016/08/08/how-to-make-projects-failed.html</link>
+        <guid isPermaLink="true">http://localhost:4000/engineering/2016/08/08/how-to-make-projects-failed.html</guid>
         
         
-        <category>project</category>
-        
-        <category>management</category>
+        <category>Engineering</category>
         
       </item>
     
@@ -599,11 +601,13 @@
 &lt;p&gt;&lt;a href=&quot;http://martinfowler.com/eaaDev/Notification.html&quot;&gt;Notification&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 20 Jun 2012 19:24:47 +0800</pubDate>
-        <link>http://localhost:4000/pattern/2012/06/20/notification-pattern.html</link>
-        <guid isPermaLink="true">http://localhost:4000/pattern/2012/06/20/notification-pattern.html</guid>
-        
+        <link>http://localhost:4000/programming/2012/06/20/notification-pattern.html</link>
+        <guid isPermaLink="true">http://localhost:4000/programming/2012/06/20/notification-pattern.html</guid>
         
         <category>pattern</category>
+        
+        
+        <category>Programming</category>
         
       </item>
     
