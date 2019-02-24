@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "我们是如何将一个项目做烂的"
+title:  我们是如何将一个项目做烂的
 date:   2016-08-08 01:24:47
 categories: project management
+tag: 
 ---
 
 > 在你读到这篇牢骚的时候，无数个项目正在慢慢变烂。

@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "如何跑半程马拉松"
+title:  如何跑完半程马拉松
 date:   2017-02-18 18:24:47
-categories: half-marathons
+categories: Marathon
 ---
 
 是的。

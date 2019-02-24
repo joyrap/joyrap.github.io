@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Notification Pattern理解"
+title: Notification Pattern理解
 date:   2012-06-20 11:24:47
-categories: pattern
+categories: Programming
+tag: pattern
 ---
 
 ## 场景

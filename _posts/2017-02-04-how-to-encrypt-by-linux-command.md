@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "如何利用Linux命令简单加密文本"
+title:  如何利用Linux命令简单加密文本
 date:   2017-02-04 18:24:47
-categories: security
+categories: Programming
+tag: security
 ---
 
 在web上无论企业还是个人网站，总会发布一些邮箱的联系方式，由于邮箱地址置于html页面中，很容易被
