@@ -5,9 +5,40 @@
     <description>“来自山川湖海，却囿于昼夜，厨房与爱。”</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 24 Feb 2019 19:31:36 +0800</pubDate>
-    <lastBuildDate>Sun, 24 Feb 2019 19:31:36 +0800</lastBuildDate>
+    <pubDate>Mon, 25 Feb 2019 09:48:37 +0800</pubDate>
+    <lastBuildDate>Mon, 25 Feb 2019 09:48:37 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>《你如何衡量你的人生》</title>
+        <description>&lt;p&gt;在读到这本书之前，是看到一篇&lt;a href=&quot;https://danielvassallo.com/only-intrinsic-motivation-lasts/&quot;&gt;辞去亚马逊年薪500万工作的文章&lt;/a&gt;，大概是讲随着工作中升职，加薪，工作激情却在逐渐降低，于是就辞去了高薪工作。&lt;/p&gt;
+
+&lt;p&gt;在作者推文评论中有人说到了这本书，我以为这本书会讲如何提高在工作中的激情，于是就下载了电子版。&lt;/p&gt;
+
+&lt;p&gt;但这本书更像是一本生活指南:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;要有长远规划，但也要注意短期计划，这两者是不冲突的&lt;/li&gt;
+  &lt;li&gt;保持行动和目标一致&lt;/li&gt;
+  &lt;li&gt;幸福的源泉很大一部分来自和家人和朋友的亲密关系&lt;/li&gt;
+  &lt;li&gt;珍惜和孩子一起的时光&lt;/li&gt;
+  &lt;li&gt;制定家庭文化，给孩子做榜样&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;关于我们生活中幸福的源泉，你首先必须回答：幸福是什么？可以看看&lt;a href=&quot;https://www.ted.com/talks/robert_waldinger_what_makes_a_good_life_lessons_from_the_longest_study_on_happiness&quot;&gt;这个TED演讲的解释&lt;/a&gt;,&lt;a href=&quot;https://open.163.com/movie/2016/1/B/T/MBAM75U2S_MBB7LQSBT.html&quot;&gt;网易有中文翻译&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;一旦你错过了改变事情的最佳时机，那么后面很难有机会纠正。&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Mon, 25 Feb 2019 02:24:47 +0800</pubDate>
+        <link>http://localhost:4000/reading/2019/02/25/how-will-you-measure-your-life.html</link>
+        <guid isPermaLink="true">http://localhost:4000/reading/2019/02/25/how-will-you-measure-your-life.html</guid>
+        
+        
+        <category>Reading</category>
+        
+      </item>
     
       <item>
         <title>如何跑完半程马拉松</title>
