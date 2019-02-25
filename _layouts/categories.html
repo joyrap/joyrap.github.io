@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+
+  {% include header.html %}
+
+  <div class="page-content">
+    <div class="wrapper">
+      {{ content }}
+      <ul>
+        {% for category in site.categories %}
+        <li><a href="/{{ category | first }}/" title="view all posts">{{ category | first }}
+            ({{ category | last | size }})</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  {% include footer.html %}
+
+</body>
+
+</html>

@@ -20,9 +20,5 @@ github_username:  xiebiao
 markdown: kramdown
 plugins:
   - jekyll-archives
-layouts:
-  year: year-archive
-  month: month-archive
-  day: day-archive
-  category: category-archive
-  tag: tag-archive
+
+permalink: /:categories/:year/:month/:day/:title:output_ext
