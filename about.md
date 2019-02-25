@@ -10,4 +10,4 @@ permalink: /about/
 - A freeline skating lover
 
 
-Contact me: dc -e  36218105788986052264101060322087675063562P
+Email to me: dc -e  36218105788986052264101060322087675063562P
