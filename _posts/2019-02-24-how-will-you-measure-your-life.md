@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  《你如何衡量你的人生》
+title:  《How Will You Measure Your Life? 》
 date:   2019-02-24 18:24:47
 categories: Reading
 ---
 
-在读到这本书之前，是看到一篇[辞去亚马逊年薪500万工作的文章](https://danielvassallo.com/only-intrinsic-motivation-lasts/)，大概是讲随着工作中升职，加薪，工作激情却在逐渐降低，于是就辞去了高薪工作。
+在读到[《How Will You Measure Your Life? 》](https://www.amazon.com/gp/product/0062102419) 这本书之前，是看到一篇[辞去亚马逊年薪500万工作的文章](https://danielvassallo.com/only-intrinsic-motivation-lasts/)，大概是讲随着工作中升职，加薪，工作激情却在逐渐降低，于是就辞去了高薪工作。
 
 在作者推文评论中有人说到了这本书，我以为这本书会讲如何提高在工作中的激情，于是就下载了电子版。
 
