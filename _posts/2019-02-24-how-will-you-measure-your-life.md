@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  How Will You Measure Your Life? 
+title:  读书:How Will You Measure Your Life? 
 date:   2019-02-24 18:24:47
 categories: Reading
 ---
@@ -10,7 +10,6 @@ categories: Reading
 在作者推文评论中有人说到了这本书，我以为这本书会讲如何提高在工作中的激情，于是就下载了电子版。
 
 但这本书更像是一本生活指南:
-
 1. 要有长远规划，但也要注意短期计划，这两者是不冲突的
 2. 保持行动和目标一致
 3. 幸福的源泉很大一部分来自和家人和朋友的亲密关系
