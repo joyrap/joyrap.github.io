@@ -20,5 +20,4 @@ github_username:  xiebiao
 markdown: kramdown
 plugins:
   - jekyll-archives
-
 permalink: /:categories/:year/:month/:day/:title:output_ext
