@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  《How Will You Measure Your Life? 》
+title:  How Will You Measure Your Life? 
 date:   2019-02-24 18:24:47
 categories: Reading
 ---
