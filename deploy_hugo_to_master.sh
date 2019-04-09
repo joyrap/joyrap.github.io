@@ -11,7 +11,7 @@ cp CNAME docs/
 cp -rf images docs/
 
 git add .
-git commit -m "$msg"
+git commit -m "deploy"
 git push origin hugo
 
 
