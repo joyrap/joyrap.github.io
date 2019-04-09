@@ -10,7 +10,7 @@ hugo -d docs
 cp CNAME docs/
 cp -rf images docs/
 
-git add .
+git add -A
 git commit -m "deploy"
 git push origin hugo
 
