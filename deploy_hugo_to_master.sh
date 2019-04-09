@@ -17,7 +17,6 @@ git push origin hugo
 
 git checkout master
 
-msg="rebuilding site `date`"
 git pull
 git merge hugo
 
