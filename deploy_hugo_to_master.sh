@@ -18,7 +18,7 @@ fi
 hugo -d docs
 
 rm -rf `ls|egrep -v docs`
-mv -f ./docs ./
+mv -rf ./docs/* ./
 
 # Add changes to git.
 git add .
