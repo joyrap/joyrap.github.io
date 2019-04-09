@@ -17,8 +17,9 @@ fi
 # Build the project. 
 hugo -d docs
 
-rm -rf `ls|egrep -v docs`
 cp CNAME docs/
+cp -rf images docs/
+rm -rf `ls|egrep -v docs`
 mv -f ./docs/* ./
 
 # Add changes to git.
