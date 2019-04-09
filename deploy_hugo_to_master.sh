@@ -7,7 +7,7 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 git checkout master
 
 msg="rebuilding site `date`"
-
+git pull
 git merge hugo
 
 if [ $# -eq 1  ]
