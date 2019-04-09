@@ -23,10 +23,8 @@ git merge hugo
 
 rm -rf `ls|egrep -v docs`
 mv -f ./docs/* ./
-
-if [ $# -eq 1  ]
-    then msg="$1"
-fi
+git add -A
+git commit -m "deploy"
 
 # Push source and build repos:
 git push origin master
