@@ -18,6 +18,7 @@ fi
 hugo -d docs
 
 rm -rf `ls|egrep -v docs`
+cp CNAME docs/
 mv -f ./docs/* ./
 
 # Add changes to git.
