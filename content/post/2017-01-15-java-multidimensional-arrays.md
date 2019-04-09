@@ -3,7 +3,7 @@ layout: post
 title:  Java多维数组
 date:   2017-01-15 20:24:47
 categories: ["Programming"]
-tag: java
+tags: ["Java"]
 ---
 
 说多维数组之前，说说简单的数组定义:

@@ -2,7 +2,7 @@
 title: Notification Pattern理解
 date:   2012-06-20 11:24:47
 categories: ["Programming"]
-tags: ["pattern"]
+tags: ["Pattern"]
 draft: false
 ---
 
