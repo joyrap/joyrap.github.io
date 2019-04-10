@@ -8,7 +8,7 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 git checkout master
 
 git pull
-git merge -f  hugo
+git merge -q  hugo
 
 hugo -d docs
 rm -rf `ls|egrep -v docs`
