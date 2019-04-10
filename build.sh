@@ -12,7 +12,7 @@ cp -rf images docs/
 
 git add -A
 git commit -m "deploy"
-git push origin hugo
+git push 
 
 
 
