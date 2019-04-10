@@ -1,4 +1,5 @@
-baseURL = "http://localhost:1313/"
+baseURL = "http://blog.xiebiao.com/"
+publishDir = "docs"
 languageCode = "en"
 defaultContentLanguage = "en"                             # en / zh-cn / ... (This field determines which i18n file to use)
 title = "活在低处 | 是一种姿态，也是一种现状。"
