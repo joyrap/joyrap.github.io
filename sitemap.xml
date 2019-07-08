@@ -9,6 +9,13 @@
   </url>
   
   <url>
+    <loc>http://blog.xiebiao.com/post/2019-07-07-beginner-programmers-mistakes/</loc>
+    <lastmod>2019-07-07T09:24:47+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.xiebiao.com/post/2019-04-19-understanding-the-lmax-disruptor/</loc>
     <lastmod>2019-04-19T21:24:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -100,14 +107,14 @@
   
   <url>
     <loc>http://blog.xiebiao.com/post/</loc>
-    <lastmod>2019-04-19T21:24:47+00:00</lastmod>
+    <lastmod>2019-07-07T09:24:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://blog.xiebiao.com/categories/programming/</loc>
-    <lastmod>2019-04-19T21:24:47+00:00</lastmod>
+    <lastmod>2019-07-07T09:24:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -149,7 +156,7 @@
   
   <url>
     <loc>http://blog.xiebiao.com/</loc>
-    <lastmod>2019-04-19T21:24:47+00:00</lastmod>
+    <lastmod>2019-07-07T09:24:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
