@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>“来自山川湖海，却囿于昼夜，厨房与爱。”------万能青年旅店</copyright>
-    <lastBuildDate>Sun, 07 Jul 2019 09:24:47 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://blog.xiebiao.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -22,12 +22,12 @@
     </item>
     
     <item>
-      <title>翻译:Beginner Programmers&#39; Mistakes</title>
-      <link>http://blog.xiebiao.com/post/2019-07-07-beginner-programmers-mistakes/</link>
-      <pubDate>Sun, 07 Jul 2019 09:24:47 +0000</pubDate>
+      <title>Clojure中的数据类型</title>
+      <link>http://blog.xiebiao.com/post/2019-11-19-clojure-datatypes/</link>
+      <pubDate>Tue, 19 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.xiebiao.com/post/2019-07-07-beginner-programmers-mistakes/</guid>
-      <description>作者是一位拥有20年编程经验的老手，给刚入行编程的新人总结了一些建议。 但我认为刚入行的新人未必能够真正理解。 这个列表如果能够写下去，我觉得肯</description>
+      <guid>http://blog.xiebiao.com/post/2019-11-19-clojure-datatypes/</guid>
+      <description>Clojure作为一款基于JVM的LISP语言，我个人从创造者Rich Hickey身上吸收了很多编程的观点，尽管作者提出了很多面向对象编程语</description>
     </item>
     
     <item>
