@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2019-11-19T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-11-19T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2183">
+<meta itemprop="wordCount" content="2191">
 
 
 
@@ -210,7 +210,7 @@
 
 <h2 id="defprotocol">defprotocol</h2>
 
-<p>在Java里通过interface来定义行为(和Clojure的<code>definterface</code>是完全一致的)，一个类可以实现多个interface，子类可以重写父类的方法来实现多态。Clojure提供的<code>defprotocol</code>,<code>extend</code>特性，可以不需要新增一个子类来实现多态。例如:</p>
+<p>在Java里通过interface来定义行为(和Clojure的<code>definterface</code>是完全一致的)，一个类可以实现多个interface，子类可以重写父类的方法来实现多态。但是接口的问题是一旦被创建，就很难被扩展，Clojure的解决方案是协议<code>defprotocol</code>,它比接口更灵活，例如:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt">1
@@ -233,7 +233,7 @@
 (to-ms (java.util.Date.))  ;java.util.Date具备了to-ms方法</pre></td></tr></table>
 </div>
 </div>
-<p>在Java中可以通过继承或者组合的方式实现对原有类的扩展，但是会显得很笨粗，Clojure避免了不必要的多层次封装/适配，在不修改原有类同时不新增类的基础上实现了真正的多态性。defprotocol 除了可以被deftype,defrecord,reify实现外，也可以被Java中的类实现。</p>
+<p>在Java中可以通过继承或者组合的方式实现对原有类的扩展，但是会显得很笨粗，Clojure避免了不必要的多层次封装/适配，在不修改原有类同时不新增类的基础上实现了真正的多态性。<code>defprotocol</code> 除了可以被<code>deftype</code>,<code>defrecord</code>,<code>reify</code>实现外，也可以被Java中的类实现。</p>
 
 <h2 id="数据与行为分离">数据与行为分离</h2>
 
