@@ -16,6 +16,13 @@
   </url>
   
   <url>
+    <loc>http://blog.xiebiao.com/post/2019-12-05-follow-your-heart/</loc>
+    <lastmod>2019-11-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.xiebiao.com/post/2019-04-19-understanding-the-lmax-disruptor/</loc>
     <lastmod>2019-04-19T21:24:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -99,6 +106,13 @@
   </url>
   
   <url>
+    <loc>http://blog.xiebiao.com/categories/life/</loc>
+    <lastmod>2019-11-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.xiebiao.com/categories/marathon/</loc>
     <lastmod>2017-02-18T18:24:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -163,6 +177,13 @@
   
   <url>
     <loc>http://blog.xiebiao.com/</loc>
+    <lastmod>2019-11-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.xiebiao.com/tags/%E8%AF%97%E6%AD%8C/</loc>
     <lastmod>2019-11-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
