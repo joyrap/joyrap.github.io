@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Life on 独立，但不独行</title>
@@ -6,7 +6,7 @@
     <description>Recent content in Life on 独立，但不独行</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>“来自山川湖海，却囿于昼夜，厨房与爱。”------万能青年旅店</copyright>
+    <copyright>来自山川湖海，却囿于昼夜，厨房与爱。------万能青年旅店</copyright>
     <lastBuildDate>Thu, 05 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://blog.xiebiao.com/categories/life/index.xml" rel="self" type="application/rss+xml" />
