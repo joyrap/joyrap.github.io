@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>来自山川湖海，却囿于昼夜，厨房与爱。------万能青年旅店</copyright>
-    <lastBuildDate>Sat, 28 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://blog.xiebiao.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,15 @@
       
       <guid>http://blog.xiebiao.com/about/</guid>
       <description>一名在JD.com工作的软件工程师。 这个博客主要用来记录一些学习以及个人观点。</description>
+    </item>
+    
+    <item>
+      <title>不可测试的代码</title>
+      <link>http://blog.xiebiao.com/post/2020-01-21-untestable-code/</link>
+      <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.xiebiao.com/post/2020-01-21-untestable-code/</guid>
+      <description>故事是这样的，我最近深陷在一个刚接手不久的项目中，经过完成两轮需求上线后， 我迫切地告诉自己，需要给这个项目完善一下测试用例（原工程测试用例几</description>
     </item>
     
     <item>
