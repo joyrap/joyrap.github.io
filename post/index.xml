@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>来自山川湖海，却囿于昼夜，厨房与爱。------万能青年旅店</copyright>
-    <lastBuildDate>Tue, 21 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://blog.xiebiao.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>多内核平台上的锁</title>
+      <link>http://blog.xiebiao.com/post/2020-08-19-locks-on-multicore/</link>
+      <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.xiebiao.com/post/2020-08-19-locks-on-multicore/</guid>
+      <description>如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问题。 特别是随着云厂商按计算收费的当下，如何有效地利用资源变得更</description>
+    </item>
     
     <item>
       <title>不可测试的代码</title>
@@ -91,15 +100,6 @@
       
       <guid>http://blog.xiebiao.com/post/2017-02-04-how-to-encrypt-by-linux-command/</guid>
       <description>在web上无论企业还是个人网站，总会发布一些邮箱的联系方式，由于邮箱地址置于html页面中，很容易被 爬虫获取，导致邮箱被垃圾邮件挤满。 所以，</description>
-    </item>
-    
-    <item>
-      <title>Java多维数组</title>
-      <link>http://blog.xiebiao.com/post/2017-01-15-java-multidimensional-arrays/</link>
-      <pubDate>Sun, 15 Jan 2017 20:24:47 +0000</pubDate>
-      
-      <guid>http://blog.xiebiao.com/post/2017-01-15-java-multidimensional-arrays/</guid>
-      <description>说多维数组之前，说说简单的数组定义: 1 int[] a; 或者 1 int a[]; 当然也可以一次性定义多个变量 1 int a[], b[],c[]; 再简单不过了。 继续看看下面的呢 1 int[][] a[][][]; 这是个几维数组?</description>
     </item>
     
     <item>
