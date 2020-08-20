@@ -48,7 +48,7 @@
 <meta itemprop="description" content="如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问题。 特别是随着云厂商按计算收费的当下，如何有效地利用计算资源变">
 <meta itemprop="datePublished" content="2020-08-19T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-08-19T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="3136">
+<meta itemprop="wordCount" content="3143">
 
 
 
@@ -128,7 +128,7 @@
         <div class="post-category">
             <a href="/categories/programming/"> Programming </a>
             </div>
-          <span class="more-meta"> 3136 words </span>
+          <span class="more-meta"> 3143 words </span>
           <span class="more-meta"> 7 mins read </span>
         
       </div>
@@ -262,7 +262,7 @@ BSWAP指令含义是：把32/64位寄存器的值按照低和高的字节交换(
 <p>由于内存读取速度的较慢(科技发展遇到了阻碍?)，但是CPU读取速度提升较快，所以CPU厂商才在内存和CPU之间加了多级缓存来缓解速度的不对等，充分利用CPU。</p>
 <p><img src="http://blog.xiebiao.com/images/2020-08-19-locks-on-multicore/CPU_Cache_Access.png" alt="访问速度与容量对比" title="图片来源于网络，请联系删除"></p>
 <p>内核首先从L1缓存中读取数据，如果没有就到L2缓存中读取，如果没有就到
-L3缓存中去读取，最坏的情况就是L3缓存也没有，那就只能到内存中去读取。</p>
+L3缓存中去读取，最坏的情况就是L3缓存也没有，那就只能到<a href="https://people.freebsd.org/~lstewart/articles/cpumemory.pdf"><strong>内存中去读取</strong></a>。</p>
 <p>但这种方案也不是没有限制，因为越是靠近内核的缓存越贵，不能肆意地设计得很大。</p>
 <h3 id="cpu缓存读写">CPU缓存读写</h3>
 <p>当多个内核在对同一块数据做加锁操作时:</p>
@@ -535,6 +535,9 @@ L3缓存中去读取，最坏的情况就是L3缓存也没有，那就只能到�
 <p>同时由于占用CPU资源的问题，在实际使用过程中，尽量让被保护的临界区小，保证可以快速地释放锁。</p>
 <h2 id="参考">参考</h2>
 <ul>
+<li>
+<p><a href="https://people.freebsd.org/~lstewart/articles/cpumemory.pdf"><em>What Every Programmer Should Know About Memory</em></a></p>
+</li>
 <li>
 <p><a href="http://https://www.cs.rice.edu/~johnmc/comp522/lecture-notes/COMP522-2019-LocksOnMulticore.pdf"><em>Locks on Multicore and Multisocket Platforms</em></a></p>
 </li>
