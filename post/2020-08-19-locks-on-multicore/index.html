@@ -278,7 +278,7 @@ L3缓存中去读取，最坏的情况就是L3缓存也没有，那就只能到<
 <p>可以看出，数据加锁这个操作非常复杂。特别是在多个内核之间共享数据。</p>
 <p>更详细的内存架构介绍，建议阅读:<a href="https://www.techbang.com/posts/18381-from-the-channel-to-address-computer-main-memory-structures-to-understand?page=2">圖解RAM結構與原理，系統記憶體的Channel、Chip與Bank</a></p>
 <h2 id="自旋锁">自旋锁</h2>
-<p>上面介绍了CPU多级内存架构，有助于理解后面锁相关的性能问题。同时上面还提到了一种硬件同步锁实现<strong>test_and_set</strong>，从实现中你可能发现代码中使用了:</p>
+<p>上面介绍了CPU多级缓存架构，有助于理解后面锁相关的性能问题。同时上面还提到了一种硬件同步锁实现<strong>test_and_set</strong>，从实现中你可能发现代码中使用了:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
