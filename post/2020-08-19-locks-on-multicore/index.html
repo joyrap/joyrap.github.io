@@ -259,7 +259,7 @@ BSWAP指令含义是：把32/64位寄存器的值按照低和高的字节交换(
 还可能导致访问冲突。</p>
 <p>现代CPU为了提高数据的访问速度，采用了NUMA(Non-Uniform Memory Access)多级缓存的架构，每个内核都有自己的<a href="https://zh.wikipedia.org/wiki/CPU%E7%BC%93%E5%AD%98"><strong>缓存</strong></a>，如下图:</p>
 <p><img src="http://blog.xiebiao.com/images/2020-08-19-locks-on-multicore/CPU_Cache.png" alt="CPU多级缓存" title=""></p>
-<p>由于内存读取速度的较慢(科技发展遇到了阻碍?)，但是CPU读取速度提升较快，所以CPU厂商才在内存和CPU之间加了多级缓存来缓解速度的不对等，充分利用CPU。来自Red Hat工程师这篇<a href="https://people.freebsd.org/~lstewart/articles/cpumemory.pdf"><strong>What Every Programmer Should Know About Memory</strong></a> 文章进行了详细的介绍。</p>
+<p>由于内存读取速度的较慢(科技发展遇到了阻碍?)，但是CPU读取速度提升较快，所以CPU厂商才在内存和CPU之间加了多级缓存来缓解速度的不对等，充分利用CPU。来自Red Hat工程师这篇<a href="https://people.freebsd.org/~lstewart/articles/cpumemory.pdf"><strong><em>What Every Programmer Should Know About Memory</em></strong></a> 文章进行了详细的介绍。</p>
 <p>一个直观的理解，如下图：</p>
 <p><img src="http://blog.xiebiao.com/images/2020-08-19-locks-on-multicore/CPU_Cache_Access.png" alt="访问速度与容量对比" title="图片来源于网络，请联系删除"></p>
 <p>内核首先从L1缓存中读取数据，如果没有就到L2缓存中读取，如果没有就到
@@ -298,7 +298,7 @@ L3缓存中去读取，最坏的情况就是L3缓存也没有，那就只能到<
 </ol>
 <p>对于第3点，很容易想到，如果执行单元释放了锁，后面哪个执行单元会获取到锁呢？这里没有机制保证每个执行单元都能获取到锁。</p>
 <h3 id="clh锁">CLH锁</h3>
-<p>基于上面说的缺点，计算机界的大拿总有解决办法的，于是就有了1991年提出的这篇论文<a href="https://dl.acm.org/doi/10.1145/103727.103729"><em>Algorithms for scalable synchronization on shared-memory multiprocessors</em></a>，这篇论文中提出了CLH锁(Craig, Landin, and Hagersten  locks): 也是一个自旋锁。</p>
+<p>基于上面说的缺点，计算机界的大拿总有解决办法的，于是就有了1991年提出的这篇论文<a href="https://dl.acm.org/doi/10.1145/103727.103729"><strong><em>Algorithms for scalable synchronization on shared-memory multiprocessors</em></strong></a>，这篇论文中提出了CLH锁(Craig, Landin, and Hagersten  locks): 也是一个自旋锁。</p>
 <p>CLH锁解决了饥饿问题，通过FIFO来保证公平性。</p>
 <p>CLH锁也是一种基于链表的可扩展、高性能、公平的自旋锁，申请线程只在本地变量上自旋，它不断轮询前驱的状态，如果发现前驱释放了锁就结束自旋。</p>
 <p>CLH锁的实现如下:</p>
