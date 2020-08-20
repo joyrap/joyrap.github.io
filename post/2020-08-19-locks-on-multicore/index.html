@@ -48,7 +48,7 @@
 <meta itemprop="description" content="如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问题。 特别是随着云厂商按计算收费的当下，如何有效地利用计算资源变">
 <meta itemprop="datePublished" content="2020-08-19T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-08-19T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="3189">
+<meta itemprop="wordCount" content="3211">
 
 
 
@@ -128,7 +128,7 @@
         <div class="post-category">
             <a href="/categories/programming/"> Programming </a>
             </div>
-          <span class="more-meta"> 3189 words </span>
+          <span class="more-meta"> 3211 words </span>
           <span class="more-meta"> 7 mins read </span>
         
       </div>
@@ -259,8 +259,8 @@ BSWAP指令含义是：把32/64位寄存器的值按照低和高的字节交换(
 还可能导致访问冲突。</p>
 <p>现代CPU为了提高数据的访问速度，采用了NUMA(Non-Uniform Memory Access)多级缓存的架构，每个内核都有自己的<a href="https://zh.wikipedia.org/wiki/CPU%E7%BC%93%E5%AD%98"><strong>缓存</strong></a>，如下图:</p>
 <p><img src="http://blog.xiebiao.com/images/2020-08-19-locks-on-multicore/CPU_Cache.png" alt="CPU多级缓存" title=""></p>
-<p>由于内存读取速度的较慢(科技发展遇到了阻碍?)，但是CPU读取速度提升较快，所以CPU厂商才在内存和CPU之间加了多级缓存来缓解速度的不对等，充分利用CPU。来自Red Hat工程师这篇<a href="https://people.freebsd.org/~lstewart/articles/cpumemory.pdf"><strong><em>What Every Programmer Should Know About Memory</em></strong></a> 文章进行了详细的介绍。</p>
-<p>一个直观的理解，如下图：</p>
+<p>由于内存读取速度的较慢(科技发展遇到了阻碍?)，但是CPU读取速度提升较快，所以CPU厂商才在内存和CPU之间加了多级缓存来缓解速度的不对等，充分利用CPU。来自Red Hat工程师这篇<a href="https://people.freebsd.org/~lstewart/articles/cpumemory.pdf"><strong><em>What Every Programmer Should Know About Memory</em></strong></a> 论文进行了详细的介绍，为何要设计多级CPU缓存。</p>
+<p>但这里我们只需要有一个直观的理解，如下图：</p>
 <p><img src="http://blog.xiebiao.com/images/2020-08-19-locks-on-multicore/CPU_Cache_Access.png" alt="访问速度与容量对比" title="图片来源于网络，请联系删除"></p>
 <p>内核首先从L1缓存中读取数据，如果没有就到L2缓存中读取，如果没有就到
 L3缓存中去读取，最坏的情况就是L3缓存也没有，那就只能到<a href="https://people.freebsd.org/~lstewart/articles/cpumemory.pdf"><strong>内存中去读取</strong></a>。</p>
