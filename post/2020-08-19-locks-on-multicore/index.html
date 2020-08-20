@@ -48,7 +48,7 @@
 <meta itemprop="description" content="如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问题。 特别是随着云厂商按计算收费的当下，如何有效地利用计算资源变">
 <meta itemprop="datePublished" content="2020-08-19T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-08-19T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="3131">
+<meta itemprop="wordCount" content="3136">
 
 
 
@@ -128,7 +128,7 @@
         <div class="post-category">
             <a href="/categories/programming/"> Programming </a>
             </div>
-          <span class="more-meta"> 3131 words </span>
+          <span class="more-meta"> 3136 words </span>
           <span class="more-meta"> 7 mins read </span>
         
       </div>
@@ -257,7 +257,7 @@ BSWAP指令含义是：把32/64位寄存器的值按照低和高的字节交换(
 <h2 id="多核cpu多级缓存架构">多核CPU多级缓存架构</h2>
 <p>早期的CPU架构基本上都采用SMP(Symmetric Multi-Processor)，这种对称多处理器结构，多个CPU内核共享内存资源，除了内存速度访问慢以外，
 还可能导致访问冲突。</p>
-<p>现代CPU为了提高数据的访问速度，采用了NUMA(Non-Uniform Memory Access)多级缓存的架构，每个内核都有自己的缓存，如下图:</p>
+<p>现代CPU为了提高数据的访问速度，采用了NUMA(Non-Uniform Memory Access)多级缓存的架构，每个内核都有自己的<a href="https://zh.wikipedia.org/wiki/CPU%E7%BC%93%E5%AD%98"><strong>缓存</strong></a>，如下图:</p>
 <p><img src="http://blog.xiebiao.com/images/2020-08-19-locks-on-multicore/CPU_Cache.png" alt="CPU多级缓存" title=""></p>
 <p>由于内存读取速度的较慢(科技发展遇到了阻碍?)，但是CPU读取速度提升较快，所以CPU厂商才在内存和CPU之间加了多级缓存来缓解速度的不对等，充分利用CPU。</p>
 <p><img src="http://blog.xiebiao.com/images/2020-08-19-locks-on-multicore/CPU_Cache_Access.png" alt="访问速度与容量对比" title="图片来源于网络，请联系删除"></p>
@@ -267,9 +267,9 @@ L3缓存中去读取，最坏的情况就是L3缓存也没有，那就只能到�
 <h3 id="cpu缓存读写">CPU缓存读写</h3>
 <p>当多个内核在对同一块数据做加锁操作时:</p>
 <ul>
-<li>CPU1 从内存中读取一个字节，以及它和它相邻的字节被读入 CPU1 的高速缓存(因为CPU的高速缓存是按行存取的)</li>
+<li>CPU1 从内存中读取一个字节，以及它和它相邻的字节被读入 CPU1 的高速缓存(因为CPU的高速缓存最小单位是行Cache Line)</li>
 <li>CPU2 和CPU1同样的操作</li>
-<li>这是CPU1 完成数据修改，通过内存总线控制，写回内存</li>
+<li>CPU1 完成数据修改，通过内存总线控制，写回内存</li>
 <li>CPU2 高速缓存数据失效，重新读取</li>
 </ul>
 <p>这个过程中，如果CPU1修改完数据，还没有写回内存时，CPU1与CPU2的高速缓存数据是不一致的，这时CPU通过内存总线
@@ -543,6 +543,9 @@ L3缓存中去读取，最坏的情况就是L3缓存也没有，那就只能到�
 </li>
 <li>
 <p><a href="https://cseweb.ucsd.edu/classes/sp13/cse141-a/Slides/10_Caches_detail.pdf"><em>Caching</em></a></p>
+</li>
+<li>
+<p><a href="https://zh.wikipedia.org/wiki/CPU%E7%BC%93%E5%AD%98"><em>CPU缓存</em></a></p>
 </li>
 <li>
 <p><a href="https://www.cnblogs.com/bjlhx/p/10658938.html"><em>https://www.cnblogs.com/bjlhx/p/10658938.html</em></a></p>
