@@ -48,7 +48,7 @@
 <meta itemprop="description" content="如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问题。 特别是随着云厂商按计算收费的当下，如何有效地利用计算资源变">
 <meta itemprop="datePublished" content="2020-08-19T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-08-19T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="3371">
+<meta itemprop="wordCount" content="3387">
 
 
 
@@ -128,7 +128,7 @@
         <div class="post-category">
             <a href="/categories/programming/"> Programming </a>
             </div>
-          <span class="more-meta"> 3371 words </span>
+          <span class="more-meta"> 3387 words </span>
           <span class="more-meta"> 7 mins read </span>
         
       </div>
@@ -296,7 +296,10 @@ L3缓存中去读取，最坏的情况就是L3缓存也没有，那就只能到<
 <li>过度消耗CPU资源</li>
 <li>竞争不具备公平性</li>
 </ol>
-<p>第2点，业界经过测试发现test_and_set锁随着线程和内核的增长，性能成指数级下(exponential backoff)，毫无可扩展性可言。</p>
+<p>第2点，业界经过测试发现test_and_set锁随着线程和内核的增长，会导致exponential backoff，毫无可扩展性可言。</p>
+<blockquote>
+<p>&quot;Exponential backoff is an algorithm that uses feedback to multiplicatively decrease the rate of some process, in order to gradually find an acceptable rate&rdquo;</p>
+</blockquote>
 <p>对于第3点，很容易想到，如果执行单元释放了锁，后面哪个执行单元会获取到锁呢？这里没有机制保证每个执行单元都能获取到锁。</p>
 <h3 id="clh锁">CLH锁</h3>
 <p>基于上面说的缺点，1993年由Travis Craig，Anders Landin 和 Eric Hagersten，提出了CLH锁，它也是一个自旋锁。</p>
@@ -449,7 +452,7 @@ L3缓存中去读取，最坏的情况就是L3缓存也没有，那就只能到<
 </div><p>这里的自旋可能发生在非本地缓存上，那么当内核需要循环读取一个非本地(或者说离自己很远)缓存中的数据时，在多级缓存架构中那就是个灾难，因为每一次读写都要通过控制器和总线(这和上面提到的SMP和NUMA处理器架构息息相关)，带来极大的开销。</p>
 <p>于是就有了&hellip;&hellip;</p>
 <h3 id="mcs锁">MCS锁</h3>
-<p>1993年这篇[<strong><em>Algorithms for scalable synchronization on shared-memory multiprocessors</em></strong>]论文提出了MCS(John Mellor-Crummey and Michael Scott)锁，针对CLH锁进行了优化，其主要区别是自旋发生在本地节点上。</p>
+<p>1991年这篇<a href="https://www.cs.rice.edu/~johnmc/papers/tocs91.pdf"><strong><em>Algorithms for scalable synchronization on shared-memory multiprocessors</em></strong></a>论文提出了MCS(John Mellor-Crummey and Michael Scott)锁，针对CLH锁进行了优化，其主要区别是自旋发生在本地节点上。</p>
 <p>实现如下:</p>
 <ol>
 <li>队列初始化时没有结点，tail=null</li>
@@ -534,7 +537,7 @@ L3缓存中去读取，最坏的情况就是L3缓存也没有，那就只能到<
 <h2 id="参考">参考</h2>
 <ul>
 <li>
-<p><a href="https://www.cs.rochester.edu/u/scott/papers/1991_TOCS_synch.pdf"><em>Algorithms for scalable synchronization on shared-memory multiprocessors</em></a></p>
+<p><a href="https://www.cs.rice.edu/~johnmc/papers/tocs91.pdf"><em>Algorithms for scalable synchronization on shared-memory multiprocessors</em></a></p>
 </li>
 <li>
 <p><a href="https://people.freebsd.org/~lstewart/articles/cpumemory.pdf"><em>What Every Programmer Should Know About Memory</em></a></p>
@@ -572,7 +575,11 @@ L3缓存中去读取，最坏的情况就是L3缓存也没有，那就只能到<
           <a href="/tags/concurrency/">Concurrency</a>
           </div>
       <nav class="post-nav">
-        
+        <a class="prev" href="/post/2020-08-21-locks-on-multicore2/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">计算机多内核平台上的锁优化(二)</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
         <a class="next" href="/post/2020-01-21-untestable-code/">
             <span class="next-text nav-default">不可测试的代码</span>
             <span class="next-text nav-mobile">Next</span>
