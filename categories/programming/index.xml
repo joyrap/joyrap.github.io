@@ -18,7 +18,7 @@
       <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>http://blog.xiebiao.com/post/2020-08-21-locks-on-multicore2/</guid>
-      <description>在Algorithms for scalable synchronization on shared-memory multiprocessors这篇论文中，CLH锁之前还提到了另外一个锁算法。 凭证锁(The Ticket Lock) 这个算法也很</description>
+      <description>申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。 在Algorithms for scalable synchronization on shared-memory multiprocessors这篇论文中，CL</description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@
       <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>http://blog.xiebiao.com/post/2020-08-19-locks-on-multicore/</guid>
-      <description>如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问题。 特别是随着云厂商按计算收费的当下，如何有效地利用计算资源变</description>
+      <description>申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。 如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问</description>
     </item>
     
     <item>

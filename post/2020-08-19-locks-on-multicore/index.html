@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Bill Xie" /><meta name="description" content="如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问题。 特别是随着云厂商按计算收费的当下，如何有效地利用计算资源变" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Bill Xie" /><meta name="description" content="申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。 如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -39,22 +39,22 @@
 
 
 <meta property="og:title" content="计算机多内核平台上的锁优化(一)" />
-<meta property="og:description" content="如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问题。 特别是随着云厂商按计算收费的当下，如何有效地利用计算资源变" />
+<meta property="og:description" content="申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。 如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://blog.xiebiao.com/post/2020-08-19-locks-on-multicore/" />
 <meta property="article:published_time" content="2020-08-19T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-08-19T00:00:00+00:00" />
 <meta itemprop="name" content="计算机多内核平台上的锁优化(一)">
-<meta itemprop="description" content="如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问题。 特别是随着云厂商按计算收费的当下，如何有效地利用计算资源变">
+<meta itemprop="description" content="申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。 如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问">
 <meta itemprop="datePublished" content="2020-08-19T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-08-19T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="3435">
+<meta itemprop="wordCount" content="3466">
 
 
 
 <meta itemprop="keywords" content="Concurrency," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="计算机多内核平台上的锁优化(一)"/>
-<meta name="twitter:description" content="如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问题。 特别是随着云厂商按计算收费的当下，如何有效地利用计算资源变"/>
+<meta name="twitter:description" content="申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。 如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -128,7 +128,7 @@
         <div class="post-category">
             <a href="/categories/programming/"> Programming </a>
             </div>
-          <span class="more-meta"> 3435 words </span>
+          <span class="more-meta"> 3466 words </span>
           <span class="more-meta"> 7 mins read </span>
         
       </div>
@@ -159,7 +159,10 @@
   </div>
 </div>
     <div class="post-content">
-      <p>如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问题。
+      <blockquote>
+<p><strong>申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。</strong></p>
+</blockquote>
+<p>如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问题。
 特别是随着云厂商按计算收费的当下，如何有效地利用计算资源变得更重要。</p>
 <blockquote>
 <p>致富的途径只有两种：一种是拼命赚钱，另外一种就是有钱后节约花钱。</p>
