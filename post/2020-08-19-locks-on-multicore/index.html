@@ -48,7 +48,7 @@
 <meta itemprop="description" content="如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问题。 特别是随着云厂商按计算收费的当下，如何有效地利用计算资源变">
 <meta itemprop="datePublished" content="2020-08-19T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-08-19T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="3387">
+<meta itemprop="wordCount" content="3423">
 
 
 
@@ -128,7 +128,7 @@
         <div class="post-category">
             <a href="/categories/programming/"> Programming </a>
             </div>
-          <span class="more-meta"> 3387 words </span>
+          <span class="more-meta"> 3423 words </span>
           <span class="more-meta"> 7 mins read </span>
         
       </div>
@@ -148,6 +148,7 @@
     <li><a href="#自旋锁">自旋锁</a>
       <ul>
         <li><a href="#clh锁">CLH锁</a></li>
+        <li><a href="#java中的aqs并发框架">JAVA中的AQS并发框架</a></li>
         <li><a href="#mcs锁">MCS锁</a></li>
       </ul>
     </li>
@@ -253,13 +254,13 @@ BSWAP指令含义是：把32/64位寄存器的值按照低和高的字节交换(
 </code></pre></td></tr></table>
 </div>
 </div><p>上面简要地说明了通过CPU硬件同步原语，对某个内存地址标志位的修改，起到加锁的作用。</p>
-<p>那么锁机制和性能有什么关系呢？这得从CPU缓存说起，因为你要加的锁在CPU缓存中。</p>
+<p>那么锁机制和性能有什么关系呢？这得从内存(<code>Memory</code>)，CPU缓存说起。</p>
 <h2 id="多核cpu多级缓存架构">多核CPU多级缓存架构</h2>
 <p>早期的CPU架构基本上都采用<a href="https://zh.wikipedia.org/wiki/%E5%AF%B9%E7%A7%B0%E5%A4%9A%E5%A4%84%E7%90%86">SMP(Symmetric Multi-Processor)</a>，这种对称多处理器结构，多个CPU内核共享内存资源，除了内存速度访问慢以外，
 还可能导致访问冲突。</p>
 <p>现代CPU为了提高数据的访问速度，采用了<a href="https://zh.wikipedia.org/wiki/%E9%9D%9E%E5%9D%87%E5%8C%80%E8%AE%BF%E5%AD%98%E6%A8%A1%E5%9E%8B">NUMA(Non-Uniform Memory Access)</a>多级缓存的架构，每个内核都有自己的<a href="https://zh.wikipedia.org/wiki/CPU%E7%BC%93%E5%AD%98">缓存</a>，如下图:</p>
 <p><img src="http://blog.xiebiao.com/images/2020-08-19-locks-on-multicore/CPU_Cache.png" alt="CPU多级缓存" title=""></p>
-<p>由于内存读取速度的较慢(科技发展遇到了阻碍?)，但是CPU读取速度提升较快，所以CPU厂商才在内存和CPU之间加了多级缓存来缓解速度的不对等，充分利用CPU。来自Red Hat工程师这篇<a href="https://people.freebsd.org/~lstewart/articles/cpumemory.pdf"><strong><em>What Every Programmer Should Know About Memory</em></strong></a> 论文进行了详细的介绍，为何要设计多级CPU缓存。</p>
+<p>由于内存读取速度的较慢(科技发展遇到了阻碍?)，但是CPU计算速度提升较快，所以CPU厂商才在内存和CPU之间加了多级缓存来缓解速度的不对等，充分利用CPU。来自Red Hat工程师这篇<a href="https://people.freebsd.org/~lstewart/articles/cpumemory.pdf"><strong><em>What Every Programmer Should Know About Memory</em></strong></a> 论文进行了详细的介绍，为何要设计多级CPU缓存。</p>
 <p>但这里我们只需要有一个直观的理解，如下图：</p>
 <p><img src="http://blog.xiebiao.com/images/2020-08-19-locks-on-multicore/CPU_Cache_Access.png" alt="访问速度与容量对比" title="图片来源于网络，请联系删除"></p>
 <p>内核首先从L1缓存中读取数据，如果没有就到L2缓存中读取，如果没有就到
@@ -296,15 +297,17 @@ L3缓存中去读取，最坏的情况就是L3缓存也没有，那就只能到<
 <li>过度消耗CPU资源</li>
 <li>竞争不具备公平性</li>
 </ol>
-<p>第2点，业界经过测试发现test_and_set锁随着线程和内核的增长，会导致exponential backoff，毫无可扩展性可言。</p>
+<p>第2点，业界经过测试发现test_and_set锁随着线程和内核的增长，会导致<a href="https://en.wikipedia.org/wiki/Exponential_backoff">Exponential backoff</a>，</p>
 <blockquote>
-<p>&quot;Exponential backoff is an algorithm that uses feedback to multiplicatively decrease the rate of some process, in order to gradually find an acceptable rate&rdquo;</p>
+<p>&quot;Exponential backoff is an algorithm that uses feedback to multiplicatively decrease the rate of some process, in order to gradually find an acceptable rate.&rdquo;</p>
 </blockquote>
+<p>指数补偿重试等待算法在CPU内核方便并不是适用(适用于网络请求场景中)。</p>
 <p>对于第3点，很容易想到，如果执行单元释放了锁，后面哪个执行单元会获取到锁呢？这里没有机制保证每个执行单元都能获取到锁。</p>
 <h3 id="clh锁">CLH锁</h3>
 <p>基于上面说的缺点，1993年由Travis Craig，Anders Landin 和 Eric Hagersten，提出了CLH锁，它也是一个自旋锁。</p>
 <p>CLH锁解决了饥饿问题，通过FIFO来保证公平性。</p>
 <p>CLH锁也是一种基于链表的可扩展、高性能、公平的自旋锁，申请线程只在本地变量上自旋，它不断轮询前驱的状态，如果发现前驱释放了锁就结束自旋。</p>
+<p><img src="http://blog.xiebiao.com/images/2020-08-19-locks-on-multicore/CLH.png" alt="CLH Lock" title=""></p>
 <p>CLH锁的实现如下:</p>
 <ol>
 <li>两个ThreadLocal变量，一个表示当前节点，一个表示前趋节点</li>
@@ -397,6 +400,7 @@ L3缓存中去读取，最坏的情况就是L3缓存也没有，那就只能到<
 </code></pre></td></tr></table>
 </div>
 </div><p>CLH自旋锁的优点是空间复杂度低，L个线程n个锁的复杂度为O（L+n）。</p>
+<h3 id="java中的aqs并发框架">JAVA中的AQS并发框架</h3>
 <p>JAVA中的AQS并发框架(<code>java.util.concurrent.locks.AbstractQueuedSynchronizer.Node</code>)也是基于CLH锁，但是它是一个变种，它考虑了等待队列中取消获取锁的情况，以及释放锁的线程可以向获取同一把锁的线程发送消息。</p>
 <p>JDK中的描述:</p>
 <div class="highlight"><div class="chroma">
@@ -453,6 +457,7 @@ L3缓存中去读取，最坏的情况就是L3缓存也没有，那就只能到<
 <p>于是就有了&hellip;&hellip;</p>
 <h3 id="mcs锁">MCS锁</h3>
 <p>1991年这篇<a href="https://www.cs.rice.edu/~johnmc/papers/tocs91.pdf"><strong><em>Algorithms for scalable synchronization on shared-memory multiprocessors</em></strong></a>论文提出了MCS(John Mellor-Crummey and Michael Scott)锁，针对CLH锁进行了优化，其主要区别是自旋发生在本地节点上。</p>
+<p><img src="http://blog.xiebiao.com/images/2020-08-19-locks-on-multicore/MCS.png" alt="MCS Lock" title=""></p>
 <p>实现如下:</p>
 <ol>
 <li>队列初始化时没有结点，tail=null</li>
@@ -502,9 +507,9 @@ L3缓存中去读取，最坏的情况就是L3缓存也没有，那就只能到<
     <span class="kd">private</span> <span class="n">ThreadLocal</span><span class="o">&lt;</span><span class="n">QNode</span><span class="o">&gt;</span> <span class="n">current</span><span class="o">;</span>
 
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">lock</span><span class="o">(</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">tail</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicReference</span><span class="o">&lt;</span><span class="n">QNode</span><span class="o">&gt;</span><span class="o">(</span><span class="k">new</span> <span class="n">QNode</span><span class="o">(</span><span class="o">)</span><span class="o">)</span><span class="o">;</span>  
+        <span class="k">this</span><span class="o">.</span><span class="na">tail</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicReference</span><span class="o">&lt;</span><span class="n">QNode</span><span class="o">&gt;</span><span class="o">(</span><span class="k">new</span> <span class="n">QNode</span><span class="o">(</span><span class="o">)</span><span class="o">)</span><span class="o">;</span>  
         <span class="n">QNode</span> <span class="n">current</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">current</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="o">)</span><span class="o">;</span>
-        <span class="n">QNode</span> <span class="n">pred</span> <span class="o">=</span> <span class="n">tail</span><span class="o">.</span><span class="na">getAndSet</span><span class="o">(</span><span class="n">current</span><span class="o">)</span><span class="o">;</span>
+        <span class="n">QNode</span> <span class="n">pred</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">tail</span><span class="o">.</span><span class="na">getAndSet</span><span class="o">(</span><span class="n">current</span><span class="o">)</span><span class="o">;</span>
         <span class="k">if</span> <span class="o">(</span><span class="n">pred</span> <span class="o">!</span><span class="o">=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
             <span class="n">current</span><span class="o">.</span><span class="na">locked</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
             <span class="n">pred</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">current</span><span class="o">;</span>
