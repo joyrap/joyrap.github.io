@@ -48,7 +48,7 @@
 <meta itemprop="description" content="如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问题。 特别是随着云厂商按计算收费的当下，如何有效地利用计算资源变">
 <meta itemprop="datePublished" content="2020-08-19T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-08-19T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="3423">
+<meta itemprop="wordCount" content="3435">
 
 
 
@@ -128,7 +128,7 @@
         <div class="post-category">
             <a href="/categories/programming/"> Programming </a>
             </div>
-          <span class="more-meta"> 3423 words </span>
+          <span class="more-meta"> 3435 words </span>
           <span class="more-meta"> 7 mins read </span>
         
       </div>
@@ -258,6 +258,8 @@ BSWAP指令含义是：把32/64位寄存器的值按照低和高的字节交换(
 <h2 id="多核cpu多级缓存架构">多核CPU多级缓存架构</h2>
 <p>早期的CPU架构基本上都采用<a href="https://zh.wikipedia.org/wiki/%E5%AF%B9%E7%A7%B0%E5%A4%9A%E5%A4%84%E7%90%86">SMP(Symmetric Multi-Processor)</a>，这种对称多处理器结构，多个CPU内核共享内存资源，除了内存速度访问慢以外，
 还可能导致访问冲突。</p>
+<p><img src="http://blog.xiebiao.com/images/2020-08-19-locks-on-multicore/CPU_Cache_0.png" alt="SMP" title=""></p>
+<p>CPU通过北桥访问内存。</p>
 <p>现代CPU为了提高数据的访问速度，采用了<a href="https://zh.wikipedia.org/wiki/%E9%9D%9E%E5%9D%87%E5%8C%80%E8%AE%BF%E5%AD%98%E6%A8%A1%E5%9E%8B">NUMA(Non-Uniform Memory Access)</a>多级缓存的架构，每个内核都有自己的<a href="https://zh.wikipedia.org/wiki/CPU%E7%BC%93%E5%AD%98">缓存</a>，如下图:</p>
 <p><img src="http://blog.xiebiao.com/images/2020-08-19-locks-on-multicore/CPU_Cache.png" alt="CPU多级缓存" title=""></p>
 <p>由于内存读取速度的较慢(科技发展遇到了阻碍?)，但是CPU计算速度提升较快，所以CPU厂商才在内存和CPU之间加了多级缓存来缓解速度的不对等，充分利用CPU。来自Red Hat工程师这篇<a href="https://people.freebsd.org/~lstewart/articles/cpumemory.pdf"><strong><em>What Every Programmer Should Know About Memory</em></strong></a> 论文进行了详细的介绍，为何要设计多级CPU缓存。</p>
