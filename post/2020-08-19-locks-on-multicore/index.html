@@ -307,7 +307,7 @@ L3缓存中去读取，最坏的情况就是L3缓存也没有，那就只能到<
 <blockquote>
 <p>&quot;Exponential backoff is an algorithm that uses feedback to multiplicatively decrease the rate of some process, in order to gradually find an acceptable rate.&rdquo;</p>
 </blockquote>
-<p>指数补偿重试等待算法在CPU内核方便并不是适用(适用于网络请求场景中)。</p>
+<p>指数补偿重试等待算法在CPU内核方面并不是适用(适用于网络请求场景中)。</p>
 <p>对于第3点，很容易想到，如果执行单元释放了锁，后面哪个执行单元会获取到锁呢？这里没有机制保证每个执行单元都能获取到锁。</p>
 <h3 id="clh锁">CLH锁</h3>
 <p>基于上面说的缺点，1993年由Travis Craig，Anders Landin 和 Eric Hagersten，提出了CLH锁，它也是一个自旋锁。</p>
