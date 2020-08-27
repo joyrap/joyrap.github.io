@@ -386,26 +386,26 @@ L3缓存中去读取，最坏的情况就是L3缓存也没有，那就只能到<
 
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">lock</span><span class="o">(</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">QNode</span> <span class="n">current</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">current</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="o">)</span><span class="o">;</span> 
-        <span class="n">current</span><span class="o">.</span><span class="na">lock</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+        <span class="n">current</span><span class="o">.</span><span class="na">locked</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
         <span class="n">QNode</span> <span class="n">pred</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">tail</span><span class="o">.</span><span class="na">getAndSet</span><span class="o">(</span><span class="n">current</span><span class="o">)</span><span class="o">;</span> 
         <span class="k">this</span><span class="o">.</span><span class="na">prev</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">pred</span><span class="o">)</span><span class="o">;</span> 
-        <span class="k">while</span> <span class="o">(</span><span class="n">pred</span><span class="o">.</span><span class="na">lock</span><span class="o">)</span> <span class="o">;</span><span class="c1">//自旋
+        <span class="k">while</span> <span class="o">(</span><span class="n">pred</span><span class="o">.</span><span class="na">locked</span><span class="o">)</span> <span class="o">;</span><span class="c1">//自旋
 </span><span class="c1"></span>    <span class="o">}</span>
 
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">unlock</span><span class="o">(</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">QNode</span> <span class="n">current</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">current</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="o">)</span><span class="o">;</span>
-        <span class="n">current</span><span class="o">.</span><span class="na">lock</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+        <span class="n">current</span><span class="o">.</span><span class="na">locked</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
         <span class="k">this</span><span class="o">.</span><span class="na">current</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">prev</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="o">)</span><span class="o">)</span><span class="o">;</span>
         <span class="n">current</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span><span class="c1">//GC
 </span><span class="c1"></span>    <span class="o">}</span>
 
     <span class="kd">private</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">QNode</span> <span class="o">{</span>
-        <span class="kd">private</span> <span class="kd">volatile</span> <span class="kt">boolean</span> <span class="n">lock</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="kd">volatile</span> <span class="kt">boolean</span> <span class="n">locked</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
     <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>CLH自旋锁的优点是空间复杂度低，L个线程n个锁的复杂度为O（L+n）。</p>
+</div><p>CLH自旋锁的优点是空间复杂度低，L个线程n个锁的复杂度为<code>O(L+n)</code>。</p>
 <h3 id="java中的aqs并发框架">JAVA中的AQS并发框架</h3>
 <p>JAVA中的AQS并发框架(<code>java.util.concurrent.locks.AbstractQueuedSynchronizer.Node</code>)也是基于CLH锁，但是它是一个变种，它考虑了等待队列中取消获取锁的情况，以及释放锁的线程可以向获取同一把锁的线程发送消息。</p>
 <p>JDK中的描述:</p>
