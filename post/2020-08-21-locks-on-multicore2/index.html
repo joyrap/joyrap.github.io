@@ -48,7 +48,7 @@
 <meta itemprop="description" content="申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。 在Algorithms for scalable synchronization on shared-memory multiprocessors这篇论文中，CL">
 <meta itemprop="datePublished" content="2020-08-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-08-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1064">
+<meta itemprop="wordCount" content="1068">
 
 
 
@@ -128,7 +128,7 @@
         <div class="post-category">
             <a href="/categories/programming/"> Programming </a>
             </div>
-          <span class="more-meta"> 1064 words </span>
+          <span class="more-meta"> 1068 words </span>
           <span class="more-meta"> 3 mins read </span>
         
       </div>
@@ -212,19 +212,13 @@
 <p>即便用固定的sleep时间也不合理，因为临界区执行的时间是未知的。</p>
 <p>另外一个细节就是，这个算法是建立在假设<code>nextTicket.getAndIncrement()</code>不会溢出的情况下。</p>
 <p>在<code>The Ticket Lock</code>之后还有<code>Array-Based Queuing Locks</code>，但由于基于数组的队列锁，性能更不理想，所以就略过了。</p>
-<p>在<code>Array-Based Queuing Locks</code>之后就是 <code>List-Based Queuing Lock </code>，<a href="https://blog.xiebiao.com/post/2020-08-19-locks-on-multicore/"><em>计算机多内核平台上的锁优化(一)</em></a>中讲到的CLH锁和MCS锁都是基于链表队列实现的。</p>
+<p>在<code>Array-Based Queuing Locks</code>之后就是 <code>List-Based Queuing Lock </code>，<a href="https://blog.xiebiao.com/post/2020-08-19-locks-on-multicore/"><em>计算机多内核平台上的并发锁优化(一)</em></a>中讲到的CLH锁和MCS锁都是基于链表队列实现的。</p>
 <h2 id="栅栏barriers">栅栏(BARRIERS)</h2>
 <p>首先对<code>Barrier</code>这个中文翻译解释一下，实际上<a href="https://www.ldoceonline.com/dictionary/barrier">朗文词典对该词给出的英文翻译如下</a>：</p>
 <ul>
-<li>
-<p>1、a rule, problem etc that prevents people from doing something, or limits what they can do</p>
-</li>
-<li>
-<p>2、a type of fence or gate that prevents people from moving in a particular direction</p>
-</li>
-<li>
-<p>3、a physical object that keeps two areas, people etc apart</p>
-</li>
+<li>1、a rule, problem etc that prevents people from doing something, or limits what they can do</li>
+<li>2、a type of fence or gate that prevents people from moving in a particular direction</li>
+<li>3、a physical object that keeps two areas, people etc apart</li>
 </ul>
 <p>很多中文书籍用的是2条翻译，实际上第1条翻译才是在计算机领域中要表达的含义。</p>
 <p>这个对应现实生活中的例子就是，你和几个好友约定晚上7点去苍蝇馆子撸串，说好了人不齐不许开干，那么先到的只能看着烤串流口水。</p>
@@ -232,7 +226,7 @@
 <p>未完待续&hellip;&hellip;</p>
 <h2 id="相关阅读">相关阅读</h2>
 <ul>
-<li><a href="https://blog.xiebiao.com/post/2020-08-19-locks-on-multicore/"><em>计算机多内核平台上的锁优化(一)</em></a></li>
+<li><a href="https://blog.xiebiao.com/post/2020-08-19-locks-on-multicore/"><em>计算机多内核平台上的并发锁优化(一)</em></a></li>
 <li><a href="http://www.cs.utah.edu/~ald/pubs/CC-numa.pdf"><em>The ccNUMA Memory Profiler</em></a></li>
 <li><a href="http://www.netlib.org/utk/papers/advanced-computers/overview.html"><em>Overview of Recent Supercomputers</em></a></li>
 <li><a href="https://people.csail.mit.edu/shanir/publications/CLH.pdf"><em>A Hierarchical CLH Queue Lock</em></a></li>
@@ -263,7 +257,7 @@
       <nav class="post-nav">
         
         <a class="next" href="/post/2020-08-19-locks-on-multicore/">
-            <span class="next-text nav-default">计算机多内核平台上的锁优化(一)</span>
+            <span class="next-text nav-default">计算机多内核平台上的并发锁优化(一)</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
