@@ -9,7 +9,49 @@
   
   <url>
     <loc>http://blog.xiebiao.com/categories/</loc>
-    <lastmod>2020-08-21T00:00:00+00:00</lastmod>
+    <lastmod>2020-10-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.xiebiao.com/tags/life/</loc>
+    <lastmod>2020-10-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.xiebiao.com/post/</loc>
+    <lastmod>2020-10-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.xiebiao.com/categories/reading/</loc>
+    <lastmod>2020-10-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.xiebiao.com/tags/</loc>
+    <lastmod>2020-10-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.xiebiao.com/post/2020-10-22-indeterminacy/</loc>
+    <lastmod>2020-10-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.xiebiao.com/</loc>
+    <lastmod>2020-10-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -22,28 +64,7 @@
   </url>
   
   <url>
-    <loc>http://blog.xiebiao.com/post/</loc>
-    <lastmod>2020-08-21T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.xiebiao.com/categories/programming/</loc>
-    <lastmod>2020-08-21T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.xiebiao.com/tags/</loc>
-    <lastmod>2020-08-21T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.xiebiao.com/</loc>
     <lastmod>2020-08-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -93,13 +114,6 @@
   
   <url>
     <loc>http://blog.xiebiao.com/post/2019-12-25-2019-read-books/</loc>
-    <lastmod>2019-12-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.xiebiao.com/categories/reading/</loc>
     <lastmod>2019-12-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
