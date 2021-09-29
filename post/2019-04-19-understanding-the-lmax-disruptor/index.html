@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.62.2 with theme even" />
+<meta name="generator" content="Hugo 0.87.0 with theme even" />
 
 
 <link rel="canonical" href="http://blog.xiebiao.com/post/2019-04-19-understanding-the-lmax-disruptor/" />
@@ -41,17 +41,14 @@
 <meta property="og:title" content="翻译:Understanding the LMAX Disruptor" />
 <meta property="og:description" content="翻译前言 知道Disruptor这个代码库，是在Log4j 1.X升级版Log4j2中提到的，那时候就好奇它为何如此高效，关于Disruptor" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://blog.xiebiao.com/post/2019-04-19-understanding-the-lmax-disruptor/" />
+<meta property="og:url" content="http://blog.xiebiao.com/post/2019-04-19-understanding-the-lmax-disruptor/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2019-04-19T21:24:47+00:00" />
 <meta property="article:modified_time" content="2019-04-19T21:24:47+00:00" />
+
 <meta itemprop="name" content="翻译:Understanding the LMAX Disruptor">
-<meta itemprop="description" content="翻译前言 知道Disruptor这个代码库，是在Log4j 1.X升级版Log4j2中提到的，那时候就好奇它为何如此高效，关于Disruptor">
-<meta itemprop="datePublished" content="2019-04-19T21:24:47&#43;00:00" />
-<meta itemprop="dateModified" content="2019-04-19T21:24:47&#43;00:00" />
+<meta itemprop="description" content="翻译前言 知道Disruptor这个代码库，是在Log4j 1.X升级版Log4j2中提到的，那时候就好奇它为何如此高效，关于Disruptor"><meta itemprop="datePublished" content="2019-04-19T21:24:47+00:00" />
+<meta itemprop="dateModified" content="2019-04-19T21:24:47+00:00" />
 <meta itemprop="wordCount" content="5260">
-
-
-
 <meta itemprop="keywords" content="Disruptor," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="翻译:Understanding the LMAX Disruptor"/>
 <meta name="twitter:description" content="翻译前言 知道Disruptor这个代码库，是在Log4j 1.X升级版Log4j2中提到的，那时候就好奇它为何如此高效，关于Disruptor"/>
@@ -175,7 +172,7 @@
 <p>举个例子，我们需要对一个计数循环递增到<code>MAX</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -186,7 +183,7 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">public void simple() {
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">public void simple() {
   int counter = 0;
   for (int i = 0; i &lt; MAX; i++) {
     counter++;
@@ -200,7 +197,7 @@
 </div><p>因为<code>MAX</code>值可能会很大，为了关注性能，我们决定在多核处理器上来跑这个程序，将这个任务分到两个独立的线程上执行，像这样:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -230,7 +227,7 @@
 </span><span class="lnt">28
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">public void multi() throws Exception {
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">public void multi() throws Exception {
   // First thread
   final Thread t1 =
       new Thread(() -&gt; {
@@ -264,13 +261,13 @@
 <p>首先,多次执行将<code>MAX</code>累加到1百万，很显然这和我们期望输出结果<code>counter=1000000</code>有点不一样。(这里完全是个人为了句子更符合中文语景)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">counter=522388
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">counter=522388
 counter=733903
 counter=532331
 
@@ -286,14 +283,14 @@ counter=532331
 <p><a href="https://software.intel.com/sites/products/collateral/hpc/vtune/performance_analysis_guide.pdf">Core i7 Xeon 5500</a>的特性:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Memory                   Latency      
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Memory                   Latency      
 L1 CACHE hit         ~4 cycles (~1.2 ns) | 
 L2 CACHE hit         ~10 cycles (~3.0 ns)   |   
 L3 CACHE hit          (~60.0 ns) |   
@@ -319,14 +316,14 @@ L3 CACHE hit          (~60.0 ns) |
 <p>为了理解其中的影响，我们看看在一个64位计数上循环执行递增500万次:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Test case                            Execution time
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Test case                            Execution time
 Single thread                             300ms
 Single thread with lock             10 000 ms
 Two thread with lock                 224 000ms
@@ -337,7 +334,7 @@ Two thread with lock                 224 000ms
 <p>简而言之，只有传入期望参数与原来值相等时，才会将变量更新，否则让线程继续重试<code>CAS</code>操作。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -349,7 +346,7 @@ Two thread with lock                 224 000ms
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">   public final int getAndSet(int newValue) {
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">   public final int getAndSet(int newValue) {
         for (;;) {
             int current = get();//当前线程获取变量原来的值
             //当current与原来的值相等时，才将变量更新为newValue,因为get到的current，
@@ -365,12 +362,12 @@ Two thread with lock                 224 000ms
 <p>我们比较一下性能:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Test case                                      Execution time
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Test case                                      Execution time
 Single thread with CAS                           5 700 ms
 Two threads with CAS                             30 000 ms
 </code></pre></td></tr></table>
@@ -391,7 +388,7 @@ Two threads with CAS                             30 000 ms
 <p>回到我们第一个例子:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -401,7 +398,7 @@ Two threads with CAS                             30 000 ms
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">public void simple() {
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">public void simple() {
   int counter = 0;
   for (int i = 0; i &lt; MAX; i++) {
     counter++;
@@ -434,7 +431,7 @@ Two threads with CAS                             30 000 ms
 <p>我们修改一下之前的多线程实现，在访问<code>sharedCounter</code>之前插入一个读屏障，在期后面插入一个写屏障:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -468,7 +465,7 @@ Two threads with CAS                             30 000 ms
 </span><span class="lnt">32
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">public void barrier() throws Exception {
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">public void barrier() throws Exception {
   // First thread
   final Thread t1 =
       new Thread(() -&gt; {
@@ -505,7 +502,7 @@ Two threads with CAS                             30 000 ms
 </div><p>我们再次运行这个实现 直到<code>MAX</code> 到1百万，我们依然期望得到输出  <code>counter = 1000000</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -516,7 +513,7 @@ Two threads with CAS                             30 000 ms
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">-- First multi-threaded implementation without a memory barrier
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">-- First multi-threaded implementation without a memory barrier
 counter=522388
 counter=733903
 counter=532331
@@ -536,7 +533,7 @@ counter=999770
 <p>我们看一下 <code>ArrayBlockingQueue</code> 的 <code>put</code>方法:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -563,7 +560,7 @@ counter=999770
 </span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">/** Main lock guarding all access */
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">/** Main lock guarding all access */
 final ReentrantLock lock;
 
 public void put(E e) throws InterruptedException {
@@ -611,7 +608,7 @@ private void enqueue(E x) {
 <p>初始化时，分配指定的内存大小(必须是2的N次方)，以及一个事件初始化工厂。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -621,7 +618,7 @@ private void enqueue(E x) {
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Disruptor&lt;MyEvent&gt; disruptor =
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Disruptor&lt;MyEvent&gt; disruptor =
   new Disruptor&lt;&gt;(
       () -&gt; new MyEvent(), // Factory for events
       ringBufferSize, // Buffer size
@@ -640,13 +637,13 @@ private void enqueue(E x) {
 <p>可以像这样配置一个消费者:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">
 disruptor.handleEventsWith(
         (event, sequence, endOfBatch) -&gt; System.out.println(event));
 
@@ -661,7 +658,7 @@ disruptor.handleEventsWith(
 <p>多生产者的情况下，他们都会收到每个事件，如果我们像分开加载，我们可以实现基于序列号的分片策略，像这样:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -675,7 +672,7 @@ disruptor.handleEventsWith(
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">disruptor.handleEventsWith(
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">disruptor.handleEventsWith(
     (event, sequence, endOfBatch) -&gt; {
       if (sequence % 2 == 0) {
         System.out.println(&#34;Consumer 1: &#34; + event.getPayload());
@@ -692,23 +689,23 @@ disruptor.handleEventsWith(
 </div><p>然后我们可以启动 Disruptor，返回一个<code>RingBuffer</code>实例。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">RingBuffer&lt;MyEvent&gt; ringBuffer = disruptor.start();
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">RingBuffer&lt;MyEvent&gt; ringBuffer = disruptor.start();
 </code></pre></td></tr></table>
 </div>
 </div><p>当<code>Disruptor</code>实例被启动，我们就可以通过下面这样发布事件:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">final long sequence = ringBuffer.next(); // Ask the ring buffer the next sequence
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">final long sequence = ringBuffer.next(); // Ask the ring buffer the next sequence
 final MyEvent event = ringBuffer.get(sequence); // Get the event instance
 event.setPayload(&#34;Hello, World!&#34;); // Business logic
 ringBuffer.publish(sequence); // Publish an event
@@ -721,7 +718,7 @@ ringBuffer.publish(sequence); // Publish an event
 <p>序列号通过内存补全的方式确保在同一个缓存行中不包含其他数据:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -734,7 +731,7 @@ ringBuffer.publish(sequence); // Publish an event
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">class LhsPadding {
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">class LhsPadding {
     protected long p1, p2, p3, p4, p5, p6, p7;
 }
 
@@ -839,11 +836,11 @@ class RhsPadding extends Value {
   <span class="copyright-year">
     &copy; 
     2012 - 
-    2020
+    2021
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
-    <span class="author">来自山川湖海，却囿于昼夜，厨房与爱。------万能青年旅店</span>
+    <span class="author">是谁来自山川湖海，却囿于昼夜，厨房与爱。------万能青年旅店</span>
   </span>
 </div>
     </footer>
