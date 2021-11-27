@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 于昼夜，思山川湖海</title>
@@ -7,17 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>是谁来自山川湖海，却囿于昼夜，厨房与爱。「万能青年旅店」</copyright>
-    <lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://blog.xiebiao.com/categories/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Mon, 22 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.xiebiao.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>documentation</title>
+      <link>http://blog.xiebiao.com/categories/documentation/</link>
+      <pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.xiebiao.com/categories/documentation/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Career</title>
       <link>http://blog.xiebiao.com/categories/career/</link>
-      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 30 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>http://blog.xiebiao.com/categories/career/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>manager</title>
+      <link>http://blog.xiebiao.com/categories/manager/</link>
+      <pubDate>Sat, 30 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.xiebiao.com/categories/manager/</guid>
       <description></description>
     </item>
     

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 于昼夜，思山川湖海</title>
@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>是谁来自山川湖海，却囿于昼夜，厨房与爱。「万能青年旅店」</copyright>
-    <lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.xiebiao.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何用PlantUML&#43;C4画架构图</title>
+      <link>http://blog.xiebiao.com/post/2021-11-22-plantuml-c4/</link>
+      <pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.xiebiao.com/post/2021-11-22-plantuml-c4/</guid>
+      <description>为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件。 软件开发时用到画图软件林林总总，差异</description>
+    </item>
     
-	<atom:link href="http://blog.xiebiao.com/post/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>读书笔记：The Manager&#39;s Path</title>
+      <link>http://blog.xiebiao.com/post/2021-10-30-the-managers-path/</link>
+      <pubDate>Sat, 30 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.xiebiao.com/post/2021-10-30-the-managers-path/</guid>
+      <description>performance review:业绩考核 track record: 业绩记录 How to Be Managed Spend Time Thinking About What You Want 工作的热情总会减弱， You Are Responsible for Yourself Give Your Manager a Break</description>
+    </item>
     
     <item>
       <title>不要急于奔赴未来，未来总会如期而至</title>
@@ -135,7 +149,7 @@
       <pubDate>Mon, 08 Aug 2016 01:24:47 +0000</pubDate>
       
       <guid>http://blog.xiebiao.com/post/2016-08-08-how-to-make-projects-failed/</guid>
-      <description>在你读到这篇牢骚的时候，无数个项目正在慢慢变烂。 既然标题都用到了&amp;rdquo;烂&amp;rdquo;这个词，那什么才是烂呢？ 在你的项目里，&amp;rdq</description>
+      <description>在你读到这篇牢骚的时候，无数个项目正在慢慢变烂。 既然标题都用到了&amp;quot;烂&amp;quot;这个词，那什么才是烂呢？ 在你的项目里，&amp;ldquo</description>
     </item>
     
     <item>
