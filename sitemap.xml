@@ -9,26 +9,44 @@
   
   <url>
     <loc>http://blog.xiebiao.com/categories/</loc>
-    <lastmod>2021-11-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2021-12-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.xiebiao.com/categories/life/</loc>
+    <lastmod>2021-12-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blog.xiebiao.com/post/</loc>
-    <lastmod>2021-11-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2021-12-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.xiebiao.com/</loc>
+    <lastmod>2021-12-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.xiebiao.com/post/2021-12-10-meet-yourself/</loc>
+    <lastmod>2021-12-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blog.xiebiao.com/categories/documentation/</loc>
     <lastmod>2021-11-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.xiebiao.com/</loc>
-    <lastmod>2021-11-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -41,7 +59,8 @@
   <url>
     <loc>http://blog.xiebiao.com/categories/career/</loc>
     <lastmod>2021-09-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -54,19 +73,22 @@
   <url>
     <loc>http://blog.xiebiao.com/tags/life/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blog.xiebiao.com/categories/reading/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blog.xiebiao.com/tags/</loc>
     <lastmod>2020-10-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -79,13 +101,15 @@
   <url>
     <loc>http://blog.xiebiao.com/tags/concurrency/</loc>
     <lastmod>2020-08-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blog.xiebiao.com/categories/programming/</loc>
     <lastmod>2020-08-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -105,7 +129,8 @@
   <url>
     <loc>http://blog.xiebiao.com/tags/test/</loc>
     <lastmod>2020-01-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -118,7 +143,8 @@
   <url>
     <loc>http://blog.xiebiao.com/categories/hiring/</loc>
     <lastmod>2019-12-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -136,12 +162,6 @@
   </url>
   
   <url>
-    <loc>http://blog.xiebiao.com/categories/life/</loc>
-    <lastmod>2019-12-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.xiebiao.com/post/2019-12-05-follow-your-heart/</loc>
     <lastmod>2019-12-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -151,13 +171,15 @@
   <url>
     <loc>http://blog.xiebiao.com/tags/%E8%AF%97%E4%B8%8E%E8%BF%9C%E6%96%B9/</loc>
     <lastmod>2019-12-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blog.xiebiao.com/tags/clojure/</loc>
     <lastmod>2019-11-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -170,13 +192,15 @@
   <url>
     <loc>http://blog.xiebiao.com/tags/disruptor/</loc>
     <lastmod>2019-04-19T21:24:47+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blog.xiebiao.com/categories/translate/</loc>
     <lastmod>2019-04-19T21:24:47+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -196,7 +220,8 @@
   <url>
     <loc>http://blog.xiebiao.com/categories/marathon/</loc>
     <lastmod>2017-02-18T18:24:47+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -209,7 +234,8 @@
   <url>
     <loc>http://blog.xiebiao.com/tags/security/</loc>
     <lastmod>2017-02-04T18:24:47+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -222,13 +248,15 @@
   <url>
     <loc>http://blog.xiebiao.com/categories/engineering/</loc>
     <lastmod>2016-08-08T01:24:47+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://blog.xiebiao.com/tags/project/</loc>
     <lastmod>2016-08-08T01:24:47+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -248,7 +276,8 @@
   <url>
     <loc>http://blog.xiebiao.com/tags/pattern/</loc>
     <lastmod>2012-06-20T11:24:47+00:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
 </urlset>

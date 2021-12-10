@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>于昼夜，思山川湖海</title>
@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>是谁来自山川湖海，却囿于昼夜，厨房与爱。「万能青年旅店」</copyright>
-    <lastBuildDate>Mon, 22 Nov 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://blog.xiebiao.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 10 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.xiebiao.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>http://blog.xiebiao.com/about/</link>
@@ -22,7 +18,16 @@
     </item>
     
     <item>
-      <title>如何用PlantUML&#43;C4画架构图</title>
+      <title>翻越了这座山，你有没有遇到过自己</title>
+      <link>http://blog.xiebiao.com/post/2021-12-10-meet-yourself/</link>
+      <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.xiebiao.com/post/2021-12-10-meet-yourself/</guid>
+      <description>一 2003年，向北出川，翻越秦岭， 绿皮火车走走停停，对于没有出过川的人来说，那是一段极其漫长的路程。 虽都是外出谋生，但北上和南下的两类人，有</description>
+    </item>
+    
+    <item>
+      <title>如何用PlantUML&#43;C4画系统架构图</title>
       <link>http://blog.xiebiao.com/post/2021-11-22-plantuml-c4/</link>
       <pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate>
       
@@ -153,7 +158,7 @@
       <pubDate>Mon, 08 Aug 2016 01:24:47 +0000</pubDate>
       
       <guid>http://blog.xiebiao.com/post/2016-08-08-how-to-make-projects-failed/</guid>
-      <description>在你读到这篇牢骚的时候，无数个项目正在慢慢变烂。 既然标题都用到了&amp;rdquo;烂&amp;rdquo;这个词，那什么才是烂呢？ 在你的项目里，&amp;rdq</description>
+      <description>在你读到这篇牢骚的时候，无数个项目正在慢慢变烂。 既然标题都用到了&amp;quot;烂&amp;quot;这个词，那什么才是烂呢？ 在你的项目里，&amp;ldquo</description>
     </item>
     
     <item>

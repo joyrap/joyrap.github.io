@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Life on 于昼夜，思山川湖海</title>
@@ -7,10 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>是谁来自山川湖海，却囿于昼夜，厨房与爱。「万能青年旅店」</copyright>
-    <lastBuildDate>Thu, 05 Dec 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://blog.xiebiao.com/categories/life/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Fri, 10 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.xiebiao.com/categories/life/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>翻越了这座山，你有没有遇到过自己</title>
+      <link>http://blog.xiebiao.com/post/2021-12-10-meet-yourself/</link>
+      <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.xiebiao.com/post/2021-12-10-meet-yourself/</guid>
+      <description>一 2003年，向北出川，翻越秦岭， 绿皮火车走走停停，对于没有出过川的人来说，那是一段极其漫长的路程。 虽都是外出谋生，但北上和南下的两类人，有</description>
+    </item>
     
     <item>
       <title>执命向西的人</title>
