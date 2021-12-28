@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.90.1 with theme even" />
+<meta name="generator" content="Hugo 0.91.2 with theme even" />
 
 
 <link rel="canonical" href="http://blog.xiebiao.com/post/2012-06-20-notification-pattern/" />
@@ -186,36 +186,36 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">public class Notification {
-	private List _errors;
+    private List _errors;
 
-	public Notification() {
-		_errors = new ArrayList();
-	}
-	public void clear() {
-		_errors.clear();
-	}
-	public boolean hasError() {
-		if (this._errors != null &amp;&amp; this.errors().size() &gt; 0) {
-			return true;
-		}
-		return false;
-	}
-	public List errors() {
-		return this._errors;
-	}
-	public class Error {
-		private String _message;
+    public Notification() {
+        _errors = new ArrayList();
+    }
+    public void clear() {
+        _errors.clear();
+    }
+    public boolean hasError() {
+        if (this._errors != null &amp;&amp; this.errors().size() &gt; 0) {
+            return true;
+        }
+        return false;
+    }
+    public List errors() {
+        return this._errors;
+    }
+    public class Error {
+        private String _message;
 
-		public Error(String messgae) {
-			this._message = messgae;
-		}
-		public String getMessage() {
-			return _message;
-		}
-		public void set_message(String _message) {
-			this._message = _message;
-		}
-	}
+        public Error(String messgae) {
+            this._message = messgae;
+        }
+        public String getMessage() {
+            return _message;
+        }
+        public void set_message(String _message) {
+            this._message = _message;
+        }
+    }
 }
 </code></pre></td></tr></table>
 </div>
@@ -234,13 +234,13 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">public abstract class IDomainValidator {
-	/* 校验结果通知 */
-	protected Notification notification;
+    /* 校验结果通知 */
+    protected Notification notification;
 
-	public IDomainValidator() {
-		notification = new Notification();
-	}
-	abstract void validate();
+    public IDomainValidator() {
+        notification = new Notification();
+    }
+    abstract void validate();
 }
 </code></pre></td></tr></table>
 </div>
@@ -283,37 +283,37 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">public class User extends IDomainValidator {
-	private String name;
-	private int age;
-	public User(String name, int age) {
-		this.name = name;
-		this.age = age;
-	}
-	/**
-	 * 校验领域模型
-	 */
-	public void validate() {
-		if (age &lt; 18) {
-			notification.errors().add(notification.new Error(&#34;年龄小于18岁&#34;));
-		}
-		if (name.equals(&#34;xiaog&#34;)) {
-			notification.errors().add(notification.new Error(&#34;名字不能为:&#34; + name));
-		}
-		// 当然你还可以对该领域做其他的校验
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
+    private String name;
+    private int age;
+    public User(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    /**
+     * 校验领域模型
+     */
+    public void validate() {
+        if (age &lt; 18) {
+            notification.errors().add(notification.new Error(&#34;年龄小于18岁&#34;));
+        }
+        if (name.equals(&#34;xiaog&#34;)) {
+            notification.errors().add(notification.new Error(&#34;名字不能为:&#34; + name));
+        }
+        // 当然你还可以对该领域做其他的校验
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public int getAge() {
-		return age;
-	}
-	public void setAge(int age) {
-		this.age = age;
-	}
+    public int getAge() {
+        return age;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
 }
 </code></pre></td></tr></table>
 </div>
@@ -337,7 +337,7 @@
       user.validate();
       if (user.notification.hasError()) {
         for (Notification.Error error : user.notification.errors()) {
-		  System.out.println(error.getMessage());
+          System.out.println(error.getMessage());
         }
       }
      }

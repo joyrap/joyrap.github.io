@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.90.1 with theme even" />
+<meta name="generator" content="Hugo 0.91.2 with theme even" />
 
 
 <link rel="canonical" href="http://blog.xiebiao.com/post/2019-04-19-understanding-the-lmax-disruptor/" />
@@ -48,7 +48,7 @@
 <meta itemprop="name" content="翻译:Understanding the LMAX Disruptor">
 <meta itemprop="description" content="翻译前言 知道Disruptor这个代码库，是在Log4j 1.X升级版Log4j2中提到的，那时候就好奇它为何如此高效，关于Disruptor"><meta itemprop="datePublished" content="2019-04-19T21:24:47+00:00" />
 <meta itemprop="dateModified" content="2019-04-19T21:24:47+00:00" />
-<meta itemprop="wordCount" content="5260">
+<meta itemprop="wordCount" content="5246">
 <meta itemprop="keywords" content="Disruptor," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="翻译:Understanding the LMAX Disruptor"/>
 <meta name="twitter:description" content="翻译前言 知道Disruptor这个代码库，是在Log4j 1.X升级版Log4j2中提到的，那时候就好奇它为何如此高效，关于Disruptor"/>
@@ -126,7 +126,7 @@
             <a href="/categories/translate/"> Translate </a>
             <a href="/categories/programming/"> Programming </a>
             </div>
-          <span class="more-meta"> 5260 words </span>
+          <span class="more-meta"> 5246 words </span>
           <span class="more-meta"> 11 mins read </span>
         
       </div>
@@ -180,7 +180,6 @@
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
-</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">public void simple() {
@@ -188,10 +187,9 @@
   for (int i = 0; i &lt; MAX; i++) {
     counter++;
   }
-  
+
   System.out.println(&#34;counter=&#34; + counter);
 }
-
 </code></pre></td></tr></table>
 </div>
 </div><p>因为<code>MAX</code>值可能会很大，为了关注性能，我们决定在多核处理器上来跑这个程序，将这个任务分到两个独立的线程上执行，像这样:</p>
@@ -224,7 +222,6 @@
 </span><span class="lnt">25
 </span><span class="lnt">26
 </span><span class="lnt">27
-</span><span class="lnt">28
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">public void multi() throws Exception {
@@ -254,7 +251,6 @@
 
   System.out.println(&#34;counter=&#34; + sharedCounter);
 }
-
 </code></pre></td></tr></table>
 </div>
 </div><p>可是这个实现有两个问题。</p>
@@ -264,13 +260,11 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">counter=522388
 counter=733903
 counter=532331
-
 </code></pre></td></tr></table>
 </div>
 </div><p>由于变量 <code>sharedCounter</code>上的条件竞争，执行结果出现了不确定性。</p>
@@ -287,14 +281,12 @@ counter=532331
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Memory                   Latency      
 L1 CACHE hit         ~4 cycles (~1.2 ns) | 
 L2 CACHE hit         ~10 cycles (~3.0 ns)   |   
 L3 CACHE hit          (~60.0 ns) |   
-
 </code></pre></td></tr></table>
 </div>
 </div><p>当处理器想访问一个内存地址，首先会在一级缓存中查找，如果不存在，再从二级缓存中查找，同样如果不存在就到三级缓存中查找，
@@ -320,30 +312,27 @@ L3 CACHE hit          (~60.0 ns) |
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Test case                            Execution time
 Single thread                             300ms
 Single thread with lock             10 000 ms
 Two thread with lock                 224 000ms
-
 </code></pre></td></tr></table>
 </div>
 </div><p><code>锁</code>的另外一种替代方案就是 <code>CAS</code>(比较后交换)操作，<code>CAS</code>操作是一个机器指令，它保证操作的原子性(要么全部成功，要么都不成功)。</p>
 <p>简而言之，只有传入期望参数与原来值相等时，才会将变量更新，否则让线程继续重试<code>CAS</code>操作。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">   public final int getAndSet(int newValue) {
@@ -355,7 +344,6 @@ Two thread with lock                 224 000ms
                 return current;
         }
     }
-
 </code></pre></td></tr></table>
 </div>
 </div><p>在Java中，<code>Atomic*</code> 类，比如<code>AtomicInteger</code> 都是基于这种操作。</p>
@@ -395,7 +383,6 @@ Two threads with CAS                             30 000 ms
 </span><span class="lnt">5
 </span><span class="lnt">6
 </span><span class="lnt">7
-</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">public void simple() {
@@ -405,7 +392,6 @@ Two threads with CAS                             30 000 ms
   }
   System.out.println(&#34;counter=&#34; + counter);
 }
-
 </code></pre></td></tr></table>
 </div>
 </div><p>这个例子，不管在循环体内<code>counter</code>是否被更新，为了执行性能CPU都会进行<code>指令重排</code>。</p>
@@ -462,7 +448,6 @@ Two threads with CAS                             30 000 ms
 </span><span class="lnt">29
 </span><span class="lnt">30
 </span><span class="lnt">31
-</span><span class="lnt">32
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">public void barrier() throws Exception {
@@ -496,7 +481,6 @@ Two threads with CAS                             30 000 ms
 
   System.out.println(&#34;counter=&#34; + sharedCounter);
 }
-
 </code></pre></td></tr></table>
 </div>
 </div><p>我们再次运行这个实现 直到<code>MAX</code> 到1百万，我们依然期望得到输出  <code>counter = 1000000</code>:</p>
@@ -510,7 +494,6 @@ Two threads with CAS                             30 000 ms
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
-</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">-- First multi-threaded implementation without a memory barrier
@@ -521,7 +504,6 @@ counter=532331
 counter=999890
 counter=999868
 counter=999770
-
 </code></pre></td></tr></table>
 </div>
 </div><p>像我们看到的那样，由于内存屏障的介入，结果已经非常接近我们的预期了，然而，即使内存屏障也不足以阻止非原子操作的条件竞争。</p>
@@ -557,7 +539,6 @@ counter=999770
 </span><span class="lnt">22
 </span><span class="lnt">23
 </span><span class="lnt">24
-</span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">/** Main lock guarding all access */
@@ -584,7 +565,6 @@ private void enqueue(E x) {
     count++;
     notEmpty.signal(); // Send signal to indicate a change
 }
-
 </code></pre></td></tr></table>
 </div>
 </div><p>在一个锁操作中，当一个元素被添加时会给等待线程发送一个信号。</p>
@@ -615,7 +595,6 @@ private void enqueue(E x) {
 </span><span class="lnt">5
 </span><span class="lnt">6
 </span><span class="lnt">7
-</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Disruptor&lt;MyEvent&gt; disruptor =
@@ -625,7 +604,6 @@ private void enqueue(E x) {
       threadFactory, 
       producerType, 
       waitStrategy);
-    
 </code></pre></td></tr></table>
 </div>
 </div><p>这里启动的时候，我们分配了一个<code>ringBufferSize</code>大小的 <code>MyEvent</code>类实例。</p>
@@ -639,14 +617,10 @@ private void enqueue(E x) {
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">
-disruptor.handleEventsWith(
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">disruptor.handleEventsWith(
         (event, sequence, endOfBatch) -&gt; System.out.println(event));
-
 </code></pre></td></tr></table>
 </div>
 </div><p>对<code>handleEventsWith()</code>我们提供lambda表达式, lambda有三个输入:</p>
@@ -702,14 +676,12 @@ disruptor.handleEventsWith(
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">final long sequence = ringBuffer.next(); // Ask the ring buffer the next sequence
 final MyEvent event = ringBuffer.get(sequence); // Get the event instance
 event.setPayload(&#34;Hello, World!&#34;); // Business logic
 ringBuffer.publish(sequence); // Publish an event
-
 </code></pre></td></tr></table>
 </div>
 </div><p>序列号表示事件在ring buffer数据结构中的位置。</p>
