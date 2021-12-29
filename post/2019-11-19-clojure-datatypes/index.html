@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.90.1 with theme even" />
+<meta name="generator" content="Hugo 0.91.2 with theme even" />
 
 
 <link rel="canonical" href="http://blog.xiebiao.com/post/2019-11-19-clojure-datatypes/" />
@@ -48,7 +48,7 @@
 <meta itemprop="name" content="Clojure中的数据类型">
 <meta itemprop="description" content="Clojure作为一款基于JVM的LISP语言，我个人从创造者Rich Hickey身上吸收了很多编程的观点，尽管作者提出了很多面向对象编程语"><meta itemprop="datePublished" content="2019-11-19T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2019-11-19T00:00:00+00:00" />
-<meta itemprop="wordCount" content="2195">
+<meta itemprop="wordCount" content="2191">
 <meta itemprop="keywords" content="Clojure," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Clojure中的数据类型"/>
 <meta name="twitter:description" content="Clojure作为一款基于JVM的LISP语言，我个人从创造者Rich Hickey身上吸收了很多编程的观点，尽管作者提出了很多面向对象编程语"/>
@@ -125,7 +125,7 @@
         <div class="post-category">
             <a href="/categories/programming/"> Programming </a>
             </div>
-          <span class="more-meta"> 2195 words </span>
+          <span class="more-meta"> 2191 words </span>
           <span class="more-meta"> 5 mins read </span>
         
       </div>
@@ -205,7 +205,6 @@
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
-</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">(defprotocol Dateable
@@ -216,7 +215,6 @@
   {:to-ms #(.getTime %)})    ;java.util.Date实现了这个接口
 
 (to-ms (java.util.Date.))  ;java.util.Date具备了to-ms方法
-
 </code></pre></td></tr></table>
 </div>
 </div><p>在Java中可以通过继承或者组合的方式实现对原有类的扩展，但是会显得很笨粗，Clojure避免了不必要的多层次封装/适配，在不修改原有类同时不新增类的基础上实现了真正的多态性。<code>defprotocol</code> 除了可以被<code>deftype</code>,<code>defrecord</code>,<code>reify</code>实现外，也可以被Java中的类实现。</p>
@@ -228,12 +226,10 @@
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">(def user {&#34;name&#34; &#34;xiebiao&#34; , &#34;age&#34; 30})
 (:name user)
-
 </code></pre></td></tr></table>
 </div>
 </div><p>用defrecord来表达:</p>
@@ -242,13 +238,11 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">(defrecord User [name age])  ;对应Java的Class User
 (def user (-&gt;User &#34;xiebiao&#34; 30)) ;创建一个user对象
 (:name user )   ;获取user对象的name数据
-
 </code></pre></td></tr></table>
 </div>
 </div><p>既然这样，Clojure为什么还需要defrecord呢？因为你除了可以获得具有map一样的数据操作特性外(包括数据解构)，还获得了类型驱动带来的多态特性，所以Clojure推荐将业务数据封装到defrecord中。</p>
@@ -331,7 +325,6 @@ IB
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
-</span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">(deftype Circle [radius]) ;定义两个不通的类型
@@ -348,7 +341,6 @@ IB
 
 (area myCircle); area方法会根据参数的类型决定调用哪个方法。
 (area mySquare)
-
 </code></pre></td></tr></table>
 </div>
 </div><p>当然Clojure通过defmulti 还可以定义更灵活的分发规则，这里只是其中一个根据类型分发实现多态的例子。
