@@ -1,4 +1,0 @@
-@startuml
-[PlantUML code] -> [graphviz]
-[graphviz] -> [PNG,SVG]
-@enduml
