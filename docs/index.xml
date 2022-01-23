@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>是谁来自山川湖海，却囿于昼夜，厨房与爱。「万能青年旅店」</copyright>
-    <lastBuildDate>Thu, 20 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://joyrap.github.io/about/</link>
@@ -15,24 +15,6 @@
       
       <guid>https://joyrap.github.io/about/</guid>
       <description>网名:于川海，软件工程师。 轻度乐观主义忧郁患者 前京东软件工程师 前嘀咕网架构师 这个博客主要是一些个人学习成长的记录, 尽量不输出观点，不评价世道</description>
-    </item>
-    
-    <item>
-      <title>如何才能什么都不做</title>
-      <link>https://joyrap.github.io/post/2022-01-20-how-to-do-nothing/</link>
-      <pubDate>Thu, 20 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://joyrap.github.io/post/2022-01-20-how-to-do-nothing/</guid>
-      <description>参考</description>
-    </item>
-    
-    <item>
-      <title>API设计-版本控制</title>
-      <link>https://joyrap.github.io/post/2022-01-19-api-versioning/</link>
-      <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://joyrap.github.io/post/2022-01-19-api-versioning/</guid>
-      <description>参考 Version Number Design Web APIs API Design Patterns API Versioning Best Practices For API Versioning Shopify API Versioning</description>
     </item>
     
     <item>
@@ -72,15 +54,6 @@
     </item>
     
     <item>
-      <title>Java Weekly周刊</title>
-      <link>https://joyrap.github.io/post/2021-10-24-java-weekly/</link>
-      <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://joyrap.github.io/post/2021-10-24-java-weekly/</guid>
-      <description>周刊结构 Java语言相关 著名框架 博客&amp;amp;播客 stackoverflow 其他值得阅读的内容</description>
-    </item>
-    
-    <item>
       <title>不要急于奔赴未来，未来总会如期而至</title>
       <link>https://joyrap.github.io/post/2021-09-30-i-am-quit/</link>
       <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
@@ -96,15 +69,6 @@
       
       <guid>https://joyrap.github.io/post/2020-10-22-indeterminacy/</guid>
       <description>这个世界有没有看起来是确定的事情？ 可能没有， 不确定才是这个世界最值得探索的奥秘。 但如果非要让一件事情变得更接近确定，那么有没有一套经得住考验</description>
-    </item>
-    
-    <item>
-      <title>Asciidoc,Markdown,reStructuredText文档格式比较</title>
-      <link>https://joyrap.github.io/post/2020-08-31-document-format-compare/</link>
-      <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://joyrap.github.io/post/2020-08-31-document-format-compare/</guid>
-      <description>-Asciidoc -Markdown -reStructuredText -LaTeX -Lightweight Markup</description>
     </item>
     
     <item>
@@ -168,15 +132,6 @@
       
       <guid>https://joyrap.github.io/post/2019-11-19-clojure-datatypes/</guid>
       <description>Clojure作为一款基于JVM的LISP语言，我个人从创造者Rich Hickey身上吸收了很多编程的观点，尽管作者提出了很多面向对象编程语</description>
-    </item>
-    
-    <item>
-      <title>翻译:What are Bloom filters?</title>
-      <link>https://joyrap.github.io/post/2019-04-26-what-are-bloom-filters/</link>
-      <pubDate>Fri, 26 Apr 2019 21:24:47 +0000</pubDate>
-      
-      <guid>https://joyrap.github.io/post/2019-04-26-what-are-bloom-filters/</guid>
-      <description>翻译前言 原文连接: https://blog.medium.com/what-are-bloom-filters-1ec2a50c68ff</description>
     </item>
     
     <item>

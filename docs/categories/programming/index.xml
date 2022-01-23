@@ -45,15 +45,6 @@
     </item>
     
     <item>
-      <title>翻译:What are Bloom filters?</title>
-      <link>https://joyrap.github.io/post/2019-04-26-what-are-bloom-filters/</link>
-      <pubDate>Fri, 26 Apr 2019 21:24:47 +0000</pubDate>
-      
-      <guid>https://joyrap.github.io/post/2019-04-26-what-are-bloom-filters/</guid>
-      <description>翻译前言 原文连接: https://blog.medium.com/what-are-bloom-filters-1ec2a50c68ff</description>
-    </item>
-    
-    <item>
       <title>翻译:Understanding the LMAX Disruptor</title>
       <link>https://joyrap.github.io/post/2019-04-19-understanding-the-lmax-disruptor/</link>
       <pubDate>Fri, 19 Apr 2019 21:24:47 +0000</pubDate>
