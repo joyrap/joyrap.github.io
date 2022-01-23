@@ -1,125 +1,158 @@
-<!doctype html><html lang=en>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
-<title>如何用PlantUML+C4画系统架构图 - 于昼夜，思山川湖海</title>
-<meta name=renderer content="webkit">
-<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
-<meta http-equiv=cache-control content="no-transform">
-<meta http-equiv=cache-control content="no-siteapp">
-<meta name=theme-color content="#f8f5ec">
-<meta name=msapplication-navbutton-color content="#f8f5ec">
-<meta name=apple-mobile-web-app-capable content="yes">
-<meta name=apple-mobile-web-app-status-bar-style content="#f8f5ec">
-<meta name=author content="于川海"><meta name=description content="为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件。 软件开发时用到画图软件林林总总，差异"><meta name=keywords content="于川海,theme,even">
-<meta name=generator content="Hugo 0.92.0 with theme even">
-<link rel=canonical href=https://joyrap.github.io/post/2021-11-22-plantuml-c4/>
-<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
-<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
-<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
-<link rel=manifest href=/manifest.json>
-<link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5>
-<link href=/dist/even.c2a46f00.min.css rel=stylesheet>
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin=anonymous>
-<meta property="og:title" content="如何用PlantUML+C4画系统架构图">
-<meta property="og:description" content="为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件。 软件开发时用到画图软件林林总总，差异">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://joyrap.github.io/post/2021-11-22-plantuml-c4/"><meta property="article:section" content="post">
-<meta property="article:published_time" content="2021-11-22T00:00:00+00:00">
-<meta property="article:modified_time" content="2021-11-22T00:00:00+00:00">
-<meta itemprop=name content="如何用PlantUML+C4画系统架构图">
-<meta itemprop=description content="为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件。 软件开发时用到画图软件林林总总，差异"><meta itemprop=datePublished content="2021-11-22T00:00:00+00:00">
-<meta itemprop=dateModified content="2021-11-22T00:00:00+00:00">
-<meta itemprop=wordCount content="1627">
-<meta itemprop=keywords content><meta name=twitter:card content="summary">
-<meta name=twitter:title content="如何用PlantUML+C4画系统架构图">
-<meta name=twitter:description content="为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件。 软件开发时用到画图软件林林总总，差异"><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script>
-<script src=https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js></script><![endif]-->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>如何用PlantUML&#43;C4画系统架构图 - 于昼夜，思山川湖海</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="于川海" /><meta name="description" content="为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件。 软件开发时用到画图软件林林总总，差异" /><meta name="keywords" content="于川海, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.92.0 with theme even" />
+
+
+<link rel="canonical" href="https://joyrap.github.io/post/2021-11-22-plantuml-c4/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="如何用PlantUML&#43;C4画系统架构图" />
+<meta property="og:description" content="为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件。 软件开发时用到画图软件林林总总，差异" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://joyrap.github.io/post/2021-11-22-plantuml-c4/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-11-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-11-22T00:00:00+00:00" />
+
+<meta itemprop="name" content="如何用PlantUML&#43;C4画系统架构图">
+<meta itemprop="description" content="为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件。 软件开发时用到画图软件林林总总，差异"><meta itemprop="datePublished" content="2021-11-22T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-11-22T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1627">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="如何用PlantUML&#43;C4画系统架构图"/>
+<meta name="twitter:description" content="为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件。 软件开发时用到画图软件林林总总，差异"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
 </head>
 <body>
-<div id=mobile-navbar class=mobile-navbar>
-<div class=mobile-header-logo>
-<a href=/ class=logo>于昼夜，思山川湖海</a>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">于昼夜，思山川湖海</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </div>
-<div class=mobile-navbar-icon>
-<span></span>
-<span></span>
-<span></span>
-</div>
-</div>
-<nav id=mobile-menu class="mobile-menu slideout-menu">
-<ul class=mobile-menu-list>
-<a href=/>
-<li class=mobile-menu-item>Home</li>
-</a><a href=/post/>
-<li class=mobile-menu-item>Archives</li>
-</a><a href=/tags/>
-<li class=mobile-menu-item>Tags</li>
-</a><a href=/categories/>
-<li class=mobile-menu-item>Categories</li>
-</a><a href=/about/>
-<li class=mobile-menu-item>About</li>
-</a>
-</ul>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
 </nav>
-<div class=container id=mobile-panel>
-<header id=header class=header>
-<div class=logo-wrapper>
-<a href=/ class=logo>于昼夜，思山川湖海</a>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">于昼夜，思山川湖海</a>
 </div>
-<nav class=site-navbar>
-<ul id=menu class=menu>
-<li class=menu-item>
-<a class=menu-item-link href=/>Home</a>
-</li><li class=menu-item>
-<a class=menu-item-link href=/post/>Archives</a>
-</li><li class=menu-item>
-<a class=menu-item-link href=/tags/>Tags</a>
-</li><li class=menu-item>
-<a class=menu-item-link href=/categories/>Categories</a>
-</li><li class=menu-item>
-<a class=menu-item-link href=/about/>About</a>
-</li>
-</ul>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
 </nav>
-</header>
-<main id=main class=main>
-<div class=content-wrapper>
-<div id=content class=content>
-<article class=post>
-<header class=post-header>
-<h1 class=post-title>如何用PlantUML+C4画系统架构图</h1>
-<div class=post-meta>
-<span class=post-time> 2021-11-22 </span>
-<div class=post-category>
-<a href=/categories/documentation/> documentation </a>
-</div>
-<span class=more-meta> 1627 words </span>
-<span class=more-meta> 4 mins read </span>
-</div>
-</header>
-<div class=post-toc id=post-toc>
-<h2 class=post-toc-title>Contents</h2>
-<div class="post-toc-content always-active">
-<nav id=TableOfContents>
-<ul>
-<li>
-<ul>
-<li><a href=#为何要用文本的方式记录>为何要用文本的方式记录</a></li>
-<li><a href=#plantuml>PlantUML</a></li>
-<li><a href=#插件与平台支持>插件与平台支持</a></li>
-<li><a href=#c4>C4</a></li>
-<li><a href=#plantuml与c4之外>PlantUML与C4之外</a></li>
-<li><a href=#最后>最后</a></li>
-</ul>
-</li>
-</ul>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">如何用PlantUML&#43;C4画系统架构图</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-11-22 </span>
+        <div class="post-category">
+            <a href="/categories/documentation/"> documentation </a>
+            </div>
+          <span class="more-meta"> 1627 words </span>
+          <span class="more-meta"> 4 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#为何要用文本的方式记录">为何要用文本的方式记录</a></li>
+        <li><a href="#plantuml">PlantUML</a></li>
+        <li><a href="#插件与平台支持">插件与平台支持</a></li>
+        <li><a href="#c4">C4</a></li>
+        <li><a href="#plantuml与c4之外">PlantUML与C4之外</a></li>
+        <li><a href="#最后">最后</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
+  </div>
 </div>
-</div>
-<div class=post-content>
-<h3 id=为何要用文本的方式记录>为何要用文本的方式记录</h3>
-<p>最近工作中开始重度使用<a href=https://plantuml.com>PlantUML</a>，于是就总结一下软件开发中使用到的画图软件。</p>
+    <div class="post-content">
+      <h3 id="为何要用文本的方式记录">为何要用文本的方式记录</h3>
+<p>最近工作中开始重度使用<a href="https://plantuml.com">PlantUML</a>，于是就总结一下软件开发中使用到的画图软件。</p>
 <p>软件开发时用到画图软件林林总总，差异化较大，但我们使用的大部分画图工具，都以独特的二进制文件存储，缺点不利于团队协作和分享，导致跟随代码的相关思维图不能更好地被管理，甚至无法与代码保持及时更新迭代，所以软件工程师们更希望通过像代码一样来管理图形化思维。</p>
 <p>文本具有以下优点：</p>
 <ul>
@@ -127,168 +160,204 @@
 <li>版本管理（借助版本管理软件git）</li>
 <li>易于编辑（任何文本编辑器）</li>
 </ul>
-<h3 id=plantuml>PlantUML</h3>
-<p>PlantUML就是为以上这些优点存在的，它允许你通过一个简单的描述性语言（类似伪代码）来画UML图，最后通过<a href=https://graphviz.org>graphviz</a>生成图片格式（PNG，SVG）。当然PlantUML不仅仅支持UML图，还支持很多非UML图，几乎涵盖了软件开发所有标准图形，具体可以看<a href=https://plantuml.com>官网</a>介绍。</p>
-<p><img src=/images/2021-11-22-plantuml-c4/plantuml.png alt=Excalidraw></p>
+<h3 id="plantuml">PlantUML</h3>
+<p>PlantUML就是为以上这些优点存在的，它允许你通过一个简单的描述性语言（类似伪代码）来画UML图，最后通过<a href="https://graphviz.org">graphviz</a>生成图片格式（PNG，SVG）。当然PlantUML不仅仅支持UML图，还支持很多非UML图，几乎涵盖了软件开发所有标准图形，具体可以看<a href="https://plantuml.com">官网</a>介绍。</p>
+<p><img src="/images/2021-11-22-plantuml-c4/plantuml.png" alt="Excalidraw"></p>
 <p>PlantUML扩展了很多语法来定义元素的的形状和属性，以及元素间的位置关系，整体布局（从上至下，或从左至右）顺序。刚开始使用PlantUML你肯定会感到不适，它不像图形化界面拖拽软件那样简单，但是作为软件开发工程师来说，学习PlantUML语法并不是难事，因为它已经做了简单化。</p>
-<h3 id=插件与平台支持>插件与平台支持</h3>
-<p>目前在两大主流编辑器<a href=https://code.visualstudio.com/>VSCode</a>和<a href=https://www.jetbrains.com/idea/>IDEA</a>都有对应的插件（依赖<a href=https://graphviz.org>graphviz</a>），个人非常推荐VSCode。</p>
+<h3 id="插件与平台支持">插件与平台支持</h3>
+<p>目前在两大主流编辑器<a href="https://code.visualstudio.com/">VSCode</a>和<a href="https://www.jetbrains.com/idea/">IDEA</a>都有对应的插件（依赖<a href="https://graphviz.org">graphviz</a>），个人非常推荐VSCode。</p>
 <p>由于PlantUML的普及，各大SaaS软件平台都支持将PlantUML代码嵌入到文档中（例如Confluence），直接生成图片，真正做到图形与文档同步。</p>
-<h3 id=c4>C4</h3>
+<h3 id="c4">C4</h3>
 <p>在工作中，很多软件工程师由于经验的不同，在表达非UML范畴的图形时，堆砌了很多线条和框图，并没有章法，鉴于这种乱象，Simon Brown 提出了
-<a href=https://c4model.com>C4模型</a>，他定义了标准化的软件架构图表达方式，将软件架构图由远及近，由粗到细，分为了4个层级：</p>
+<a href="https://c4model.com">C4模型</a>，他定义了标准化的软件架构图表达方式，将软件架构图由远及近，由粗到细，分为了4个层级：</p>
 <ul>
 <li>上下文关系</li>
 <li>容器</li>
 <li>组件</li>
 <li>代码</li>
 </ul>
-<p>在<a href=https://en.wikipedia.org/wiki/Unified_Modeling_Language>UML</a>基础上提出了更高层的抽象来描述软件架构。</p>
+<p>在<a href="https://en.wikipedia.org/wiki/Unified_Modeling_Language">UML</a>基础上提出了更高层的抽象来描述软件架构。</p>
 <p>原话是:</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>It&#39;s a way to create maps of your code, at various levels of detail, 
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">It&#39;s a way to create maps of your code, at various levels of detail, 
 in the same way you would use something 
 like Google Maps to zoom in and out of an area you are interested in.
 </code></pre></td></tr></table>
 </div>
 </div><p>这种方法就像是地图软件上使用缩放功能一样来观察软件系统。</p>
-<p>C4同时提供了一套基于<a href=https://github.com/plantuml-stdlib/C4-PlantUML>PlantUML的模型定义</a>，效果图如下：</p>
-<p><img src=https://camo.githubusercontent.com/fd09f234c8035394c23a201f31eef5057a6ea042806517b448e36e23473b74a2/68747470733a2f2f7777772e706c616e74756d6c2e636f6d2f706c616e74756d6c2f706e672f684c50525a2d39363474747468775858545f4d316e344d56446c6949515148626d43644559576c31703670554b44616b4a366c52744c5074366d50352d552d6644585733437a3536496275474e5054705a676b686f6c76693748664e765a4275376f485178535775343078736d6371317172477565484c41546b4b76675849614b304865695a3864765130744e65514a7555686e454c6d5f7061514a66743575742d67746d366165424f374b324b667632457834315a78697130594339517466484c58647377745270354f643042574a41663562496a30567a466b33714b5f68614c4f456354467132775f6e5a6749626f78596a53754e7a554a306d6b457a64684263436354616164434e772d676e774b34584b5f6c627772674c496e3070514d745a4a7174476f6f44347743635f6f6735486957593377436c2d734e654a425133765270767a4d61795450734575346d70474439566141683331686a7339436c64437939334c36676d6c6c44746d4f515164445f566a6d34617833734d687a6f766e5f486c46395643642d45336a774d2d792d566c6d713764786f454e514231547337386a6b774941494b486c7853786249344976384c3654673349646f6d657655514f42585369696d51734c5f48747065595476317146715178664e475972327377316e5f79446e4a516b4f4f59534339395764454c38484d4f36536e58656d717941615436614f43374c442d356f5930774d345476343270384d417451494d6354706962714f4e4a2d726e66325247517a305253625933637855737053656166344d5461306171494e6f6a614d77705832686e5f4f614138766a39465f437a516a57354f375f57573065443752746245796e6742577536794b6d78306566345a47707151424a4c7a6e58727338326b46354a767a37745a4f63414e594f52324e44456576447544494d6d38444b63532d7953567457596f36426c365173314a39536e3676396c474c63764462687259576e656431543641676962365979554d37714a67486130514c7963734c4a676b4775726938545f423063504c4c3832706b3146614b4f754555357345597a395644414b51765a3855624b5a67615f64334d4474644e5854796f484174366a31514a385851434b5231625253646e645f72595256494e6b4130314973656334526b4d44757451413363457176415f587a445568594e77526d444e50515346515f4338304776636d7062484e3261396e4d2d524c5f6f7669677261314242636c34614366414954477367766c4178384d66437875473278666c6f684b514a356d664f4a6c73434e5a7375717072586e63636870426f6c73654768756533356e44417352735f6c4b6f4f624c5f646c692d5637356a6f6237386a51714370314a7366646d2d70506f644e6c367a5938654c394b6e354f684a4c366d5658497839356248374f4f734a64346c4361686135624a424e5830515552654d7867786c6b705265453433564b334e624f56434451625174675755767862425a59336f63394c5967522d6d5042616e527665666c5239616c4e534e72516848534931727434794f702d4367526b2d574a6c49684d563432706c4d704f776575396544533441675a3953547148314d327853424e5f616a43775a38632d6b694e3255344869365f3072655f5337385a6b76634d517a30624f4d66584f74485542516f7a344f7569454573394a5a705a586e3533645a346c67644e4a503137334d6732556a724f4f5a5032525668704d5339724e4d6b7746585a775168584f4354374b374c2d61744e54644b674e6444795267514a637668725257505f6c57444330625f334d545a566c546c6a37506138334d754c79554e4a5671723052692d5646304e7058745078624772797a79515a50554670784b782d436d676f72702d31473030 alt="Alt text"></p>
-<h3 id=plantuml与c4之外>PlantUML与C4之外</h3>
-<h4 id=diagrams>Diagrams</h4>
-<p>相较于<a href=https://app.diagrams.net/>Diagrams</a>，国内开发者用得最多的是<a href=https://processon.com>ProcessOn</a>，后者主要是商业化收费，在线协作存储，前者<a href=https://github.com/jgraph/drawio>代码开源</a>，提供本地桌面版本(主要开发语言是JavaScript)，
+<p>C4同时提供了一套基于<a href="https://github.com/plantuml-stdlib/C4-PlantUML">PlantUML的模型定义</a>，效果图如下：</p>
+<p><img src="https://camo.githubusercontent.com/fd09f234c8035394c23a201f31eef5057a6ea042806517b448e36e23473b74a2/68747470733a2f2f7777772e706c616e74756d6c2e636f6d2f706c616e74756d6c2f706e672f684c50525a2d39363474747468775858545f4d316e344d56446c6949515148626d43644559576c31703670554b44616b4a366c52744c5074366d50352d552d6644585733437a3536496275474e5054705a676b686f6c76693748664e765a4275376f485178535775343078736d6371317172477565484c41546b4b76675849614b304865695a3864765130744e65514a7555686e454c6d5f7061514a66743575742d67746d366165424f374b324b667632457834315a78697130594339517466484c58647377745270354f643042574a41663562496a30567a466b33714b5f68614c4f456354467132775f6e5a6749626f78596a53754e7a554a306d6b457a64684263436354616164434e772d676e774b34584b5f6c627772674c496e3070514d745a4a7174476f6f44347743635f6f6735486957593377436c2d734e654a425133765270767a4d61795450734575346d70474439566141683331686a7339436c64437939334c36676d6c6c44746d4f515164445f566a6d34617833734d687a6f766e5f486c46395643642d45336a774d2d792d566c6d713764786f454e514231547337386a6b774941494b486c7853786249344976384c3654673349646f6d657655514f42585369696d51734c5f48747065595476317146715178664e475972327377316e5f79446e4a516b4f4f59534339395764454c38484d4f36536e58656d717941615436614f43374c442d356f5930774d345476343270384d417451494d6354706962714f4e4a2d726e66325247517a305253625933637855737053656166344d5461306171494e6f6a614d77705832686e5f4f614138766a39465f437a516a57354f375f57573065443752746245796e6742577536794b6d78306566345a47707151424a4c7a6e58727338326b46354a767a37745a4f63414e594f52324e44456576447544494d6d38444b63532d7953567457596f36426c365173314a39536e3676396c474c63764462687259576e656431543641676962365979554d37714a67486130514c7963734c4a676b4775726938545f423063504c4c3832706b3146614b4f754555357345597a395644414b51765a3855624b5a67615f64334d4474644e5854796f484174366a31514a385851434b5231625253646e645f72595256494e6b4130314973656334526b4d44757451413363457176415f587a445568594e77526d444e50515346515f4338304776636d7062484e3261396e4d2d524c5f6f7669677261314242636c34614366414954477367766c4178384d66437875473278666c6f684b514a356d664f4a6c73434e5a7375717072586e63636870426f6c73654768756533356e44417352735f6c4b6f4f624c5f646c692d5637356a6f6237386a51714370314a7366646d2d70506f644e6c367a5938654c394b6e354f684a4c366d5658497839356248374f4f734a64346c4361686135624a424e5830515552654d7867786c6b705265453433564b334e624f56434451625174675755767862425a59336f63394c5967522d6d5042616e527665666c5239616c4e534e72516848534931727434794f702d4367526b2d574a6c49684d563432706c4d704f776575396544533441675a3953547148314d327853424e5f616a43775a38632d6b694e3255344869365f3072655f5337385a6b76634d517a30624f4d66584f74485542516f7a344f7569454573394a5a705a586e3533645a346c67644e4a503137334d6732556a724f4f5a5032525668704d5339724e4d6b7746585a775168584f4354374b374c2d61744e54644b674e6444795267514a637668725257505f6c57444330625f334d545a566c546c6a37506138334d754c79554e4a5671723052692d5646304e7058745078624772797a79515a50554670784b782d436d676f72702d31473030" alt="Alt text"></p>
+<h3 id="plantuml与c4之外">PlantUML与C4之外</h3>
+<h4 id="diagrams">Diagrams</h4>
+<p>相较于<a href="https://app.diagrams.net/">Diagrams</a>，国内开发者用得最多的是<a href="https://processon.com">ProcessOn</a>，后者主要是商业化收费，在线协作存储，前者<a href="https://github.com/jgraph/drawio">代码开源</a>，提供本地桌面版本(主要开发语言是JavaScript)，
 这类工具都提供拖拽的方式来绘制图形，支持导出图片，另外Diagrams存储的文件虽然是XML格式，但是也只有它自己的程序才能解析。</p>
 <p>效果如下：
-<img src=https://www.diagrams.net/assets/svg/home-dia1.svg alt=Diagrams></p>
-<h4 id=excalidraw>Excalidraw</h4>
-<p>像Diagrams这些工具，并不是没有竞争对手，<a href=https://excalidraw.com/>Excalidraw</a>就是其中一个，
-PlantUML与C4模型构建了图形化的标准，但有时候我们又希望带点随性，更灵活地表达头脑风暴，<a href=https://excalidraw.com/>Excalidraw</a>这个工具提供了手绘风格样式，同时也支持外部导入样式。
-Excalidraw也是<a href=https://github.com/excalidraw/excalidraw>代码开源</a>,主要采用TypeScript语言开发，本质上和Diagrams的区别在于自由的模版风格。</p>
+<img src="https://www.diagrams.net/assets/svg/home-dia1.svg" alt="Diagrams"></p>
+<h4 id="excalidraw">Excalidraw</h4>
+<p>像Diagrams这些工具，并不是没有竞争对手，<a href="https://excalidraw.com/">Excalidraw</a>就是其中一个，
+PlantUML与C4模型构建了图形化的标准，但有时候我们又希望带点随性，更灵活地表达头脑风暴，<a href="https://excalidraw.com/">Excalidraw</a>这个工具提供了手绘风格样式，同时也支持外部导入样式。
+Excalidraw也是<a href="https://github.com/excalidraw/excalidraw">代码开源</a>,主要采用TypeScript语言开发，本质上和Diagrams的区别在于自由的模版风格。</p>
 <p>效果如下：</p>
-<p><img src=/images/2021-11-22-plantuml-c4/excalidraw.png alt=Excalidraw title=图片来自网络></p>
-<h4 id=tldraw>Tldraw</h4>
-<p><a href=https://www.tldraw.com/>tldraw</a>似乎是另外一个Excalidraw？待观察。</p>
-<h4 id=asciiflow>Asciiflow</h4>
+<p><img src="/images/2021-11-22-plantuml-c4/excalidraw.png" alt="Excalidraw" title="图片来自网络"></p>
+<h4 id="tldraw">Tldraw</h4>
+<p><a href="https://www.tldraw.com/">tldraw</a>似乎是另外一个Excalidraw？待观察。</p>
+<h4 id="asciiflow">Asciiflow</h4>
 <p>另外一种场景就是，有时候我们想在代码中放一些简单的流程图，例如：</p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span><span class=lnt>6
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
 </span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=err>+---------+</span>
-<span class=err>|</span>         <span class=err>|</span>       <span class=err>+---------+</span>
-<span class=err>|</span>         <span class=err>|</span>       <span class=err>|</span>         <span class=err>|</span>
-<span class=err>|</span>         <span class=err>+------&gt;|</span>         <span class=err>|</span>
-<span class=err>|</span>         <span class=err>|</span>       <span class=err>+---------+</span>
-<span class=err>+---------+</span>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="err">+---------+</span>
+<span class="err">|</span>         <span class="err">|</span>       <span class="err">+---------+</span>
+<span class="err">|</span>         <span class="err">|</span>       <span class="err">|</span>         <span class="err">|</span>
+<span class="err">|</span>         <span class="err">+------&gt;|</span>         <span class="err">|</span>
+<span class="err">|</span>         <span class="err">|</span>       <span class="err">+---------+</span>
+<span class="err">+---------+</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>这类包含在代码注释中的图形出现在很多开源项目中(Java JDK源码中也在使用)。
-手动输入这些符号肯定不科学，<a href=https://asciiflow.com/#/>Asciiflow</a>这个工具专门解决这类问题。</p>
+手动输入这些符号肯定不科学，<a href="https://asciiflow.com/#/">Asciiflow</a>这个工具专门解决这类问题。</p>
 <p>效果图如下：</p>
-<p><img src=http://blog.xiebiao.com/images/2021-11-22-plantuml-c4/asciiflow.png alt=Excalidraw title=图片来自网络></p>
-<h3 id=最后>最后</h3>
-<p>回到<a href=https://c4model.com>C4模型</a>在讲Level 4: Code的时候提到一个概念，对表达代码级别的图形来说，其生命周期相对来说比较短，也就是说这类图你画完后，随着需求以及代码的变更会慢慢过期。</p>
+<p><img src="http://blog.xiebiao.com/images/2021-11-22-plantuml-c4/asciiflow.png" alt="Excalidraw" title="图片来自网络"></p>
+<h3 id="最后">最后</h3>
+<p>回到<a href="https://c4model.com">C4模型</a>在讲Level 4: Code的时候提到一个概念，对表达代码级别的图形来说，其生命周期相对来说比较短，也就是说这类图你画完后，随着需求以及代码的变更会慢慢过期。</p>
 <p>所以并不是所有架构图都值得维护其有效性，往往越具体的架构图越容易过期，
 可以选择先用PlantUML之外的工具来画，再将具有长期价值的架构想法转化成PlantUML代码。</p>
 <p>&mdash; 相关连接 &mdash;</p>
 <ul>
-<li><a href=https://plantuml.com>PlantUML</a></li>
-<li><a href=https://graphviz.org>graphviz</a></li>
-<li><a href=https://excalidraw.com>Excalidraw</a></li>
-<li><a href=https://asciiflow.com/>Asciiflow</a></li>
-<li><a href=https://en.wikipedia.org/wiki/C4_model>C4 model</a></li>
-<li><a href=http://c4model.com>C4</a></li>
-<li><a href=https://github.com/plantuml-stdlib/C4-PlantUML>PlantUML插件库</a></li>
-<li><a href=https://github.com/xuanye/plantuml-style-c4>PlantUML美化</a></li>
+<li><a href="https://plantuml.com">PlantUML</a></li>
+<li><a href="https://graphviz.org">graphviz</a></li>
+<li><a href="https://excalidraw.com">Excalidraw</a></li>
+<li><a href="https://asciiflow.com/">Asciiflow</a></li>
+<li><a href="https://en.wikipedia.org/wiki/C4_model">C4 model</a></li>
+<li><a href="http://c4model.com">C4</a></li>
+<li><a href="https://github.com/plantuml-stdlib/C4-PlantUML">PlantUML插件库</a></li>
+<li><a href="https://github.com/xuanye/plantuml-style-c4">PlantUML美化</a></li>
 </ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">于川海</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2021-11-22
+        
+    </span>
+  </p>
+  
+  
 </div>
-<div class=post-copyright>
-<p class=copyright-item>
-<span class=item-title>Author</span>
-<span class=item-content>于川海</span>
-</p>
-<p class=copyright-item>
-<span class=item-title>LastMod</span>
-<span class=item-content>
-2021-11-22
-</span>
-</p>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://blog.xiebiao.com/images/wechat-qr-code.png">
+        <span>wechat</span>
+      </label>
+    
+  </div>
+</div><footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/2021-12-10-meet-yourself/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">翻越了这座山，你有没有遇到过自己</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/2021-10-24-java-weekly/">
+            <span class="next-text nav-default">Java Weekly周刊</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/1130203/bill-xie" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://twitter.com/joyrap" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/xiebiao" class="iconfont icon-github" title="github"></a>
+  <a href="https://joyrap.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
-<div class=post-reward>
-<input type=checkbox name=reward id=reward hidden>
-<label class=reward-button for=reward>Reward</label>
-<div class=qr-code>
-<label class=qr-code-image for=reward>
-<img class=image src=https://blog.xiebiao.com/images/wechat-qr-code.png>
-<span>wechat</span>
-</label>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2012 - 
+    2022
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">是谁来自山川湖海，却囿于昼夜，厨房与爱。「万能青年旅店」</span>
+  </span>
 </div>
-</div><footer class=post-footer>
-<nav class=post-nav>
-<a class=prev href=/post/2021-12-10-meet-yourself/>
-<i class="iconfont icon-left"></i>
-<span class="prev-text nav-default">翻越了这座山，你有没有遇到过自己</span>
-<span class="prev-text nav-mobile">Prev</span>
-</a>
-<a class=next href=/post/2021-09-30-i-am-quit/>
-<span class="next-text nav-default">不要急于奔赴未来，未来总会如期而至</span>
-<span class="next-text nav-mobile">Next</span>
-<i class="iconfont icon-right"></i>
-</a>
-</nav>
-</footer>
-</article>
-</div>
-</div>
-</main>
-<footer id=footer class=footer>
-<div class=social-links>
-<a href=https://stackoverflow.com/users/1130203/bill-xie class="iconfont icon-stack-overflow" title=stack-overflow></a>
-<a href=https://twitter.com/joyrap class="iconfont icon-twitter" title=twitter></a>
-<a href=https://github.com/xiebiao class="iconfont icon-github" title=github></a>
-<a href=https://joyrap.github.io/index.xml type=application/rss+xml class="iconfont icon-rss" title=rss></a>
-</div>
-<div class=copyright>
-<span class=power-by>
-Powered by <a class=hexo-link href=https://gohugo.io>Hugo</a>
-</span>
-<span class=division>|</span>
-<span class=theme-info>
-Theme -
-<a class=theme-link href=https://github.com/olOwOlo/hugo-theme-even>Even</a>
-</span>
-<span class=copyright-year>
-&copy;
-2012 -
-2022
-<span class=heart>
-<i class="iconfont icon-heart"></i>
-</span>
-<span class=author>是谁来自山川湖海，却囿于昼夜，厨房与爱。「万能青年旅店」</span>
-</span>
-</div>
-</footer>
-<div class=back-to-top id=back-to-top>
-<i class="iconfont icon-up"></i>
-</div>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=anonymous></script>
-<script src=https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin=anonymous></script>
-<script src=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin=anonymous></script>
-<script type=text/javascript src=/dist/even.26188efa.min.js></script>
-<script type=text/javascript>window.MathJax={tex2jax:{inlineMath:[['$','$'],['\\(','\\)']]},TeX:{equationNumbers:{autoNumber:"AMS"}},showProcessingMessages:!1,messageStyle:'none'}</script>
-<script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin=anonymous></script>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
 </body>
 </html>

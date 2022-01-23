@@ -1,1 +1,237 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>于昼夜，思山川湖海</title><link>https://joyrap.github.io/</link><description>Recent content on 于昼夜，思山川湖海</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>是谁来自山川湖海，却囿于昼夜，厨房与爱。「万能青年旅店」</copyright><lastBuildDate>Thu, 20 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://joyrap.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://joyrap.github.io/about/</guid><description>网名:于川海，软件工程师。 轻度乐观主义忧郁患者 前京东软件工程师 前嘀咕网架构师 这个博客主要是一些个人学习成长的记录, 尽量不输出观点，不评价世道</description></item><item><title>如何才能什么都不做</title><link>https://joyrap.github.io/post/2022-01-20-how-to-do-nothing/</link><pubDate>Thu, 20 Jan 2022 00:00:00 +0000</pubDate><guid>https://joyrap.github.io/post/2022-01-20-how-to-do-nothing/</guid><description>参考</description></item><item><title>API设计-版本控制</title><link>https://joyrap.github.io/post/2022-01-19-api-versioning/</link><pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate><guid>https://joyrap.github.io/post/2022-01-19-api-versioning/</guid><description>参考 Version Number Design Web APIs API Design Patterns API Versioning Best Practices For API Versioning Shopify API Versioning</description></item><item><title>A Philosophy Of Software Design-读书笔记</title><link>https://joyrap.github.io/post/2022-01-08-a-philosophy-of-software-design/</link><pubDate>Sat, 08 Jan 2022 00:00:00 +0000</pubDate><guid>https://joyrap.github.io/post/2022-01-08-a-philosophy-of-software-design/</guid><description>《软件设计的哲学》这本书最早出版于2018年，2021年出了2nd Edition，目前国内还没有中文版，这本书是作者 在斯坦福大学开设的CS1</description></item><item><title>2021</title><link>https://joyrap.github.io/post/2021-12-28-2021/</link><pubDate>Tue, 28 Dec 2021 00:00:00 +0000</pubDate><guid>https://joyrap.github.io/post/2021-12-28-2021/</guid><description>歌与诗 2021年12月26日，歌手刘森出了一首新歌:《和小葛去石家庄》 你已不满只是在楼下喝几杯小酒 我多加的那盘小毛豆 你也觉得不太够 感叹世界乱</description></item><item><title>翻越了这座山，你有没有遇到过自己</title><link>https://joyrap.github.io/post/2021-12-10-meet-yourself/</link><pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate><guid>https://joyrap.github.io/post/2021-12-10-meet-yourself/</guid><description>一 2003年，向北出川，翻越秦岭， 绿皮火车走走停停，对于没有出过川的人来说，那是一段极其漫长的路程。 虽都是外出谋生，但北上和南下的两类人，有</description></item><item><title>如何用PlantUML+C4画系统架构图</title><link>https://joyrap.github.io/post/2021-11-22-plantuml-c4/</link><pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate><guid>https://joyrap.github.io/post/2021-11-22-plantuml-c4/</guid><description>为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件。 软件开发时用到画图软件林林总总，差异</description></item><item><title>不要急于奔赴未来，未来总会如期而至</title><link>https://joyrap.github.io/post/2021-09-30-i-am-quit/</link><pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate><guid>https://joyrap.github.io/post/2021-09-30-i-am-quit/</guid><description>在京东工作的第9个年头，我决定离职，这并不是一个艰难的决定。 回首过往，很难相信在这里待了如此长的时间。 至今还记得刚来成都的样子， 阴冷的天空，</description></item><item><title>不确定性</title><link>https://joyrap.github.io/post/2020-10-22-indeterminacy/</link><pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate><guid>https://joyrap.github.io/post/2020-10-22-indeterminacy/</guid><description>这个世界有没有看起来是确定的事情？ 可能没有， 不确定才是这个世界最值得探索的奥秘。 但如果非要让一件事情变得更接近确定，那么有没有一套经得住考验</description></item><item><title>计算机多内核平台上的并发锁优化(二)</title><link>https://joyrap.github.io/post/2020-08-21-locks-on-multicore2/</link><pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate><guid>https://joyrap.github.io/post/2020-08-21-locks-on-multicore2/</guid><description>申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。 在Algorithms for scalable synchronization on shared-memory multiprocessors这篇论文中，CL</description></item><item><title>计算机多内核平台上的并发锁优化(一)</title><link>https://joyrap.github.io/post/2020-08-19-locks-on-multicore/</link><pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate><guid>https://joyrap.github.io/post/2020-08-19-locks-on-multicore/</guid><description>申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。 如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问</description></item><item><title>不可测试的代码</title><link>https://joyrap.github.io/post/2020-01-21-untestable-code/</link><pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate><guid>https://joyrap.github.io/post/2020-01-21-untestable-code/</guid><description>故事是这样的，我最近深陷在一个刚接手不久的项目中，经过完成两轮需求上线后， 我迫切地告诉自己，需要给这个项目完善一下测试用例（原工程测试用例几</description></item><item><title>对技术招聘的一些启发</title><link>https://joyrap.github.io/post/2019-12-28-heuristics-for-hiring/</link><pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate><guid>https://joyrap.github.io/post/2019-12-28-heuristics-for-hiring/</guid><description>国外一家自由职业招聘平台 Gun.io ，最近针对问题“当招聘高级工程师时最看中哪些方面？”，采访了38名CTO， 最后出了一份报告。 在招聘开发工程师上，国</description></item><item><title>2019阅读清单</title><link>https://joyrap.github.io/post/2019-12-25-2019-read-books/</link><pubDate>Wed, 25 Dec 2019 00:00:00 +0000</pubDate><guid>https://joyrap.github.io/post/2019-12-25-2019-read-books/</guid><description>人们经常说这个时代物欲横流，信息爆炸，有人自带优越感，有人贩卖焦虑&amp;hellip;&amp;hellip; 但无论如何，这都不是你看到的那个世界，唯有</description></item><item><title>执命向西的人</title><link>https://joyrap.github.io/post/2019-12-05-follow-your-heart/</link><pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate><guid>https://joyrap.github.io/post/2019-12-05-follow-your-heart/</guid><description>老婆自行车环游大半个中国回来后的那段日子，我无意中听到一首歌《一个西藏》 一座高原 一个西藏 …… 我和世界只有一个西藏 我没有去过西藏，所以对西藏并</description></item><item><title>Clojure中的数据类型</title><link>https://joyrap.github.io/post/2019-11-19-clojure-datatypes/</link><pubDate>Tue, 19 Nov 2019 00:00:00 +0000</pubDate><guid>https://joyrap.github.io/post/2019-11-19-clojure-datatypes/</guid><description>Clojure作为一款基于JVM的LISP语言，我个人从创造者Rich Hickey身上吸收了很多编程的观点，尽管作者提出了很多面向对象编程语</description></item><item><title>翻译:Understanding the LMAX Disruptor</title><link>https://joyrap.github.io/post/2019-04-19-understanding-the-lmax-disruptor/</link><pubDate>Fri, 19 Apr 2019 21:24:47 +0000</pubDate><guid>https://joyrap.github.io/post/2019-04-19-understanding-the-lmax-disruptor/</guid><description>翻译前言 知道Disruptor这个代码库，是在Log4j 1.X升级版Log4j2中提到的，那时候就好奇它为何如此高效，关于Disruptor</description></item><item><title>读书:How Will You Measure Your Life?</title><link>https://joyrap.github.io/post/2019-02-24-how-will-you-measure-your-life/</link><pubDate>Sun, 24 Feb 2019 18:24:47 +0000</pubDate><guid>https://joyrap.github.io/post/2019-02-24-how-will-you-measure-your-life/</guid><description>在读到《How Will You Measure Your Life? 》 这本书之前，是看到一篇辞去亚马逊年薪500万工作的文章，大概是讲随着工作中升职，加薪，工作激情却在逐渐降低，于是就</description></item><item><title>如何跑完半程马拉松</title><link>https://joyrap.github.io/post/2017-02-18-how-to-run-half-marathons/</link><pubDate>Sat, 18 Feb 2017 18:24:47 +0000</pubDate><guid>https://joyrap.github.io/post/2017-02-18-how-to-run-half-marathons/</guid><description>是的。 如果你想先喝一碗高质量鸡汤，来加强跑马拉松的决心，那么你可以读读村上春树的《当我谈跑步时,我谈些什么》。 然而我觉得那对你真正跑起来并没</description></item><item><title>如何利用Linux命令简单加密文本</title><link>https://joyrap.github.io/post/2017-02-04-how-to-encrypt-by-linux-command/</link><pubDate>Sat, 04 Feb 2017 18:24:47 +0000</pubDate><guid>https://joyrap.github.io/post/2017-02-04-how-to-encrypt-by-linux-command/</guid><description>在web上无论企业还是个人网站，总会发布一些邮箱的联系方式，由于邮箱地址置于html页面中，很容易被 爬虫获取，导致邮箱被垃圾邮件挤满。 所以，</description></item><item><title>我们是如何将一个项目做烂的</title><link>https://joyrap.github.io/post/2016-08-08-how-to-make-projects-failed/</link><pubDate>Mon, 08 Aug 2016 01:24:47 +0000</pubDate><guid>https://joyrap.github.io/post/2016-08-08-how-to-make-projects-failed/</guid><description>在你读到这篇牢骚的时候，无数个项目正在慢慢变烂。 既然标题都用到了&amp;quot;烂&amp;quot;这个词，那什么才是烂呢？ 在你的项目里，&amp;ldquo</description></item><item><title>Notification Pattern理解</title><link>https://joyrap.github.io/post/2012-06-20-notification-pattern/</link><pubDate>Wed, 20 Jun 2012 11:24:47 +0000</pubDate><guid>https://joyrap.github.io/post/2012-06-20-notification-pattern/</guid><description>场景 在MVC的架构中，我们想从Model层传递一些错误信息到View层，比如用户注册这个功能，用户填写了密码，邮箱，然后提交注册， 这时候我们</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>于昼夜，思山川湖海</title>
+    <link>https://joyrap.github.io/</link>
+    <description>Recent content on 于昼夜，思山川湖海</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>是谁来自山川湖海，却囿于昼夜，厨房与爱。「万能青年旅店」</copyright>
+    <lastBuildDate>Thu, 20 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://joyrap.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/about/</guid>
+      <description>网名:于川海，软件工程师。 轻度乐观主义忧郁患者 前京东软件工程师 前嘀咕网架构师 这个博客主要是一些个人学习成长的记录, 尽量不输出观点，不评价世道</description>
+    </item>
+    
+    <item>
+      <title>如何才能什么都不做</title>
+      <link>https://joyrap.github.io/post/2022-01-20-how-to-do-nothing/</link>
+      <pubDate>Thu, 20 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2022-01-20-how-to-do-nothing/</guid>
+      <description>参考</description>
+    </item>
+    
+    <item>
+      <title>API设计-版本控制</title>
+      <link>https://joyrap.github.io/post/2022-01-19-api-versioning/</link>
+      <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2022-01-19-api-versioning/</guid>
+      <description>参考 Version Number Design Web APIs API Design Patterns API Versioning Best Practices For API Versioning Shopify API Versioning</description>
+    </item>
+    
+    <item>
+      <title>A Philosophy Of Software Design-读书笔记</title>
+      <link>https://joyrap.github.io/post/2022-01-08-a-philosophy-of-software-design/</link>
+      <pubDate>Sat, 08 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2022-01-08-a-philosophy-of-software-design/</guid>
+      <description>《软件设计的哲学》这本书最早出版于2018年，2021年出了2nd Edition，目前国内还没有中文版，这本书是作者 在斯坦福大学开设的CS1</description>
+    </item>
+    
+    <item>
+      <title>2021</title>
+      <link>https://joyrap.github.io/post/2021-12-28-2021/</link>
+      <pubDate>Tue, 28 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2021-12-28-2021/</guid>
+      <description>歌与诗 2021年12月26日，歌手刘森出了一首新歌:《和小葛去石家庄》 你已不满只是在楼下喝几杯小酒 我多加的那盘小毛豆 你也觉得不太够 感叹世界乱</description>
+    </item>
+    
+    <item>
+      <title>翻越了这座山，你有没有遇到过自己</title>
+      <link>https://joyrap.github.io/post/2021-12-10-meet-yourself/</link>
+      <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2021-12-10-meet-yourself/</guid>
+      <description>一 2003年，向北出川，翻越秦岭， 绿皮火车走走停停，对于没有出过川的人来说，那是一段极其漫长的路程。 虽都是外出谋生，但北上和南下的两类人，有</description>
+    </item>
+    
+    <item>
+      <title>如何用PlantUML&#43;C4画系统架构图</title>
+      <link>https://joyrap.github.io/post/2021-11-22-plantuml-c4/</link>
+      <pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2021-11-22-plantuml-c4/</guid>
+      <description>为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件。 软件开发时用到画图软件林林总总，差异</description>
+    </item>
+    
+    <item>
+      <title>Java Weekly周刊</title>
+      <link>https://joyrap.github.io/post/2021-10-24-java-weekly/</link>
+      <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2021-10-24-java-weekly/</guid>
+      <description>周刊结构 Java语言相关 著名框架 博客&amp;amp;播客 stackoverflow 其他值得阅读的内容</description>
+    </item>
+    
+    <item>
+      <title>不要急于奔赴未来，未来总会如期而至</title>
+      <link>https://joyrap.github.io/post/2021-09-30-i-am-quit/</link>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2021-09-30-i-am-quit/</guid>
+      <description>在京东工作的第9个年头，我决定离职，这并不是一个艰难的决定。 回首过往，很难相信在这里待了如此长的时间。 至今还记得刚来成都的样子， 阴冷的天空，</description>
+    </item>
+    
+    <item>
+      <title>不确定性</title>
+      <link>https://joyrap.github.io/post/2020-10-22-indeterminacy/</link>
+      <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2020-10-22-indeterminacy/</guid>
+      <description>这个世界有没有看起来是确定的事情？ 可能没有， 不确定才是这个世界最值得探索的奥秘。 但如果非要让一件事情变得更接近确定，那么有没有一套经得住考验</description>
+    </item>
+    
+    <item>
+      <title>Asciidoc,Markdown,reStructuredText文档格式比较</title>
+      <link>https://joyrap.github.io/post/2020-08-31-document-format-compare/</link>
+      <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2020-08-31-document-format-compare/</guid>
+      <description>-Asciidoc -Markdown -reStructuredText -LaTeX -Lightweight Markup</description>
+    </item>
+    
+    <item>
+      <title>计算机多内核平台上的并发锁优化(二)</title>
+      <link>https://joyrap.github.io/post/2020-08-21-locks-on-multicore2/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2020-08-21-locks-on-multicore2/</guid>
+      <description>申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。 在Algorithms for scalable synchronization on shared-memory multiprocessors这篇论文中，CL</description>
+    </item>
+    
+    <item>
+      <title>计算机多内核平台上的并发锁优化(一)</title>
+      <link>https://joyrap.github.io/post/2020-08-19-locks-on-multicore/</link>
+      <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2020-08-19-locks-on-multicore/</guid>
+      <description>申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。 如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问</description>
+    </item>
+    
+    <item>
+      <title>不可测试的代码</title>
+      <link>https://joyrap.github.io/post/2020-01-21-untestable-code/</link>
+      <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2020-01-21-untestable-code/</guid>
+      <description>故事是这样的，我最近深陷在一个刚接手不久的项目中，经过完成两轮需求上线后， 我迫切地告诉自己，需要给这个项目完善一下测试用例（原工程测试用例几</description>
+    </item>
+    
+    <item>
+      <title>对技术招聘的一些启发</title>
+      <link>https://joyrap.github.io/post/2019-12-28-heuristics-for-hiring/</link>
+      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2019-12-28-heuristics-for-hiring/</guid>
+      <description>国外一家自由职业招聘平台 Gun.io ，最近针对问题“当招聘高级工程师时最看中哪些方面？”，采访了38名CTO， 最后出了一份报告。 在招聘开发工程师上，国</description>
+    </item>
+    
+    <item>
+      <title>2019阅读清单</title>
+      <link>https://joyrap.github.io/post/2019-12-25-2019-read-books/</link>
+      <pubDate>Wed, 25 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2019-12-25-2019-read-books/</guid>
+      <description>人们经常说这个时代物欲横流，信息爆炸，有人自带优越感，有人贩卖焦虑&amp;hellip;&amp;hellip; 但无论如何，这都不是你看到的那个世界，唯有</description>
+    </item>
+    
+    <item>
+      <title>执命向西的人</title>
+      <link>https://joyrap.github.io/post/2019-12-05-follow-your-heart/</link>
+      <pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2019-12-05-follow-your-heart/</guid>
+      <description>老婆自行车环游大半个中国回来后的那段日子，我无意中听到一首歌《一个西藏》 一座高原 一个西藏 …… 我和世界只有一个西藏 我没有去过西藏，所以对西藏并</description>
+    </item>
+    
+    <item>
+      <title>Clojure中的数据类型</title>
+      <link>https://joyrap.github.io/post/2019-11-19-clojure-datatypes/</link>
+      <pubDate>Tue, 19 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2019-11-19-clojure-datatypes/</guid>
+      <description>Clojure作为一款基于JVM的LISP语言，我个人从创造者Rich Hickey身上吸收了很多编程的观点，尽管作者提出了很多面向对象编程语</description>
+    </item>
+    
+    <item>
+      <title>翻译:What are Bloom filters?</title>
+      <link>https://joyrap.github.io/post/2019-04-26-what-are-bloom-filters/</link>
+      <pubDate>Fri, 26 Apr 2019 21:24:47 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2019-04-26-what-are-bloom-filters/</guid>
+      <description>翻译前言 原文连接: https://blog.medium.com/what-are-bloom-filters-1ec2a50c68ff</description>
+    </item>
+    
+    <item>
+      <title>翻译:Understanding the LMAX Disruptor</title>
+      <link>https://joyrap.github.io/post/2019-04-19-understanding-the-lmax-disruptor/</link>
+      <pubDate>Fri, 19 Apr 2019 21:24:47 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2019-04-19-understanding-the-lmax-disruptor/</guid>
+      <description>翻译前言 知道Disruptor这个代码库，是在Log4j 1.X升级版Log4j2中提到的，那时候就好奇它为何如此高效，关于Disruptor</description>
+    </item>
+    
+    <item>
+      <title>读书:How Will You Measure Your Life?</title>
+      <link>https://joyrap.github.io/post/2019-02-24-how-will-you-measure-your-life/</link>
+      <pubDate>Sun, 24 Feb 2019 18:24:47 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2019-02-24-how-will-you-measure-your-life/</guid>
+      <description>在读到《How Will You Measure Your Life? 》 这本书之前，是看到一篇辞去亚马逊年薪500万工作的文章，大概是讲随着工作中升职，加薪，工作激情却在逐渐降低，于是就</description>
+    </item>
+    
+    <item>
+      <title>如何跑完半程马拉松</title>
+      <link>https://joyrap.github.io/post/2017-02-18-how-to-run-half-marathons/</link>
+      <pubDate>Sat, 18 Feb 2017 18:24:47 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2017-02-18-how-to-run-half-marathons/</guid>
+      <description>是的。 如果你想先喝一碗高质量鸡汤，来加强跑马拉松的决心，那么你可以读读村上春树的《当我谈跑步时,我谈些什么》。 然而我觉得那对你真正跑起来并没</description>
+    </item>
+    
+    <item>
+      <title>如何利用Linux命令简单加密文本</title>
+      <link>https://joyrap.github.io/post/2017-02-04-how-to-encrypt-by-linux-command/</link>
+      <pubDate>Sat, 04 Feb 2017 18:24:47 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2017-02-04-how-to-encrypt-by-linux-command/</guid>
+      <description>在web上无论企业还是个人网站，总会发布一些邮箱的联系方式，由于邮箱地址置于html页面中，很容易被 爬虫获取，导致邮箱被垃圾邮件挤满。 所以，</description>
+    </item>
+    
+    <item>
+      <title>我们是如何将一个项目做烂的</title>
+      <link>https://joyrap.github.io/post/2016-08-08-how-to-make-projects-failed/</link>
+      <pubDate>Mon, 08 Aug 2016 01:24:47 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2016-08-08-how-to-make-projects-failed/</guid>
+      <description>在你读到这篇牢骚的时候，无数个项目正在慢慢变烂。 既然标题都用到了&amp;quot;烂&amp;quot;这个词，那什么才是烂呢？ 在你的项目里，&amp;ldquo</description>
+    </item>
+    
+    <item>
+      <title>Notification Pattern理解</title>
+      <link>https://joyrap.github.io/post/2012-06-20-notification-pattern/</link>
+      <pubDate>Wed, 20 Jun 2012 11:24:47 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2012-06-20-notification-pattern/</guid>
+      <description>场景 在MVC的架构中，我们想从Model层传递一些错误信息到View层，比如用户注册这个功能，用户填写了密码，邮箱，然后提交注册， 这时候我们</description>
+    </item>
+    
+  </channel>
+</rss>
