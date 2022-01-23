@@ -1,5 +1,5 @@
-baseURL = "https://blog.xiebiao.com/"
-publishDir = "publish"
+baseURL = "https://joyrap.github.io"
+publishDir = "public"
 languageCode = "en"
 defaultContentLanguage = "en"                             # en / zh-cn / ... (This field determines which i18n file to use)
 title = "于昼夜，思山川湖海"

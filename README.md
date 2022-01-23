@@ -1,7 +1,7 @@
-xiebiao.github.io
+joyrap.github.io
 ===================
 
-blog.xiebiao.com
+博客地址：blog.xiebiao.com
 
 ## github多账号管理
 
