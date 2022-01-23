@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>A Philosophy Of Software Design-读书笔记 - 于昼夜，思山川湖海</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="于川海" /><meta name="description" content="《软件设计的哲学》这本书最早出版于2018年，2021年出了2nd Edition，目前国内还没有中文版，这本书是作者 在斯坦福大学开设的CS1" /><meta name="keywords" content="于川海, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.92.0 with theme even" />
+
+
+<link rel="canonical" href="https://joyrap.github.io/post/2022-01-08-a-philosophy-of-software-design/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="A Philosophy Of Software Design-读书笔记" />
+<meta property="og:description" content="《软件设计的哲学》这本书最早出版于2018年，2021年出了2nd Edition，目前国内还没有中文版，这本书是作者 在斯坦福大学开设的CS1" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://joyrap.github.io/post/2022-01-08-a-philosophy-of-software-design/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-01-08T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-01-08T00:00:00+00:00" />
+
+<meta itemprop="name" content="A Philosophy Of Software Design-读书笔记">
+<meta itemprop="description" content="《软件设计的哲学》这本书最早出版于2018年，2021年出了2nd Edition，目前国内还没有中文版，这本书是作者 在斯坦福大学开设的CS1"><meta itemprop="datePublished" content="2022-01-08T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-01-08T00:00:00+00:00" />
+<meta itemprop="wordCount" content="4315">
+<meta itemprop="keywords" content="Programming," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="A Philosophy Of Software Design-读书笔记"/>
+<meta name="twitter:description" content="《软件设计的哲学》这本书最早出版于2018年，2021年出了2nd Edition，目前国内还没有中文版，这本书是作者 在斯坦福大学开设的CS1"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">于昼夜，思山川湖海</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">于昼夜，思山川湖海</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">A Philosophy Of Software Design-读书笔记</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-01-08 </span>
+        <div class="post-category">
+            <a href="/categories/design/"> Design </a>
+            </div>
+          <span class="more-meta"> 4315 words </span>
+          <span class="more-meta"> 9 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#2-the-nature-of-complexity-复杂性的本质">2. The Nature of Complexity &lt;复杂性的本质&gt;</a>
+      <ul>
+        <li><a href="#21-complexity-defined-复杂性的定义">2.1 Complexity defined &lt;复杂性的定义&gt;</a></li>
+        <li><a href="#22-symptoms-of-complexity-复杂性的特征">2.2 Symptoms of complexity &lt;复杂性的特征&gt;</a></li>
+        <li><a href="#23-causes-of-complexity-复杂性的原因">2.3 Causes of complexity &lt;复杂性的原因&gt;</a></li>
+        <li><a href="#25-complexity-is-incremental-复杂性的增长">2.5 Complexity is incremental &lt;复杂性的增长&gt;</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-working-code-isnt-enough-能够工作的代码是不够的">3. Working Code isn&rsquo;t Enough &lt;能够工作的代码是不够的&gt;</a>
+      <ul>
+        <li><a href="#31-tactical-programming战术编程">3.1 Tactical programming&lt;战术编程&gt;</a></li>
+        <li><a href="#32-stategic-programming战略规划">3.2 Stategic programming&lt;战略规划&gt;</a></li>
+        <li><a href="#33-how-to-invest">3.3 How to invest?</a></li>
+        <li><a href="#34-startups-and-investment">3.4 Startups and investment</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-modules-should-be-deep">4. Modules Should be deep</a>
+      <ul>
+        <li><a href="#41-modular-design模块化设计">4.1 Modular design&lt;模块化设计&gt;</a></li>
+        <li><a href="#42-what-is-interface">4.2 What is interface?</a></li>
+        <li><a href="#43-abstractions">4.3 Abstractions</a></li>
+        <li><a href="#44-deep-modules">4.4 Deep modules</a></li>
+        <li><a href="#45-shallow-modules">4.5 Shallow modules</a></li>
+        <li><a href="#46-classitis过度拆分">4.6 Classitis&lt;过度拆分&gt;</a></li>
+        <li><a href="#47-examples-java-and-unixio">4.7 Examples: Java and Unix/IO</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-information-hidingand-leakage">5. Information Hiding(and leakage)</a>
+      <ul>
+        <li><a href="#51-information-hiding">5.1 information hiding</a></li>
+        <li><a href="#52-information-leakage信息泄露">5.2 information leakage&lt;信息泄露&gt;</a></li>
+        <li><a href="#53-temporal-decomposition">5.3 Temporal decomposition</a></li>
+        <li><a href="#54-example-http-server">5.4 Example HTTP Server</a></li>
+        <li><a href="#55-example-too-many-classes">5.5 Example too many classes</a></li>
+        <li><a href="#56-information-hiding-within--a-class">5.6 Information hiding within  a class</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-general-purpose-modules-are-deeper">6. General-Purpose Modules are Deeper</a></li>
+    <li><a href="#65questions-to-ask-yourself">6.5  Questions to ask yourself</a></li>
+    <li><a href="#7-different-layerdifferent-abstraction">7. Different Layer,Different Abstraction</a>
+      <ul>
+        <li><a href="#72-when-is-interface-duplication-is-ok什么时候接口重复没问题">7.2 When is interface duplication is OK?&lt;什么时候接口重复没问题？&gt;</a></li>
+        <li><a href="#73-decorators装饰器">7.3 Decorators&lt;装饰器&gt;</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-pull-complexity-downwards">8. Pull Complexity Downwards</a></li>
+    <li><a href="#9-better-together-or-better-apart">9. Better Together Or better Apart?</a></li>
+    <li><a href="#10-define-errors-out-of-existence定义不存在的错误">10. Define Errors Out Of Existence&lt;定义不存在的错误&gt;</a>
+      <ul>
+        <li><a href="#101why-exceptions-add-complexity">10.1  Why exceptions add complexity</a></li>
+        <li><a href="#102too-many-exceptions">10.2 Too many exceptions</a></li>
+      </ul>
+    </li>
+    <li><a href="#11-design-it-twice二次设计">11. Design it Twice&lt;二次设计&gt;</a></li>
+    <li><a href="#12-why-write-commentsthe-four-excuses">12. Why Write Comments?The Four Excuses</a>
+      <ul>
+        <li><a href="#121-good-code-is-self-documenting">12.1 Good code is self-documenting</a></li>
+        <li><a href="#122i-dont-have-time-to-write-comments">12.2  I don’t have time to write comments</a></li>
+        <li><a href="#123comments-get-out-of-date-and-become-misleading">12.3  Comments get out of date and become misleading</a></li>
+        <li><a href="#124all-the-comments-i-have-seen-are-worthless">12.4  All the comments I have seen are worthless</a></li>
+      </ul>
+    </li>
+    <li><a href="#13-comments-should-describe-things-that-arent-obvious-from-the-code">13. Comments Should Describe Things that Aren&rsquo;t Obvious from the Code</a></li>
+    <li><a href="#14-choosing-names命名">14. Choosing Names&lt;命名&gt;</a>
+      <ul>
+        <li><a href="#142create-an-image">14.2  Create an image</a></li>
+        <li><a href="#143names-should-be-precise">14.3  Names should be precise</a></li>
+        <li><a href="#144use-names-consistently">14.4 Use names consistently</a></li>
+      </ul>
+    </li>
+    <li><a href="#15-write-the-comments-first">15. Write The Comments First</a>
+      <ul>
+        <li><a href="#151delayed-comments-are-bad-comments">15.1  Delayed comments are bad comments</a></li>
+        <li><a href="#152write-the-comments-first">15.2  Write the comments first</a></li>
+      </ul>
+    </li>
+    <li><a href="#16-modifying-existing-code">16. Modifying Existing Code</a></li>
+    <li><a href="#17-consistency一致性">17. Consistency&lt;一致性&gt;</a></li>
+    <li><a href="#18-code-should-be-obvious">18. Code Should be Obvious</a></li>
+    <li><a href="#19-software-trends软件规范">19. Software Trends&lt;软件规范&gt;</a>
+      <ul>
+        <li><a href="#191-object-oriented-programming-and-inheritance面向对象编程与继承">19.1 Object-oriented programming and inheritance&lt;面向对象编程与继承&gt;</a></li>
+      </ul>
+    </li>
+    <li><a href="#20-designing-for-performance性能设计">20. Designing for Performance&lt;性能设计&gt;</a>
+      <ul>
+        <li><a href="#202measure-before-modifying">20.2  Measure before modifying</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <blockquote>
+<p><a href="https://book.douban.com/subject/30218046/">《软件设计的哲学》</a>这本书最早出版于2018年，2021年出了<a href="https://web.stanford.edu/~ouster/cgi-bin/book.php">2nd Edition</a>，目前国内还没有中文版，这本书是<a href="https://twitter.com/johnousterhout">作者</a>
+在斯坦福大学开设的<a href="https://web.stanford.edu/~ouster/cgi-bin/cs190-winter21/index.php">CS190</a>课程大纲。
+我专门搜索了一下国内软件专业的大学，基本上都没有关于软件设计的课程。</p>
+<p>市面很多关于软件设计的书籍，大部分都是基于某些特定编程语言或者技术，还没有一本全面讲解软件设计本身的书。</p>
+<p>软件设计本来是一种创造性活动，主观性极强，本书作者的基调还是鼓励利用一切手段来考虑系统的设计性，有些做法比较激进。</p>
+<p>这里尝试将其中觉得精彩的部分做点翻译结合自己的理解便于学习。</p>
+</blockquote>
+<h2 id="2-the-nature-of-complexity-复杂性的本质">2. The Nature of Complexity &lt;复杂性的本质&gt;</h2>
+<p>这本书是关于如何设计软件系统并最小化复杂性，首先你得了解你的敌人，明确什么是“复杂性”？你如何描述一个系统复杂性？是什么让系统变得复杂？
+本章将在一个更高维度阐述这些问题。</p>
+<p>识别复杂性是重要的设计技能，它让你在处理问题之前明确问题所在，让你在众多选择中作出好的选择。</p>
+<h3 id="21-complexity-defined-复杂性的定义">2.1 Complexity defined &lt;复杂性的定义&gt;</h3>
+<p><strong>任何使软件系统难于理解和修改的东西，即是复杂性</strong>。复杂性以不同方式存在，比如它可能是一段难于理解的代码，它可能是需要付出巨大努力才能实现一个很小的优化，
+它可能是错综复杂的关联中难于修复的BUG。</p>
+<p>复杂性是一个开发人员在某个时间点上试图完成某个特定目标的过程，它不一定是整个系统功能。人们直觉上认为具有大量功能的大型软件系统是”复杂“的，但是这样的系统如果容易实现
+，那么对于本书的定义来说，他就不算复杂。当然几乎所有的大型软件系统实际上都是复杂到难于实现，他们或多或少都会出现我定义的复杂性，也不是说没有复杂功能的简单系统就不可能出现复杂。</p>
+<p>复杂性是由大多数常见的活动决定的，如果一个系统只有很少一部分是复杂的，但它们不影响整个系统复杂性。</p>
+<p>我们可以用一个简单的数学公式来描述系统复杂性：</p>
+<p>$$ C=\sum_{p}c_{p}t_{p} $$ （p为系统的组件数量，c为组件的复杂性，t为完成组件投入的时间）</p>
+<p>系统的整体复杂性由组成部分乘以开发人员在其投入的工作时间，将复杂性隔离在不容易被发现的地方不亚于完全消除复杂性。</p>
+<p>复杂性相对于作者而言对读者更显而易见，当事者总会觉得他们写的代码似乎很简单，但其他人却觉得复杂。如果你遇到这种情况，试着询问其他
+开发人员，为什么你写的代码在他们看来这样复杂，从交流中找到你与他们之间不同的想法。作为开发者你的工作不只是写你认为容易的代码，
+同时也要让其他人容易理解。</p>
+<h3 id="22-symptoms-of-complexity-复杂性的特征">2.2 Symptoms of complexity &lt;复杂性的特征&gt;</h3>
+<ol>
+<li>Change amplification&lt;复杂关联&gt;</li>
+</ol>
+<p>有时候看上去是做一个小的改变，但是需要修改多处代码（功能散落在多处）。好设计的目标是降低每个设计中受影响的代码量。</p>
+<ol start="2">
+<li>Cognitive load&lt;认知负载&gt;</li>
+</ol>
+<p>高认知负载意味着开发人员需要花更多的时间去理解需求，这会导致产生BUG的风险，因为他们很容易遗漏一些重要的信息。</p>
+<blockquote>
+<p>作者用C语言分配内存函数举了一个例子，方法调用方需要自己关心内存释放。</p>
+</blockquote>
+<p>系统设计师有时候用代码行数来衡量复杂性，代码行数与复杂度并无关系，<strong>有时候用更多的代码去实现，也许才是更简单的方式，因为它降低了认知负载。</strong></p>
+<ol start="3">
+<li>
+<p>Unknown unknowns&lt;未知且不确定&gt;</p>
+<p>没人能够在一个不清楚来龙去脉的系统中完成开发任务，系统中太多不确定性关联，你无法定义自己应该了解到何种程度。</p>
+</li>
+</ol>
+<h3 id="23-causes-of-complexity-复杂性的原因">2.3 Causes of complexity &lt;复杂性的原因&gt;</h3>
+<p>复杂性由<strong>依赖</strong>和<strong>含糊不清</strong>导致。</p>
+<p>依赖是软件的基础部分并不能完全消除，实际上依赖贯穿整个软件设计过程，但是软件设计的一个重要的目标是降低依赖，使依赖尽可能地简单。</p>
+<p>很多时候，一个需要大量文档的系统通常是晦涩难懂的，说明它的设计不清晰，好的设计结果往往只需要少量文档。</p>
+<h3 id="25-complexity-is-incremental-复杂性的增长">2.5 Complexity is incremental &lt;复杂性的增长&gt;</h3>
+<p>复杂性在系统中是一个变量，它随着功能一起增长，当它积累到一定程度的时候，将会失去控制很难被消除，所以对于复杂性的增长要“零容忍”。</p>
+<h2 id="3-working-code-isnt-enough-能够工作的代码是不够的">3. Working Code isn&rsquo;t Enough &lt;能够工作的代码是不够的&gt;</h2>
+<h3 id="31-tactical-programming战术编程">3.1 Tactical programming&lt;战术编程&gt;</h3>
+<p><strong>不要怎么快实现就怎么来！</strong>，不然项目最后会变成<a href="/post/2016-08-08-how-to-make-projects-failed/">屎山</a>，
+战术编程在未来的代价和成本很高。</p>
+<h3 id="32-stategic-programming战略规划">3.2 Stategic programming&lt;战略规划&gt;</h3>
+<p>战略规划是一种投资心态，不要过早做决定，以交付最好设计为目标。</p>
+<h3 id="33-how-to-invest">3.3 How to invest?</h3>
+<p>把开发时间的10-20%时间投入到具有长期价值的事情上。</p>
+<h3 id="34-startups-and-investment">3.4 Startups and investment</h3>
+<p>为了加快交付，创业公司更容易陷入战术编程模式。长期的技术债会拖慢产品的发布，除非雇佣非常优秀的开发人员。</p>
+<h2 id="4-modules-should-be-deep">4. Modules Should be deep</h2>
+<h3 id="41-modular-design模块化设计">4.1 Modular design&lt;模块化设计&gt;</h3>
+<p>将系统拆解成多个模块，理想情况下，模块之间应该完全独立。这样，可以将复杂性屏蔽在模块内部。</p>
+<p>但这是理想情况很难做到，因为模块之间存在依赖或调用关系。</p>
+<p>管理依赖的方式：将模块拆分为 <em><em>接口</em></em> 和 <em><em>实现</em></em></p>
+<p>好的模块在 <em>接口</em> 实现上要尽量简单，这样的好处是模块在不修改接口的情况下，几乎不会给其他系统带来影响。</p>
+<h3 id="42-what-is-interface">4.2 What is interface?</h3>
+<p>接口由两部分组成：一部分是由编程语言语法决定，例如接口方法的参数，以及返回值的类型，方法可能抛出的异常。</p>
+<p>另外一部分则是编程语言无能为力的，这部分内容可能描述的是接口更高层次的行为，（比如你希望接口实现支持线程安全，在语法上无法控制实现，只能通过注释。），例如在调用接口某个方法前必须调用另外一个方法，这个部分内容会增加系统的复杂性，这就是第2章所说的<strong>Unknown unknowns&lt;未知且不确定&gt;</strong>，清晰且明确的接口定义有助于消除Unknown unknowns。</p>
+<h3 id="43-abstractions">4.3 Abstractions</h3>
+<p>抽象与模块设计密切相关，<strong>抽象是对实体的简化视角，它省略了不重要的细节。</strong></p>
+<p>通过抽象来管理复杂度，不仅仅存在编程中，在我们的生活中也很普遍。</p>
+<h3 id="44-deep-modules">4.4 Deep modules</h3>
+<p><img src="/images/2022-01-08/deep_shallow.jpeg" alt="Deep and shallow module"></p>
+<blockquote>
+<p>作者用了Deep和Shallow两个概念来描述模块接口与功能的设计，非常形象，</p>
+</blockquote>
+<p>在同等复杂度的情况下，Deep模块的接口简单，具备复杂的功能实现，Shallow模块（类似于领域驱动设计中的贫血模型）则相反。</p>
+<blockquote>
+<p>原文夸奖了一下Unix IO模块的接口设计，接口简单明了，内部实现细节对调用者来说完全不用关心。</p>
+</blockquote>
+<p>Deep模块设计另外一个很好的例子，就是Java的垃圾收集器，它有强大的功能，但对于研发人员来说完全是不可见的，所以垃圾收集器的变更不会影响到应用层开发人员。</p>
+<p>Unix IO和垃圾收集器易于使用，同时提供了良好的抽象，除此之外他们还将重要的实现复杂度做了很好的隐藏。</p>
+<h3 id="45-shallow-modules">4.5 Shallow modules</h3>
+<h3 id="46-classitis过度拆分">4.6 Classitis&lt;过度拆分&gt;</h3>
+<p>很不幸，Deep设计方式在今天并不被推崇。传统的编程智慧是“类应该设计得足够小”，而不是Deep。
+学生们被教导，将大类拆分成多个小类，或者建议他们“当方法代码行数达到多少行后，就应该拆分成多个子方法”，结果是整个系统充满了大量Shallow类和方法。</p>
+<h3 id="47-examples-java-and-unixio">4.7 Examples: Java and Unix/IO</h3>
+<h2 id="5-information-hidingand-leakage">5. Information Hiding(and leakage)</h2>
+<h3 id="51-information-hiding">5.1 information hiding</h3>
+<p>达到Deep模块设计的最重要的手段就是信息隐藏。基本思想是每个模块都应该封装一些代表设计决策的知识。</p>
+<h3 id="52-information-leakage信息泄露">5.2 information leakage&lt;信息泄露&gt;</h3>
+<h3 id="53-temporal-decomposition">5.3 Temporal decomposition</h3>
+<p><strong>设计模块的时候，关注每个执行的任务，而不是他们的执行顺序。</strong></p>
+<h3 id="54-example-http-server">5.4 Example HTTP Server</h3>
+<h3 id="55-example-too-many-classes">5.5 Example too many classes</h3>
+<h3 id="56-information-hiding-within--a-class">5.6 Information hiding within  a class</h3>
+<h2 id="6-general-purpose-modules-are-deeper">6. General-Purpose Modules are Deeper</h2>
+<p>在设计一个新的模块时，你将面临的一个最常见的决定：是提供一个通用的解决方案，还是只解决当前问题。</p>
+<p>花时间开发通用解决方案对未来可能节约更多时间。</p>
+<h2 id="65questions-to-ask-yourself">6.5  Questions to ask yourself</h2>
+<p>什么样的接口既能满足我的所有需求，又是最简单的？</p>
+<p>如果你减少了API的方法，但并没有减少功能，那么你可能得到更通用的方法。</p>
+<h2 id="7-different-layerdifferent-abstraction">7. Different Layer,Different Abstraction</h2>
+<p>系统分层设计，每层有自己的抽象逻辑。</p>
+<h3 id="72-when-is-interface-duplication-is-ok什么时候接口重复没问题">7.2 When is interface duplication is OK?&lt;什么时候接口重复没问题？&gt;</h3>
+<h3 id="73-decorators装饰器">7.3 Decorators&lt;装饰器&gt;</h3>
+<p>装饰器设计模式可以起到串联多层之间API重复的作用，JDK中IO模块就是一个很好的例子。</p>
+<h2 id="8-pull-complexity-downwards">8. Pull Complexity Downwards</h2>
+<h2 id="9-better-together-or-better-apart">9. Better Together Or better Apart?</h2>
+<p>软件设计中一个最基本的问题就是，两个功能是应该分开实现，还是一起实现？</p>
+<p>这个问题适用于系统的各个方面，例如功能，方法，类和服务。</p>
+<h2 id="10-define-errors-out-of-existence定义不存在的错误">10. Define Errors Out Of Existence&lt;定义不存在的错误&gt;</h2>
+<h3 id="101why-exceptions-add-complexity">10.1  Why exceptions add complexity</h3>
+<p>我这里讲的异常，是指超出了控制流外的非正常条件，不是编程语言级别的异常，很多语言都有异常处理机制。</p>
+<p>抛出异常是容易的，处理异常却非常复杂，异常处理之间也经常包含关联，例如因为网络原因，客户端需要重试远程调用，
+但是如果只是网络延迟呢，那么接收端必须要处理重复调用的情况（幂等）。</p>
+<p>所以异常本身就具有很强的复杂性。</p>
+<h3 id="102too-many-exceptions">10.2 Too many exceptions</h3>
+<p>防止在设计中过度使用异常。</p>
+<h2 id="11-design-it-twice二次设计">11. Design it Twice&lt;二次设计&gt;</h2>
+<p>软件设计并不容易，很多时候你一开始的设计并不一定就是最好的。</p>
+<p>在设计的时候提供更多的选型，选择更好的那个，当你有了多个选择的时候，你就可以比较：</p>
+<ul>
+<li>哪个设计的接口更简单？</li>
+<li>哪个设计的接口更通用？</li>
+<li>哪个设计的接口更容易高效实现？</li>
+</ul>
+<p>二次设计可以运用于软件开发的所有阶段。</p>
+<h2 id="12-why-write-commentsthe-four-excuses">12. Why Write Comments?The Four Excuses</h2>
+<p>写注释的过程，如果运用得当，会提升系统的设计。相反一个好的软件设计如果没有文档辅助，它的价值会大打折扣。</p>
+<h3 id="121-good-code-is-self-documenting">12.1 Good code is self-documenting</h3>
+<p>一些人认为如果代码写得足够好，就不需要注释。真实情况并不是这样，代码并不能描述所有情况，有时候需要依赖注释。</p>
+<p>很不幸，这种观点并没有得到普遍认同，很多开发人员认为写注释是在浪费时间。</p>
+<p><strong>如果用户使用一个方法需要阅读代码，说明这里没有抽象</strong></p>
+<h3 id="122i-dont-have-time-to-write-comments">12.2  I don’t have time to write comments</h3>
+<h3 id="123comments-get-out-of-date-and-become-misleading">12.3  Comments get out of date and become misleading</h3>
+<h3 id="124all-the-comments-i-have-seen-are-worthless">12.4  All the comments I have seen are worthless</h3>
+<h2 id="13-comments-should-describe-things-that-arent-obvious-from-the-code">13. Comments Should Describe Things that Aren&rsquo;t Obvious from the Code</h2>
+<p>写注释的原因是，开发人员用来描述代码不能表达的想法，便于未来理解和修改代码。</p>
+<h2 id="14-choosing-names命名">14. Choosing Names&lt;命名&gt;</h2>
+<h3 id="142create-an-image">14.2  Create an image</h3>
+<h3 id="143names-should-be-precise">14.3  Names should be precise</h3>
+<h3 id="144use-names-consistently">14.4 Use names consistently</h3>
+<h2 id="15-write-the-comments-first">15. Write The Comments First</h2>
+<h3 id="151delayed-comments-are-bad-comments">15.1  Delayed comments are bad comments</h3>
+<p>写代码前先写注释，很多开发人员认为代码一直在改变，提前写文档毫无意义。</p>
+<p>推迟写文档的结果是，最后没有文档。</p>
+<h3 id="152write-the-comments-first">15.2  Write the comments first</h3>
+<p>我在一开始写注释</p>
+<ul>
+<li>先写接口注释</li>
+<li>然后写公共方法的注释</li>
+<li>在多个注释之间来回审查感觉没什么问题</li>
+<li>给重要的变量写注释</li>
+<li>然后才是去写实现，在实现中写上必要的注释。</li>
+<li></li>
+</ul>
+<h2 id="16-modifying-existing-code">16. Modifying Existing Code</h2>
+<p>软件开发是一个迭代增加的过程，大型软件系统都有一系列演进阶段，每个阶段中存在修改或新增模块，这意味着系统设计持续演进，
+不可能一开始就相处最好的设计。一个成长中的系统设计是在系统演进中通过改变达成的。</p>
+<h2 id="17-consistency一致性">17. Consistency&lt;一致性&gt;</h2>
+<p>一致性是强有力的降低系统复杂性的工具。</p>
+<p>强调系统一致性，包括概念，解决问题的方式，</p>
+<h2 id="18-code-should-be-obvious">18. Code Should be Obvious</h2>
+<h2 id="19-software-trends软件规范">19. Software Trends&lt;软件规范&gt;</h2>
+<h3 id="191-object-oriented-programming-and-inheritance面向对象编程与继承">19.1 Object-oriented programming and inheritance&lt;面向对象编程与继承&gt;</h3>
+<p>在面向对象编程中，继承有两种形式：
+一种是接口间继承，接口继承目的在于多个实现间复用相同接口，从而降低复杂性。</p>
+<p>比如IO的读写接口被磁盘读写接口和网络读写接口继承。</p>
+<h2 id="20-designing-for-performance性能设计">20. Designing for Performance&lt;性能设计&gt;</h2>
+<h3 id="202measure-before-modifying">20.2  Measure before modifying</h3>
+<p>性能优化前，先想好衡量性能的方案，这样才能量化你做的性能优化。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">于川海</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2022-01-08
+        
+    </span>
+  </p>
+  
+  
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://blog.xiebiao.com/images/wechat-qr-code.png">
+        <span>wechat</span>
+      </label>
+    
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/programming/">Programming</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/2022-01-19-api-versioning/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">API设计-版本控制</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/2021-12-28-2021/">
+            <span class="next-text nav-default">2021</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/1130203/bill-xie" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://twitter.com/joyrap" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/xiebiao" class="iconfont icon-github" title="github"></a>
+  <a href="https://joyrap.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2012 - 
+    2022
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">是谁来自山川湖海，却囿于昼夜，厨房与爱。「万能青年旅店」</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

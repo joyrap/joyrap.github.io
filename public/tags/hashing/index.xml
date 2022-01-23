@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hashing on 于昼夜，思山川湖海</title>
+    <link>https://joyrap.github.io/tags/hashing/</link>
+    <description>Recent content in Hashing on 于昼夜，思山川湖海</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>是谁来自山川湖海，却囿于昼夜，厨房与爱。「万能青年旅店」</copyright>
+    <lastBuildDate>Fri, 26 Apr 2019 21:24:47 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/tags/hashing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>翻译:What are Bloom filters?</title>
+      <link>https://joyrap.github.io/post/2019-04-26-what-are-bloom-filters/</link>
+      <pubDate>Fri, 26 Apr 2019 21:24:47 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2019-04-26-what-are-bloom-filters/</guid>
+      <description>翻译前言 原文连接: https://blog.medium.com/what-are-bloom-filters-1ec2a50c68ff</description>
+    </item>
+    
+  </channel>
+</rss>
