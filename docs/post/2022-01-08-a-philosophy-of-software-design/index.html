@@ -48,7 +48,7 @@
 <meta itemprop="name" content="A Philosophy Of Software Design-读书笔记">
 <meta itemprop="description" content="《软件设计的哲学》这本书最早出版于2018年，2021年出了2nd Edition，目前国内还没有中文版，这本书是作者 在斯坦福大学开设的CS1"><meta itemprop="datePublished" content="2022-01-08T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2022-01-08T00:00:00+00:00" />
-<meta itemprop="wordCount" content="4677">
+<meta itemprop="wordCount" content="5013">
 <meta itemprop="keywords" content="Programming," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="A Philosophy Of Software Design-读书笔记"/>
 <meta name="twitter:description" content="《软件设计的哲学》这本书最早出版于2018年，2021年出了2nd Edition，目前国内还没有中文版，这本书是作者 在斯坦福大学开设的CS1"/>
@@ -125,8 +125,8 @@
         <div class="post-category">
             <a href="/categories/design/"> Design </a>
             </div>
-          <span class="more-meta"> 4677 words </span>
-          <span class="more-meta"> 10 mins read </span>
+          <span class="more-meta"> 5013 words </span>
+          <span class="more-meta"> 11 mins read </span>
         
       </div>
     </header>
@@ -167,7 +167,7 @@
       <ul>
         <li><a href="#51-information-hiding">5.1 information hiding</a></li>
         <li><a href="#52-information-leakage信息泄露">5.2 information leakage&lt;信息泄露&gt;</a></li>
-        <li><a href="#53-temporal-decomposition">5.3 Temporal decomposition</a></li>
+        <li><a href="#53-temporal-decomposition时间拆分">5.3 Temporal decomposition&lt;时间拆分&gt;</a></li>
         <li><a href="#54-example-http-server">5.4 Example HTTP Server</a></li>
         <li><a href="#55-example-too-many-classes">5.5 Example too many classes</a></li>
         <li><a href="#56-information-hiding-within--a-class">5.6 Information hiding within  a class</a></li>
@@ -241,7 +241,7 @@
 我专门搜索了一下国内软件专业的大学，基本上都没有关于软件设计的课程。</p>
 <p>市面很多关于软件设计的书籍，大部分都是基于某些特定编程语言或者技术，还没有一本全面讲解软件设计本身的书。</p>
 <p>软件设计本来是一种创造性活动，主观性极强，本书作者的基调还是鼓励利用一切手段来考虑系统的设计性，有些做法比较激进。</p>
-<p>这里尝试将其中觉得精彩的部分做点翻译结合自己的理解便于学习。</p>
+<p>这里尝试将其中精彩部分做点翻译，结合自己的理解便于学习。</p>
 </blockquote>
 <h2 id="2-the-nature-of-complexity-复杂性的本质">2. The Nature of Complexity &lt;复杂性的本质&gt;</h2>
 <p>这本书是关于如何设计软件系统并最小化复杂性，首先你得了解你的敌人，明确什么是“复杂性”？你如何描述一个系统复杂性？是什么让系统变得复杂？
@@ -326,8 +326,14 @@
 <h3 id="51-information-hiding">5.1 information hiding</h3>
 <p>达到Deep模块设计的最重要的手段就是信息隐藏。基本思想是每个模块都应该封装一些代表设计决策的知识。</p>
 <h3 id="52-information-leakage信息泄露">5.2 information leakage&lt;信息泄露&gt;</h3>
-<h3 id="53-temporal-decomposition">5.3 Temporal decomposition</h3>
-<p><strong>设计模块的时候，关注每个执行的任务，而不是他们的执行顺序。</strong></p>
+<h3 id="53-temporal-decomposition时间拆分">5.3 Temporal decomposition&lt;时间拆分&gt;</h3>
+<p>一个典型的信息泄露的设计风格，我称为”时间拆分“，系统结构对应操作时间顺序。</p>
+<p>想象一个应用对文件读，修改，最后被写入，如果利用时间拆分方法，应用会被拆分为三个类，一个是读文件，一个执行修改，另外一个写入新版本。</p>
+<p>读与写过程都必须知道文件格式，结果导致了信息泄露（文件格式相关的信息在读和写的代码中都存在），解决办法是将读与写逻辑放在一个类中。</p>
+<p>容易掉进时间拆分陷阱的原因是，在你写代码时操作的执行顺序通常在你的大脑中。</p>
+<p>顺序通常很重要，他总是反映在应用的某个角落，但是它不应该反映在模块结构上。</p>
+<p><strong>设计模块的时候，关注每个需要执行的任务上，而不是他们的执行顺序。</strong></p>
+<p>小心：在时间拆分中，执行顺序反映了代码结构，相同的操作发生在不同类或方法中的不同时间。如果相同的逻辑被用于不同地方，最终会导致信息泄露。</p>
 <h3 id="54-example-http-server">5.4 Example HTTP Server</h3>
 <h3 id="55-example-too-many-classes">5.5 Example too many classes</h3>
 <h3 id="56-information-hiding-within--a-class">5.6 Information hiding within  a class</h3>
