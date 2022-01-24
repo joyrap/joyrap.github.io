@@ -48,7 +48,7 @@
 <meta itemprop="name" content="A Philosophy Of Software Design-读书笔记">
 <meta itemprop="description" content="《软件设计的哲学》这本书最早出版于2018年，2021年出了2nd Edition，目前国内还没有中文版，这本书是作者 在斯坦福大学开设的CS1"><meta itemprop="datePublished" content="2022-01-08T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2022-01-08T00:00:00+00:00" />
-<meta itemprop="wordCount" content="4315">
+<meta itemprop="wordCount" content="4677">
 <meta itemprop="keywords" content="Programming," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="A Philosophy Of Software Design-读书笔记"/>
 <meta name="twitter:description" content="《软件设计的哲学》这本书最早出版于2018年，2021年出了2nd Edition，目前国内还没有中文版，这本书是作者 在斯坦福大学开设的CS1"/>
@@ -125,8 +125,8 @@
         <div class="post-category">
             <a href="/categories/design/"> Design </a>
             </div>
-          <span class="more-meta"> 4315 words </span>
-          <span class="more-meta"> 9 mins read </span>
+          <span class="more-meta"> 4677 words </span>
+          <span class="more-meta"> 10 mins read </span>
         
       </div>
     </header>
@@ -215,13 +215,18 @@
     <li><a href="#16-modifying-existing-code">16. Modifying Existing Code</a></li>
     <li><a href="#17-consistency一致性">17. Consistency&lt;一致性&gt;</a></li>
     <li><a href="#18-code-should-be-obvious">18. Code Should be Obvious</a></li>
-    <li><a href="#19-software-trends软件规范">19. Software Trends&lt;软件规范&gt;</a>
+    <li><a href="#19-software-trends软件趋势">19. Software Trends&lt;软件趋势&gt;</a>
       <ul>
         <li><a href="#191-object-oriented-programming-and-inheritance面向对象编程与继承">19.1 Object-oriented programming and inheritance&lt;面向对象编程与继承&gt;</a></li>
+        <li><a href="#192agile-development敏捷开发">19.2  Agile development&lt;敏捷开发&gt;</a></li>
+        <li><a href="#193unit-tests单元测试">19.3  Unit tests&lt;单元测试&gt;</a></li>
+        <li><a href="#194test-driven-development测试驱动开发">19.4  Test-driven development&lt;测试驱动开发&gt;</a></li>
+        <li><a href="#195design-patterns">19.5 Design patterns</a></li>
       </ul>
     </li>
     <li><a href="#20-designing-for-performance性能设计">20. Designing for Performance&lt;性能设计&gt;</a>
       <ul>
+        <li><a href="#201how-to-think-about-performance如何看待性能">20.1  How to think about performance&lt;如何看待性能&gt;</a></li>
         <li><a href="#202measure-before-modifying">20.2  Measure before modifying</a></li>
       </ul>
     </li>
@@ -304,9 +309,9 @@
 <h3 id="44-deep-modules">4.4 Deep modules</h3>
 <p><img src="/images/2022-01-08/deep_shallow.jpeg" alt="Deep and shallow module"></p>
 <blockquote>
-<p>作者用了Deep和Shallow两个概念来描述模块接口与功能的设计，非常形象，</p>
+<p>作者用了Deep和Shallow两个概念来描述模块接口与功能的设计，非常形象，我理解应该是：接口设计趋向于在解决领域问题内越抽象越好，这里的Deep应该就是指抽象的程度。</p>
 </blockquote>
-<p>在同等复杂度的情况下，Deep模块的接口简单，具备复杂的功能实现，Shallow模块（类似于领域驱动设计中的贫血模型）则相反。</p>
+<p>在同等复杂度的情况下，Deep模块的接口简单，具备复杂的功能实现，Shallow模块（类似于领域驱动设计中的<strong>贫血模型</strong>）则相反。</p>
 <blockquote>
 <p>原文夸奖了一下Unix IO模块的接口设计，接口简单明了，内部实现细节对调用者来说完全不用关心。</p>
 </blockquote>
@@ -394,12 +399,22 @@
 <p>一致性是强有力的降低系统复杂性的工具。</p>
 <p>强调系统一致性，包括概念，解决问题的方式，</p>
 <h2 id="18-code-should-be-obvious">18. Code Should be Obvious</h2>
-<h2 id="19-software-trends软件规范">19. Software Trends&lt;软件规范&gt;</h2>
+<h2 id="19-software-trends软件趋势">19. Software Trends&lt;软件趋势&gt;</h2>
 <h3 id="191-object-oriented-programming-and-inheritance面向对象编程与继承">19.1 Object-oriented programming and inheritance&lt;面向对象编程与继承&gt;</h3>
 <p>在面向对象编程中，继承有两种形式：
-一种是接口间继承，接口继承目的在于多个实现间复用相同接口，从而降低复杂性。</p>
+接口间继承：目的在于多个实现间复用相同接口，使解决方式适用于不用问题，从而降低复杂性。
+如果一个接口被更多地不同实现，那么说明这个接口会变得更Deep（抽象），这是抽象的核心概念。</p>
 <p>比如IO的读写接口被磁盘读写接口和网络读写接口继承。</p>
+<h3 id="192agile-development敏捷开发">19.2  Agile development&lt;敏捷开发&gt;</h3>
+<p>敏捷开发由于其快速迭代的特性，很容易陷入战术编程思维。</p>
+<h3 id="193unit-tests单元测试">19.3  Unit tests&lt;单元测试&gt;</h3>
+<p>过去，开发人员几乎不写测试。没有测试的系统很难被重构，单元测试在软件设计中扮演相当重要的角色。</p>
+<h3 id="194test-driven-development测试驱动开发">19.4  Test-driven development&lt;测试驱动开发&gt;</h3>
+<p>测试驱动开发的问题是他专注于可用特性开发工作上，而不是寻找更好的设计。</p>
+<h3 id="195design-patterns">19.5 Design patterns</h3>
+<p>设计模式最大的风险是过度使用，不是所有问题都能被现有模式完美解决。只有在系统适合某个模式的时候才使用。</p>
 <h2 id="20-designing-for-performance性能设计">20. Designing for Performance&lt;性能设计&gt;</h2>
+<h3 id="201how-to-think-about-performance如何看待性能">20.1  How to think about performance&lt;如何看待性能&gt;</h3>
 <h3 id="202measure-before-modifying">20.2  Measure before modifying</h3>
 <p>性能优化前，先想好衡量性能的方案，这样才能量化你做的性能优化。</p>
 
