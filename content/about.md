@@ -4,6 +4,8 @@ menu: "main"
 weight: 50
 ---
 
+![It's Me](/images/me_400x400.jpg "It's Me")
+
 网名:于川海，软件工程师。
 
 - 轻度乐观主义忧郁患者
