@@ -158,7 +158,7 @@ copyright = "是谁来自山川湖海，却囿于昼夜，厨房与爱。「万�
     pagePV = true
 
   [params.reward]                                         # 文章打赏
-    enable = true
+    enable = false
     wechat = "https://blog.xiebiao.com/images/wechat-qr-code.png"           # 微信二维码
    # alipay = "/path/to/your/alipay-qr-code.png"           # 支付宝二维码
 
