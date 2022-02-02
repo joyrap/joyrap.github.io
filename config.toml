@@ -16,7 +16,7 @@ pygmentsUseClasses = true
 pygmentsCodefencesGuessSyntax = true
 
 hasCJKLanguage = true     # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
-paginate = 2                                              # 首页每页显示的文章数
+paginate = 5                                              # 首页每页显示的文章数
 disqusShortname = ""      # disqus_shortname
 googleAnalytics = ""      # UA-XXXXXXXX-X
 copyright = "是谁来自山川湖海，却囿于昼夜，厨房与爱。「万能青年旅店」"            # default: author.name ↓        # 默认为下面配置的author.name ↓
@@ -61,7 +61,7 @@ copyright = "是谁来自山川湖海，却囿于昼夜，厨房与爱。「万�
 
   # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
   logoTitle = "于昼夜，思山川湖海"        # default: the title value    # 默认值: 上面设置的title值
-  keywords = ["于川海", "theme","even"]
+  keywords = ["于川海", "于昼夜，思山川湖海"]
   description = "来自山川湖海，却囿于昼夜，厨房与爱。"
 
   # paginate of archives, tags and categories             # 归档、标签、分类每页显示的文章数目，建议修改为一个较大的值
