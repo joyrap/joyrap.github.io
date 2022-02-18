@@ -48,7 +48,7 @@
 <meta itemprop="name" content="A Philosophy Of Software Design-读书笔记">
 <meta itemprop="description" content="《软件设计的哲学》这本书最早出版于2018年，2021年出了2nd Edition，目前国内还没有中文版，这本书是作者 在斯坦福大学开设的CS1"><meta itemprop="datePublished" content="2022-01-08T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2022-01-24T14:59:35+08:00" />
-<meta itemprop="wordCount" content="5013">
+<meta itemprop="wordCount" content="5043">
 <meta itemprop="keywords" content="Programming," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="A Philosophy Of Software Design-读书笔记"/>
 <meta name="twitter:description" content="《软件设计的哲学》这本书最早出版于2018年，2021年出了2nd Edition，目前国内还没有中文版，这本书是作者 在斯坦福大学开设的CS1"/>
@@ -125,7 +125,7 @@
         <div class="post-category">
             <a href="/categories/design/"> Design </a>
             </div>
-          <span class="more-meta"> 5013 words </span>
+          <span class="more-meta"> 5043 words </span>
           <span class="more-meta"> 11 mins read </span>
         
       </div>
@@ -254,14 +254,15 @@
 ，那么对于本书的定义来说，他就不算复杂。当然几乎所有的大型软件系统实际上都是复杂到难于实现，他们或多或少都会出现我定义的复杂性，也不是说没有复杂功能的简单系统就不可能出现复杂。</p>
 <p>复杂性是由大多数常见的活动决定的，如果一个系统只有很少一部分是复杂的，但它们不影响整个系统复杂性。</p>
 <p>我们可以用一个简单的数学公式来描述系统复杂性：</p>
-<p>$$ C=\sum_{p}c_{p}t_{p} $$ （p为系统的组件数量，c为组件的复杂性，t为完成组件投入的时间）</p>
+<p>$$ C=\sum_{p}c_{p}t_{p} $$</p>
+<p>（p为系统的组件数量，c为组件的复杂性，t为完成组件投入的时间）</p>
 <p>系统的整体复杂性由组成部分乘以开发人员在其投入的工作时间，将复杂性隔离在不容易被发现的地方不亚于完全消除复杂性。</p>
 <p>复杂性相对于作者而言对读者更显而易见，当事者总会觉得他们写的代码似乎很简单，但其他人却觉得复杂。如果你遇到这种情况，试着询问其他
 开发人员，为什么你写的代码在他们看来这样复杂，从交流中找到你与他们之间不同的想法。作为开发者你的工作不只是写你认为容易的代码，
 同时也要让其他人容易理解。</p>
 <h3 id="22-symptoms-of-complexity-复杂性的特征">2.2 Symptoms of complexity &lt;复杂性的特征&gt;</h3>
 <ol>
-<li>Change amplification&lt;复杂关联&gt;</li>
+<li>Change amplification&lt;变更放大&gt;</li>
 </ol>
 <p>有时候看上去是做一个小的改变，但是需要修改多处代码（功能散落在多处）。好设计的目标是降低每个设计中受影响的代码量。</p>
 <ol start="2">
@@ -423,6 +424,11 @@
 <h3 id="201how-to-think-about-performance如何看待性能">20.1  How to think about performance&lt;如何看待性能&gt;</h3>
 <h3 id="202measure-before-modifying">20.2  Measure before modifying</h3>
 <p>性能优化前，先想好衡量性能的方案，这样才能量化你做的性能优化。</p>
+<hr>
+<p>参考阅读：</p>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/g6f8-eSUjc_-fsLt0hKlZQ">系统困境与软件复杂度：为什么我们的系统会如此复杂？</a></li>
+</ul>
 
     </div>
 
