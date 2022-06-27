@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>如何用PlantUML&#43;C4画系统架构图 - 于昼夜，思山川湖海</title>
+  <title>图表即代码 - 于昼夜，思山川湖海</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="于川海" /><meta name="description" content="为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件。 软件开发时用到画图软件林林总总，差异" /><meta name="keywords" content="于川海, 于昼夜，思山川湖海" />
+<meta name="author" content="于川海" /><meta name="description" content="为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件，以及如何在文档中嵌入图表。 软件开发时" /><meta name="keywords" content="于川海, 于昼夜，思山川湖海" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.92.0 with theme even" />
+<meta name="generator" content="Hugo 0.101.0 with theme even" />
 
 
 <link rel="canonical" href="https://joyrap.github.io/post/2021-11-22-plantuml-c4/" />
@@ -38,20 +38,20 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="如何用PlantUML&#43;C4画系统架构图" />
-<meta property="og:description" content="为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件。 软件开发时用到画图软件林林总总，差异" />
+<meta property="og:title" content="图表即代码" />
+<meta property="og:description" content="为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件，以及如何在文档中嵌入图表。 软件开发时" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://joyrap.github.io/post/2021-11-22-plantuml-c4/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-11-22T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-01-23T21:48:28+08:00" />
+<meta property="article:modified_time" content="2022-06-27T11:02:21+08:00" />
 
-<meta itemprop="name" content="如何用PlantUML&#43;C4画系统架构图">
-<meta itemprop="description" content="为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件。 软件开发时用到画图软件林林总总，差异"><meta itemprop="datePublished" content="2021-11-22T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2022-01-23T21:48:28+08:00" />
-<meta itemprop="wordCount" content="1627">
+<meta itemprop="name" content="图表即代码">
+<meta itemprop="description" content="为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件，以及如何在文档中嵌入图表。 软件开发时"><meta itemprop="datePublished" content="2021-11-22T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-06-27T11:02:21+08:00" />
+<meta itemprop="wordCount" content="1643">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="如何用PlantUML&#43;C4画系统架构图"/>
-<meta name="twitter:description" content="为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件。 软件开发时用到画图软件林林总总，差异"/>
+<meta name="twitter:title" content="图表即代码"/>
+<meta name="twitter:description" content="为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件，以及如何在文档中嵌入图表。 软件开发时"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -118,14 +118,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">如何用PlantUML&#43;C4画系统架构图</h1>
+      <h1 class="post-title">图表即代码</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2021-11-22 </span>
         <div class="post-category">
             <a href="/categories/documentation/"> documentation </a>
             </div>
-          <span class="more-meta"> 1627 words </span>
+          <span class="more-meta"> 1643 words </span>
           <span class="more-meta"> 4 mins read </span>
         
       </div>
@@ -152,7 +152,7 @@
 </div>
     <div class="post-content">
       <h3 id="为何要用文本的方式记录">为何要用文本的方式记录</h3>
-<p>最近工作中开始重度使用<a href="https://plantuml.com">PlantUML</a>，于是就总结一下软件开发中使用到的画图软件。</p>
+<p>最近工作中开始重度使用<a href="https://plantuml.com">PlantUML</a>，于是就总结一下软件开发中使用到的画图软件，以及如何在文档中嵌入图表。</p>
 <p>软件开发时用到画图软件林林总总，差异化较大，但我们使用的大部分画图工具，都以独特的二进制文件存储，缺点不利于团队协作和分享，导致跟随代码的相关思维图不能更好地被管理，甚至无法与代码保持及时更新迭代，所以软件工程师们更希望通过像代码一样来管理图形化思维。</p>
 <p>文本具有以下优点：</p>
 <ul>
@@ -185,10 +185,10 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">It&#39;s a way to create maps of your code, at various levels of detail, 
-in the same way you would use something 
-like Google Maps to zoom in and out of an area you are interested in.
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">It&#39;s a way to create maps of your code, at various levels of detail, 
+</span></span><span class="line"><span class="cl">in the same way you would use something 
+</span></span><span class="line"><span class="cl">like Google Maps to zoom in and out of an area you are interested in.
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>这种方法就像是地图软件上使用缩放功能一样来观察软件系统。</p>
 <p>C4同时提供了一套基于<a href="https://github.com/plantuml-stdlib/C4-PlantUML">PlantUML的模型定义</a>，效果图如下：</p>
@@ -219,13 +219,13 @@ Excalidraw也是<a href="https://github.com/excalidraw/excalidraw">代码开源<
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="err">+---------+</span>
-<span class="err">|</span>         <span class="err">|</span>       <span class="err">+---------+</span>
-<span class="err">|</span>         <span class="err">|</span>       <span class="err">|</span>         <span class="err">|</span>
-<span class="err">|</span>         <span class="err">+------&gt;|</span>         <span class="err">|</span>
-<span class="err">|</span>         <span class="err">|</span>       <span class="err">+---------+</span>
-<span class="err">+---------+</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">+---------+</span>
+</span></span><span class="line"><span class="cl"><span class="err">|</span>         <span class="err">|</span>       <span class="err">+---------+</span>
+</span></span><span class="line"><span class="cl"><span class="err">|</span>         <span class="err">|</span>       <span class="err">|</span>         <span class="err">|</span>
+</span></span><span class="line"><span class="cl"><span class="err">|</span>         <span class="err">+------&gt;|</span>         <span class="err">|</span>
+</span></span><span class="line"><span class="cl"><span class="err">|</span>         <span class="err">|</span>       <span class="err">+---------+</span>
+</span></span><span class="line"><span class="cl"><span class="err">+---------+</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>这类包含在代码注释中的图形出现在很多开源项目中(Java JDK源码中也在使用)。
 手动输入这些符号肯定不科学，<a href="https://asciiflow.com/#/">Asciiflow</a>这个工具专门解决这类问题。</p>
@@ -238,13 +238,15 @@ Excalidraw也是<a href="https://github.com/excalidraw/excalidraw">代码开源<
 <p>&mdash; 相关连接 &mdash;</p>
 <ul>
 <li><a href="https://plantuml.com">PlantUML</a></li>
-<li><a href="https://graphviz.org">graphviz</a></li>
-<li><a href="https://excalidraw.com">Excalidraw</a></li>
-<li><a href="https://asciiflow.com/">Asciiflow</a></li>
 <li><a href="https://en.wikipedia.org/wiki/C4_model">C4 model</a></li>
 <li><a href="http://c4model.com">C4</a></li>
 <li><a href="https://github.com/plantuml-stdlib/C4-PlantUML">PlantUML插件库</a></li>
 <li><a href="https://github.com/xuanye/plantuml-style-c4">PlantUML美化</a></li>
+<li><a href="https://graphviz.org">graphviz</a></li>
+<li><a href="https://excalidraw.com">Excalidraw</a></li>
+<li><a href="https://asciiflow.com/">Asciiflow</a></li>
+<li><a href="https://docs.asciidoctor.org/diagram-extension/latest/">AsciiDoctor Diagram</a></li>
+<li><a href="https://www.websequencediagrams.com/">WebSequenceDiagrams</a></li>
 </ul>
 
     </div>
@@ -257,8 +259,8 @@ Excalidraw也是<a href="https://github.com/excalidraw/excalidraw">代码开源<
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2022-01-23
-        <a href="#ZgotmplZ/commit/d5cda2499194ac6afedc735c2b191c4c552d3553" title="action-hugo">(d5cda24)</a>
+        2022-06-27
+        <a href="#ZgotmplZ/commit/aef131a10876da9b97978ab65c0a75c6ebcb46ae" title="更新标题:图表即代码">(aef131a)</a>
     </span>
   </p>
   

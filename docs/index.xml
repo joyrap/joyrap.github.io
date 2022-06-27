@@ -45,12 +45,12 @@
     </item>
     
     <item>
-      <title>如何用PlantUML&#43;C4画系统架构图</title>
+      <title>图表即代码</title>
       <link>https://joyrap.github.io/post/2021-11-22-plantuml-c4/</link>
       <pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://joyrap.github.io/post/2021-11-22-plantuml-c4/</guid>
-      <description>为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件。 软件开发时用到画图软件林林总总，差异</description>
+      <description>为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件，以及如何在文档中嵌入图表。 软件开发时</description>
     </item>
     
     <item>
