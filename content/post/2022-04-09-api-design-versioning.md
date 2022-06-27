@@ -4,7 +4,7 @@ date: 2022-04-09
 layout: post
 categories: ["API Design"]
 tags: ["versioning","api"]
-draft: false
+draft: true
 ---
 公司或技术团队为了适应市场或环境的变化，为用户提供更多的特性，这种情况下催生出的软件产品，必然要面对频繁的需求迭代，需求迭代让软件一直处于变化过程中，这其中包括内部和与外部交互的协议。
 
