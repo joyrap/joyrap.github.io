@@ -9,15 +9,64 @@
   </url>
   
   <url>
-    <loc>https://joyrap.github.io/post/2022-01-08-a-philosophy-of-software-design/</loc>
-    <lastmod>2022-02-18T16:02:17+08:00</lastmod>
+    <loc>https://joyrap.github.io/tags/api/</loc>
+    <lastmod>2022-07-03T09:52:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://joyrap.github.io/categories/api-design/</loc>
+    <lastmod>2022-07-03T09:52:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://joyrap.github.io/post/2022-04-09-api-design-versioning/</loc>
+    <lastmod>2022-07-03T09:52:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://joyrap.github.io/categories/</loc>
-    <lastmod>2022-06-27T11:02:21+08:00</lastmod>
+    <lastmod>2022-07-03T09:52:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://joyrap.github.io/post/</loc>
+    <lastmod>2022-07-03T09:52:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://joyrap.github.io/tags/</loc>
+    <lastmod>2022-07-03T09:52:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://joyrap.github.io/tags/versioning/</loc>
+    <lastmod>2022-07-03T09:52:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://joyrap.github.io/</loc>
+    <lastmod>2022-07-03T09:52:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://joyrap.github.io/post/2022-01-08-a-philosophy-of-software-design/</loc>
+    <lastmod>2022-02-18T16:02:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -30,29 +79,8 @@
   </url>
   
   <url>
-    <loc>https://joyrap.github.io/post/</loc>
-    <lastmod>2022-06-27T11:02:21+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://joyrap.github.io/tags/programming/</loc>
     <lastmod>2022-02-18T16:02:17+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://joyrap.github.io/tags/</loc>
-    <lastmod>2022-02-18T16:02:17+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://joyrap.github.io/</loc>
-    <lastmod>2022-06-27T11:02:21+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
