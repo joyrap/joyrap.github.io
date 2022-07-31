@@ -9,6 +9,41 @@
   </url>
   
   <url>
+    <loc>https://joyrap.github.io/categories/</loc>
+    <lastmod>2022-07-31T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://joyrap.github.io/categories/life/</loc>
+    <lastmod>2022-07-31T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://joyrap.github.io/post/</loc>
+    <lastmod>2022-07-31T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://joyrap.github.io/</loc>
+    <lastmod>2022-07-31T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://joyrap.github.io/post/2022-07-31-no-title/</loc>
+    <lastmod>2022-07-31T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://joyrap.github.io/tags/api/</loc>
     <lastmod>2022-07-03T23:20:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -30,20 +65,6 @@
   </url>
   
   <url>
-    <loc>https://joyrap.github.io/categories/</loc>
-    <lastmod>2022-07-05T17:31:34+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://joyrap.github.io/post/</loc>
-    <lastmod>2022-07-05T17:31:34+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://joyrap.github.io/tags/</loc>
     <lastmod>2022-07-03T23:20:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -53,13 +74,6 @@
   <url>
     <loc>https://joyrap.github.io/tags/versioning/</loc>
     <lastmod>2022-07-03T23:20:29+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://joyrap.github.io/</loc>
-    <lastmod>2022-07-05T17:31:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -87,13 +101,6 @@
   
   <url>
     <loc>https://joyrap.github.io/post/2021-12-28-2021/</loc>
-    <lastmod>2022-01-23T21:48:28+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://joyrap.github.io/categories/life/</loc>
     <lastmod>2022-01-23T21:48:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -326,6 +333,12 @@
   <url>
     <loc>https://joyrap.github.io/tags/pattern/</loc>
     <lastmod>2022-01-23T21:48:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://joyrap.github.io/post/2022-07-18-maven-shade-plugin-vs-maven-assembly-plugin/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

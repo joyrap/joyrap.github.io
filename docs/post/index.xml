@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>是谁来自山川湖海，却囿于昼夜，厨房与爱。「万能青年旅店」</copyright>
-    <lastBuildDate>Sat, 09 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>无题</title>
+      <link>https://joyrap.github.io/post/2022-07-31-no-title/</link>
+      <pubDate>Sun, 31 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2022-07-31-no-title/</guid>
+      <description>盛夏，酷热。 &amp;ldquo;发一份辣椒酱制作菜谱给你，可好&amp;rdquo; &amp;ldquo;你不在，我不想把时间花在做饭上&amp;hellip;&amp;hell</description>
+    </item>
+    
     <item>
       <title>API设计之版本控制</title>
       <link>https://joyrap.github.io/post/2022-04-09-api-design-versioning/</link>
@@ -186,6 +195,15 @@
       
       <guid>https://joyrap.github.io/post/2012-06-20-notification-pattern/</guid>
       <description>场景 在MVC的架构中，我们想从Model层传递一些错误信息到View层，比如用户注册这个功能，用户填写了密码，邮箱，然后提交注册， 这时候我们</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://joyrap.github.io/post/2022-07-18-maven-shade-plugin-vs-maven-assembly-plugin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2022-07-18-maven-shade-plugin-vs-maven-assembly-plugin/</guid>
+      <description></description>
     </item>
     
   </channel>
