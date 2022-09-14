@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.101.0 with theme even" />
+<meta name="generator" content="Hugo 0.102.3 with theme even" />
 
 
 <link rel="canonical" href="https://joyrap.github.io/post/2016-08-08-how-to-make-projects-failed/" />
@@ -43,12 +43,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://joyrap.github.io/post/2016-08-08-how-to-make-projects-failed/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2016-08-08T01:24:47+00:00" />
-<meta property="article:modified_time" content="2022-01-23T21:48:28+08:00" />
+<meta property="article:modified_time" content="2022-09-14T22:14:33+08:00" />
 
 <meta itemprop="name" content="我们是如何将一个项目做烂的">
 <meta itemprop="description" content="在你读到这篇牢骚的时候，无数个项目正在慢慢变烂。 既然标题都用到了&quot;烂&quot;这个词，那什么才是烂呢？ 在你的项目里，&ldquo"><meta itemprop="datePublished" content="2016-08-08T01:24:47+00:00" />
-<meta itemprop="dateModified" content="2022-01-23T21:48:28+08:00" />
-<meta itemprop="wordCount" content="4556">
+<meta itemprop="dateModified" content="2022-09-14T22:14:33+08:00" />
+<meta itemprop="wordCount" content="4570">
 <meta itemprop="keywords" content="programming," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="我们是如何将一个项目做烂的"/>
 <meta name="twitter:description" content="在你读到这篇牢骚的时候，无数个项目正在慢慢变烂。 既然标题都用到了&quot;烂&quot;这个词，那什么才是烂呢？ 在你的项目里，&ldquo"/>
@@ -126,7 +126,7 @@
             <a href="/categories/engineering/"> Engineering </a>
             <a href="/categories/design/"> Design </a>
             </div>
-          <span class="more-meta"> 4556 words </span>
+          <span class="more-meta"> 4570 words </span>
           <span class="more-meta"> 10 mins read </span>
         
       </div>
@@ -145,6 +145,7 @@
     <li><a href="#需求">需求</a></li>
     <li><a href="#负面情绪">负面情绪</a></li>
     <li><a href="#保持现状">保持现状</a></li>
+    <li><a href="#参考">参考</a></li>
   </ul>
 </nav>
   </div>
@@ -169,7 +170,7 @@
 <p>如果你的项目还不能做到一键命令构建，打包。</p>
 <p>如果你的测试环境和线上环境程序部署时间不在可控范围。</p>
 <p>&hellip;&hellip;</p>
-<p>如果你的项目中有一群还没有意识到危险来临的开发人员，</p>
+<p>如果你的项目中有一群还没有意识到低效，重复意味着着危险的开发人员，</p>
 <p>那么你的项目，肯定会慢慢变烂, 因为效率太低。</p>
 <h2 id="框架">框架</h2>
 <p>是的，从你找工作开始，就肯定听说了这个词，如果你在学校的时候就是一个勤奋好学的同志，那么你早就听说过了，在Java的世界里，你不会几种框架，还好意思出去混吗，于是很多招聘里面都提到，精通Spring,Hibernate,Struts,Mybatis &hellip;
@@ -179,7 +180,7 @@
 <li>使用了框架，但是版本已经是上个世纪的了，却依然在线上跑着</li>
 <li>依赖同一个第三方开源工具包，却有多个版本</li>
 <li>有的地方用了框架的注解配置方式，有的地方却用的XML配置文件</li>
-<li>一个本来只需要几十K代码搞定的项目，最后把框架依赖一起打包，至少几十M</li>
+<li>一个本来只需要几十kb代码搞定的项目，最后把框架依赖一起打包，至少几十Mb</li>
 <li>没看出来为什么这个项目需要用到这个框架</li>
 <li>&hellip;&hellip;</li>
 </ul>
@@ -216,8 +217,8 @@
 <p>如果你有所觉悟，然后只是到网上到处借鉴各种军规堆砌在项目里, 那么依然没什么卵用。</p>
 <p><strong>规范并不能让你的代码变得多优秀</strong>，规范只是防止代码里到处弥漫着单身屌丝程序员(猿)的个人感情色彩,规避一些显而易见的错误.</p>
 <p>有了规范, 你有没有<a href="http://blog.takipi.com/5-code-review-tricks-the-experts-use-based-on-3-2-million-lines-of-code/">代码审查</a>?</p>
-<p>你在网络上到处都能搜索到&quot; XX团队如何看重代码审查,XX团队为了代码质量开发了一个代码审查工具&quot;, 可是你很难找到XX团队是如何做代码审查的,所以搞清楚如何让代码审查起到作用 比代码审查本身更重要.</p>
-<p>总之,在代码审查之外，你还需要权衡，要不要把代码审查搞成政治任务，要不要搞成批斗大会, 如果你在代码审查的气氛里面闻到了坏味道, 那就应该停下来。</p>
+<p>你在网络上到处都能搜索到&quot; XX团队如何看重代码审查,XX团队为了代码质量开发了一个代码审查工具&quot;, 可是你很难找到XX团队是如何做代码审查的，所以搞清楚如何让代码审查起到作用比代码审查本身更重要。</p>
+<p>总之，在代码审查之外，你还需要权衡，要不要把代码审查搞成政治任务，要不要搞成批斗大会, 如果你在代码审查的气氛里面闻到了坏味道, 那就应该停下来。</p>
 <p>一个做好了代码规范和代码审查的项目，想变烂都没那么容易。</p>
 <h2 id="测试">测试</h2>
 <p>我在大学里面学编程的时候，似乎老师都没教过什么是测试，当时写TC的时候，老师只是说上机执行，现在回想起来，好像当时的教材也没有专门讲测试。（也许我就没有好好学过）</p>
@@ -246,7 +247,7 @@
 <p>如何识别项目中遇到的负面情绪呢？</p>
 <ul>
 <li>小A最近经常一边写代码，一边逛招聘网站</li>
-<li>小B经常给你说，[某某公司]的工资更高，全员MAC环境开发，23寸显示器&hellip;</li>
+<li>小B经常给你说，[某某公司]的工资更高，全员MAC环境开发，4k显示器&hellip;</li>
 <li>小C给你讲，小A和小B的代码写得真烂</li>
 <li>小D抱怨技术上得不到提高</li>
 <li>&hellip;&hellip;</li>
@@ -263,6 +264,10 @@
 <p>保持现状是一种惰性思维，它已经麻痹了开发人员对项目变化带来的风险评估。</p>
 <p>如果将项目比做一辆汽车，它只是在不停地行驶，却没有定期保养。（重点是你不知道应该保养哪些部件）</p>
 <p>不要让保持现状的思维腐蚀了项目，让项目慢慢变烂。</p>
+<h2 id="参考">参考</h2>
+<ul>
+<li><a href="https://abseil.io/resources/swe-book/html/ch09.html">Code Review At Google</a></li>
+</ul>
 
     </div>
 
@@ -274,8 +279,8 @@
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2022-01-23
-        <a href="#ZgotmplZ/commit/d5cda2499194ac6afedc735c2b191c4c552d3553" title="action-hugo">(d5cda24)</a>
+        2022-09-14
+        <a href="#ZgotmplZ/commit/9361724651146d5d9fc1229c057597a0e89086ff" title="new blank post">(9361724)</a>
     </span>
   </p>
   
