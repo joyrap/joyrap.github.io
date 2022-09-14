@@ -3,7 +3,7 @@ layout: post
 title:  翻译:Understanding the LMAX Disruptor
 date:   2019-04-19 21:24:47
 categories: ["Translate","Programming"]
-tags: ["Disruptor"]
+tags: ["Disruptor","Advanced Data Structure","Data Structure"]
 ---
 
 ### 翻译前言
@@ -438,6 +438,7 @@ class RhsPadding extends Value {
 
 ### 扩展阅读
 
+- [Disruptor介绍](https://lmax-exchange.github.io/disruptor/disruptor.html)
 - [*Is Parallel Programming Hard, And, If So, What Can You Do About It?*](https://mirrors.edge.kernel.org/pub/linux/kernel/people/paulmck/perfbook/perfbook.html)
 
 - [*计算机多核平台上的锁(一)*](http://blog.xiebiao.com/post/2020-08-19-locks-on-multicore/)

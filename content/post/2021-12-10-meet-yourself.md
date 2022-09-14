@@ -3,6 +3,7 @@ title: 翻越了这座山，你有没有遇到过自己
 date: 2021-12-10
 layout: post
 categories: ["Life"]
+tags: ["诗与远方"]
 draft: false
 ---
 
