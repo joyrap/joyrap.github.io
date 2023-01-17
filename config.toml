@@ -19,7 +19,7 @@ hasCJKLanguage = true     # has chinese/japanese/korean ? # 自动检测是否�
 paginate = 5                                              # 首页每页显示的文章数
 disqusShortname = ""      # disqus_shortname
 googleAnalytics = ""      # UA-XXXXXXXX-X
-copyright = "是谁来自山川湖海，却囿于昼夜，厨房与爱。「万能青年旅店」"            # default: author.name ↓        # 默认为下面配置的author.name ↓
+copyright = "语言是一生的枷锁。"            # default: author.name ↓        # 默认为下面配置的author.name ↓
 
 [author]                  # essential                     # 必需
   name = "于川海"
