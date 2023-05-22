@@ -88,13 +88,23 @@ $header-padding: 20px 20px !default;
   url('../fonts/chancery/apple-chancery-webfont.woff2') format('woff2'),
   url('../fonts/chancery/apple-chancery-webfont.woff') format('woff'),
   url('../fonts/chancery/apple-chancery-webfont.ttf') format('truetype'),
+  url('https: //cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/files/lxgwwenkaiscreen-subset-100.woff2') format('woff2'),
+  url('https: //cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/files/lxgwwenkaiscreen-subset-102.woff2') format('woff2'),
+  url('https: //cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/files/lxgwwenkaiscreen-subset-111.woff2') format('woff2'),
+  url('https: //cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/files/lxgwwenkaiscreen-subset-112.woff2') format('woff2'),
+  url('https: //cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/files/lxgwwenkaiscreen-subset-114.woff2') format('woff2'),
+  url('https: //cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/files/lxgwwenkaiscreen-subset-115.woff2') format('woff2'),
+  url('https: //cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/files/lxgwwenkaiscreen-subset-116.woff2') format('woff2'),
+  url('https: //cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/files/lxgwwenkaiscreen-subset-117.woff2') format('woff2'),
+  url('https: //cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/files/lxgwwenkaiscreen-subset-118.woff2') format('woff2'),
+  url('https: //cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/files/lxgwwenkaiscreen-subset-119.woff2') format('woff2'),
   url('../fonts/chancery/apple-chancery-webfont.svg#apple-chancery') format('svg');
   font-weight: lighter;
   font-style: normal;
 }
 
 // Font size of the logo.
-$logo-font-size: 46px !default;
+$logo-font-size: 48px !default;
 
 // Font family of the logo.
 //$logo-font-family: 'Chancery', cursive, LiSu, sans-serif !default;
