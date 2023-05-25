@@ -83,9 +83,11 @@
     };
   </script>
   {{ if .Site.Params.mathjaxUseLocalFiles -}}
-    <script type="text/javascript" async src="{{ "lib/mathjax/MathJax.js?config=TeX-MML-AM_CHTML" | relURL }}"></script>
+    <script type="text/javascript" async src="{{ "lib/mathjax/MathJax.js" | relURL }}"></script>
   {{- else -}}
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.min.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+      integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
   {{- end }}
 {{- end }}
 
