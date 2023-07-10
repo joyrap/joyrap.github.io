@@ -22,7 +22,7 @@ googleAnalytics = ""      # UA-XXXXXXXX-X
 copyright = "语言是一生的枷锁。"            # default: author.name ↓        # 默认为下面配置的author.name ↓
 
 [author]                  # essential                     # 必需
-  name = "于川海"
+  name = "于川海XXXXXXXXXX啊打发的暗室逢灯的撒"
 
 [sitemap]                 # essential                     # 必需
   changefreq = "weekly"
