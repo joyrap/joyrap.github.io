@@ -22,7 +22,7 @@ googleAnalytics = ""      # UA-XXXXXXXX-X
 copyright = "语言是一生的枷锁。"            # default: author.name ↓        # 默认为下面配置的author.name ↓
 
 [author]                  # essential                     # 必需
-  name = "于川海XXXXXXXXXX啊打发的暗室逢灯的撒"
+  name = "于川海"
 
 [sitemap]                 # essential                     # 必需
   changefreq = "weekly"
@@ -60,7 +60,7 @@ copyright = "语言是一生的枷锁。"            # default: author.name ↓ 
   gitRepo = " https://github.com/joyrap/joyrap.github.io.git"
 
   # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
-  logoTitle = "于川海"        # default: the title value    # 默认值: 上面设置的title值
+  logoTitle = "于川海啊撒旦范德萨范德萨阿斯顿阿斯蒂芬"        # default: the title value    # 默认值: 上面设置的title值
   keywords = ["于川海", "于昼夜，思山川湖海|语言是一生的枷锁"]
   description = "来自山川湖海，却囿于昼夜，厨房与爱。|语言是一生的枷锁"
 
