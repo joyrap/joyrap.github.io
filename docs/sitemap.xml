@@ -10,42 +10,49 @@
   
   <url>
     <loc>https://joyrap.github.io/categories/</loc>
-    <lastmod>2023-07-19T09:21:51+08:00</lastmod>
+    <lastmod>2023-07-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://joyrap.github.io/categories/life/</loc>
-    <lastmod>2023-07-19T09:21:51+08:00</lastmod>
+    <lastmod>2023-07-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://joyrap.github.io/post/</loc>
-    <lastmod>2023-07-19T09:21:51+08:00</lastmod>
+    <lastmod>2023-07-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://joyrap.github.io/tags/</loc>
-    <lastmod>2023-07-19T09:21:51+08:00</lastmod>
+    <lastmod>2023-07-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://joyrap.github.io/post/2023-07-30-my-aunt-passed-away/</loc>
+    <lastmod>2023-07-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://joyrap.github.io/</loc>
-    <lastmod>2023-07-19T09:21:51+08:00</lastmod>
+    <lastmod>2023-07-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://joyrap.github.io/tags/%E6%95%85%E4%B9%A1/</loc>
-    <lastmod>2023-07-04T11:26:24+08:00</lastmod>
+    <lastmod>2023-07-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -66,14 +73,14 @@
   
   <url>
     <loc>https://joyrap.github.io/post/2022-12-28-2022-is-the-ending/</loc>
-    <lastmod>2023-07-19T09:21:51+08:00</lastmod>
+    <lastmod>2023-07-24T16:13:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://joyrap.github.io/tags/life/</loc>
-    <lastmod>2023-07-19T09:21:51+08:00</lastmod>
+    <lastmod>2023-07-24T16:13:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
