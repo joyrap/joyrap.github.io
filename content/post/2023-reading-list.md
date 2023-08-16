@@ -6,7 +6,7 @@ categories: ["Reading"]
 draft: false
 ---
 
-大部分书都没完整看完，
+大部分书都只是选读了其中部分章节。
 
 - [《生命是什么》- 薛定谔](https://book.douban.com/subject/1317485/)
   
