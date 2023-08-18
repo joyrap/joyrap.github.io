@@ -7,7 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>语言是一生的枷锁。</copyright>
-    <lastBuildDate>Sun, 30 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Design</title>
+      <link>https://joyrap.github.io/categories/design/</link>
+      <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/categories/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>documentation</title>
+      <link>https://joyrap.github.io/categories/documentation/</link>
+      <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/categories/documentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Engineering</title>
+      <link>https://joyrap.github.io/categories/engineering/</link>
+      <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/categories/engineering/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Life</title>
       <link>https://joyrap.github.io/categories/life/</link>
@@ -32,24 +59,6 @@
       <pubDate>Sat, 09 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://joyrap.github.io/categories/api-design/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Design</title>
-      <link>https://joyrap.github.io/categories/design/</link>
-      <pubDate>Sat, 08 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://joyrap.github.io/categories/design/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>documentation</title>
-      <link>https://joyrap.github.io/categories/documentation/</link>
-      <pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://joyrap.github.io/categories/documentation/</guid>
       <description></description>
     </item>
     
@@ -95,15 +104,6 @@
       <pubDate>Sat, 18 Feb 2017 18:24:47 +0000</pubDate>
       
       <guid>https://joyrap.github.io/categories/marathon/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Engineering</title>
-      <link>https://joyrap.github.io/categories/engineering/</link>
-      <pubDate>Mon, 08 Aug 2016 01:24:47 +0000</pubDate>
-      
-      <guid>https://joyrap.github.io/categories/engineering/</guid>
       <description></description>
     </item>
     

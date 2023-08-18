@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>语言是一生的枷锁。</copyright>
-    <lastBuildDate>Sun, 30 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://joyrap.github.io/about/</link>
@@ -15,6 +15,15 @@
       
       <guid>https://joyrap.github.io/about/</guid>
       <description>我是谁 网名：于川海， 软件工程师， 轻度乐观主义忧郁患者, 人类精神文明建设观察员， 竹笛爱好者。 工作经历 京东软件工程师（2012/02 ~ 2021/</description>
+    </item>
+    
+    <item>
+      <title>如何画架构图</title>
+      <link>https://joyrap.github.io/post/2023-08-16-how-to-architectural-diagrams/</link>
+      <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2023-08-16-how-to-architectural-diagrams/</guid>
+      <description>最近看了一篇如何画软件架构图的博客，结合个人的一些经验，整理总结一下。 一图胜千言 当你要描述一个复杂系统中各个组件之间的交互关系，组件之间还存</description>
     </item>
     
     <item>
