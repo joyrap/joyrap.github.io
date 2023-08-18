@@ -2,7 +2,7 @@
 title: 如何画架构图
 date: 2023-08-16
 layout: post
-categories: ["documentation","Engineering","Design"]
+categories: ["Documentation","Engineering","Design"]
 draft: false
 ---
 
