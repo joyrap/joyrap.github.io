@@ -118,6 +118,8 @@ draft: false
 - 你要在架构图中完整展示你想表达的内容。
 - 避免过多或太少的信息展示，这是一个平衡取舍技巧。
 
+你也可以参考[C4 model](https://c4model.com/)提出的规范，从4个维度来画软件架构图，与上面提到的内容没有冲突。
+
 ### 总结
 
 许多软件项目缺乏适当的文档，因为人们认为维护文档是一件非常耗时的事情。但是没有架构图就像试图在没有规划路线的情况下开车去某个地方一样，
@@ -127,5 +129,6 @@ draft: false
 
 ### 参考
 
-- [图表即代码](https://blog.xiebiao.com/post/2021-11-22-diagrams-as-code/)
 - [Architectural diagrams: what to know, and how to draw one](https://nulab.com/learn/software-development/architectural-diagrams-what-to-know-and-how-to-draw-one/)
+- [图表即代码](https://blog.xiebiao.com/post/2021-11-22-diagrams-as-code/)
+- [C4 model](https://c4model.com/)
