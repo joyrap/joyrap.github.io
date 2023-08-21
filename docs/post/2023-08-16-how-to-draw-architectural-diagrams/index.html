@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>如何画软件系统架构图 - 把昨天变成字节。</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="于川海" /><meta name="description" content="最近看了一篇如何画软件架构图的博客，结合个人的一些经验，整理总结一下。 一图胜千言 当你要描述一个复杂系统中各个组件之间的交互关系，组件之间还存" /><meta name="keywords" content="于川海, 于昼夜，思山川湖海|语言是一生的枷锁" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.115.2 with theme even" />
+
+
+<link rel="canonical" href="https://joyrap.github.io/post/2023-08-16-how-to-draw-architectural-diagrams/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.42b493c7.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" integrity="sha512-MaRpC5n6oJYFxacB2GS46fBxVK0ysPce0r/XX5Sn5CNayuAssUo44ZpNTKwi+z5bJHlPC4AcXX7XDl9kJdNajA==" crossorigin="anonymous">
+
+
+
+
+
+
+
+
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">于川海</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">于川海</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">如何画软件系统架构图</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-08-16 </span>
+        <div class="post-category">
+            <a href="/categories/documentation/"> Documentation </a>
+            <a href="/categories/engineering/"> Engineering </a>
+            <a href="/categories/design/"> Design </a>
+            <a href="/categories/diagram/"> Diagram </a>
+            </div>
+          <span class="more-meta"> 1734 words </span>
+          <span class="more-meta"> 4 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#一图胜千言">一图胜千言</a></li>
+        <li><a href="#设计图与架构图">设计图与架构图</a></li>
+        <li><a href="#架构图的两个作用">架构图的两个作用</a></li>
+        <li><a href="#软件系统架构图的类型">软件系统架构图的类型</a></li>
+        <li><a href="#应用架构图">应用架构图</a></li>
+        <li><a href="#数据架构图">数据架构图</a></li>
+        <li><a href="#集成架构图">集成架构图</a></li>
+        <li><a href="#如何画架构图">如何画架构图</a></li>
+        <li><a href="#注意事项">注意事项</a></li>
+        <li><a href="#总结">总结</a></li>
+        <li><a href="#参考">参考</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>最近看了一篇<a href="https://nulab.com/learn/software-development/architectural-diagrams-what-to-know-and-how-to-draw-one/">如何画软件架构图</a>的博客，结合个人的一些经验，整理总结一下。</p>
+<h3 id="一图胜千言">一图胜千言</h3>
+<p>当你要描述一个复杂系统中各个组件之间的交互关系，组件之间还存在复杂的数据流转，仅仅只用文字很难对主题快速地树立形象的表达，这时候就需要用到架构图，架构图可以应用于很多领域，例如建筑，工程，IT，产品，销售等等。</p>
+<p>下面这张图就是一个非常好的案例，来至<a href="https://www.morling.dev/blog/the-code-review-pyramid/">The Code Review Pyramid</a>:</p>
+<p><img src="https://www.morling.dev/images/code_review_pyramid.svg" alt="Code review pyramid"></p>
+<p>它有以下几个特点：</p>
+<ul>
+<li>明确的主题</li>
+<li>信息分层</li>
+<li>使用金字塔表达不同信息的权重</li>
+<li>文字提示</li>
+<li>使用箭头</li>
+<li>不同的配色</li>
+</ul>
+<h3 id="设计图与架构图">设计图与架构图</h3>
+<p>许多人混淆了两者之间的区别，架构图描述的是你正在构建的系统状态，组件之间的交互关系以及相互约束，设计图是你将要如何构建系统（未完成）。</p>
+<p>例如：假设你正在建造一个足球场，架构图告诉你架构师想要什么，其中很多细节涉及到多个领域，但是架构图的主要目的是表达如何满足各方的需求，设计图则是如何逐步实现这些需求。</p>
+<h3 id="架构图的两个作用">架构图的两个作用</h3>
+<h4 id="1有助于理解系统">1.有助于理解系统</h4>
+<p>一图胜千言，一张架构图可以传递复杂的信息。</p>
+<ul>
+<li>可以在图上看到系统全景，组件之间的上下游关系，以及他们如何互相影响。</li>
+<li>架构图可以将组件关系和流程分层表达，从中可以自由地关注整体或局部。</li>
+</ul>
+<h4 id="2改善沟通和协作">2.改善沟通和协作</h4>
+<p>软件工程师面临的主要问题之一是一致性，特别是多方参与的系统，团队之间沟通的主要障碍就是理解上的不一致，所以架构图也有助于信息标准化。</p>
+<h3 id="软件系统架构图的类型">软件系统架构图的类型</h3>
+<p>软件架构图可以根据你表达信息的偏向，大致分为以下几类：</p>
+<h3 id="应用架构图">应用架构图</h3>
+<p>应用架构图用于表达软件系统的结构布局以及它如何与其他系统交互，这一类架构图旨在高度抽象组件如何构成系统。通常将关系图分组为层，这些层详细说明系统在不同级别的工作方式。</p>
+<h3 id="数据架构图">数据架构图</h3>
+<p>数据是系统的核心，一个庞大的系统往往伴随着各种业务数据，数据架构图提供数据如何在系统中流转的概况，当你想查询数据，或者扩展系统时非常有帮助。</p>
+<h3 id="集成架构图">集成架构图</h3>
+<p>集成架构图提供组件内部如何协作，以及如何与外部系统配合，集成架构图对设计和部署非常有帮助。</p>
+<h3 id="如何画架构图">如何画架构图</h3>
+<h4 id="1为不同的图形做好文档">1.为不同的图形做好文档</h4>
+<p>一张架构图中，你可能选择多个不同的形状表达不同的含义，为了避免混乱，可以对不同图形进行标注说明，保持全局一致性。</p>
+<p>例如下面这张图：
+<img src="/images/2023-08-16/SaaS_Deploy.jpg" alt="SaaS Deploy Demo"></p>
+<p>你可以标注不同颜色的线框的含义。</p>
+<h4 id="2不同图形背后的含义">2.不同图形背后的含义</h4>
+<p>图形大小，直觉上可以表达量词的比较关系，例如：快与慢，多与少，等等。</p>
+<p>例如：</p>
+<p><img src="/images/2023-08-16/Latency_Numbers.jpeg" alt="Latency_Numbers"></p>
+<h4 id="3图形的不同线框">3.图形的不同线框</h4>
+<p>图形的边缘，你可以选择实线，虚线，直角线框，还是圆角线框。</p>
+<h4 id="4保持箭头指向一致性">4.保持箭头指向一致性</h4>
+<p>箭头的使用很多人最容易犯错，箭头可以表达数据流，或者依赖，如果你想用箭头表达其他关系，但最好不要混合交叉使用。</p>
+<h4 id="5谨慎使用颜色">5.谨慎使用颜色</h4>
+<p>如果要使用颜色，越少越好，同时颜色也需要保持一致性。你可以给线框，背景，文字设置不同颜色。</p>
+<p>切记：颜色具有一种很强的暗示，使用过多不同的颜色，会增加理解成本。</p>
+<h4 id="6有必要使用多个图">6.有必要使用多个图</h4>
+<p>有时候你需要向不同知识背景的人展示架构图，项目的不同干系人关心的内容不太一样，只有一张架构图不能满足不同的受众。</p>
+<h4 id="7合并不完整的图">7.合并不完整的图</h4>
+<p>如果两个关系图都表示一个流程或系统，但它们不完整，请考虑合并它们。</p>
+<h4 id="8包含说明关键词和词汇表">8.包含说明，关键词，和词汇表</h4>
+<p>有必要给图提供说明，关键词和词汇表，但尽量准确和简洁。</p>
+<h4 id="9使用绘图软件">9.使用绘图软件</h4>
+<p>头脑风暴时你可以只用笔和纸，如果需要将<strong>架构图作为团队知识库长期迭代，而不是用完一次就扔掉</strong>，那么你就需要借助画图软件。（我之前整理过一篇<a href="https://blog.xiebiao.com/post/2021-11-22-diagrams-as-code">图表即代码</a>的文章），绘图软件也有利于让架构图信息标准化。</p>
+<h3 id="注意事项">注意事项</h3>
+<ul>
+<li>组件之间的关系要完整，不要有孤立的元素。</li>
+<li>如果要用简写，缩写，或者特殊的专业术语，最好维护在词汇表。</li>
+<li>相同的术语要统一，而且准确。</li>
+<li>标注不清楚的术语，最好说明原因。（难免会有疑问的地方）</li>
+<li>你要在架构图中完整展示你想表达的内容。</li>
+<li>避免过多或太少的信息展示，这是一个平衡取舍技巧。</li>
+</ul>
+<p>你也可以参考<a href="https://c4model.com/">C4 model</a>提出的规范，从4个维度来画软件架构图，与上面提到的内容没有冲突。</p>
+<h3 id="总结">总结</h3>
+<p>许多软件项目缺乏适当的文档，因为人们认为维护文档是一件非常耗时的事情。但是没有架构图就像试图在没有规划路线的情况下开车去某个地方一样，
+总有一天你会迷路，不得不尝试倒退到起点，周而复始。</p>
+<p>最后，强烈推荐这个通过画图来讲计算机相关技术的<a href="https://blog.bytebytego.com/">Newsletter</a>，他们的技术文章配图都非常精美。</p>
+<h3 id="参考">参考</h3>
+<ul>
+<li><a href="https://nulab.com/learn/software-development/architectural-diagrams-what-to-know-and-how-to-draw-one/">Architectural diagrams: what to know, and how to draw one</a></li>
+<li><a href="https://blog.xiebiao.com/post/2021-11-22-diagrams-as-code/">图表即代码</a></li>
+<li><a href="https://c4model.com/">C4 model</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">于川海</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2023-08-16
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/2023-reading-list/">
+            <span class="next-text nav-default">2023阅读清单</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/1130203/bill-xie" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://twitter.com/joyrap" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/xiebiao" class="iconfont icon-github" title="github"></a>
+  <a href="https://joyrap.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2012 - 
+    2023
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">语言是一生的枷锁。</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js" integrity="sha512-GA1YgNe8NTU3XMDMofUTpTNqMsPUL6VjYgc6NjOUTA/6pwTFlTmFc/tk+LnDfXD3/mNGZcik9kvfAjeVPTHisA==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js" integrity="sha512-l0i7i+24ESeyrzZawcOFGAZADXr7mFVJvFNR/BImmv8aGYqR/svqbJHSLzXIr62hE9J9ibyGOEpoBfWwU64a0Q==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/3.0.2/timeago.min.js" integrity="sha512-+HwB8Magvpg+0LZ4APOss9s3mopC9KUMq1/gQbCEaZ9fjSl6vWuVbvo6Nt+2dGfEqNVTZ+NVasiAfBy58kRCLg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/3.0.2/timeago.locales.min.js" integrity="sha512-kjHDpsRVaJ0pxKiXH4ibysg7971Epm80gABnxVYgtMiU4fSll6NaAhzUD4NXg++ihdC160LuogIzwh2b74rP4g==" crossorigin="anonymous"></script>
+  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+<script type="text/javascript" src="/dist/even.2a341756.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+      integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
