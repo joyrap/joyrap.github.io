@@ -33,4 +33,4 @@ weight: 50
 
 ### 联系方式
 
-![Contact](/images/qq.png)
+![Contact](/images/contact.png)
