@@ -33,4 +33,4 @@ weight: 50
 
 ### 联系方式
 
-![Contact](/images/contact.png)
+![Contact1](/images/contact1.png) 或 ![Contact1](/images/contact2.png)
