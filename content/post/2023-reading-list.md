@@ -19,3 +19,7 @@ draft: false
 - [How to Live 27 Conflicting Answers And One Weird Conclusion](https://book.douban.com/subject/35486980/)
   
   英文版的心灵鸡汤，大部分都是英文短句，单词量也不大，阅读起来很轻松，非常适合学习英语。
+
+- [活着回来的男人：一个普通日本兵的二战及战后生命史](https://book.douban.com/subject/26897187/)
+  
+  从一个被战争推着走的底层人民视角讲述二战，导读里面讲吴雄根的经历，让人唏嘘不已。
