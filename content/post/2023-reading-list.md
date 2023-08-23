@@ -8,11 +8,11 @@ draft: false
 
 大部分书都只是选读了其中部分章节。
 
-- [《生命是什么》- 薛定谔](https://book.douban.com/subject/1317485/)
+- [生命是什么 - 薛定谔](https://book.douban.com/subject/1317485/)
   
   科学家从物理角度解释生命是什么，非常有趣且有深度的视角，很多章节看不懂，后面再找其他翻译版本来看看。
 
-- [《费曼讲物理：入门》](https://book.douban.com/subject/33457293/)
+- [费曼讲物理：入门](https://book.douban.com/subject/33457293/)
   
   深入浅出，非常有趣。
 
