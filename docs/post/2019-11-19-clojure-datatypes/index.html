@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.88.1 with theme even" />
+<meta name="generator" content="Hugo 0.115.2 with theme even" />
 
 
 <link rel="canonical" href="https://joyrap.github.io/post/2019-11-19-clojure-datatypes/" />
@@ -176,18 +176,18 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Class User {
-    private String name;   //数据
-    private int age;       //数据
-    ....
-    public String getName(){ //行为
-        ....
-    }
-    public void setName(String name){ //行为
-        ....
-    }
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Class User {
+</span></span><span class="line"><span class="cl">    private String name;   //数据
+</span></span><span class="line"><span class="cl">    private int age;       //数据
+</span></span><span class="line"><span class="cl">    ....
+</span></span><span class="line"><span class="cl">    public String getName(){ //行为
+</span></span><span class="line"><span class="cl">        ....
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">    public void setName(String name){ //行为
+</span></span><span class="line"><span class="cl">        ....
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>但这个<code>POJO</code>将数据和行为交织在一起，如果在行为中没有任何业务逻辑，仅仅是暴露数据给外部，在领域驱动设计中这叫贫血对象，根据个人的经验，这样的贫血对象设计在很多Java系统都存在，同样的领域概念不能在系统中重用，想象一下，在社交系统中有User领域模型，电商系统中可能也包含一个User领域模型，但你不能重用两个系统之间完全相同的数据模型。</p>
 <h2 id="defprotocol">defprotocol</h2>
@@ -204,15 +204,15 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">(defprotocol Dateable
-  (to-ms [t])) ;定义一个包含to-ms方法的接口
-
-(extend java.util.Date
-  Dateable
-  {:to-ms #(.getTime %)})    ;java.util.Date实现了这个接口
-
-(to-ms (java.util.Date.))  ;java.util.Date具备了to-ms方法
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">(defprotocol Dateable
+</span></span><span class="line"><span class="cl">  (to-ms [t])) ;定义一个包含to-ms方法的接口
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">(extend java.util.Date
+</span></span><span class="line"><span class="cl">  Dateable
+</span></span><span class="line"><span class="cl">  {:to-ms #(.getTime %)})    ;java.util.Date实现了这个接口
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">(to-ms (java.util.Date.))  ;java.util.Date具备了to-ms方法
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>在Java中可以通过继承或者组合的方式实现对原有类的扩展，但是会显得很笨粗，Clojure避免了不必要的多层次封装/适配，在不修改原有类同时不新增类的基础上实现了真正的多态性。<code>defprotocol</code> 除了可以被<code>deftype</code>,<code>defrecord</code>,<code>reify</code>实现外，也可以被Java中的类实现。</p>
 <h2 id="数据与行为分离">数据与行为分离</h2>
@@ -225,9 +225,9 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">(def user {&#34;name&#34; &#34;xiebiao&#34; , &#34;age&#34; 30})
-(:name user)
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">(def user {&#34;name&#34; &#34;xiebiao&#34; , &#34;age&#34; 30})
+</span></span><span class="line"><span class="cl">(:name user)
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>用defrecord来表达:</p>
 <div class="highlight"><div class="chroma">
@@ -237,10 +237,10 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">(defrecord User [name age])  ;对应Java的Class User
-(def user (-&gt;User &#34;xiebiao&#34; 30)) ;创建一个user对象
-(:name user )   ;获取user对象的name数据
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">(defrecord User [name age])  ;对应Java的Class User
+</span></span><span class="line"><span class="cl">(def user (-&gt;User &#34;xiebiao&#34; 30)) ;创建一个user对象
+</span></span><span class="line"><span class="cl">(:name user )   ;获取user对象的name数据
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>既然这样，Clojure为什么还需要defrecord呢？因为你除了可以获得具有map一样的数据操作特性外(包括数据解构)，还获得了类型驱动带来的多态特性，所以Clojure推荐将业务数据封装到defrecord中。</p>
 <p><code>defrecord</code> 实现行为<code>defprotocol</code>:</p>
@@ -256,15 +256,15 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">(defprotocol IA
-  (say [this])) ;
-
-(defrecord User [name age]
-IA
-(say [this] (println (:name this))))
-
-(say (-&gt;User &#34;xiebiao&#34; 30) )
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">(defprotocol IA
+</span></span><span class="line"><span class="cl">  (say [this])) ;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">(defrecord User [name age]
+</span></span><span class="line"><span class="cl">IA
+</span></span><span class="line"><span class="cl">(say [this] (println (:name this))))
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">(say (-&gt;User &#34;xiebiao&#34; 30) )
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>也可以实现多个<code>defprotocol</code>:</p>
 <div class="highlight"><div class="chroma">
@@ -286,22 +286,22 @@ IA
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">(defprotocol IA
-  (say [this])) ;
-(defprotocol IB
-  (talk [this])) 
-
-(defrecord User [name age]
-IA
-(say [this] (println (:name this)))
-IB
-(talk [this] (println (:name this)))
-)
-
-(def user (-&gt;User &#34;xiebiao&#34; 30) )
-(say user )
-(talk user )
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">(defprotocol IA
+</span></span><span class="line"><span class="cl">  (say [this])) ;
+</span></span><span class="line"><span class="cl">(defprotocol IB
+</span></span><span class="line"><span class="cl">  (talk [this])) 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">(defrecord User [name age]
+</span></span><span class="line"><span class="cl">IA
+</span></span><span class="line"><span class="cl">(say [this] (println (:name this)))
+</span></span><span class="line"><span class="cl">IB
+</span></span><span class="line"><span class="cl">(talk [this] (println (:name this)))
+</span></span><span class="line"><span class="cl">)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">(def user (-&gt;User &#34;xiebiao&#34; 30) )
+</span></span><span class="line"><span class="cl">(say user )
+</span></span><span class="line"><span class="cl">(talk user )
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>上面的例子可以看出，通过实现defprotocol让数据具备行为，但数据本身独立于行为。</p>
 <h2 id="deftype">deftype</h2>
@@ -324,21 +324,21 @@ IB
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">(deftype Circle [radius]) ;定义两个不通的类型
-(deftype Square [length width])
-
-;不同类型上定义相同的行为，类似Java中的重载，但不是通过子类继承的方式。
-(defmethod area Circle [c]
-    (* Math/PI (* (.radius c) (.radius c))))
-(defmethod area Square [s]
-    (* (.length s) (.width s)))
-
-(def myCircle (Circle. 10))
-(def mySquare (Square. 5 11))
-
-(area myCircle); area方法会根据参数的类型决定调用哪个方法。
-(area mySquare)
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">(deftype Circle [radius]) ;定义两个不通的类型
+</span></span><span class="line"><span class="cl">(deftype Square [length width])
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">;不同类型上定义相同的行为，类似Java中的重载，但不是通过子类继承的方式。
+</span></span><span class="line"><span class="cl">(defmethod area Circle [c]
+</span></span><span class="line"><span class="cl">    (* Math/PI (* (.radius c) (.radius c))))
+</span></span><span class="line"><span class="cl">(defmethod area Square [s]
+</span></span><span class="line"><span class="cl">    (* (.length s) (.width s)))
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">(def myCircle (Circle. 10))
+</span></span><span class="line"><span class="cl">(def mySquare (Square. 5 11))
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">(area myCircle); area方法会根据参数的类型决定调用哪个方法。
+</span></span><span class="line"><span class="cl">(area mySquare)
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>当然Clojure通过defmulti 还可以定义更灵活的分发规则，这里只是其中一个根据类型分发实现多态的例子。
 如果要问什么时候使用deftype，那就是当defrecord不能满足你的设计意图的时候。</p>

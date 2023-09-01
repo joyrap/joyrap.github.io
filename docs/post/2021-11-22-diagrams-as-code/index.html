@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.88.1 with theme even" />
+<meta name="generator" content="Hugo 0.115.2 with theme even" />
 
 
 <link rel="canonical" href="https://joyrap.github.io/post/2021-11-22-diagrams-as-code/" />
@@ -117,7 +117,7 @@
         <div class="post-category">
             <a href="/categories/documentation/"> documentation </a>
             </div>
-          <span class="more-meta"> 1713 words </span>
+          <span class="more-meta"> 1712 words </span>
           <span class="more-meta"> 4 mins read </span>
         
       </div>
@@ -182,10 +182,10 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">It&#39;s a way to create maps of your code, at various levels of detail, 
-in the same way you would use something 
-like Google Maps to zoom in and out of an area you are interested in.
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">It&#39;s a way to create maps of your code, at various levels of detail, 
+</span></span><span class="line"><span class="cl">in the same way you would use something 
+</span></span><span class="line"><span class="cl">like Google Maps to zoom in and out of an area you are interested in.
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>这种方法就像是地图软件上使用缩放功能一样来观察软件系统。</p>
 <p>C4同时提供了一套基于<a href="https://github.com/plantuml-stdlib/C4-PlantUML">PlantUML的模型定义</a>，效果图如下：</p>
@@ -224,27 +224,25 @@ Excalidraw也是<a href="https://github.com/excalidraw/excalidraw">代码开源<
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
-</span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json">
-<span class="err">+----------+</span>           <span class="err">+----------+</span>
-<span class="err">|</span>          <span class="err">|</span>           <span class="err">|</span>          <span class="err">|</span>
-<span class="err">|</span>    <span class="err">A</span>     <span class="err">|</span>           <span class="err">|</span>     <span class="err">B</span>    <span class="err">|</span>
-<span class="err">|</span>          <span class="err">|</span>           <span class="err">|</span>          <span class="err">|</span>
-<span class="err">+----+-----+</span>           <span class="err">+-----+----+</span>
-     <span class="err">|</span>                       <span class="err">|</span>
-     <span class="err">|</span>                       <span class="err">|</span>
-     <span class="err">|</span>                       <span class="err">|</span>
-     <span class="err">|</span>                       <span class="err">|</span>
-     <span class="err">|</span>                       <span class="err">|</span>
-     <span class="err">|</span>     <span class="err">+----------+</span>      <span class="err">|</span>
-     <span class="err">|</span>     <span class="err">|</span>          <span class="err">|</span>      <span class="err">|</span>
-     <span class="err">+----&gt;|</span>     <span class="err">C</span>    <span class="err">|&lt;-----+</span>
-           <span class="err">|</span>          <span class="err">|</span>
-           <span class="err">+----------+</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">+----------+</span>           <span class="err">+----------+</span>
+</span></span><span class="line"><span class="cl"><span class="err">|</span>          <span class="err">|</span>           <span class="err">|</span>          <span class="err">|</span>
+</span></span><span class="line"><span class="cl"><span class="err">|</span>    <span class="err">A</span>     <span class="err">|</span>           <span class="err">|</span>     <span class="err">B</span>    <span class="err">|</span>
+</span></span><span class="line"><span class="cl"><span class="err">|</span>          <span class="err">|</span>           <span class="err">|</span>          <span class="err">|</span>
+</span></span><span class="line"><span class="cl"><span class="err">+----+-----+</span>           <span class="err">+-----+----+</span>
+</span></span><span class="line"><span class="cl">     <span class="err">|</span>                       <span class="err">|</span>
+</span></span><span class="line"><span class="cl">     <span class="err">|</span>                       <span class="err">|</span>
+</span></span><span class="line"><span class="cl">     <span class="err">|</span>                       <span class="err">|</span>
+</span></span><span class="line"><span class="cl">     <span class="err">|</span>                       <span class="err">|</span>
+</span></span><span class="line"><span class="cl">     <span class="err">|</span>                       <span class="err">|</span>
+</span></span><span class="line"><span class="cl">     <span class="err">|</span>     <span class="err">+----------+</span>      <span class="err">|</span>
+</span></span><span class="line"><span class="cl">     <span class="err">|</span>     <span class="err">|</span>          <span class="err">|</span>      <span class="err">|</span>
+</span></span><span class="line"><span class="cl">     <span class="err">+----&gt;|</span>     <span class="err">C</span>    <span class="err">|&lt;-----+</span>
+</span></span><span class="line"><span class="cl">           <span class="err">|</span>          <span class="err">|</span>
+</span></span><span class="line"><span class="cl">           <span class="err">+----------+</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>这类包含在代码注释中的图形出现在很多开源项目中(Java JDK源码中也在使用)。
 手动输入这些符号肯定不科学，<a href="https://asciiflow.com/#/">Asciiflow</a>这个工具专门解决这类问题。</p>

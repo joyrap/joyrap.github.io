@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.88.1 with theme even" />
+<meta name="generator" content="Hugo 0.115.2 with theme even" />
 
 
 <link rel="canonical" href="https://joyrap.github.io/post/2022-04-09-api-design-versioning/" />
@@ -193,7 +193,7 @@ API服务方也应该尽量减少第三方开发者的理解负担，所以API�
 <ul>
 <li>方案1：将版本号放到路径中，例如：<em><a href="https://api.akulaku.com/">https://api.akulaku.com/</a><strong>v1.0</strong>/products/users</em> 或使用不同的域名 <em>https://<strong>apiv1</strong>.akulaku.com/products/users</em></li>
 <li>方案2：将版本号放在HTTP header头中，例如，在header中放入：v=1.0</li>
-<li>方案3：将版本号放到参数中，例如：<em><a href="https://api.akulaku.com/products/users?">https://api.akulaku.com/products/users?</a><strong>api-version=1.0</strong></em></li>
+<li>方案3：将版本号放到参数中，例如：<em><a href="https://api.akulaku.com/products/users">https://api.akulaku.com/products/users</a>?<strong>api-version=1.0</strong></em></li>
 </ul>
 <p>方案1和2都需要借助DNS或API网关对请求路由，不同版本的API路由到不同的API服务上。</p>
 <p>方案3则需要API服务内部管理版本号映射</p>

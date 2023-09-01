@@ -2,7 +2,7 @@
 title: How to Do great work
 date: 2023-08-29
 layout: post
-categories: ["Life","Work"]
+categories: ["Reading"]
 draft: false
 ---
 
