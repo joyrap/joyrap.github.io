@@ -2,7 +2,7 @@
 title: 我的姑姑
 date: 2023-07-30
 layout: post
-categories: ["Life"]
+categories: ["Life","Writing"]
 tags: ["故乡"]
 draft: false
 ---
