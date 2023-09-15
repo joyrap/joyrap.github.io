@@ -2,7 +2,7 @@ baseURL = "https://joyrap.github.io"
 publishDir = "docs"
 languageCode = "en"
 defaultContentLanguage = "en"                             # en / zh-cn / ... (This field determines which i18n file to use)
-title = "于川海：语言是一生的枷锁。"
+title = "戒掉幻想，接受现实。"
 preserveTaxonomyNames = true
 enableRobotsTXT = true
 enableEmoji = true
@@ -142,6 +142,10 @@ copyright = "语言是一生的枷锁。"            # default: author.name ↓ 
     repo = ""               # The repo to store comments
     clientId = ""           # Your client ID
     clientSecret = ""       # Your client secret
+
+  [params.utterances]           # https://utteranc.es/
+    owner = "joyrap"            # Your GitHub ID
+    repo = "joyrap.github.io"   # The repo to store comments
 
   [params.flowchartDiagrams]# see https://blog.olowolo.com/example-site/post/js-flowchart-diagrams/
     enable = false
