@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.115.2 with theme even" />
+<meta name="generator" content="Hugo 0.118.2 with theme even" />
 
 
 <link rel="canonical" href="https://joyrap.github.io/post/2020-08-21-locks-on-multicore2/" />
@@ -176,8 +176,8 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl">   <span class="kd">public</span> <span class="kd">class</span> <span class="nc">TicketLock</span> <span class="o">{</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="kd">private</span> <span class="kd">final</span> <span class="n">AtomicLong</span> <span class="n">nextTicket</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicLong</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
-</span></span><span class="line"><span class="cl">        <span class="kd">private</span> <span class="kd">final</span> <span class="n">AtomicLong</span> <span class="n">nowServing</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicLong</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">private</span> <span class="kd">final</span> <span class="n">AtomicLong</span> <span class="n">nextTicket</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicLong</span><span class="o">(</span><span class="n">0</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">private</span> <span class="kd">final</span> <span class="n">AtomicLong</span> <span class="n">nowServing</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicLong</span><span class="o">(</span><span class="n">0</span><span class="o">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">lock</span><span class="o">()</span> <span class="o">{</span>
 </span></span><span class="line"><span class="cl">            <span class="kt">long</span> <span class="n">myTicket</span> <span class="o">=</span> <span class="n">nextTicket</span><span class="o">.</span><span class="na">getAndIncrement</span><span class="o">();</span>
