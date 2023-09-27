@@ -40,4 +40,4 @@ weight: 50
 
 ### 联系方式
 
-![Contact1](/images/contact1.png) 或 ![Contact1](/images/contact2.png)
+你可以通过非即时沟通渠道 _`joyrap@qq.com`_ 或 _`joyrap@gmail.com`_ 与我联系。
