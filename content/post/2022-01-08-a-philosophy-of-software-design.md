@@ -1,10 +1,8 @@
-
 ---
+layout: post
 title: A Philosophy Of Software Design-读书笔记
 date: 2022-01-08
-layout: post
-categories: ["Design"]
-tags: ["Programming"]
+categories: ["Design","Programming"]
 draft: false
 ---
 
