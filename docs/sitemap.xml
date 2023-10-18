@@ -9,98 +9,42 @@
   
   <url>
     <loc>https://joyrap.github.io/categories/</loc>
-    <lastmod>2023-10-18T00:00:00+00:00</lastmod>
+    <lastmod>2023-10-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://joyrap.github.io/tags/html/</loc>
-    <lastmod>2023-10-18T00:00:00+00:00</lastmod>
+    <loc>https://joyrap.github.io/categories/life/</loc>
+    <lastmod>2023-10-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://joyrap.github.io/post/</loc>
-    <lastmod>2023-10-18T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://joyrap.github.io/categories/programming/</loc>
-    <lastmod>2023-10-18T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://joyrap.github.io/tags/</loc>
-    <lastmod>2023-10-18T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://joyrap.github.io/categories/web-development/</loc>
-    <lastmod>2023-10-18T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://joyrap.github.io/post/2023-10-18-learn-html-007/</loc>
-    <lastmod>2023-10-18T00:00:00+00:00</lastmod>
+    <lastmod>2023-10-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://joyrap.github.io/</loc>
-    <lastmod>2023-10-18T00:00:00+00:00</lastmod>
+    <lastmod>2023-10-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://joyrap.github.io/post/2023-10-12-learn-html-006/</loc>
-    <lastmod>2023-10-13T00:00:00+00:00</lastmod>
+    <loc>https://joyrap.github.io/post/2023-10-18-three_gorges_dam/</loc>
+    <lastmod>2023-10-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://joyrap.github.io/post/2023-10-12-learn-html-005/</loc>
-    <lastmod>2023-10-13T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://joyrap.github.io/post/2023-10-12-learn-html-004/</loc>
-    <lastmod>2023-10-11T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://joyrap.github.io/post/2023-10-11-learn-html-003/</loc>
-    <lastmod>2023-10-11T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://joyrap.github.io/post/2023-10-09-learn-html-002/</loc>
-    <lastmod>2023-10-09T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://joyrap.github.io/post/2023-10-08-learn-html-001/</loc>
-    <lastmod>2023-10-08T00:00:00+00:00</lastmod>
+    <loc>https://joyrap.github.io/tags/</loc>
+    <lastmod>2023-09-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -177,13 +121,6 @@
   
   <url>
     <loc>https://joyrap.github.io/post/2023-reading-list/</loc>
-    <lastmod>2023-07-30T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://joyrap.github.io/categories/life/</loc>
     <lastmod>2023-07-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -268,6 +205,13 @@
   
   <url>
     <loc>https://joyrap.github.io/post/2022-01-08-a-philosophy-of-software-design/</loc>
+    <lastmod>2022-01-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://joyrap.github.io/categories/programming/</loc>
     <lastmod>2022-01-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

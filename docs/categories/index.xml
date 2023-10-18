@@ -7,22 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>语言是一生的枷锁。</copyright>
-    <lastBuildDate>Wed, 18 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Programming</title>
-      <link>https://joyrap.github.io/categories/programming/</link>
-      <pubDate>Wed, 18 Oct 2023 00:00:00 +0000</pubDate>
+      <title>Life</title>
+      <link>https://joyrap.github.io/categories/life/</link>
+      <pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://joyrap.github.io/categories/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Web Development</title>
-      <link>https://joyrap.github.io/categories/web-development/</link>
-      <pubDate>Wed, 18 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://joyrap.github.io/categories/web-development/</guid>
+      <guid>https://joyrap.github.io/categories/life/</guid>
       <description></description>
     </item>
     
@@ -81,20 +72,20 @@
     </item>
     
     <item>
-      <title>Life</title>
-      <link>https://joyrap.github.io/categories/life/</link>
-      <pubDate>Sun, 30 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://joyrap.github.io/categories/life/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>API Design</title>
       <link>https://joyrap.github.io/categories/api-design/</link>
       <pubDate>Sat, 09 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://joyrap.github.io/categories/api-design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>https://joyrap.github.io/categories/programming/</link>
+      <pubDate>Sat, 08 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/categories/programming/</guid>
       <description></description>
     </item>
     
