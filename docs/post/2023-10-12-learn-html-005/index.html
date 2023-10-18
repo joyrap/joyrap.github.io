@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>学习HTML-标题和章节 - 戒掉幻想，认清现实。</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="于川海" /><meta name="description" content="在上一节中，您了解了即使您不知道页面上的单词的含义，当语义元素为文档提供有意义的结构时，其他元素 - 搜索引擎、辅助技术、未来的维护人员、新的团" /><meta name="keywords" content="于川海, 于昼夜，思山川湖海|语言是一生的枷锁" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.119.0 with theme even" />
+
+
+<link rel="canonical" href="https://joyrap.github.io/post/2023-10-12-learn-html-005/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.42b493c7.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" integrity="sha512-MaRpC5n6oJYFxacB2GS46fBxVK0ysPce0r/XX5Sn5CNayuAssUo44ZpNTKwi+z5bJHlPC4AcXX7XDl9kJdNajA==" crossorigin="anonymous">
+
+
+
+
+
+
+
+
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">于昼夜，思山川湖海。</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">于昼夜，思山川湖海。</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">学习HTML-标题和章节</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-10-13 </span>
+        <div class="post-category">
+            <a href="/categories/web-development/"> Web Development </a>
+            <a href="/categories/programming/"> Programming </a>
+            </div>
+          <span class="more-meta"> 2927 words </span>
+          <span class="more-meta"> 6 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#网站头">网站头</a></li>
+        <li><a href="#站点页脚">站点页脚</a></li>
+        <li><a href="#main"><code>&lt;main&gt;</code></a></li>
+        <li><a href="#aside"><code>&lt;aside&gt;</code></a></li>
+        <li><a href="#article"><code>&lt;article&gt;</code></a></li>
+        <li><a href="#section"><code>&lt;section&gt;</code></a></li>
+        <li><a href="#标题-h1h6">标题 <code>&lt;h1&gt;~&lt;h6&gt;</code></a></li>
+        <li><a href="#原文">原文</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>在上一节中，您了解了即使您不知道页面上的单词的含义，当语义元素为文档提供有意义的结构时，其他元素 - 搜索引擎、辅助技术、未来的维护人员、新的团队成员——会理解文档的大纲。</p>
+<p>在本节中，您将发现文档结构;您将回顾上一节中的章节元素;并标记应用程序的大纲。</p>
+<h3 id="网站头">网站头</h3>
+<p>让我们构建一个网站标题。您将从非语义标记开始，逐步找到一个好的解决方案，以便您可以一路了解 HTML 章节和标题元素的好处。</p>
+<p>如果您很少甚至没有考虑标头的语义，您可能会使用如下代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;!-- start header --&gt;
+</span></span><span class="line"><span class="cl">&lt;div id=&#34;pageHeader&#34;&gt;
+</span></span><span class="line"><span class="cl">  &lt;div id=&#34;title&#34;&gt;Machine Learning Workshop&lt;/div&gt;
+</span></span><span class="line"><span class="cl">  &lt;!-- navigation --&gt;
+</span></span><span class="line"><span class="cl">  &lt;div id=&#34;navigation&#34;&gt;
+</span></span><span class="line"><span class="cl">    &lt;a href=&#34;#reg&#34;&gt;Register&lt;/a&gt;
+</span></span><span class="line"><span class="cl">    &lt;a href=&#34;#about&#34;&gt;About&lt;/a&gt;
+</span></span><span class="line"><span class="cl">    &lt;a href=&#34;#teachers&#34;&gt;Instructors&lt;/a&gt;
+</span></span><span class="line"><span class="cl">    &lt;a href=&#34;#feedback&#34;&gt;Testimonials&lt;/a&gt;
+</span></span><span class="line"><span class="cl">  &lt;/div&gt;
+</span></span><span class="line"><span class="cl">  &lt;!-- end navigation bar --&gt;
+</span></span><span class="line"><span class="cl">&lt;/div&gt;
+</span></span><span class="line"><span class="cl">&lt;!-- end of header --&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>CSS 可以使（几乎）任何标记看起来都正确。但对所有内容使用非语义 <code>&lt;div&gt;</code> 实际上会产生额外的工作。要使用 CSS 定位多个 <code>&lt;div&gt;</code> ，您最终需要使用 id 或类来标识内容。该代码还包括每个结束 <code>&lt;/div&gt;</code> 的注释，以指示每个 <code>&lt;/div&gt;</code> 结束哪个开始标记。</p>
+<p>虽然 id 和 class 属性为样式和 JavaScript 提供了挂钩，但它们没有为屏幕阅读器和（大多数情况下）搜索引擎添加任何语义值。</p>
+<p>您可以包含 role 属性来提供语义，以便为屏幕阅读器创建良好的辅助功能对象模型 (AOM)：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;!-- start header --&gt;
+</span></span><span class="line"><span class="cl">&lt;div role=&#34;banner&#34;&gt;
+</span></span><span class="line"><span class="cl">  &lt;div role=&#34;heading&#34; aria-level=&#34;1&#34;&gt;Machine Learning Workshop&lt;/div&gt;
+</span></span><span class="line"><span class="cl">  &lt;div role=&#34;navigation&#34;&gt;
+</span></span><span class="line"><span class="cl">    &lt;a href=&#34;#reg&#34;&gt;Register&lt;/a&gt;
+</span></span><span class="line"><span class="cl">    &lt;a href=&#34;#about&#34;&gt;About&lt;/a&gt;
+</span></span><span class="line"><span class="cl">    &lt;a href=&#34;#teachers&#34;&gt;Instructors&lt;/a&gt;
+</span></span><span class="line"><span class="cl">    &lt;a href=&#34;#feedback&#34;&gt;Testimonials&lt;/a&gt;
+</span></span><span class="line"><span class="cl">  &lt;/div&gt;
+</span></span><span class="line"><span class="cl">  &lt;!-- end navigation bar --&gt;
+</span></span><span class="line"><span class="cl">&lt;div&gt;
+</span></span><span class="line"><span class="cl">&lt;!-- end of header --&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这至少提供了语义并允许在 CSS 中使用属性选择器，但它仍然添加注释来标识每个 <code>&lt;/div&gt;</code> 关闭的是哪个 <code>&lt;div&gt;</code> 。</p>
+<p>如果您了解 HTML，您所要做的就是考虑内容的用途。然后，您可以在语义上编写此代码，而无需使用 role 并且无需注释结束标记：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;header&gt;
+</span></span><span class="line"><span class="cl">  &lt;h1&gt;Machine Learning Workshop&lt;/h1&gt;
+</span></span><span class="line"><span class="cl">  &lt;nav&gt;
+</span></span><span class="line"><span class="cl">    &lt;a href=&#34;#reg&#34;&gt;Register&lt;/a&gt;
+</span></span><span class="line"><span class="cl">    &lt;a href=&#34;#about&#34;&gt;About&lt;/a&gt;
+</span></span><span class="line"><span class="cl">    &lt;a href=&#34;#teachers&#34;&gt;Instructors&lt;/a&gt;
+</span></span><span class="line"><span class="cl">    &lt;a href=&#34;#feedback&#34;&gt;Testimonials&lt;/a&gt;
+</span></span><span class="line"><span class="cl">  &lt;/nav&gt;
+</span></span><span class="line"><span class="cl">&lt;/header&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>此代码使用两个语义标志： <code>&lt;header&gt;</code> 和 <code>&lt;nav&gt;</code>。</p>
+<p>这是一个在main中的头部，<code>&lt;header&gt;</code> 元素并不总是一个位置标记。根据嵌套位置的不同，它具有不同的语义。当 <code>&lt;header&gt;</code> 位于顶层时，它就是站点 banner ，一个地标角色，您可能已经在 role 代码块中注意到了。当 <code>&lt;header&gt;</code> 嵌套在 <code>&lt;main&gt;</code> 、 <code>&lt;article&gt;</code> 或 <code>&lt;section&gt;</code> 中时，它只是将其标识为该部分的标头，而不是一个地标。</p>
+<blockquote>
+<p>landmark主要作用是表示网页区域结构，比如你可以将页面划分为，导航，横幅标语，和内容，这些区域HTML中有对应的元素标签，landmark把他们叫做地标，方便开发者在应用中实现无障碍访问。</p>
+</blockquote>
+<p><code>&lt;nav&gt;</code> 元素将内容标识为导航。由于此 <code>&lt;nav&gt;</code> 嵌套在网站标题中，因此它是网站的主要导航。如果它嵌套在 <code>&lt;article&gt;</code> 或 <code>&lt;section&gt;</code> 中，则它只是该部分的内部导航。通过使用语义元素，您构建了一个有意义的可访问性对象模型（AOM）。 AOM 使屏幕阅读器能够通知用户此部分包含一个主要导航块，用户可以导航或跳过该导航块。</p>
+<p>使用 <code>&lt;/nav&gt;</code>和 <code>&lt;/header&gt;</code> 结束标记无需注释即可识别每个结束标记结束的元素。此外，对不同的元素使用不同的标签就不再需要 id 和 class 钩子。 CSS 选择器的特异性可能较低；您可以使用 header nav a 定位链接，而不必担心冲突。</p>
+<p>您编写的标头只包含很少的 HTML，并且没有类或 id。使用语义 HTML 时，您不需要这样做。</p>
+<h3 id="站点页脚">站点页脚</h3>
+<p>让我们对网站页脚进行编码。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;footer&gt;
+</span></span><span class="line"><span class="cl">  &lt;p&gt;&amp;copy;2022 Machine Learning Workshop, LLC. All rights reserved.&lt;/p&gt;
+</span></span><span class="line"><span class="cl">&lt;/footer&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>与 <code>&lt;header&gt;</code> 类似，页脚是否是地标(landmark)取决于页脚的嵌套位置。当它是网站页脚时，它是一个地标，并且应该在每个页面上包含您想要的网站页脚信息，例如版权声明、联系信息以及指向您的隐私和 cookie 政策的链接。网站页脚的隐式角色是 contentinfo 。否则，页脚没有隐式角色，也不是地标，如以下 Chrome 中 AOM 的屏幕截图所示（其中有 <code>&lt;article&gt;</code> 以及 <code>&lt;header&gt;</code> 和 <code>&lt;footer&gt;</code> 和 <code>&lt;footer&gt;</code> 之间）。</p>
+<p>在此屏幕截图中，有两个页脚：一个位于 <!-- raw HTML omitted --> 中，一个位于顶层。顶层页脚是一个具有 contentinfo 隐含角色的地标。另一个页脚不是地标。 Chrome 将其显示为 FooterAsNonLandmark ； Firefox 将其显示为 section 。</p>
+<p>这并不意味着您不应该使用 <code>&lt;footer&gt;</code> 。假设您有一个博客。该博客有一个具有隐式 contentinfo 角色的网站页脚。每篇博客文章还可以有一个 <code>&lt;footer&gt;</code> 。在博客的主登陆页面上，浏览器、搜索引擎和屏幕阅读器都知道主页脚是顶级页脚，并且所有其他页脚都与它们嵌套的帖子相关。</p>
+<p>当 <code>&lt;footer&gt;</code>是 <code>&lt;article&gt;</code> 、 <code>&lt;aside&gt;</code> 、 <code>&lt;main&gt;</code> 、 <code>&lt;nav&gt;</code> 或 <code>&lt;section&gt;</code>的子节点 ，那么它就不是一个地标。如果帖子单独出现，根据标记，该页脚可能会被提升。</p>
+<p>页脚通常是您可以找到联系信息的地方，这些信息包含在 <code>&lt;address&gt;</code> （联系地址元素）中。这是一个不太好命名的元素；它用于包含个人或组织的联系信息，而不是实际邮寄地址。</p>
+<p>该模块以 <!-- raw HTML omitted --> 和 <!-- raw HTML omitted --> 开头，因为它们的独特之处在于有时是标志性元素或“分段”元素。让我们通过讨论最常见的页面布局来介绍“全职”分区元素：</p>
+<p><img src="https://web.dev/static/learn/html/headings-and-sections/image/a-layout-a-header-three-31026f6b6c4b4_856.png" alt="https://web.dev/learn/html/headings-and-sections?hl=en"></p>
+<p>具有页眉、两个侧边栏和页脚的布局被称为圣杯布局。标记此内容的方法有很多，包括：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;body&gt;
+</span></span><span class="line"><span class="cl">  &lt;header&gt;Header&lt;/header&gt;
+</span></span><span class="line"><span class="cl">  &lt;nav&gt;Nav&lt;/nav&gt;
+</span></span><span class="line"><span class="cl">  &lt;main&gt;Content&lt;/main&gt;
+</span></span><span class="line"><span class="cl">  &lt;aside&gt;Aside&lt;/aside&gt;
+</span></span><span class="line"><span class="cl">  &lt;footer&gt;Footer&lt;/footer&gt;
+</span></span><span class="line"><span class="cl">&lt;/body&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果您正在创建博客，您可能在 <!-- raw HTML omitted --> 中有一系列文章:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;body&gt;
+</span></span><span class="line"><span class="cl">  &lt;header&gt;Header&lt;/header&gt;
+</span></span><span class="line"><span class="cl">  &lt;nav&gt;Nav&lt;/nav&gt;
+</span></span><span class="line"><span class="cl">  &lt;main&gt;
+</span></span><span class="line"><span class="cl">    &lt;article&gt;First post&lt;/article&gt;
+</span></span><span class="line"><span class="cl">    &lt;article&gt;Second post&lt;/article&gt;
+</span></span><span class="line"><span class="cl">  &lt;/main&gt;
+</span></span><span class="line"><span class="cl">  &lt;aside&gt;Aside&lt;/aside&gt;
+</span></span><span class="line"><span class="cl">  &lt;footer&gt;Footer&lt;/footer&gt;
+</span></span><span class="line"><span class="cl">&lt;/body&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>当使用语义元素时，浏览器能够创建有意义的可访问性树，使屏幕阅读器用户能够更轻松地导航。这里，通过站点 <code>&lt;header&gt;</code> 和 <code>&lt;footer&gt;</code> 提供 banner 和 contentinfo 。这里添加的新元素包括 <code>&lt;main&gt;</code> 、 <code>&lt;aside&gt;</code> 和 <code>&lt;article&gt;</code> ；另外，您之前使用过的 <code>&lt;h1&gt;</code> 和 <code>&lt;nav&gt;</code> ，以及您尚未使用过的 <code>&lt;section&gt;</code> 。</p>
+<h3 id="main"><code>&lt;main&gt;</code></h3>
+<p>有一个 <code>&lt;main&gt;</code> 地标元素。 <code>&lt;main&gt;</code> 元素标识文档的主要内容，每页只能有一个 <code>&lt;main&gt;</code>。</p>
+<h3 id="aside"><code>&lt;aside&gt;</code></h3>
+<p><code>&lt;aside&gt;</code> 用于与文档主要内容间接或切线相关的内容。例如，本文是关于 HTML 的。对于有关三个站点标头示例（div、角色和语义）的 CSS 选择器特异性的部分，切线相关的旁白可以包含在 <code>&lt;aside&gt;</code> 中；并且，与大多数内容一样， <code>&lt;aside&gt;</code> 可能会显示在侧边栏或调出框中。 <code>&lt;aside&gt;</code> 也是一个地标，具有 complementary 的隐含角色。</p>
+<h3 id="article"><code>&lt;article&gt;</code></h3>
+<p>嵌套在 <code>&lt;main&gt;</code> 中，我们添加了两个 <code>&lt;article&gt;</code> 元素。在第一个示例中，当主要内容只是一个单词，或者在现实世界中，只有一个内容部分时，这是不必要的。但是，如果您正在编写博客，如我们的第二个示例中所示，则每个帖子都应位于嵌套在 <code>&lt;main&gt;</code> 的 <code>&lt;article&gt;</code> 中。</p>
+<p><code>&lt;article&gt;</code> 代表完整的或独立的内容部分，原则上可以独立重用。像报纸上的文章一样思考一篇文章。在印刷品中，一篇有关新西兰总理杰辛达·阿德恩的新闻文章可能只出现在一个版块中，也许是世界新闻。在报纸的网站上，同一篇新闻文章可能会出现在主页、政治版块、Oceana 或亚太新闻版块中，并且根据新闻主题、体育、生活方式或技术版块，也许。该文章还可能出现在其他网站上，例如 Pocket 或 Yahoo News!</p>
+<h3 id="section"><code>&lt;section&gt;</code></h3>
+<p>当没有更具体的语义元素可供使用时， <code>&lt;section&gt;</code> 元素用于包含文档的通用独立部分。除了极少数例外，各节都应该有一个标题。</p>
+<p>回到 Jacinda Ardern 的例子，在报纸的主页上，横幅将包含报纸的名称，后跟一个 <code>&lt;main&gt;</code> ，分为几个    <code>&lt;section&gt;</code> ，每个都有一个标题，例如“世界新闻”和“政治”；在每个部分中，您都会找到一系列 <code>&lt;article&gt;</code> 。在每个 <code>&lt;article&gt;</code> 中，您还可能会找到一个或多个 <code>&lt;section&gt;</code> 元素。如果您查看此页面，整个“标题和部分”部分就是 <code>&lt;article&gt;</code> 。然后这个 <code>&lt;article&gt;</code> 被分成几个 <code>&lt;section&gt;</code> ，包括 site header 、 site footer 和文档结构。文章本身有一个标题，每个部分也有一个标题。</p>
+<p><code>&lt;section&gt;</code> 不是一个地标，除非它有一个易于理解的名称；如果它具有可访问的名称，则隐式角色是 region 。应谨慎使用地标角色，以识别文档的较大整体部分。如果您的 <code>&lt;main&gt;</code> 包含两个或三个重要的子部分（包括每个子部分的可访问名称），则使用过多的标志性角色可能会在屏幕阅读器中产生“噪音”，从而导致难以理解页面的整体布局 <code>&lt;section&gt;</code> 可能是有益的。</p>
+<h3 id="标题-h1h6">标题 <code>&lt;h1&gt;~&lt;h6&gt;</code></h3>
+<p>有六个标题元素： <code>&lt;h1&gt;</code> 、 <code>&lt;h2&gt;</code> 、 <code>&lt;h3&gt;</code> 、 <code>&lt;h4&gt;</code> 、 <code>&lt;h5&gt;</code> 和 <code>&lt;h6&gt;</code> 。每个代表一个等级， <code>&lt;h1&gt;</code> 是最高或最重要的节级别， <code>&lt;h6&gt;</code> 是最低的。</p>
+<p>当标题嵌套在文档横幅  <code>&lt;header&gt;</code> 中时，它是应用程序或站点的标题。当嵌套在 <code>&lt;main&gt;</code> 中时，无论它是否嵌套在 <code>&lt;main&gt;</code> 的 <code>&lt;header&gt;</code> 中，它都是该页面的标题，而不是整个网站的标题。当嵌套在 <code>&lt;article&gt;</code> 或 <code>&lt;section&gt;</code> 中时，它是页面该子部分的标题。</p>
+<h3 id="原文">原文</h3>
+<ul>
+<li><a href="https://web.dev/learn/html/headings-and-sections?hl=en">Headings and sections</a></li>
+<li><a href="https://w3c.github.io/aria/#landmark">什么是landmark</a></li>
+</ul>
+
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/html/">html</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/2023-10-12-learn-html-006/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">学习HTML-属性</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/2023-10-12-learn-html-004/">
+            <span class="next-text nav-default">学习HTML-HTML语义</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="joyrap/joyrap.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/1130203/bill-xie" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://twitter.com/joyrap" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/xiebiao" class="iconfont icon-github" title="github"></a>
+  <a href="https://joyrap.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2012 - 
+    2023
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">语言是一生的枷锁。</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js" integrity="sha512-GA1YgNe8NTU3XMDMofUTpTNqMsPUL6VjYgc6NjOUTA/6pwTFlTmFc/tk+LnDfXD3/mNGZcik9kvfAjeVPTHisA==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js" integrity="sha512-l0i7i+24ESeyrzZawcOFGAZADXr7mFVJvFNR/BImmv8aGYqR/svqbJHSLzXIr62hE9J9ibyGOEpoBfWwU64a0Q==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/3.0.2/timeago.min.js" integrity="sha512-+HwB8Magvpg+0LZ4APOss9s3mopC9KUMq1/gQbCEaZ9fjSl6vWuVbvo6Nt+2dGfEqNVTZ+NVasiAfBy58kRCLg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/3.0.2/timeago.locales.min.js" integrity="sha512-kjHDpsRVaJ0pxKiXH4ibysg7971Epm80gABnxVYgtMiU4fSll6NaAhzUD4NXg++ihdC160LuogIzwh2b74rP4g==" crossorigin="anonymous"></script>
+  <script>
+    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+<script type="text/javascript" src="/dist/even.2a341756.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+      integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

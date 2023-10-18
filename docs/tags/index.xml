@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>语言是一生的枷锁。</copyright>
-    <lastBuildDate>Mon, 25 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>html</title>
+      <link>https://joyrap.github.io/tags/html/</link>
+      <pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/tags/html/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>故事</title>
       <link>https://joyrap.github.io/tags/%E6%95%85%E4%BA%8B/</link>
@@ -59,15 +68,6 @@
       <pubDate>Sat, 09 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://joyrap.github.io/tags/versioning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>programming</title>
-      <link>https://joyrap.github.io/tags/programming/</link>
-      <pubDate>Sat, 08 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://joyrap.github.io/tags/programming/</guid>
       <description></description>
     </item>
     

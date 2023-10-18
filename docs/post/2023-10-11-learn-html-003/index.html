@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>学习HTML-元数据 - 戒掉幻想，认清现实。</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="于川海" /><meta name="description" content="在文档结构部分中，您了解了（几乎）总是在 HTML 文档的 &amp;lt;head&amp;gt; 中找到的组件。虽然 &amp;lt;head&amp;gt; 中的所有内容，包括 &amp;lt;title&amp;gt; 、 &amp;lt;link&amp;gt; 、 &amp;lt;script&amp;gt; 、 &amp;lt;style&amp;gt; 以及较少使用的 &amp;lt;base&amp;gt; ，实际上是“元数据”，" /><meta name="keywords" content="于川海, 于昼夜，思山川湖海|语言是一生的枷锁" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.119.0 with theme even" />
+
+
+<link rel="canonical" href="https://joyrap.github.io/post/2023-10-11-learn-html-003/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.42b493c7.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" integrity="sha512-MaRpC5n6oJYFxacB2GS46fBxVK0ysPce0r/XX5Sn5CNayuAssUo44ZpNTKwi+z5bJHlPC4AcXX7XDl9kJdNajA==" crossorigin="anonymous">
+
+
+
+
+
+
+
+
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">于昼夜，思山川湖海。</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">于昼夜，思山川湖海。</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">学习HTML-元数据</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-10-11 </span>
+        <div class="post-category">
+            <a href="/categories/web-development/"> Web Development </a>
+            <a href="/categories/programming/"> Programming </a>
+            </div>
+          <span class="more-meta"> 3311 words </span>
+          <span class="more-meta"> 7 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#再讨论meta标签">再讨论<code>&lt;meta&gt;</code>标签</a></li>
+        <li><a href="#官方定义的元标签">官方定义的元标签</a></li>
+        <li><a href="#命名元标记">命名元标记</a></li>
+        <li><a href="#关键字">关键字</a></li>
+        <li><a href="#描述">描述</a></li>
+        <li><a href="#机器人">机器人</a></li>
+        <li><a href="#主题色">主题色</a></li>
+        <li><a href="#开放图谱">开放图谱</a></li>
+        <li><a href="#其他一些有用的元信息">其他一些有用的元信息</a></li>
+        <li><a href="#原文">原文</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>在文档结构部分中，您了解了（几乎）总是在 HTML 文档的 <code>&lt;head&gt;</code> 中找到的组件。虽然 <code>&lt;head&gt;</code> 中的所有内容，包括 <code>&lt;title&gt;</code> 、 <code>&lt;link&gt;</code> 、 <code>&lt;script&gt;</code> 、 <code>&lt;style&gt;</code> 以及较少使用的 <code>&lt;base&gt;</code> ，实际上是“元数据”，有一个 <code>&lt;meta&gt;</code> 标签用于元数据，这些元数据无法由这些其他元素表示。</p>
+<p>该规范包括多种元类型，并且还有许多其他应用程序支持的元类型未包含在任何官方规范中。在本节中，我们将讨论规范中包含的属性和值、一些常见的元名称和内容值，以及一些对于搜索引擎优化、社交媒体发布和用户体验非常有用的元类型。未由 WHATWG 或 W3C 正式定义。</p>
+<h3 id="再讨论meta标签">再讨论<code>&lt;meta&gt;</code>标签</h3>
+<p>让我们重新回顾一下已经介绍过的两个必要的 <code>&lt;meta&gt;</code> 标记 - 字符集声明和视窗元标记 - 并在此过程中更好地理解 <code>&lt;meta&gt;</code> 标记</p>
+<p><code>&lt;meta&gt;</code> 元素的 charset 属性以独特的方式出现。最初，字符集元数据被编写为 <code>&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=&lt;characterset&gt;&quot; /&gt;</code> ，但许多开发人员将 content 属性错误地输入为 <code>content=&quot;text/html&quot; charset=&quot;&lt;characterset&gt;&quot;</code>，以至于浏览器开始支持字符集作为属性。现在，它在 HTML 生活标准中被标准化为 <code>&lt;meta charset=&lt;charset&gt;&quot; /&gt;</code> ，其中，对于 HTML， <code>&lt;charset&gt;</code> 是不区分大小写的字符串 &ldquo;utf-8&rdquo; 。</p>
+<p>您可能已经注意到原始字符集元声明用于包含 http-equiv 属性。这是“http-equivalent”的缩写，因为元标记基本上复制了 HTTP 标头中可以设置的内容。除了 charset 例外，WHATWG HTML 规范中定义的所有其他元标记都包含 http-equiv 或 name 属性。</p>
+<h3 id="官方定义的元标签">官方定义的元标签</h3>
+<p>元标记有两种主要类型：pragma 指令，具有 http-equiv 属性（如过去的字符集元标记），以及命名元类型（如具有 name 的视口元标记）我们在文档结构部分讨论的属性。 name 和 http-equiv 元类型都必须包含 content 属性，该属性定义列出的元数据类型的内容。</p>
+<p>该规范定义了七个 pragma 指令，其中大多数都有其他设置方法。例如，虽然您可以使用 <code>&lt;meta http-equiv=&quot;content-language&quot; content=&quot;en-us&quot; /&gt;</code> 包含语言指令，但我们已经讨论过在 HTML 元素上使用 lang 属性才是首选。</p>
+<p>最常见的 pragma 指令是 refresh 指令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;meta http-equiv=&#34;refresh&#34; content=&#34;60; https://machinelearningworkshop.com/regTimeout&#34; /&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>虽然您可以设置指令以 content 属性中设置的秒数间隔刷新，甚至重定向到不同的 URL，但请不要这样做。在没有明确用户请求的情况下刷新和重定向内容的可用性很差，并且会对可访问性产生负面影响。当您在段落中间并且页面重置时，您是否不讨厌它？想象一下，如果有认知或视力问题，就会发生这种情况。如果您打算通过重定向设置刷新，请确保用户有足够的时间阅读页面、加快进程的链接，以及（如果适用）“停止时钟”并防止发生重定向的按钮。</p>
+<p>我们不会将其包含在我们的网站中，因为除了惹恼我们的访问者之外，没有理由使用户会话超时。</p>
+<p>最有用的指令是 content-security-policy ，它可以为当前文档定义内容策略。内容策略主要指定允许的服务器源和脚本端点，这有助于防范跨站点脚本攻击。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;meta http-equiv=&#34;content-security-policy&#34; content=&#34;default-src https:&#34; /&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果您无权更改 HTTP 标头（或者您有），这里是 content-security-policy 指令的空格分隔内容值列表。</p>
+<h3 id="命名元标记">命名元标记</h3>
+<p>通常，您会包含命名元数据。包含 name 属性，属性值是元数据的名称。与 pragma 指令一样， content 属性是必需的。</p>
+<p>name 属性是元数据的名称。除了 viewport 之外，您可能还需要包含 description 和 theme-color ，但不包含 keywords 。</p>
+<h3 id="关键字">关键字</h3>
+<p>搜索引擎优化的销售人员滥用了关键词元标签，他们在关键词元标签中塞满了逗号分隔的垃圾单词列表，而不是相关的关键词列表，因此搜索引擎不再认为这些元数据有用。不需要浪费时间、精力或字节来添加它。</p>
+<h3 id="描述">描述</h3>
+<p>然而， description 值对于 SEO 来说非常重要；除了帮助网站根据内容排名之外，描述内容值通常是搜索引擎在搜索结果中页面标题下显示的内容。一些浏览器，如 Firefox 和 Opera，使用它作为书签页面的默认描述。描述应该是页面内容的简短而准确的摘要。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;meta name=&#34;description&#34;
+</span></span><span class="line"><span class="cl">  content=&#34;Register for a machine learning workshop at our school for machines who can&#39;t learn good and want to do other stuff good too&#34; /&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果我们描述的后半部分对您来说没有意义，那么您可能还没有看过电影《超级英雄》。</p>
+<h3 id="机器人">机器人</h3>
+<p>如果您不希望搜索引擎将您的网站编入索引，您可以让他们知道。 <code>&lt;meta name=&quot;robots&quot; content=&quot;noindex, nofollow&quot; /&gt;</code> 告诉机器人不要索引该网站，也不要跟踪任何链接。机器人应该听取该请求，但没有法律要求它们注意该请求。您不需要包含 <code>&lt;meta name=&quot;robots&quot; content=&quot;index, follow&quot; /&gt;</code> 来请求索引站点和以下链接，因为这是默认设置，除非 HTTP 标头另有说明。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;meta name=&#34;robots&#34; content=&#34;index, follow&#34; /&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="主题色">主题色</h3>
+<p>theme-color 值允许您定义颜色来自定义浏览器界面。内容属性上的颜色值将由支持的浏览器和操作系统使用，让您为支持标题栏、选项卡栏或其他 Chrome 组件着色的用户代理提供建议的颜色。此元标记对于渐进式 Web 应用程序特别有用。但是，如果您包含 PWA 所需的清单文件，则可以在其中包含主题颜色。然而，在 HTML 中定义它可以确保在渲染之前立即找到颜色，这在第一次加载时可能比等待清单更快。</p>
+<p>要将主题颜色设置为我们网站背景颜色的蓝色调，请包括：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;meta name=&#34;theme-color&#34; content=&#34;#226DAA&#34; /&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>主题颜色元标记可以包括 media 属性，使得能够基于媒体查询设置不同的主题颜色。 media 属性只能包含在此元标记中，并且在所有其他元标记中将被忽略。</p>
+<p>还有其他几个 name 元值，但我们讨论的那些是最常见的。除了为不同的媒体查询声明不同的 theme-color 值之外，每个元标记仅包含一个。如果您确实需要包含多种类型的元标记来支持旧版浏览器，则旧值应位于新值之后，因为用户代理会读取连续的规则，直到找到匹配项。</p>
+<h3 id="开放图谱">开放图谱</h3>
+<p>开放图谱和类似的元标记协议可用于控制 Twitter、LinkedIn 和 Facebook 等社交媒体网站如何显示内容链接。如果不包含，社交媒体网站将正确地从描述元标记中获取页面标题和描述，与搜索引擎将呈现的信息相同，但您可以有意设置在链接发布到时希望用户看到的内容你的网站。</p>
+<p>例如创建Facebook的媒体卡：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;meta property=&#34;og:title&#34; content=&#34;Machine Learning Workshop&#34; /&gt;
+</span></span><span class="line"><span class="cl">&lt;meta property=&#34;og:description&#34; content=&#34;School for Machines Who Can&#39;t Learn Good and Want to Do Other Stuff Good Too&#34; /&gt;
+</span></span><span class="line"><span class="cl">&lt;meta property=&#34;og:image&#34; content=&#34;http://www.machinelearningworkshop.com/image/all.png&#34; /&gt;
+</span></span><span class="line"><span class="cl">&lt;meta property=&#34;og:image:alt&#34; content=&#34;Black and white line drawing of refrigerator, french door refrigerator, range, washer, fan, microwave, vaccuum, space heater and air conditioner&#34; /&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这些标签都在<a href="https://ogp.me/">Open Gragh protocol</a>中有定义，属性值是你希望第三方web应用显示的内容。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;meta name=&#34;twitter:title&#34; content=&#34;Machine Learning Workshop&#34; /&gt;
+</span></span><span class="line"><span class="cl">&lt;meta name=&#34;twitter:description&#34; content=&#34;School for machines who can&#39;t learn good and want to do other stuff good too&#34; /&gt;
+</span></span><span class="line"><span class="cl">&lt;meta name=&#34;twitter:url&#34; content=&#34;https://www.machinelearningworkshop.com/?src=twitter&#34; /&gt;
+</span></span><span class="line"><span class="cl">&lt;meta name=&#34;twitter:image:src&#34; content=&#34;http://www.machinelearningworkshop.com/image/all.png&#34; /&gt;
+</span></span><span class="line"><span class="cl">&lt;meta name=&#34;twitter:image:alt&#34; content=&#34;27 different home appliances&#34; /&gt;
+</span></span><span class="line"><span class="cl">&lt;meta name=&#34;twitter:creator&#34; content=&#34;@estellevw&#34; /&gt;
+</span></span><span class="line"><span class="cl">&lt;meta name=&#34;twitter:site&#34; content=&#34;@perfmattersconf&#34; /&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这是twitter的例子，这里需要确保name的值和将来的规范不要冲突，对于 Twitter 卡片，不使用 Open Graph 中定义的 property 属性，而使用新的属性，而且所有名称值都以 Twitter 作为前缀:</p>
+<p>你可以通过不同的链接参数，对不同的社交媒体设置不用的卡片图片，标题，和描述。</p>
+<h3 id="其他一些有用的元信息">其他一些有用的元信息</h3>
+<p>如果有人想把你的网站加入书签，把它放到首页，或者如果你的网站是一个网络应用程序，或者以其他方式离线工作，或者没有浏览器铬特性显示，你可以为移动设备的主屏幕提供应用程序图标。</p>
+<p>您可以使用 <code>&lt;link&gt;</code> 标记链接到您要使用的启动图像。以下是包含一些图像和媒体查询的示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;link rel=&#34;apple-touch-startup-image&#34; href=&#34;icons/ios-portrait.png&#34; media=&#34;orientation: portrait&#34; /&gt;
+</span></span><span class="line"><span class="cl">&lt;link rel=&#34;apple-touch-startup-image&#34; href=&#34;icons/ios-landscape.png&#34; media=&#34;orientation: landscape&#34; /&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果您的网站或应用程序支持 Web 应用程序，这意味着该网站可以独立运行，具有最少的 UI（例如没有后退按钮），您也可以使用元标记来告诉浏览器：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;meta name=&#34;apple-mobile-web-app-capable&#34; content=&#34;yes&#34; /&gt;
+</span></span><span class="line"><span class="cl">&lt;meta name=&#34;mobile-web-app-capable&#34; content=&#34;yes&#34; /&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>仅当您的应用程序确实支持应用程序时才包含这些内容。如果您的网站不是这样，那么您将给您最热心的支持者（那些将您的网站添加到其主屏幕的人）带来非常糟糕的用户体验。你会失去他们的爱！</p>
+<p>如果有人要将您的图标保存到他们的小型设备的主屏幕上，您需要为操作系统提供一个简短的名称，该名称不会在小型设备的主屏幕上占用太多空间。您可以通过包含元标记或使用 webmanifest 文件来完成此操作。下面演示一下meta标签的方法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;meta name=&#34;apple-mobile-web-app-title&#34; content=&#34;MLW&#34; /&gt;
+</span></span><span class="line"><span class="cl">&lt;meta name=&#34;application-name&#34; content=&#34;MLW&#34; /&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>您已经涵盖了几个元标记，所有这些都会使您的标头更长。如果您确实要创建一个支持 Web 应用程序、离线友好的渐进式 Web 应用程序，那么您可以更简单、更简洁地在 webmanifest 文件中包含 short_name: MLW ，而不是包含这两个额外的元标记。</p>
+<p>manifest文件可以防止出现充满 <code>&lt;link&gt;</code> 和 <code>&lt;meta&gt;</code> 标记的笨重标头。我们可以创建一个清单文件，通常称为 manifest.webmanifest 或 manifest.json 。然后，我们使用方便的 <code>&lt;link&gt;</code> 标记，其中 rel 属性设置为 manifest ， href 属性设置为清单文件的 URL ：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;link rel=&#34;manifest&#34; href=&#34;/mlw.webmanifest&#34; /&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>您的 HTML 现在看起来像这样：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;!DOCTYPE html&gt;
+</span></span><span class="line"><span class="cl">&lt;html lang=&#34;en&#34;&gt;
+</span></span><span class="line"><span class="cl">  &lt;head&gt;
+</span></span><span class="line"><span class="cl">    &lt;meta charset=&#34;utf-8&#34; /&gt;
+</span></span><span class="line"><span class="cl">    &lt;title&gt;Machine Learning Workshop&lt;/title&gt;
+</span></span><span class="line"><span class="cl">    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width&#34; /&gt;
+</span></span><span class="line"><span class="cl">    &lt;meta name=&#34;description&#34; content=&#34;Register for a machine learning workshop at our school for machines who can&#39;t learn good and want to do other stuff good too&#34; /&gt;
+</span></span><span class="line"><span class="cl">    &lt;meta property=&#34;og:title&#34; content=&#34;Machine Learning Workshop&#34; /&gt;
+</span></span><span class="line"><span class="cl">    &lt;meta property=&#34;og:description&#34; content=&#34;School for Machines Who Can&#39;t Learn Good and Want to Do Other Stuff Good Too&#34; /&gt;
+</span></span><span class="line"><span class="cl">    &lt;meta property=&#34;og:image&#34; content=&#34;http://www.machinelearningworkshop.com/image/all.png&#34; /&gt;
+</span></span><span class="line"><span class="cl">    &lt;meta property=&#34;og:image:alt&#34; content=&#34;Black and white line drawing of refrigerator, french door refrigerator, range, washer, fan, microwave, vaccuum, space heater and air conditioner&#34; /&gt;
+</span></span><span class="line"><span class="cl">    &lt;meta name=&#34;twitter:title&#34; content=&#34;Machine Learning Workshop&#34; /&gt;
+</span></span><span class="line"><span class="cl">    &lt;meta name=&#34;twitter:description&#34; content=&#34;School for machines who can&#39;t learn good and want to do other stuff good too&#34; /&gt;
+</span></span><span class="line"><span class="cl">    &lt;meta name=&#34;twitter:url&#34; content=&#34;https://www.machinelearningworkshop.com/?src=twitter&#34; /&gt;
+</span></span><span class="line"><span class="cl">    &lt;meta name=&#34;twitter:image:src&#34; content=&#34;http://www.machinelearningworkshop.com/image/all.png&#34; /&gt;
+</span></span><span class="line"><span class="cl">    &lt;meta name=&#34;twitter:image:alt&#34; content=&#34;27 different home appliances&#34; /&gt;
+</span></span><span class="line"><span class="cl">    &lt;meta name=&#34;twitter:creator&#34; content=&#34;@estellevw&#34; /&gt;
+</span></span><span class="line"><span class="cl">    &lt;meta name=&#34;twitter:site&#34; content=&#34;@perfmattersconf&#34; /&gt;
+</span></span><span class="line"><span class="cl">    &lt;link rel=&#34;stylesheet&#34; src=&#34;css/styles.css&#34; /&gt;
+</span></span><span class="line"><span class="cl">    &lt;link rel=&#34;icon&#34; type=&#34;image/png&#34; href=&#34;/images/favicon.png&#34; /&gt;
+</span></span><span class="line"><span class="cl">    &lt;link rel=&#34;alternate&#34; href=&#34;https://www.machinelearningworkshop.com/fr/&#34; hreflang=&#34;fr-FR&#34; /&gt;
+</span></span><span class="line"><span class="cl">    &lt;link rel=&#34;alternate&#34; href=&#34;https://www.machinelearningworkshop.com/pt/&#34; hreflang=&#34;pt-BR&#34; /&gt;
+</span></span><span class="line"><span class="cl">    &lt;link rel=&#34;canonical&#34; href=&#34;https://www.machinelearning.com&#34; /&gt;
+</span></span><span class="line"><span class="cl">    &lt;link rel=&#34;manifest&#34; href=&#34;/mlwmanifest.json&#34; /&gt;
+</span></span><span class="line"><span class="cl">  &lt;/head&gt;
+</span></span><span class="line"><span class="cl">  &lt;body&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    &lt;!-- &lt;script defer src=&#34;scripts/lightswitch.js&#34;&gt;&lt;/script&gt;--&gt;
+</span></span><span class="line"><span class="cl">  &lt;/body&gt;
+</span></span><span class="line"><span class="cl">&lt;/html&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>虽然很长，但是已经完成了。它本来会更长，但是您已经在manifest文件中总结了所有图标、短名称等，使您能够省略许多 <code>&lt;meta&gt;</code> 和 <code>&lt;link&gt;</code> 标签，</p>
+<p>现在您的 <code>&lt;head&gt;</code> 已基本完成，您可以深入研究一些语义 HTML。</p>
+<h3 id="原文">原文</h3>
+<p><a href="https://web.dev/learn/html/metadata?hl=en">metadata</a></p>
+
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/html/">html</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/2023-10-12-learn-html-004/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">学习HTML-HTML语义</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/2023-10-09-learn-html-002/">
+            <span class="next-text nav-default">学习HTML-文档结构</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="joyrap/joyrap.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/1130203/bill-xie" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://twitter.com/joyrap" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/xiebiao" class="iconfont icon-github" title="github"></a>
+  <a href="https://joyrap.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2012 - 
+    2023
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">语言是一生的枷锁。</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js" integrity="sha512-GA1YgNe8NTU3XMDMofUTpTNqMsPUL6VjYgc6NjOUTA/6pwTFlTmFc/tk+LnDfXD3/mNGZcik9kvfAjeVPTHisA==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js" integrity="sha512-l0i7i+24ESeyrzZawcOFGAZADXr7mFVJvFNR/BImmv8aGYqR/svqbJHSLzXIr62hE9J9ibyGOEpoBfWwU64a0Q==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/3.0.2/timeago.min.js" integrity="sha512-+HwB8Magvpg+0LZ4APOss9s3mopC9KUMq1/gQbCEaZ9fjSl6vWuVbvo6Nt+2dGfEqNVTZ+NVasiAfBy58kRCLg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/3.0.2/timeago.locales.min.js" integrity="sha512-kjHDpsRVaJ0pxKiXH4ibysg7971Epm80gABnxVYgtMiU4fSll6NaAhzUD4NXg++ihdC160LuogIzwh2b74rP4g==" crossorigin="anonymous"></script>
+  <script>
+    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
+    timeago().render(document.querySelectorAll('.timeago'), languageCode);
+    timeago.cancel();  
+  </script>
+<script type="text/javascript" src="/dist/even.2a341756.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+      integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

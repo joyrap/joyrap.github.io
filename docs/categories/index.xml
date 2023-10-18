@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>语言是一生的枷锁。</copyright>
-    <lastBuildDate>Mon, 25 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Programming</title>
+      <link>https://joyrap.github.io/categories/programming/</link>
+      <pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/categories/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web Development</title>
+      <link>https://joyrap.github.io/categories/web-development/</link>
+      <pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/categories/web-development/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Writing</title>
       <link>https://joyrap.github.io/categories/writing/</link>
@@ -90,15 +108,6 @@
     </item>
     
     <item>
-      <title>Programming</title>
-      <link>https://joyrap.github.io/categories/programming/</link>
-      <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://joyrap.github.io/categories/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Hiring</title>
       <link>https://joyrap.github.io/categories/hiring/</link>
       <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
@@ -122,6 +131,15 @@
       <pubDate>Sat, 18 Feb 2017 18:24:47 +0000</pubDate>
       
       <guid>https://joyrap.github.io/categories/marathon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>project management</title>
+      <link>https://joyrap.github.io/categories/project-management/</link>
+      <pubDate>Mon, 08 Aug 2016 01:24:47 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/categories/project-management/</guid>
       <description></description>
     </item>
     

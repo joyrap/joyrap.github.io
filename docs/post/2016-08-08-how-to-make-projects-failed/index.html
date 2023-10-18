@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.115.2 with theme even" />
+<meta name="generator" content="Hugo 0.119.0 with theme even" />
 
 
 <link rel="canonical" href="https://joyrap.github.io/post/2016-08-08-how-to-make-projects-failed/" />
@@ -58,7 +58,7 @@
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/" class="logo">语言是一生的枷锁。</a>
+    <a href="/" class="logo">于昼夜，思山川湖海。</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -84,7 +84,7 @@
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
-  <a href="/" class="logo">语言是一生的枷锁。</a>
+  <a href="/" class="logo">于昼夜，思山川湖海。</a>
 </div>
 
 <nav class="site-navbar">
@@ -115,10 +115,9 @@
       <div class="post-meta">
         <span class="post-time"> 2016-08-08 </span>
         <div class="post-category">
-            <a href="/categories/engineering/"> Engineering </a>
-            <a href="/categories/design/"> Design </a>
+            <a href="/categories/project-management/"> project management </a>
             </div>
-          <span class="more-meta"> 4570 words </span>
+          <span class="more-meta"> 4595 words </span>
           <span class="more-meta"> 10 mins read </span>
         
       </div>
@@ -126,7 +125,7 @@
 
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
-  <div class="post-toc-content always-active">
+  <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
     <li><a href="#工具">工具</a></li>
@@ -142,6 +141,11 @@
 </nav>
   </div>
 </div>
+  <div class="post-outdated">
+    <div class="warn">
+      <p>[NOTE] Updated <span class="timeago" datetime="2016-08-08T01:24:47" title="August 8, 2016">August 8, 2016</span>. This article may have outdated content or subject matter.</p>
+    </div>
+  </div>
     <div class="post-content">
       <blockquote>
 <p>在你读到这篇牢骚的时候，无数个项目正在慢慢变烂。</p>
@@ -155,7 +159,7 @@
 <p>意识到项目的烂与闻到<a href="https://book.douban.com/subject/4262627/">《代码的坏味道》</a>一样是优秀开发人员的基本素养。</p>
 <p>不过本文说的烂，只是从程序员的角度去看项目，与项目本身的创意，项目在公司层面的战略意义没有关系。</p>
 <h2 id="工具">工具</h2>
-<p>在我刚出道时（06年左右），那时候的Java生态圈其实已经很强大了，但是我刚毕业工作过的几家公司，几乎在项目部署上都没有使用太多的自动化工具。</p>
+<p>在我刚毕业参加工作时（2006年左右），那时候的Java生态圈其实已经很强大了，但是我工作过的几家公司，几乎在项目部署上都没有使用太多的自动化工具。</p>
 <p>有的是直接用开发工具Eclipse打包war文件，其中一家公司，甚至是在本地编译Java文件，然后上传class文件到线上服务器，就算那时已经有 <a href="http://ant.apache.org">Ant</a> 这样的先进工具，可惜我们还是类人猿没有进化过来, 要知道<strong>制作和使用工具是智人起源的重要标志.</strong></p>
 <p>如今我们在一个最好的时代, 你有太多的选择， <a href="http://ant.apache.org">Ant</a>，<a href="http://mavent.apache.org">Maven</a>，<a href="http://www.gradle.org">Gradle</a> &hellip;&hellip;, 无论如何请把打造高可用自动化工具链与开发高可用系统提升到同样一个高度。</p>
 <p>如果你的项目中使用到了工具，但是它却很脆弱：过多依赖环境，依赖复杂的配置，有时候还会有BUG。</p>
@@ -188,7 +192,7 @@
 <p>引入了框架, 那么项目成员是否在框架上做足了技术储备? 如果仅仅是达到使用的地步,那么由于框架引发的问题,你是否能够在最短的时间内解决?</p>
 <p>不然框架就成了项目的枷锁，即使不会让项目慢慢变烂，也不会让项目慢慢变好。</p>
 <h2 id="领域模型">领域模型</h2>
-<p>对啊，没问题，我们项目里面的使用Spring，爽得不要不要的，Spring不是提倡面向接口编程吗，我们有完善的Service接口层。</p>
+<p>对啊，没问题，我们项目里面的使用Spring，它为我们解决了大部分问题（解决了什么问题？反正我也不知道），Spring不是提倡面向接口编程吗，我们有完善的Service接口层。</p>
 <p>是的，就像上面提到的，我曾经学习过公司的框架Demo代码，里面把Module都分好了，Domain, Dao，Manager（用于管理DAO层的事务），Service，Web。
 真实的情况却是，Service里面，一个Service接口对应了一个Dao（大部分情况是这样的），你有几个数据表，大概就有多少个Service接口，如果有个新业务来了，添加了一张表，就再搞一个Service接口,Service，Dao基本都是在为数据库CRUD服务。</p>
 <p>一个接口类从项目产生就没有出现过多个实现, 当时定义接口仅仅是为了遵循面向接口编程。</p>
@@ -263,25 +267,9 @@
 
     </div>
 
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">Author</span>
-    <span class="item-content">于川海</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">LastMod</span>
-    <span class="item-content">
-        2023-09-25
-        <a href="#ZgotmplZ/commit/75a972204775461629b7571e66807cade674f03f" title="更新链接">(75a9722)</a>
-    </span>
-  </p>
-  
-  
-</div>
+    
 <footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/programming/">programming</a>
-          </div>
+      
       <nav class="post-nav">
         <a class="prev" href="/post/2017-02-04-how-to-encrypt-by-linux-command/">
             <i class="iconfont icon-left"></i>
@@ -356,7 +344,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js" integrity="sha512-l0i7i+24ESeyrzZawcOFGAZADXr7mFVJvFNR/BImmv8aGYqR/svqbJHSLzXIr62hE9J9ibyGOEpoBfWwU64a0Q==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/3.0.2/timeago.min.js" integrity="sha512-+HwB8Magvpg+0LZ4APOss9s3mopC9KUMq1/gQbCEaZ9fjSl6vWuVbvo6Nt+2dGfEqNVTZ+NVasiAfBy58kRCLg==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/3.0.2/timeago.locales.min.js" integrity="sha512-kjHDpsRVaJ0pxKiXH4ibysg7971Epm80gABnxVYgtMiU4fSll6NaAhzUD4NXg++ihdC160LuogIzwh2b74rP4g==" crossorigin="anonymous"></script>
-  <script><!-- NOTE: timeago.js uses the language code format like "zh_CN" (underscore and case sensitive) -->
+  <script>
     var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
     timeago().render(document.querySelectorAll('.timeago'), languageCode);
     timeago.cancel();  

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>html on 戒掉幻想，认清现实。</title>
+    <link>https://joyrap.github.io/tags/html/</link>
+    <description>Recent content in html on 戒掉幻想，认清现实。</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>语言是一生的枷锁。</copyright>
+    <lastBuildDate>Fri, 13 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>学习HTML-属性</title>
+      <link>https://joyrap.github.io/post/2023-10-12-learn-html-006/</link>
+      <pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2023-10-12-learn-html-006/</guid>
+      <description>属性使 HTML 如此强大。属性是出现在开始标记中的以空格分隔的名称和名称/值对，提供有关元素的信息和功能。 属性定义元素的行为、链接和功能。有些属性是</description>
+    </item>
+    
+    <item>
+      <title>学习HTML-标题和章节</title>
+      <link>https://joyrap.github.io/post/2023-10-12-learn-html-005/</link>
+      <pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2023-10-12-learn-html-005/</guid>
+      <description>在上一节中，您了解了即使您不知道页面上的单词的含义，当语义元素为文档提供有意义的结构时，其他元素 - 搜索引擎、辅助技术、未来的维护人员、新的团</description>
+    </item>
+    
+    <item>
+      <title>学习HTML-HTML语义</title>
+      <link>https://joyrap.github.io/post/2023-10-12-learn-html-004/</link>
+      <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2023-10-12-learn-html-004/</guid>
+      <description>凭借 100 多个 HTML 元素以及创建自定义元素的能力，您可以通过多种方式来标记您的内容；但有些方法——尤其是语义上的——比其他方法更好。 语义意味着“与意</description>
+    </item>
+    
+    <item>
+      <title>学习HTML-元数据</title>
+      <link>https://joyrap.github.io/post/2023-10-11-learn-html-003/</link>
+      <pubDate>Wed, 11 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2023-10-11-learn-html-003/</guid>
+      <description>在文档结构部分中，您了解了（几乎）总是在 HTML 文档的 &amp;lt;head&amp;gt; 中找到的组件。虽然 &amp;lt;head&amp;gt; 中的所有内容，包括 &amp;lt;title&amp;gt; 、 &amp;lt;link&amp;gt; 、 &amp;lt;script&amp;gt; 、 &amp;lt;style&amp;gt; 以及较少使用的 &amp;lt;base&amp;gt; ，实际上是“元数据”，</description>
+    </item>
+    
+    <item>
+      <title>学习HTML-文档结构</title>
+      <link>https://joyrap.github.io/post/2023-10-09-learn-html-002/</link>
+      <pubDate>Mon, 09 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2023-10-09-learn-html-002/</guid>
+      <description>HTML包含一个根元素&amp;lt;html&amp;gt;,内嵌在其内的就是文档头和文档主体。虽然文档头对视觉访问者不可见，但是它对你的站点功能非常重要</description>
+    </item>
+    
+    <item>
+      <title>学习HTML-概览</title>
+      <link>https://joyrap.github.io/post/2023-10-08-learn-html-001/</link>
+      <pubDate>Sun, 08 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2023-10-08-learn-html-001/</guid>
+      <description>HTML是超文本标记语言（HyperText Markup Language），用于描述如何在Web上显示文档结构的标准标记语言，HTML由一系列元素和元</description>
+    </item>
+    
+  </channel>
+</rss>
