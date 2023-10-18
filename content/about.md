@@ -21,7 +21,7 @@ weight: 50
   
   我是一名软件工程师，轻度乐观主义忧郁患者，
   
-  痴迷于学习笛箫演奏。
+  痴迷于学习[笛](https://en.wikipedia.org/wiki/Dizi_(instrument))，[箫](https://en.wikipedia.org/wiki/Xiao_(flute))演奏。
 
 ### 工作经历
 

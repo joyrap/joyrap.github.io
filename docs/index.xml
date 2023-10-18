@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>语言是一生的枷锁。</copyright>
-    <lastBuildDate>Fri, 13 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://joyrap.github.io/about/</link>
@@ -15,6 +15,15 @@
       
       <guid>https://joyrap.github.io/about/</guid>
       <description>我是谁 说起万能青年旅店，喜欢这只乐队的歌迷多少会被贴上文艺愤青的标签，我并不是某只乐队的歌迷，对音乐类型的喜好也不固定，相比音乐，我更在意文</description>
+    </item>
+    
+    <item>
+      <title>学习HTML-文本基础知识</title>
+      <link>https://joyrap.github.io/post/2023-10-18-learn-html-007/</link>
+      <pubDate>Wed, 18 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://joyrap.github.io/post/2023-10-18-learn-html-007/</guid>
+      <description>与文本编辑器提供 到 标题的方式类似，以及以有意义和可视的方式格式化文本部分的多种方法，HTML 提供了一组非常相似的语义和内容。非语义元素来赋予</description>
     </item>
     
     <item>
