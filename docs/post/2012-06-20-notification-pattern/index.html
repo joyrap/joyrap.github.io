@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.119.0 with theme even" />
+<meta name="generator" content="Hugo 0.120.4 with theme even" />
 
 
 <link rel="canonical" href="https://joyrap.github.io/post/2012-06-20-notification-pattern/" />
@@ -279,39 +279,39 @@
 </span><span class="lnt">33
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">public class User extends IDomainValidator {
-</span></span><span class="line"><span class="cl">    private String name;
-</span></span><span class="line"><span class="cl">    private int age;
-</span></span><span class="line"><span class="cl">    public User(String name, int age) {
-</span></span><span class="line"><span class="cl">        this.name = name;
-</span></span><span class="line"><span class="cl">        this.age = age;
-</span></span><span class="line"><span class="cl">    }
-</span></span><span class="line"><span class="cl">    /**
-</span></span><span class="line"><span class="cl">     * 校验领域模型
-</span></span><span class="line"><span class="cl">     */
-</span></span><span class="line"><span class="cl">    public void validate() {
-</span></span><span class="line"><span class="cl">        if (age &lt; 18) {
-</span></span><span class="line"><span class="cl">            notification.errors().add(notification.new Error(&#34;年龄小于18岁&#34;));
-</span></span><span class="line"><span class="cl">        }
-</span></span><span class="line"><span class="cl">        if (name.equals(&#34;xiaog&#34;)) {
-</span></span><span class="line"><span class="cl">            notification.errors().add(notification.new Error(&#34;名字不能为:&#34; + name));
-</span></span><span class="line"><span class="cl">        }
-</span></span><span class="line"><span class="cl">        // 当然你还可以对该领域做其他的校验
-</span></span><span class="line"><span class="cl">    }
-</span></span><span class="line"><span class="cl">    public String getName() {
-</span></span><span class="line"><span class="cl">        return name;
-</span></span><span class="line"><span class="cl">    }
-</span></span><span class="line"><span class="cl">    public void setName(String name) {
-</span></span><span class="line"><span class="cl">        this.name = name;
-</span></span><span class="line"><span class="cl">    }
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">public</span> <span class="k">class</span> <span class="n">User</span> <span class="k">extends</span> <span class="n">IDomainValidator</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">private</span> <span class="ne">String</span> <span class="n">name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">private</span> <span class="ne">int</span> <span class="n">age</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">public</span> <span class="n">User</span><span class="p">(</span><span class="ne">String</span> <span class="n">name</span><span class="p">,</span> <span class="ne">int</span> <span class="n">age</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">this</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">this</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">/**</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*</span> <span class="err">校验领域模型</span>
+</span></span><span class="line"><span class="cl">     <span class="o">*/</span>
+</span></span><span class="line"><span class="cl">    <span class="n">public</span> <span class="n">void</span> <span class="n">validate</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">notification</span><span class="o">.</span><span class="n">errors</span><span class="p">()</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">notification</span><span class="o">.</span><span class="n">new</span> <span class="n">Error</span><span class="p">(</span><span class="s2">&#34;年龄小于18岁&#34;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="s2">&#34;xiaog&#34;</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">notification</span><span class="o">.</span><span class="n">errors</span><span class="p">()</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">notification</span><span class="o">.</span><span class="n">new</span> <span class="n">Error</span><span class="p">(</span><span class="s2">&#34;名字不能为:&#34;</span> <span class="o">+</span> <span class="n">name</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="o">//</span> <span class="err">当然你还可以对该领域做其他的校验</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">public</span> <span class="ne">String</span> <span class="n">getName</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">public</span> <span class="n">void</span> <span class="n">setName</span><span class="p">(</span><span class="ne">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">this</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    public int getAge() {
-</span></span><span class="line"><span class="cl">        return age;
-</span></span><span class="line"><span class="cl">    }
-</span></span><span class="line"><span class="cl">    public void setAge(int age) {
-</span></span><span class="line"><span class="cl">        this.age = age;
-</span></span><span class="line"><span class="cl">    }
-</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">    <span class="n">public</span> <span class="ne">int</span> <span class="n">getAge</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">age</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">public</span> <span class="n">void</span> <span class="n">setAge</span><span class="p">(</span><span class="ne">int</span> <span class="n">age</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">this</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>测试:</p>

@@ -7,15 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>语言是一生的枷锁。</copyright>
-    <lastBuildDate>Tue, 19 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/tags/clojure/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://joyrap.github.io/tags/clojure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Clojure中的数据类型</title>
       <link>https://joyrap.github.io/post/2019-11-19-clojure-datatypes/</link>
       <pubDate>Tue, 19 Nov 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://joyrap.github.io/post/2019-11-19-clojure-datatypes/</guid>
       <description>Clojure作为一款基于JVM的LISP语言，我个人从创造者Rich Hickey身上吸收了很多编程的观点，尽管作者提出了很多面向对象编程语</description>
     </item>
-    
   </channel>
 </rss>

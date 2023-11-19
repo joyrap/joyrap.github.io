@@ -7,132 +7,105 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>语言是一生的枷锁。</copyright>
-    <lastBuildDate>Mon, 25 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://joyrap.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>故事</title>
       <link>https://joyrap.github.io/tags/%E6%95%85%E4%BA%8B/</link>
       <pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://joyrap.github.io/tags/%E6%95%85%E4%BA%8B/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>故乡</title>
       <link>https://joyrap.github.io/tags/%E6%95%85%E4%B9%A1/</link>
       <pubDate>Sun, 30 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://joyrap.github.io/tags/%E6%95%85%E4%B9%A1/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>诗与远方</title>
       <link>https://joyrap.github.io/tags/%E8%AF%97%E4%B8%8E%E8%BF%9C%E6%96%B9/</link>
       <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://joyrap.github.io/tags/%E8%AF%97%E4%B8%8E%E8%BF%9C%E6%96%B9/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Life</title>
       <link>https://joyrap.github.io/tags/life/</link>
       <pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://joyrap.github.io/tags/life/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>api</title>
       <link>https://joyrap.github.io/tags/api/</link>
       <pubDate>Sat, 09 Apr 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://joyrap.github.io/tags/api/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>versioning</title>
       <link>https://joyrap.github.io/tags/versioning/</link>
       <pubDate>Sat, 09 Apr 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://joyrap.github.io/tags/versioning/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Concurrency</title>
       <link>https://joyrap.github.io/tags/concurrency/</link>
       <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://joyrap.github.io/tags/concurrency/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Test</title>
       <link>https://joyrap.github.io/tags/test/</link>
       <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://joyrap.github.io/tags/test/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Clojure</title>
       <link>https://joyrap.github.io/tags/clojure/</link>
       <pubDate>Tue, 19 Nov 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://joyrap.github.io/tags/clojure/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Advanced Data Structure</title>
       <link>https://joyrap.github.io/tags/advanced-data-structure/</link>
       <pubDate>Fri, 19 Apr 2019 21:24:47 +0000</pubDate>
-      
       <guid>https://joyrap.github.io/tags/advanced-data-structure/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Data Structure</title>
       <link>https://joyrap.github.io/tags/data-structure/</link>
       <pubDate>Fri, 19 Apr 2019 21:24:47 +0000</pubDate>
-      
       <guid>https://joyrap.github.io/tags/data-structure/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Disruptor</title>
       <link>https://joyrap.github.io/tags/disruptor/</link>
       <pubDate>Fri, 19 Apr 2019 21:24:47 +0000</pubDate>
-      
       <guid>https://joyrap.github.io/tags/disruptor/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>security</title>
       <link>https://joyrap.github.io/tags/security/</link>
       <pubDate>Sat, 04 Feb 2017 18:24:47 +0000</pubDate>
-      
       <guid>https://joyrap.github.io/tags/security/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Pattern</title>
       <link>https://joyrap.github.io/tags/pattern/</link>
       <pubDate>Wed, 20 Jun 2012 11:24:47 +0000</pubDate>
-      
       <guid>https://joyrap.github.io/tags/pattern/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

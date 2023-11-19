@@ -7,24 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>语言是一生的枷锁。</copyright>
-    <lastBuildDate>Wed, 16 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/categories/documentation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://joyrap.github.io/categories/documentation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>如何画软件系统架构图</title>
       <link>https://joyrap.github.io/post/2023-08-16-how-to-draw-architectural-diagrams/</link>
       <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://joyrap.github.io/post/2023-08-16-how-to-draw-architectural-diagrams/</guid>
       <description>最近看了一篇如何画软件架构图的博客，结合个人的一些经验，整理总结一下。 一图胜千言 当你要描述一个复杂系统中各个组件之间的交互关系，组件之间还存</description>
     </item>
-    
     <item>
       <title>图表即代码</title>
       <link>https://joyrap.github.io/post/2021-11-22-diagrams-as-code/</link>
       <pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://joyrap.github.io/post/2021-11-22-diagrams-as-code/</guid>
       <description>为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件，以及如何在文档中嵌入图表。 软件开发时</description>
     </item>
-    
   </channel>
 </rss>

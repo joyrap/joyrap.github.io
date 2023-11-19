@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.119.0 with theme even" />
+<meta name="generator" content="Hugo 0.120.4 with theme even" />
 
 
 <link rel="canonical" href="https://joyrap.github.io/post/2019-04-19-understanding-the-lmax-disruptor/" />
@@ -447,37 +447,37 @@
 </span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">public void barrier() throws Exception {
-</span></span><span class="line"><span class="cl">  // First thread
-</span></span><span class="line"><span class="cl">  final Thread t1 =
-</span></span><span class="line"><span class="cl">      new Thread(() -&gt; {
-</span></span><span class="line"><span class="cl">        for (int i = 0; i &lt; MAX / 2; i++) {
-</span></span><span class="line"><span class="cl">          getUnsafe().loadFence(); // Read barrier
-</span></span><span class="line"><span class="cl">          sharedCounter++;
-</span></span><span class="line"><span class="cl">          getUnsafe().storeFence(); // Store barrier
-</span></span><span class="line"><span class="cl">        }
-</span></span><span class="line"><span class="cl">      });
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">public</span> <span class="n">void</span> <span class="n">barrier</span><span class="p">()</span> <span class="n">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="o">//</span> <span class="n">First</span> <span class="n">thread</span>
+</span></span><span class="line"><span class="cl">  <span class="n">final</span> <span class="ne">Thread</span> <span class="n">t1</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">      <span class="n">new</span> <span class="ne">Thread</span><span class="p">(()</span> <span class="o">-&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="ne">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">MAX</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="n">getUnsafe</span><span class="p">()</span><span class="o">.</span><span class="n">loadFence</span><span class="p">();</span> <span class="o">//</span> <span class="n">Read</span> <span class="n">barrier</span>
+</span></span><span class="line"><span class="cl">          <span class="n">sharedCounter</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">          <span class="n">getUnsafe</span><span class="p">()</span><span class="o">.</span><span class="n">storeFence</span><span class="p">();</span> <span class="o">//</span> <span class="n">Store</span> <span class="n">barrier</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">});</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  // Second thread
-</span></span><span class="line"><span class="cl">  final Thread t2 =
-</span></span><span class="line"><span class="cl">      new Thread(() -&gt; {
-</span></span><span class="line"><span class="cl">        for (int i = 0; i &lt; MAX / 2; i++) {
-</span></span><span class="line"><span class="cl">          getUnsafe().loadFence(); // Read barrier
-</span></span><span class="line"><span class="cl">          sharedCounter++;
-</span></span><span class="line"><span class="cl">          getUnsafe().storeFence(); // Store barrier
-</span></span><span class="line"><span class="cl">        }
-</span></span><span class="line"><span class="cl">      });
+</span></span><span class="line"><span class="cl">  <span class="o">//</span> <span class="n">Second</span> <span class="n">thread</span>
+</span></span><span class="line"><span class="cl">  <span class="n">final</span> <span class="ne">Thread</span> <span class="n">t2</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">      <span class="n">new</span> <span class="ne">Thread</span><span class="p">(()</span> <span class="o">-&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="ne">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">MAX</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="n">getUnsafe</span><span class="p">()</span><span class="o">.</span><span class="n">loadFence</span><span class="p">();</span> <span class="o">//</span> <span class="n">Read</span> <span class="n">barrier</span>
+</span></span><span class="line"><span class="cl">          <span class="n">sharedCounter</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">          <span class="n">getUnsafe</span><span class="p">()</span><span class="o">.</span><span class="n">storeFence</span><span class="p">();</span> <span class="o">//</span> <span class="n">Store</span> <span class="n">barrier</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">});</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  // Start threads
-</span></span><span class="line"><span class="cl">  t1.start();
-</span></span><span class="line"><span class="cl">  t2.start();
+</span></span><span class="line"><span class="cl">  <span class="o">//</span> <span class="n">Start</span> <span class="n">threads</span>
+</span></span><span class="line"><span class="cl">  <span class="n">t1</span><span class="o">.</span><span class="n">start</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="n">t2</span><span class="o">.</span><span class="n">start</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  // Wait threads
-</span></span><span class="line"><span class="cl">  t1.join();
-</span></span><span class="line"><span class="cl">  t2.join();
+</span></span><span class="line"><span class="cl">  <span class="o">//</span> <span class="n">Wait</span> <span class="n">threads</span>
+</span></span><span class="line"><span class="cl">  <span class="n">t1</span><span class="o">.</span><span class="n">join</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="n">t2</span><span class="o">.</span><span class="n">join</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  System.out.println(&#34;counter=&#34; + sharedCounter);
-</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">  <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&#34;counter=&#34;</span> <span class="o">+</span> <span class="n">sharedCounter</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>我们再次运行这个实现 直到<code>MAX</code> 到1百万，我们依然期望得到输出  <code>counter = 1000000</code>:</p>
@@ -538,30 +538,30 @@
 </span><span class="lnt">24
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/** Main lock guarding all access */
-</span></span><span class="line"><span class="cl">final ReentrantLock lock;
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">/**</span> <span class="n">Main</span> <span class="n">lock</span> <span class="n">guarding</span> <span class="n">all</span> <span class="n">access</span> <span class="o">*/</span>
+</span></span><span class="line"><span class="cl"><span class="n">final</span> <span class="n">ReentrantLock</span> <span class="n">lock</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">public void put(E e) throws InterruptedException {
-</span></span><span class="line"><span class="cl">    checkNotNull(e);
-</span></span><span class="line"><span class="cl">    final ReentrantLock lock = this.lock;
-</span></span><span class="line"><span class="cl">    lock.lockInterruptibly(); // Lock accesses
-</span></span><span class="line"><span class="cl">    try {
-</span></span><span class="line"><span class="cl">        while (count == items.length)
-</span></span><span class="line"><span class="cl">            notFull.await();
-</span></span><span class="line"><span class="cl">        enqueue(e); // See method below
-</span></span><span class="line"><span class="cl">    } finally {
-</span></span><span class="line"><span class="cl">        lock.unlock(); // Unlock
-</span></span><span class="line"><span class="cl">    }
-</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl"><span class="n">public</span> <span class="n">void</span> <span class="n">put</span><span class="p">(</span><span class="n">E</span> <span class="n">e</span><span class="p">)</span> <span class="n">throws</span> <span class="n">InterruptedException</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">checkNotNull</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">final</span> <span class="n">ReentrantLock</span> <span class="n">lock</span> <span class="o">=</span> <span class="n">this</span><span class="o">.</span><span class="n">lock</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">lock</span><span class="o">.</span><span class="n">lockInterruptibly</span><span class="p">();</span> <span class="o">//</span> <span class="n">Lock</span> <span class="n">accesses</span>
+</span></span><span class="line"><span class="cl">    <span class="n">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="p">(</span><span class="n">count</span> <span class="o">==</span> <span class="n">items</span><span class="o">.</span><span class="n">length</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">notFull</span><span class="o">.</span><span class="n">await</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">enqueue</span><span class="p">(</span><span class="n">e</span><span class="p">);</span> <span class="o">//</span> <span class="n">See</span> <span class="n">method</span> <span class="n">below</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="n">finally</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">lock</span><span class="o">.</span><span class="n">unlock</span><span class="p">();</span> <span class="o">//</span> <span class="n">Unlock</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">private void enqueue(E x) {
-</span></span><span class="line"><span class="cl">    final Object[] items = this.items;
-</span></span><span class="line"><span class="cl">    items[putIndex] = x;
-</span></span><span class="line"><span class="cl">    if (++putIndex == items.length)
-</span></span><span class="line"><span class="cl">        putIndex = 0;
-</span></span><span class="line"><span class="cl">    count++;
-</span></span><span class="line"><span class="cl">    notEmpty.signal(); // Send signal to indicate a change
-</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl"><span class="n">private</span> <span class="n">void</span> <span class="n">enqueue</span><span class="p">(</span><span class="n">E</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">final</span> <span class="ne">Object</span><span class="p">[]</span> <span class="n">items</span> <span class="o">=</span> <span class="n">this</span><span class="o">.</span><span class="n">items</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">items</span><span class="p">[</span><span class="n">putIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">++</span><span class="n">putIndex</span> <span class="o">==</span> <span class="n">items</span><span class="o">.</span><span class="n">length</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">putIndex</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">notEmpty</span><span class="o">.</span><span class="k">signal</span><span class="p">();</span> <span class="o">//</span> <span class="n">Send</span> <span class="k">signal</span> <span class="n">to</span> <span class="n">indicate</span> <span class="n">a</span> <span class="n">change</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>在一个锁操作中，当一个元素被添加时会给等待线程发送一个信号。</p>
@@ -643,18 +643,18 @@
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">disruptor.handleEventsWith(
-</span></span><span class="line"><span class="cl">    (event, sequence, endOfBatch) -&gt; {
-</span></span><span class="line"><span class="cl">      if (sequence % 2 == 0) {
-</span></span><span class="line"><span class="cl">        System.out.println(&#34;Consumer 1: &#34; + event.getPayload());
-</span></span><span class="line"><span class="cl">      }
-</span></span><span class="line"><span class="cl">    },
-</span></span><span class="line"><span class="cl">    (event, sequence, endOfBatch) -&gt; {
-</span></span><span class="line"><span class="cl">      if (sequence % 2 == 1) {
-</span></span><span class="line"><span class="cl">        System.out.println(&#34;Consumer 2: &#34; + event.getPayload());
-</span></span><span class="line"><span class="cl">      }
-</span></span><span class="line"><span class="cl">    }
-</span></span><span class="line"><span class="cl">);
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">disruptor</span><span class="o">.</span><span class="n">handleEventsWith</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">sequence</span><span class="p">,</span> <span class="n">endOfBatch</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="n">sequence</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&#34;Consumer 1: &#34;</span> <span class="o">+</span> <span class="n">event</span><span class="o">.</span><span class="n">getPayload</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">sequence</span><span class="p">,</span> <span class="n">endOfBatch</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="n">sequence</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&#34;Consumer 2: &#34;</span> <span class="o">+</span> <span class="n">event</span><span class="o">.</span><span class="n">getPayload</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>然后我们可以启动 Disruptor，返回一个<code>RingBuffer</code>实例。</p>
@@ -675,10 +675,10 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">final long sequence = ringBuffer.next(); // Ask the ring buffer the next sequence
-</span></span><span class="line"><span class="cl">final MyEvent event = ringBuffer.get(sequence); // Get the event instance
-</span></span><span class="line"><span class="cl">event.setPayload(&#34;Hello, World!&#34;); // Business logic
-</span></span><span class="line"><span class="cl">ringBuffer.publish(sequence); // Publish an event
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">final</span> <span class="n">long</span> <span class="n">sequence</span> <span class="o">=</span> <span class="n">ringBuffer</span><span class="o">.</span><span class="n">next</span><span class="p">();</span> <span class="o">//</span> <span class="n">Ask</span> <span class="n">the</span> <span class="n">ring</span> <span class="n">buffer</span> <span class="n">the</span> <span class="n">next</span> <span class="n">sequence</span>
+</span></span><span class="line"><span class="cl"><span class="n">final</span> <span class="n">MyEvent</span> <span class="n">event</span> <span class="o">=</span> <span class="n">ringBuffer</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">sequence</span><span class="p">);</span> <span class="o">//</span> <span class="n">Get</span> <span class="n">the</span> <span class="n">event</span> <span class="n">instance</span>
+</span></span><span class="line"><span class="cl"><span class="n">event</span><span class="o">.</span><span class="n">setPayload</span><span class="p">(</span><span class="s2">&#34;Hello, World!&#34;</span><span class="p">);</span> <span class="o">//</span> <span class="n">Business</span> <span class="n">logic</span>
+</span></span><span class="line"><span class="cl"><span class="n">ringBuffer</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">sequence</span><span class="p">);</span> <span class="o">//</span> <span class="n">Publish</span> <span class="n">an</span> <span class="n">event</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>序列号表示事件在ring buffer数据结构中的位置。</p>
@@ -700,17 +700,17 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">class LhsPadding {
-</span></span><span class="line"><span class="cl">    protected long p1, p2, p3, p4, p5, p6, p7;
-</span></span><span class="line"><span class="cl">}
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="k">class</span> <span class="n">LhsPadding</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">protected</span> <span class="n">long</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p3</span><span class="p">,</span> <span class="n">p4</span><span class="p">,</span> <span class="n">p5</span><span class="p">,</span> <span class="n">p6</span><span class="p">,</span> <span class="n">p7</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">class Value extends LhsPadding {
-</span></span><span class="line"><span class="cl">    protected volatile long value;
-</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="n">Value</span> <span class="k">extends</span> <span class="n">LhsPadding</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">protected</span> <span class="n">volatile</span> <span class="n">long</span> <span class="n">value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">class RhsPadding extends Value {
-</span></span><span class="line"><span class="cl">    protected long p9, p10, p11, p12, p13, p14, p15;
-</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="n">RhsPadding</span> <span class="k">extends</span> <span class="n">Value</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">protected</span> <span class="n">long</span> <span class="n">p9</span><span class="p">,</span> <span class="n">p10</span><span class="p">,</span> <span class="n">p11</span><span class="p">,</span> <span class="n">p12</span><span class="p">,</span> <span class="n">p13</span><span class="p">,</span> <span class="n">p14</span><span class="p">,</span> <span class="n">p15</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>而且，通过创建一个内存屏障，确保所有缓存得到发布事件的更新。在ring buffer中添加一个事件完全不需要锁，从而性能得到了大大提升。</p>

@@ -7,15 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>语言是一生的枷锁。</copyright>
-    <lastBuildDate>Wed, 20 Jun 2012 11:24:47 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/tags/pattern/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Jun 2012 11:24:47 +0000</lastBuildDate>
+    <atom:link href="https://joyrap.github.io/tags/pattern/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Notification Pattern理解</title>
       <link>https://joyrap.github.io/post/2012-06-20-notification-pattern/</link>
       <pubDate>Wed, 20 Jun 2012 11:24:47 +0000</pubDate>
-      
       <guid>https://joyrap.github.io/post/2012-06-20-notification-pattern/</guid>
       <description>场景 在MVC的架构中，我们想从Model层传递一些错误信息到View层，比如用户注册这个功能，用户填写了密码，邮箱，然后提交注册， 这时候我们</description>
     </item>
-    
   </channel>
 </rss>

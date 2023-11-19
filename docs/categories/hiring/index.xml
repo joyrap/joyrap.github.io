@@ -7,15 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>语言是一生的枷锁。</copyright>
-    <lastBuildDate>Sat, 28 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://joyrap.github.io/categories/hiring/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://joyrap.github.io/categories/hiring/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>对技术招聘的一些启发</title>
       <link>https://joyrap.github.io/post/2019-12-28-heuristics-for-hiring/</link>
       <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://joyrap.github.io/post/2019-12-28-heuristics-for-hiring/</guid>
       <description>国外一家自由职业招聘平台 Gun.io ，最近针对问题“当招聘高级工程师时最看中哪些方面？”，采访了38名CTO， 最后出了一份报告。 在招聘开发工程师上，国</description>
     </item>
-    
   </channel>
 </rss>
