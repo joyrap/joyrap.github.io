@@ -2,7 +2,7 @@
 layout: post
 title:  对技术招聘的一些启发
 date:   2019-12-28
-categories: ["Hiring"]
+categories: ["Career"]
 ---
 
 国外一家自由职业招聘平台 [Gun.io ](https://www.gun.io/) ，最近针对问题“**当招聘高级工程师时最看中哪些方面？**”，采访了38名CTO，

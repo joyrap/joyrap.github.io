@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software design on 戒掉幻想，认清现实。</title>
+    <link>https://joyrap.github.io/categories/software-design/</link>
+    <description>Recent content in Software design on 戒掉幻想，认清现实。</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>语言是一生的枷锁。</copyright>
+    <lastBuildDate>Sat, 09 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://joyrap.github.io/categories/software-design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>API设计之版本控制</title>
+      <link>https://joyrap.github.io/post/2022-04-09-api-design-versioning/</link>
+      <pubDate>Sat, 09 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://joyrap.github.io/post/2022-04-09-api-design-versioning/</guid>
+      <description>为了追求系统的健壮性，稳定性，越来越多的系统采用分布式软件架构，分布式意味着跨应用访问成为系统交互的一种特点，特别是微服务架构在商业系统中的</description>
+    </item>
+    <item>
+      <title>A Philosophy Of Software Design-读书笔记</title>
+      <link>https://joyrap.github.io/post/2022-01-08-a-philosophy-of-software-design/</link>
+      <pubDate>Sat, 08 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://joyrap.github.io/post/2022-01-08-a-philosophy-of-software-design/</guid>
+      <description>《软件设计的哲学》这本书最早出版于2018年，2021年出了2nd Edition，目前国内还没有中文版，这本书是作者 在斯坦福大学开设的CS1</description>
+    </item>
+    <item>
+      <title>翻译:Understanding the LMAX Disruptor</title>
+      <link>https://joyrap.github.io/post/2019-04-19-understanding-the-lmax-disruptor/</link>
+      <pubDate>Fri, 19 Apr 2019 21:24:47 +0000</pubDate>
+      <guid>https://joyrap.github.io/post/2019-04-19-understanding-the-lmax-disruptor/</guid>
+      <description>翻译前言 知道Disruptor这个代码库，是在Log4j 1.X升级版Log4j2中提到的，那时候就好奇它为何如此高效，关于Disruptor</description>
+    </item>
+  </channel>
+</rss>

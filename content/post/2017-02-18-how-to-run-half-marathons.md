@@ -2,7 +2,8 @@
 layout: post
 title:  如何跑完半程马拉松
 date:   2017-02-18 18:24:47
-categories: ["Marathon","Life"]
+categories: ["Life"]
+tags: ["Marathon"]
 ---
 
 是的。

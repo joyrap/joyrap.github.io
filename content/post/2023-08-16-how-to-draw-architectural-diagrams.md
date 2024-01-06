@@ -2,7 +2,7 @@
 title: 如何画软件系统架构图
 date: 2023-08-16
 layout: post
-categories: ["Documentation","Engineering","Design","Diagram"]
+categories: ["Engineering"]
 draft: false
 ---
 

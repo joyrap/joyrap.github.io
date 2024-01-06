@@ -10,16 +10,9 @@
     <lastBuildDate>Tue, 17 Oct 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://joyrap.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Life</title>
-      <link>https://joyrap.github.io/categories/life/</link>
-      <pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://joyrap.github.io/categories/life/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Writing</title>
       <link>https://joyrap.github.io/categories/writing/</link>
-      <pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/categories/writing/</guid>
       <description></description>
     </item>
@@ -31,27 +24,6 @@
       <description></description>
     </item>
     <item>
-      <title>Design</title>
-      <link>https://joyrap.github.io/categories/design/</link>
-      <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>https://joyrap.github.io/categories/design/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Diagram</title>
-      <link>https://joyrap.github.io/categories/diagram/</link>
-      <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>https://joyrap.github.io/categories/diagram/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>documentation</title>
-      <link>https://joyrap.github.io/categories/documentation/</link>
-      <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>https://joyrap.github.io/categories/documentation/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Engineering</title>
       <link>https://joyrap.github.io/categories/engineering/</link>
       <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
@@ -59,17 +31,24 @@
       <description></description>
     </item>
     <item>
-      <title>API Design</title>
-      <link>https://joyrap.github.io/categories/api-design/</link>
-      <pubDate>Sat, 09 Apr 2022 00:00:00 +0000</pubDate>
-      <guid>https://joyrap.github.io/categories/api-design/</guid>
+      <title>Life</title>
+      <link>https://joyrap.github.io/categories/life/</link>
+      <pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://joyrap.github.io/categories/life/</guid>
       <description></description>
     </item>
     <item>
-      <title>Programming</title>
-      <link>https://joyrap.github.io/categories/programming/</link>
-      <pubDate>Sat, 08 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>https://joyrap.github.io/categories/programming/</guid>
+      <title>Software design</title>
+      <link>https://joyrap.github.io/categories/software-design/</link>
+      <pubDate>Sat, 09 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://joyrap.github.io/categories/software-design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>documentation</title>
+      <link>https://joyrap.github.io/categories/documentation/</link>
+      <pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://joyrap.github.io/categories/documentation/</guid>
       <description></description>
     </item>
     <item>
@@ -80,24 +59,10 @@
       <description></description>
     </item>
     <item>
-      <title>Hiring</title>
-      <link>https://joyrap.github.io/categories/hiring/</link>
-      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>https://joyrap.github.io/categories/hiring/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Translate</title>
-      <link>https://joyrap.github.io/categories/translate/</link>
-      <pubDate>Fri, 19 Apr 2019 21:24:47 +0000</pubDate>
-      <guid>https://joyrap.github.io/categories/translate/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Marathon</title>
-      <link>https://joyrap.github.io/categories/marathon/</link>
-      <pubDate>Sat, 18 Feb 2017 18:24:47 +0000</pubDate>
-      <guid>https://joyrap.github.io/categories/marathon/</guid>
+      <title>Programming</title>
+      <link>https://joyrap.github.io/categories/programming/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://joyrap.github.io/categories/programming/</guid>
       <description></description>
     </item>
     <item>

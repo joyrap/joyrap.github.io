@@ -2,8 +2,8 @@
 layout: post
 title:  翻译:Understanding the LMAX Disruptor
 date:   2019-04-19 21:24:47
-categories: ["Translate","Programming"]
-tags: ["Disruptor","Advanced Data Structure","Data Structure"]
+categories: ["Software design"]
+tags: ["Disruptor","Advanced Data Structure","Translate"]
 ---
 
 ### 翻译前言

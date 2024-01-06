@@ -2,8 +2,8 @@
 title: API设计之版本控制
 date: 2022-04-09
 layout: post
-categories: ["API Design"]
-tags: ["versioning","api"]
+categories: ["Software Design"]
+tags: ["API Design"]
 draft: false
 ---
 
