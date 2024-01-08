@@ -117,7 +117,7 @@
         <div class="post-category">
             <a href="/categories/programming/"> Programming </a>
             </div>
-          <span class="more-meta"> 670 words </span>
+          <span class="more-meta"> 680 words </span>
           <span class="more-meta"> 2 mins read </span>
         
       </div>
@@ -146,7 +146,7 @@
 <p>面向对象编程语言可以通过继承来达到功能复用目的，但继承也会有不少陷阱，或者说有时候他们并不满足设计上的需求。</p>
 <p>例如我们想让类具备另外多个已经存在于其他类中的功能，那么通过继承就无法实现，因为Java不允许多重继承。而且子类会全部继承父类的开放功能，也不是我们期望的，在<a href="https://www.amazon.com/Effective-Java-Joshua-Bloch/dp/0134685997">Effective Java</a>中也推荐优先选择复合而不是继承。</p>
 <p>从关系类型上来说，我们也不希望为了获得某个功能，让类之间成为<a href="https://en.wikipedia.org/wiki/Is-a"><em>IS-A</em></a>的关系。</p>
-<p>这时候我们自然想到的就是接口，接口作为开放的协议约定，所有类都可以实现接口，同时类可以实现多个接口。为了让类可以实现接口同时又能获得默认实现，Java在接口中设计了<code>default</code>默认实现方法，这样子类可以在不需要自己实现的情况下获得接口中默认提供的功能（这里的<code>default</code>方法还解决了新增接口方法导致实现类变更的问题）。</p>
+<p>这时候我们自然想到的就是接口，接口作为开放的协议约定，所有类都可以实现接口，同时类可以实现多个接口。为了让类可以实现接口同时又能获得默认实现，Java在接口中设计了<code>default</code>默认实现方法，这样子类可以在不需要自己实现的情况下获得接口中默认提供的功能（这里的<code>default</code>方法还解决了新增接口方法导致实现类变更的问题），变相地实现了多继承。</p>
 <p>例如下面这种情况：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
