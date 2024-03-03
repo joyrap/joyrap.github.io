@@ -2,7 +2,7 @@ baseURL: 'https://joyrap.github.io'
 publishDir: docs
 languageCode: en
 defaultContentLanguage: en
-title: 懒人笔记
+title: 于川海的笔记
 preserveTaxonomyNames: true
 enableRobotsTXT: true
 enableEmoji: true
