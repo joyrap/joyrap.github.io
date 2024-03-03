@@ -1,5 +1,5 @@
 ---
-title: Mixin in Java
+title: Mix-in in Java
 date: 2024-01-08
 layout: post
 categories: ["Programming"]
