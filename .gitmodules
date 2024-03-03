@@ -1,3 +1,6 @@
 [submodule "publish"]
 	path = publish
 	url = git@github.com:joyrap/joyrap.github.io.git
+[submodule "themes/PaperMod"]
+	path = themes/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git

@@ -2,11 +2,12 @@ baseURL = "https://joyrap.github.io"
 publishDir = "docs"
 languageCode = "en"
 defaultContentLanguage = "en"                             # en / zh-cn / ... (This field determines which i18n file to use)
-title = "戒掉幻想，认清现实。"
+title = "于川海"
 preserveTaxonomyNames = true
 enableRobotsTXT = true
 enableEmoji = true
-theme = "even"
+#theme = "even"
+theme = "PaperMod"
 enableGitInfo = false # use git commit log to generate lastmod record # 可根据 Git 中的提交生成最近更新记录。
 
 # Syntax highlighting by Chroma. NOTE: Don't enable `highlightInClient` and `chroma` at the same time!
@@ -21,8 +22,8 @@ disqusShortname = ""      # disqus_shortname
 googleAnalytics = "G-FMD3WCHRSY"      # UA-XXXXXXXX-X
 copyright = "语言是一生的枷锁。"            # default: author.name ↓        # 默认为下面配置的author.name ↓
 
-[author]                  # essential                     # 必需
-  name = "于川海"
+#[author]                  # essential                     # 必需
+#  name = "于川海"
 
 [sitemap]                 # essential                     # 必需
   changefreq = "weekly"
@@ -51,6 +52,7 @@ copyright = "语言是一生的枷锁。"            # default: author.name ↓ 
   url = "/categories/"
 
 [params]
+  author.name = "于川海"
   version = "4.x"           # Used to give a friendly message when you have an incompatible update
   debug = false             # If true, load `eruda.min.js`. See https://github.com/liriliri/eruda
 

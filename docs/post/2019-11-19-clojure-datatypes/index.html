@@ -1,153 +1,222 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Clojure中的数据类型 - 戒掉幻想，认清现实。</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html lang="en" dir="auto">
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Clojure中的数据类型 | 于川海</title>
+<meta name="keywords" content="Clojure">
+<meta name="description" content="Clojure作为一款基于JVM的LISP语言，我个人从创造者Rich Hickey身上吸收了很多编程的观点，尽管作者提出了很多面向对象编程语">
+<meta name="author" content="map[name:于川海]">
+<link rel="canonical" href="https://joyrap.github.io/post/2019-11-19-clojure-datatypes/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://joyrap.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://joyrap.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://joyrap.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://joyrap.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://joyrap.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://joyrap.github.io/post/2019-11-19-clojure-datatypes/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FMD3WCHRSY"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-FMD3WCHRSY', { 'anonymize_ip': true });
+}
+</script>
+<meta property="og:title" content="Clojure中的数据类型" />
+<meta property="og:description" content="Clojure作为一款基于JVM的LISP语言，我个人从创造者Rich Hickey身上吸收了很多编程的观点，尽管作者提出了很多面向对象编程语" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://joyrap.github.io/post/2019-11-19-clojure-datatypes/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2019-11-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-11-19T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Clojure中的数据类型"/>
+<meta name="twitter:description" content="Clojure作为一款基于JVM的LISP语言，我个人从创造者Rich Hickey身上吸收了很多编程的观点，尽管作者提出了很多面向对象编程语"/>
 
 
-<meta name="author" content="于川海" /><meta name="description" content="Clojure作为一款基于JVM的LISP语言，我个人从创造者Rich Hickey身上吸收了很多编程的观点，尽管作者提出了很多面向对象编程语" /><meta name="keywords" content="于川海, 于昼夜，思山川湖海|语言是一生的枷锁" />
-
-
-
-
-
-
-<meta name="generator" content="Hugo 0.121.2 with theme even" />
-
-
-<link rel="canonical" href="https://joyrap.github.io/post/2019-11-19-clojure-datatypes/" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-
-<link href="/dist/even.42b493c7.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" integrity="sha512-MaRpC5n6oJYFxacB2GS46fBxVK0ysPce0r/XX5Sn5CNayuAssUo44ZpNTKwi+z5bJHlPC4AcXX7XDl9kJdNajA==" crossorigin="anonymous">
-
-
-
-
-
-
-
-
-
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://joyrap.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Clojure中的数据类型",
+      "item": "https://joyrap.github.io/post/2019-11-19-clojure-datatypes/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Clojure中的数据类型",
+  "name": "Clojure中的数据类型",
+  "description": "Clojure作为一款基于JVM的LISP语言，我个人从创造者Rich Hickey身上吸收了很多编程的观点，尽管作者提出了很多面向对象编程语",
+  "keywords": [
+    "Clojure"
+  ],
+  "articleBody": "Clojure作为一款基于JVM的LISP语言，我个人从创造者Rich Hickey身上吸收了很多编程的观点，尽管作者提出了很多面向对象编程语言的缺陷，但单从语言本身来说，作者更希望通过JVM这个平台对寄主语言(Java)提供一种补充，只不过是通过LISP的方式。\n封装与多态性 封装和多态性是面向对象编程语言的两大特性，松本行弘认为\n面向对象的设计方法是在结构化编程对控制流程实现了结构化后，又加上了对数据的结构化\n不需要知道内部的详细处理就可以进行操作(封装，数据抽象) 根据不通的数据类型自动选择适当的方法(多态性) Java利用类和接口虽然解决了很多设计问题，但是看上去还是不够优雅，比如类不能多继承，所以Clojure希望通过更彻底的方式来做到更高级的抽象。\n认识Java的类 在拥有了基本的数据结构(set，vector，list，map)之后，我们就可以依赖这些基础数据结构构建我们模型，通过组合的方式来表达业务领域，在Java中是这样的：\n1 2 3 4 5 6 7 8 9 10 11 Class User { private String name; //数据 private int age; //数据 .... public String getName(){ //行为 .... } public void setName(String name){ //行为 .... } } 但这个POJO将数据和行为交织在一起，如果在行为中没有任何业务逻辑，仅仅是暴露数据给外部，在领域驱动设计中这叫贫血对象，根据个人的经验，这样的贫血对象设计在很多Java系统都存在，同样的领域概念不能在系统中重用，想象一下，在社交系统中有User领域模型，电商系统中可能也包含一个User领域模型，但你不能重用两个系统之间完全相同的数据模型。\ndefprotocol 在Java里通过interface来定义行为(和Clojure的definterface是完全一致的)，一个类可以实现多个interface，子类可以重写父类的方法来实现多态。但是接口的问题是一旦被创建，就很难被扩展，Clojure的解决方案是协议defprotocol,它比接口更灵活，例如:\n1 2 3 4 5 6 7 8 (defprotocol Dateable (to-ms [t])) ;定义一个包含to-ms方法的接口 (extend java.util.Date Dateable {:to-ms #(.getTime %)}) ;java.util.Date实现了这个接口 (to-ms (java.util.Date.)) ;java.util.Date具备了to-ms方法 在Java中可以通过继承或者组合的方式实现对原有类的扩展，但是会显得很笨粗，Clojure避免了不必要的多层次封装/适配，在不修改原有类同时不新增类的基础上实现了真正的多态性。defprotocol 除了可以被deftype,defrecord,reify实现外，也可以被Java中的类实现。\n数据与行为分离 所以，Clojure提供更明确的方式，数据必须具有不可变性(函数式编程特性)，行为是在更搞层次抽象。推荐将数据和行为分别定义，Clojure提供了deftype，defrecord，reify, defprotocol来达到这个目的，他们就是Clojure的数据类型。defrecord用于映射你的数据记录，deftype可以理解为Java中的class，defprotocol定义行为。\ndefrecord defrecord在Clojure里面可以理解为是另外一种map变形方式,例如一个定义User领域模型的map为:\n1 2 (def user {\"name\" \"xiebiao\" , \"age\" 30}) (:name user) 用defrecord来表达:\n1 2 3 (defrecord User [name age]) ;对应Java的Class User (def user (-\u003eUser \"xiebiao\" 30)) ;创建一个user对象 (:name user ) ;获取user对象的name数据 既然这样，Clojure为什么还需要defrecord呢？因为你除了可以获得具有map一样的数据操作特性外(包括数据解构)，还获得了类型驱动带来的多态特性，所以Clojure推荐将业务数据封装到defrecord中。\ndefrecord 实现行为defprotocol:\n1 2 3 4 5 6 7 8 (defprotocol IA (say [this])) ; (defrecord User [name age] IA (say [this] (println (:name this)))) (say (-\u003eUser \"xiebiao\" 30) ) 也可以实现多个defprotocol:\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 (defprotocol IA (say [this])) ; (defprotocol IB (talk [this])) (defrecord User [name age] IA (say [this] (println (:name this))) IB (talk [this] (println (:name this))) ) (def user (-\u003eUser \"xiebiao\" 30) ) (say user ) (talk user ) 上面的例子可以看出，通过实现defprotocol让数据具备行为，但数据本身独立于行为。\ndeftype deftype与defrecord具有类似的语法定义，也有很多功能上的相似之处， 但deftype相比较与defrecord提供了更丰富的功能，比如修改成员数据，当然类型多态行为才是重点。\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 (deftype Circle [radius]) ;定义两个不通的类型 (deftype Square [length width]) ;不同类型上定义相同的行为，类似Java中的重载，但不是通过子类继承的方式。 (defmethod area Circle [c] (* Math/PI (* (.radius c) (.radius c)))) (defmethod area Square [s] (* (.length s) (.width s))) (def myCircle (Circle. 10)) (def mySquare (Square. 5 11)) (area myCircle); area方法会根据参数的类型决定调用哪个方法。 (area mySquare) 当然Clojure通过defmulti 还可以定义更灵活的分发规则，这里只是其中一个根据类型分发实现多态的例子。 如果要问什么时候使用deftype，那就是当defrecord不能满足你的设计意图的时候。\n为什么有defrecord和deftype? Clojure官方文档解释了为什么有defrecord和deftype，其中最大的区别就是，deftype允许你修改成员数据，但是不推荐你这样做。Clojure推荐将领域数据映射到defrecord中，一方面它的底层是不可变的map结构，属于基础的数据结构，以达到语言层面的重用。\n最后 Clojure虽然是一门LISP方言，LISP语言本身语法结构很简单，但是Clojure实现了纯粹的面向对象语言特性，特别是对当下面向对象编程语言的诟病，值得我们思考学习。\n",
+  "wordCount" : "2191",
+  "inLanguage": "en",
+  "datePublished": "2019-11-19T00:00:00Z",
+  "dateModified": "2019-11-19T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": {"name":"于川海"}
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://joyrap.github.io/post/2019-11-19-clojure-datatypes/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "于川海",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://joyrap.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">于昼夜，思山川湖海。</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a><a href="/about/">
-        <li class="mobile-menu-item">About</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">于昼夜，思山川湖海。</a>
-</div>
 
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/about/">About</a>
-      </li>
-  </ul>
-</nav>
-    </header>
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
 
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">Clojure中的数据类型</h1>
+</script>
 
-      <div class="post-meta">
-        <span class="post-time"> 2019-11-19 </span>
-        <div class="post-category">
-            <a href="/categories/programming/"> Programming </a>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://joyrap.github.io/" accesskey="h" title="于川海 (Alt + H)">于川海</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
             </div>
-          <span class="more-meta"> 2191 words </span>
-          <span class="more-meta"> 5 mins read </span>
-        
-      </div>
-    </header>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://joyrap.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://joyrap.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://joyrap.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://joyrap.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://joyrap.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
 
-    <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">Contents</h2>
-  <div class="post-toc-content">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#封装与多态性">封装与多态性</a></li>
-    <li><a href="#认识java的类">认识Java的类</a></li>
-    <li><a href="#defprotocol">defprotocol</a></li>
-    <li><a href="#数据与行为分离">数据与行为分离</a></li>
-    <li><a href="#defrecord">defrecord</a></li>
-    <li><a href="#deftype">deftype</a></li>
-    <li><a href="#为什么有defrecord和deftype">为什么有defrecord和deftype?</a></li>
-    <li><a href="#最后">最后</a></li>
-  </ul>
-</nav>
-  </div>
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Clojure中的数据类型
+    </h1>
+    <div class="post-meta"><span title='2019-11-19 00:00:00 +0000 UTC'>November 19, 2019</span>&nbsp;·&nbsp;map[name:于川海]
+
 </div>
-  <div class="post-outdated">
-    <div class="warn">
-      <p>[NOTE] Updated <span class="timeago" datetime="2019-11-19T00:00:00" title="November 19, 2019">November 19, 2019</span>. This article may have outdated content or subject matter.</p>
-    </div>
-  </div>
-    <div class="post-content">
-      <p><a href="http://clojure.org">Clojure</a>作为一款基于JVM的LISP语言，我个人从创造者<a href="https://twitter.com/richhickey">Rich Hickey</a>身上吸收了很多编程的观点，尽管作者提出了很多面向对象编程语言的缺陷，但单从语言本身来说，作者更希望通过JVM这个平台对寄主语言(Java)提供一种补充，只不过是通过LISP的方式。</p>
-<h2 id="封装与多态性">封装与多态性</h2>
+  </header> 
+  <div class="post-content"><p><a href="http://clojure.org">Clojure</a>作为一款基于JVM的LISP语言，我个人从创造者<a href="https://twitter.com/richhickey">Rich Hickey</a>身上吸收了很多编程的观点，尽管作者提出了很多面向对象编程语言的缺陷，但单从语言本身来说，作者更希望通过JVM这个平台对寄主语言(Java)提供一种补充，只不过是通过LISP的方式。</p>
+<h2 id="封装与多态性">封装与多态性<a hidden class="anchor" aria-hidden="true" href="#封装与多态性">#</a></h2>
 <p>封装和多态性是面向对象编程语言的两大特性，松本行弘认为</p>
 <blockquote>
 <p>面向对象的设计方法是在结构化编程对控制流程实现了结构化后，又加上了对数据的结构化</p>
@@ -159,7 +228,7 @@
 </ul>
 </blockquote>
 <p>Java利用类和接口虽然解决了很多设计问题，但是看上去还是不够优雅，比如类不能多继承，所以Clojure希望通过更彻底的方式来做到更高级的抽象。</p>
-<h2 id="认识java的类">认识Java的类</h2>
+<h2 id="认识java的类">认识Java的类<a hidden class="anchor" aria-hidden="true" href="#认识java的类">#</a></h2>
 <p>在拥有了基本的<a href="https://clojure.org/reference/data_structures">数据结构</a>(<a href="http://clojuredocs.org/clojure.core/set">set</a>，<a href="http://clojuredocs.org/clojure.core/vector">vector</a>，<a href="http://clojuredocs.org/clojure.core/list">list</a>，map)之后，我们就可以依赖这些基础数据结构构建我们模型，通过组合的方式来表达业务领域，在Java中是这样的：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -190,7 +259,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>但这个<code>POJO</code>将数据和行为交织在一起，如果在行为中没有任何业务逻辑，仅仅是暴露数据给外部，在领域驱动设计中这叫贫血对象，根据个人的经验，这样的贫血对象设计在很多Java系统都存在，同样的领域概念不能在系统中重用，想象一下，在社交系统中有User领域模型，电商系统中可能也包含一个User领域模型，但你不能重用两个系统之间完全相同的数据模型。</p>
-<h2 id="defprotocol">defprotocol</h2>
+<h2 id="defprotocol">defprotocol<a hidden class="anchor" aria-hidden="true" href="#defprotocol">#</a></h2>
 <p>在Java里通过interface来定义行为(和Clojure的<code>definterface</code>是完全一致的)，一个类可以实现多个interface，子类可以重写父类的方法来实现多态。但是接口的问题是一旦被创建，就很难被扩展，Clojure的解决方案是协议<code>defprotocol</code>,它比接口更灵活，例如:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -215,9 +284,9 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>在Java中可以通过继承或者组合的方式实现对原有类的扩展，但是会显得很笨粗，Clojure避免了不必要的多层次封装/适配，在不修改原有类同时不新增类的基础上实现了真正的多态性。<code>defprotocol</code> 除了可以被<code>deftype</code>,<code>defrecord</code>,<code>reify</code>实现外，也可以被Java中的类实现。</p>
-<h2 id="数据与行为分离">数据与行为分离</h2>
+<h2 id="数据与行为分离">数据与行为分离<a hidden class="anchor" aria-hidden="true" href="#数据与行为分离">#</a></h2>
 <p>所以，Clojure提供更明确的方式，数据必须具有不可变性(函数式编程特性)，行为是在更搞层次抽象。推荐将数据和行为分别定义，Clojure提供了<a href="http://clojuredocs.org/clojure.core/deftype">deftype</a>，<a href="http://clojuredocs.org/clojure.core/defrecord">defrecord</a>，<a href="http://clojuredocs.org/clojure.core/reify">reify</a>, <a href="http://clojuredocs.org/clojure.core/defprotocol">defprotocol</a>来达到这个目的，他们就是<a href="https://clojure.org/reference/datatypes">Clojure的数据类型</a>。<code>defrecord</code>用于映射你的数据记录，<code>deftype</code>可以理解为Java中的class，<code>defprotocol</code>定义行为。</p>
-<h2 id="defrecord">defrecord</h2>
+<h2 id="defrecord">defrecord<a hidden class="anchor" aria-hidden="true" href="#defrecord">#</a></h2>
 <p>defrecord在Clojure里面可以理解为是另外一种map变形方式,例如一个定义User领域模型的map为:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -304,7 +373,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>上面的例子可以看出，通过实现defprotocol让数据具备行为，但数据本身独立于行为。</p>
-<h2 id="deftype">deftype</h2>
+<h2 id="deftype">deftype<a hidden class="anchor" aria-hidden="true" href="#deftype">#</a></h2>
 <p>deftype与defrecord具有类似的语法定义，也有很多功能上的相似之处， 但deftype相比较与defrecord提供了更丰富的功能，比如修改成员数据，当然类型多态行为才是重点。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -342,125 +411,90 @@
 </div>
 </div><p>当然Clojure通过defmulti 还可以定义更灵活的分发规则，这里只是其中一个根据类型分发实现多态的例子。
 如果要问什么时候使用deftype，那就是当defrecord不能满足你的设计意图的时候。</p>
-<h2 id="为什么有defrecord和deftype">为什么有defrecord和deftype?</h2>
+<h2 id="为什么有defrecord和deftype">为什么有defrecord和deftype?<a hidden class="anchor" aria-hidden="true" href="#为什么有defrecord和deftype">#</a></h2>
 <p>Clojure官方文档解释了为什么有defrecord和deftype，其中最大的区别就是，deftype允许你修改成员数据，但是不推荐你这样做。Clojure推荐将领域数据映射到defrecord中，一方面它的底层是不可变的map结构，属于基础的数据结构，以达到语言层面的重用。</p>
-<h2 id="最后">最后</h2>
+<h2 id="最后">最后<a hidden class="anchor" aria-hidden="true" href="#最后">#</a></h2>
 <p>Clojure虽然是一门LISP方言，LISP语言本身语法结构很简单，但是Clojure实现了纯粹的面向对象语言特性，特别是对当下面向对象编程语言的诟病，值得我们思考学习。</p>
 
-    </div>
 
-    
-<footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/clojure/">Clojure</a>
-          </div>
-      <nav class="post-nav">
-        <a class="prev" href="/post/2019-12-05-follow-your-heart/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">执命向西的人</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/post/2019-04-19-understanding-the-lmax-disruptor/">
-            <span class="next-text nav-default">翻译:Understanding the LMAX Disruptor</span>
-            <span class="next-text nav-mobile">Next</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
-        </div>
-        
-
-  
-
-  
-    <script src="https://utteranc.es/client.js"
-            repo="joyrap/joyrap.github.io"
-            issue-term="pathname"
-            theme="github-light"
-            crossorigin="anonymous"
-            async>
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="https://stackoverflow.com/users/1130203/bill-xie" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-      <a href="https://twitter.com/joyrap" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="https://github.com/xiebiao" class="iconfont icon-github" title="github"></a>
-  <a href="https://joyrap.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    Theme - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    2012 - 
-    2024
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">语言是一生的枷锁。</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
   </div>
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js" integrity="sha512-GA1YgNe8NTU3XMDMofUTpTNqMsPUL6VjYgc6NjOUTA/6pwTFlTmFc/tk+LnDfXD3/mNGZcik9kvfAjeVPTHisA==" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js" integrity="sha512-l0i7i+24ESeyrzZawcOFGAZADXr7mFVJvFNR/BImmv8aGYqR/svqbJHSLzXIr62hE9J9ibyGOEpoBfWwU64a0Q==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/3.0.2/timeago.min.js" integrity="sha512-+HwB8Magvpg+0LZ4APOss9s3mopC9KUMq1/gQbCEaZ9fjSl6vWuVbvo6Nt+2dGfEqNVTZ+NVasiAfBy58kRCLg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/3.0.2/timeago.locales.min.js" integrity="sha512-kjHDpsRVaJ0pxKiXH4ibysg7971Epm80gABnxVYgtMiU4fSll6NaAhzUD4NXg++ihdC160LuogIzwh2b74rP4g==" crossorigin="anonymous"></script>
-  <script>
-    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
-    timeago().render(document.querySelectorAll('.timeago'), languageCode);
-    timeago.cancel();  
-  </script>
-<script type="text/javascript" src="/dist/even.2a341756.min.js"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      TeX: {equationNumbers: {autoNumber: "AMS"}},
-      showProcessingMessages: false,
-      messageStyle: 'none'
-    };
-  </script>
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
-      integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://joyrap.github.io/tags/clojure/">Clojure</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>语言是一生的枷锁。</span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
 <script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'G-FMD3WCHRSY', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
 
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
-
-
-
-
-
+</script>
 </body>
+
 </html>

@@ -1,158 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>API设计之版本控制 - 戒掉幻想，认清现实。</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<html lang="en" dir="auto">
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>API设计之版本控制 | 于川海</title>
+<meta name="keywords" content="API Design">
+<meta name="description" content="为了追求系统的健壮性，稳定性，越来越多的系统采用分布式软件架构，分布式意味着跨应用访问成为系统交互的一种特点，特别是微服务架构在商业系统中的">
+<meta name="author" content="map[name:于川海]">
+<link rel="canonical" href="https://joyrap.github.io/post/2022-04-09-api-design-versioning/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://joyrap.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://joyrap.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://joyrap.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://joyrap.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://joyrap.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://joyrap.github.io/post/2022-04-09-api-design-versioning/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FMD3WCHRSY"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-FMD3WCHRSY', { 'anonymize_ip': true });
+}
+</script>
+<meta property="og:title" content="API设计之版本控制" />
+<meta property="og:description" content="为了追求系统的健壮性，稳定性，越来越多的系统采用分布式软件架构，分布式意味着跨应用访问成为系统交互的一种特点，特别是微服务架构在商业系统中的" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://joyrap.github.io/post/2022-04-09-api-design-versioning/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-04-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-04-09T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="API设计之版本控制"/>
+<meta name="twitter:description" content="为了追求系统的健壮性，稳定性，越来越多的系统采用分布式软件架构，分布式意味着跨应用访问成为系统交互的一种特点，特别是微服务架构在商业系统中的"/>
 
 
-<meta name="author" content="于川海" /><meta name="description" content="为了追求系统的健壮性，稳定性，越来越多的系统采用分布式软件架构，分布式意味着跨应用访问成为系统交互的一种特点，特别是微服务架构在商业系统中的" /><meta name="keywords" content="于川海, 于昼夜，思山川湖海|语言是一生的枷锁" />
-
-
-
-
-
-
-<meta name="generator" content="Hugo 0.121.2 with theme even" />
-
-
-<link rel="canonical" href="https://joyrap.github.io/post/2022-04-09-api-design-versioning/" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-
-<link href="/dist/even.42b493c7.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" integrity="sha512-MaRpC5n6oJYFxacB2GS46fBxVK0ysPce0r/XX5Sn5CNayuAssUo44ZpNTKwi+z5bJHlPC4AcXX7XDl9kJdNajA==" crossorigin="anonymous">
-
-
-
-
-
-
-
-
-
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://joyrap.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "API设计之版本控制",
+      "item": "https://joyrap.github.io/post/2022-04-09-api-design-versioning/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "API设计之版本控制",
+  "name": "API设计之版本控制",
+  "description": "为了追求系统的健壮性，稳定性，越来越多的系统采用分布式软件架构，分布式意味着跨应用访问成为系统交互的一种特点，特别是微服务架构在商业系统中的",
+  "keywords": [
+    "API Design"
+  ],
+  "articleBody": "为了追求系统的健壮性，稳定性，越来越多的系统采用分布式软件架构，分布式意味着跨应用访问成为系统交互的一种特点，特别是微服务架构在商业系统中的大量运用。\nAPI作为应用之间交互协议，当单体应用演变为远程调用后，API持续变更成为一个跨应用或跨团队之间协作的常态，如何维护API，在研发过程中变得尤为重要，非常有必要将API版本控制作为设计的一部分来重视。\n目的 API版本控制的目的是为了降低API在迭代过程中对用户的影响，并提供一套对第三方开发者有利的演进规则，以及升级策略，尽可能避免用户功能被破坏。\n发布管理 变更管理 从服务提供方的视角来看，版本发布与服务实现变更是密切相关的，同时也会对第三方开发者带来影响，所以服务方需要严格管理API版本发布内容，每次发布对API做出不限于以下情况的说明：\n是否在协议不变更的情况，进行了服务优化？ 是否在老协议上新增了入参，新入参对内部业务逻辑有什么影响？ 新增协议与现有协议之间有什么关系，是否是独立的？ 新增协议接口与老接口哪些内容不兼容？告知第三方开发者如何升级。 有些较为庞大的组织，按系统维度进行了API划分，变更说明也应该以系统维度来说明。\n变更的影响说明可以大致分为以下三类：\n1、 API架构变化（影响范围较大，不能兼容） 2、 局部新特性变更（影响较小，提供兼容） 3、 问题修复（完全兼容） 变更说明应该以公开文档的形式公布给第三方开发者。\n生命周期管理 对于整个API来说，必须以两种视角来看到API版本，一种是第三方开发者视角，一种是API服务视角。\n尽管对API进行生命周期管理，好处在于一方面可以控制内部开发节奏，另一方面给第三方开发者提供调试和升级时间。但是在API版本号与API服务内部同时演进的情况下，第三方开发者并不关心API服务内部的演进路线， API服务方也应该尽量减少第三方开发者的理解负担，所以API版本号的变更不易过于频繁。\n不同的业务和产品，对API版本发布的周期管理会有所不同，主要有以下两种主流的版本化管理策略：\n1、基于时间发布 对不同的变更影响，定义不同的发布周期，例如，将API架构变化这种影响范围较大的场景，周期时间应该更长，其次是局部新特性变更，问题修复发布周期最短。\nAPI架构变化：每三个月发布一次，局部新特性变更：每三周发布一次，问题修复：每周一次。\n不同的业务，可以调整这个周期，但时间周期长短上应该遵循：问题修复 \u003c 局部新特性变更 \u003c API架构变化\n基于时间周期发布，对于第三方开发者来说的好处是可预知性，有明确的API支持时间范围，何时过期，何时被删除。\n1、基于语义化版本号发布 基于语义化版本号的三个维度来管理，例如，版本号:主版本号.次版本号.小版本号\n1、主版本号（对应API架构变化） 2、次版本号（对应局部新特性变更） 3、小版本号（对应问题修复） 版本号发布方式，常用于不需要周期发布的产品，或API在较长的时间范围内稳定的产品。\n同时需要注意：语义化版本号策略更多地是来至API服务方的视角，主要目标是跟踪API不同的兼容性问题。\n基于WEB的API版本发布方案 对于REST API可选的三种方案：\n方案1：将版本号放到路径中，例如：https://api.akulaku.com/v1.0/products/users 或使用不同的域名 https://apiv1.akulaku.com/products/users 方案2：将版本号放在HTTP header头中，例如，在header中放入：v=1.0 方案3：将版本号放到参数中，例如：https://api.akulaku.com/products/users?api-version=1.0 方案1和2都需要借助DNS或API网关对请求路由，不同版本的API路由到不同的API服务上。\n方案3则需要API服务内部管理版本号映射\nAPI版本号 API内部服务版本号 v1.0 v1.0.0，v1.0.1 v2.0 v2.0.0 …… …… 案例 Shopify Shopify作为全球最大的一站式商家平台，强大的API为其提供了核心竞争力。\nShopify的API管理区分了两类API，一类是非版本化的API，一类是版本化的API， 其中版本化的API是基于时间发布。\n例如官方给的REST API demo：/admin/api/2022-07/products.json\n同时官方也提供了API状态周期表：\nStable version Release date Date stable version is supported until 2021-01 January 1, 2021 January 1, 2022 2021-04 April 1, 2021 April 1, 2022 2021-07 July 1, 2021 July 1, 2022 2021-10 October 1, 2021 October 1, 2022 给第三方调用者提供了明确的API支持时间。\n参考 How to Design a Good API and Why it Matters Microsoft API Versioning Shopify API Versioning Google Cloud API Versioning ",
+  "wordCount" : "1809",
+  "inLanguage": "en",
+  "datePublished": "2022-04-09T00:00:00Z",
+  "dateModified": "2022-04-09T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": {"name":"于川海"}
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://joyrap.github.io/post/2022-04-09-api-design-versioning/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "于川海",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://joyrap.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">于昼夜，思山川湖海。</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a><a href="/about/">
-        <li class="mobile-menu-item">About</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">于昼夜，思山川湖海。</a>
-</div>
 
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/about/">About</a>
-      </li>
-  </ul>
-</nav>
-    </header>
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
 
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">API设计之版本控制</h1>
+</script>
 
-      <div class="post-meta">
-        <span class="post-time"> 2022-04-09 </span>
-        <div class="post-category">
-            <a href="/categories/software-design/"> Software Design </a>
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://joyrap.github.io/" accesskey="h" title="于川海 (Alt + H)">于川海</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
             </div>
-          <span class="more-meta"> 1809 words </span>
-          <span class="more-meta"> 4 mins read </span>
-        
-      </div>
-    </header>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://joyrap.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://joyrap.github.io/post/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://joyrap.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://joyrap.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://joyrap.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
 
-    <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">Contents</h2>
-  <div class="post-toc-content">
-    <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#目的">目的</a></li>
-        <li><a href="#发布管理">发布管理</a></li>
-        <li><a href="#生命周期管理">生命周期管理</a></li>
-        <li><a href="#案例">案例</a></li>
-        <li><a href="#参考">参考</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-  </div>
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      API设计之版本控制
+    </h1>
+    <div class="post-meta"><span title='2022-04-09 00:00:00 +0000 UTC'>April 9, 2022</span>&nbsp;·&nbsp;map[name:于川海]
+
 </div>
-  <div class="post-outdated">
-    <div class="warn">
-      <p>[NOTE] Updated <span class="timeago" datetime="2022-04-09T00:00:00" title="April 9, 2022">April 9, 2022</span>. This article may have outdated content or subject matter.</p>
-    </div>
-  </div>
-    <div class="post-content">
-      <p>为了追求系统的健壮性，稳定性，越来越多的系统采用分布式软件架构，分布式意味着跨应用访问成为系统交互的一种特点，特别是微服务架构在商业系统中的大量运用。</p>
+  </header> 
+  <div class="post-content"><p>为了追求系统的健壮性，稳定性，越来越多的系统采用分布式软件架构，分布式意味着跨应用访问成为系统交互的一种特点，特别是微服务架构在商业系统中的大量运用。</p>
 <p>API作为应用之间交互协议，当单体应用演变为远程调用后，API持续变更成为一个跨应用或跨团队之间协作的常态，如何维护API，在研发过程中变得尤为重要，非常有必要将API版本控制作为设计的一部分来重视。</p>
-<h3 id="目的">目的</h3>
+<h3 id="目的">目的<a hidden class="anchor" aria-hidden="true" href="#目的">#</a></h3>
 <p>API版本控制的目的是为了降低API在迭代过程中对用户的影响，并提供一套对第三方开发者有利的演进规则，以及升级策略，尽可能避免用户功能被破坏。</p>
-<h3 id="发布管理">发布管理</h3>
-<h4 id="变更管理">变更管理</h4>
+<h3 id="发布管理">发布管理<a hidden class="anchor" aria-hidden="true" href="#发布管理">#</a></h3>
+<h4 id="变更管理">变更管理<a hidden class="anchor" aria-hidden="true" href="#变更管理">#</a></h4>
 <p>从服务提供方的视角来看，版本发布与服务实现变更是密切相关的，同时也会对第三方开发者带来影响，所以服务方需要严格管理API版本发布内容，每次发布对API做出不限于以下情况的说明：</p>
 <ul>
 <li>是否在协议不变更的情况，进行了服务优化？</li>
@@ -168,18 +236,19 @@
 <li>3、 问题修复（完全兼容）</li>
 </ul>
 <p>变更说明应该以公开文档的形式公布给第三方开发者。</p>
-<h3 id="生命周期管理">生命周期管理</h3>
+<h3 id="生命周期管理">生命周期管理<a hidden class="anchor" aria-hidden="true" href="#生命周期管理">#</a></h3>
 <p>对于整个API来说，必须以两种视角来看到API版本，一种是第三方开发者视角，一种是API服务视角。</p>
-<p><img src="/images/2022-04-09-api-design-versioning/version-number-map.png" alt="API version and Service version"></p>
+<p><img loading="lazy" src="/images/2022-04-09-api-design-versioning/version-number-map.png" alt="API version and Service version"  />
+</p>
 <p>尽管对API进行生命周期管理，好处在于一方面可以控制内部开发节奏，另一方面给第三方开发者提供调试和升级时间。但是在API版本号与API服务内部同时演进的情况下，第三方开发者并不关心API服务内部的演进路线，
 API服务方也应该尽量减少第三方开发者的理解负担，所以API版本号的变更不易过于频繁。</p>
 <p>不同的业务和产品，对API版本发布的周期管理会有所不同，主要有以下两种主流的版本化管理策略：</p>
-<h4 id="1基于时间发布">1、基于时间发布</h4>
+<h4 id="1基于时间发布">1、基于时间发布<a hidden class="anchor" aria-hidden="true" href="#1基于时间发布">#</a></h4>
 <p>对不同的变更影响，定义不同的发布周期，例如，将<code>API架构变化</code>这种影响范围较大的场景，周期时间应该更长，其次是<code>局部新特性变更</code>，<code>问题修复</code>发布周期最短。</p>
 <p><code>API架构变化</code>：每三个月发布一次，<code>局部新特性变更</code>：每三周发布一次，<code>问题修复</code>：每周一次。</p>
 <p>不同的业务，可以调整这个周期，但时间周期长短上应该遵循：<code>问题修复</code> &lt; <code>局部新特性变更</code> &lt; <code>API架构变化</code></p>
 <p>基于时间周期发布，对于第三方开发者来说的好处是<code>可预知性</code>，有明确的API支持时间范围，何时过期，何时被删除。</p>
-<h4 id="1基于语义化版本号发布">1、基于语义化版本号发布</h4>
+<h4 id="1基于语义化版本号发布">1、基于语义化版本号发布<a hidden class="anchor" aria-hidden="true" href="#1基于语义化版本号发布">#</a></h4>
 <p>基于语义化<a href="https://semver.org/lang/zh-CN/">版本号</a>的三个维度来管理，例如，版本号:<code>主版本号.次版本号.小版本号</code></p>
 <ul>
 <li>1、主版本号（对应<code>API架构变化</code>）</li>
@@ -188,7 +257,7 @@ API服务方也应该尽量减少第三方开发者的理解负担，所以API�
 </ul>
 <p>版本号发布方式，常用于不需要周期发布的产品，或API在较长的时间范围内稳定的产品。</p>
 <p>同时需要注意：语义化版本号策略更多地是来至API服务方的视角，主要目标是跟踪API不同的兼容性问题。</p>
-<h4 id="基于web的api版本发布方案">基于WEB的API版本发布方案</h4>
+<h4 id="基于web的api版本发布方案">基于WEB的API版本发布方案<a hidden class="anchor" aria-hidden="true" href="#基于web的api版本发布方案">#</a></h4>
 <p>对于REST API可选的三种方案：</p>
 <ul>
 <li>方案1：将版本号放到路径中，例如：<em><a href="https://api.akulaku.com/">https://api.akulaku.com/</a><strong>v1.0</strong>/products/users</em> 或使用不同的域名 <em>https://<strong>apiv1</strong>.akulaku.com/products/users</em></li>
@@ -219,8 +288,8 @@ API服务方也应该尽量减少第三方开发者的理解负担，所以API�
 </tr>
 </tbody>
 </table>
-<h3 id="案例">案例</h3>
-<h4 id="shopify">Shopify</h4>
+<h3 id="案例">案例<a hidden class="anchor" aria-hidden="true" href="#案例">#</a></h3>
+<h4 id="shopify">Shopify<a hidden class="anchor" aria-hidden="true" href="#shopify">#</a></h4>
 <p>Shopify作为全球最大的一站式商家平台，强大的API为其提供了核心竞争力。</p>
 <p>Shopify的API管理区分了两类API，一类是非版本化的API，一类是版本化的API，
 其中版本化的API是<code>基于时间发布</code>。</p>
@@ -258,7 +327,7 @@ API服务方也应该尽量减少第三方开发者的理解负担，所以API�
 </tbody>
 </table>
 <p>给第三方调用者提供了明确的API支持时间。</p>
-<h3 id="参考">参考</h3>
+<h3 id="参考">参考<a hidden class="anchor" aria-hidden="true" href="#参考">#</a></h3>
 <ul>
 <li><a href="https://static.googleusercontent.com/media/research.google.com/zh-CN//pubs/archive/32713.pdf">How to Design a Good API and Why it Matters</a></li>
 <li><a href="https://github.com/microsoft/api-guidelines/blob/vNext/Guidelines.md#12-versioning">Microsoft API Versioning</a></li>
@@ -266,120 +335,85 @@ API服务方也应该尽量减少第三方开发者的理解负担，所以API�
 <li><a href="https://cloud.google.com/apis/design/versioning">Google Cloud API Versioning</a></li>
 </ul>
 
-    </div>
 
-    
-<footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/api-design/">API Design</a>
-          </div>
-      <nav class="post-nav">
-        <a class="prev" href="/post/2022-07-31-no-title/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">无题</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/post/2022-01-08-a-philosophy-of-software-design/">
-            <span class="next-text nav-default">A Philosophy Of Software Design-读书笔记</span>
-            <span class="next-text nav-mobile">Next</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
-        </div>
-        
-
-  
-
-  
-    <script src="https://utteranc.es/client.js"
-            repo="joyrap/joyrap.github.io"
-            issue-term="pathname"
-            theme="github-light"
-            crossorigin="anonymous"
-            async>
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="https://stackoverflow.com/users/1130203/bill-xie" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-      <a href="https://twitter.com/joyrap" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="https://github.com/xiebiao" class="iconfont icon-github" title="github"></a>
-  <a href="https://joyrap.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    Theme - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    2012 - 
-    2024
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">语言是一生的枷锁。</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
   </div>
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js" integrity="sha512-GA1YgNe8NTU3XMDMofUTpTNqMsPUL6VjYgc6NjOUTA/6pwTFlTmFc/tk+LnDfXD3/mNGZcik9kvfAjeVPTHisA==" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js" integrity="sha512-l0i7i+24ESeyrzZawcOFGAZADXr7mFVJvFNR/BImmv8aGYqR/svqbJHSLzXIr62hE9J9ibyGOEpoBfWwU64a0Q==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/3.0.2/timeago.min.js" integrity="sha512-+HwB8Magvpg+0LZ4APOss9s3mopC9KUMq1/gQbCEaZ9fjSl6vWuVbvo6Nt+2dGfEqNVTZ+NVasiAfBy58kRCLg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/3.0.2/timeago.locales.min.js" integrity="sha512-kjHDpsRVaJ0pxKiXH4ibysg7971Epm80gABnxVYgtMiU4fSll6NaAhzUD4NXg++ihdC160LuogIzwh2b74rP4g==" crossorigin="anonymous"></script>
-  <script>
-    var languageCode = "en".replace(/-/g, '_').replace(/_(.*)/, function ($0, $1) {return $0.replace($1, $1.toUpperCase());});
-    timeago().render(document.querySelectorAll('.timeago'), languageCode);
-    timeago.cancel();  
-  </script>
-<script type="text/javascript" src="/dist/even.2a341756.min.js"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      TeX: {equationNumbers: {autoNumber: "AMS"}},
-      showProcessingMessages: false,
-      messageStyle: 'none'
-    };
-  </script>
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
-      integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://joyrap.github.io/tags/api-design/">API Design</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>语言是一生的枷锁。</span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
 <script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'G-FMD3WCHRSY', 'auto');
-	ga('set', 'anonymizeIp', true);
-	ga('send', 'pageview');
-}
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
 </script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
 
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
-
-
-
-
-
+</script>
 </body>
+
 </html>
