@@ -1,0 +1,178 @@
+baseURL: 'https://joyrap.github.io'
+publishDir: docs
+languageCode: en
+defaultContentLanguage: en
+title: 懒人笔记
+preserveTaxonomyNames: true
+enableRobotsTXT: true
+enableEmoji: true
+theme: PaperMod
+enableGitInfo: false
+pygmentsOptions: linenos=table
+pygmentsCodefences: true
+pygmentsUseClasses: true
+pygmentsCodefencesGuessSyntax: true
+hasCJKLanguage: true
+paginate: 5
+disqusShortname: ''
+googleAnalytics: G-FMD3WCHRSY
+copyright: 语言是一生的枷锁。
+sitemap:
+  changefreq: weekly
+  priority: 0.5
+  filename: sitemap.xml
+menu:
+  main:
+    - name: Home
+      weight: 10
+      identifier: home
+      url: /
+    - name: Archives
+      weight: 20
+      identifier: archives
+      url: /post/
+    - name: Tags
+      weight: 30
+      identifier: tags
+      url: /tags/
+    - name: Categories
+      weight: 40
+      identifier: categories
+      url: /categories/
+params:
+  author: "于川海"
+  version: 4.x
+  debug: false
+  since: '2012'
+  gitRepo: ' https://github.com/joyrap/joyrap.github.io.git'
+  logoTitle: 于昼夜，思山川湖海。
+  keywords:
+    - 于川海
+    - 于昼夜，思山川湖海|语言是一生的枷锁
+  description: 来自山川湖海，却囿于昼夜，厨房与爱。|语言是一生的枷锁
+  archivePaginate: 50
+  showArchiveCount: true
+  dateFormatToUse: '2006-01-02'
+  dateFormat: '2006-01-02'
+  moreMeta: true
+  highlightInClient: false
+  toc: true
+  autoCollapseToc: true
+  fancybox: true
+  mathjax: true
+  mathjaxEnableSingleDollar: false
+  mathjaxEnableAutoNumber: true
+  mathjaxUseLocalFiles: false
+  postMetaInFooter: false
+  linkToMarkDown: false
+  contentCopyright: ''
+  changyanAppid: ''
+  changyanAppkey: ''
+  livereUID: ''
+  baiduPush: false
+  baiduAnalytics: ''
+  baiduVerification: ''
+  googleVerification: ''
+  customCSS: []
+  customJS: []
+  uglyURLs: false
+  publicCDN:
+    enable: true
+    jquery: >-
+      <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+      integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA=="
+      crossorigin="anonymous"></script>
+    slideout: >-
+      <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"
+      integrity="sha512-GA1YgNe8NTU3XMDMofUTpTNqMsPUL6VjYgc6NjOUTA/6pwTFlTmFc/tk+LnDfXD3/mNGZcik9kvfAjeVPTHisA=="
+      crossorigin="anonymous"></script>
+    fancyboxJS: >-
+      <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"
+      integrity="sha512-l0i7i+24ESeyrzZawcOFGAZADXr7mFVJvFNR/BImmv8aGYqR/svqbJHSLzXIr62hE9J9ibyGOEpoBfWwU64a0Q=="
+      crossorigin="anonymous"></script>
+    fancyboxCSS: >-
+      <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css"
+      integrity="sha512-MaRpC5n6oJYFxacB2GS46fBxVK0ysPce0r/XX5Sn5CNayuAssUo44ZpNTKwi+z5bJHlPC4AcXX7XDl9kJdNajA=="
+      crossorigin="anonymous">
+    timeagoJS: >-
+      <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/3.0.2/timeago.min.js"
+      integrity="sha512-+HwB8Magvpg+0LZ4APOss9s3mopC9KUMq1/gQbCEaZ9fjSl6vWuVbvo6Nt+2dGfEqNVTZ+NVasiAfBy58kRCLg=="
+      crossorigin="anonymous"></script>
+    timeagoLocalesJS: >-
+      <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/3.0.2/timeago.locales.min.js"
+      integrity="sha512-kjHDpsRVaJ0pxKiXH4ibysg7971Epm80gABnxVYgtMiU4fSll6NaAhzUD4NXg++ihdC160LuogIzwh2b74rP4g=="
+      crossorigin="anonymous"></script>
+    flowchartDiagramsJS: >-
+      <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"
+      integrity="sha512-SRXz9uEJc7fvIGD3+fakHFS1AehwJ0laJfSWR6i/vcz1Maa3lQvV1he+iM8uPgGt4XDQ7vMgMMZk5h6SQFhM9g=="
+      crossorigin="anonymous"></script> <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.8.0/flowchart.min.js"
+      integrity="sha512-s9ieTqpJ1YhvyPj7WL7M23vf/F2xlDYEGgrUj2soiIL1m7weE+c7imYAnmFfDiKN9N4lgYKvo2FdAAZ9QMe0AA=="
+      crossorigin="anonymous"></script>
+    sequenceDiagramsCSS: >-
+      <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/bramp/js-sequence-diagrams@2.0.1/dist/sequence-diagram-min.css"
+      integrity="sha384-6QbLKJMz5dS3adWSeINZe74uSydBGFbnzaAYmp+tKyq60S7H2p6V7g1TysM5lAaF"
+      crossorigin="anonymous">
+    sequenceDiagramsJS: >-
+      <script
+      src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"
+      integrity="sha256-4O4pS1SH31ZqrSO2A/2QJTVjTPqVe+jnYgOWUVr7EEc="
+      crossorigin="anonymous"></script> <script
+      src="https://cdn.jsdelivr.net/npm/snapsvg@0.5.1/dist/snap.svg-min.js"
+      integrity="sha256-oI+elz+sIm+jpn8F/qEspKoKveTc5uKeFHNNVexe6d8="
+      crossorigin="anonymous"></script> <script
+      src="https://cdn.jsdelivr.net/npm/underscore@1.8.3/underscore-min.js"
+      integrity="sha256-obZACiHd7gkOk9iIL/pimWMTJ4W/pBsKu+oZnSeBIek="
+      crossorigin="anonymous"></script> <script
+      src="https://cdn.jsdelivr.net/gh/bramp/js-sequence-diagrams@2.0.1/dist/sequence-diagram-min.js"
+      integrity="sha384-8748Vn52gHJYJI0XEuPB2QlPVNUkJlJn9tHqKec6J3q2r9l8fvRxrgn/E5ZHV0sP"
+      crossorigin="anonymous"></script>
+  outdatedInfoWarning:
+    enable: true
+    hint: 30
+    warn: 180
+  gitment:
+    owner: ''
+    repo: ''
+    clientId: ''
+    clientSecret: ''
+  gitalk:
+    owner: ''
+    repo: ''
+    clientId: ''
+    clientSecret: ''
+  utterances:
+    owner: joyrap
+    repo: joyrap.github.io
+  flowchartDiagrams:
+    enable: false
+    options: ''
+  sequenceDiagrams:
+    enable: false
+    options: ''
+  busuanzi:
+    enable: false
+    siteUV: true
+    sitePV: true
+    pagePV: true
+  reward:
+    enable: false
+    wechat: 'https://blog.xiebiao.com/images/wechat-qr-code.png'
+  social:
+    b-stack-overflow: 'https://stackoverflow.com/users/1130203/bill-xie'
+    c-twitter: 'https://twitter.com/joyrap'
+    g-github: 'https://github.com/xiebiao'
+privacy:
+  googleAnalytics:
+    anonymizeIP: true
+  youtube:
+    privacyEnhanced: true
+

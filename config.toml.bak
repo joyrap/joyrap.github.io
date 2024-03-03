@@ -52,7 +52,6 @@ copyright = "语言是一生的枷锁。"            # default: author.name ↓ 
   url = "/categories/"
 
 [params]
-  author.name = "于川海"
   version = "4.x"           # Used to give a friendly message when you have an incompatible update
   debug = false             # If true, load `eruda.min.js`. See https://github.com/liriliri/eruda
 
