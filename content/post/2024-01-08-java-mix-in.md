@@ -1,5 +1,5 @@
 ---
-title: Mix-in in Java
+title: Mixin in Java
 date: 2024-01-08
 layout: post
 categories: ["Programming"]
@@ -7,7 +7,7 @@ tags: ["Java"]
 draft: false
 ---
 
-## 什么是Mix-in
+## 什么是Mixin
 
 维基百科的解释是：
 
