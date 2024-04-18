@@ -16,7 +16,7 @@ hasCJKLanguage: true
 paginate: 5
 disqusShortname: ''
 googleAnalytics: G-FMD3WCHRSY
-copyright: 语言是一生的枷锁。
+# copyright: 语言是一生的枷锁。
 sitemap:
   changefreq: weekly
   priority: 0.5
