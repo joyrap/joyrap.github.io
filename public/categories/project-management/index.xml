@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project Management on </title>
+    <link>//localhost:1313/categories/project-management/</link>
+    <description>Recent content in Project Management on </description>
+    <generator>Hugo 0.125.0</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 08 Aug 2016 01:24:47 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/project-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我们是如何将一个项目做烂的</title>
+      <link>//localhost:1313/post/2016-08-08-how-to-make-projects-failed/</link>
+      <pubDate>Mon, 08 Aug 2016 01:24:47 +0000</pubDate>
+      <guid>//localhost:1313/post/2016-08-08-how-to-make-projects-failed/</guid>
+      <description>在你读到这篇牢骚的时候，无数个项目正在慢慢变烂。&#xA;既然标题都用到了&amp;quot;烂&amp;quot;这个词，那什么才是烂呢？&#xA;在你的项目里，&amp;ldquo;烂&amp;quot;和&amp;quot;好&amp;quot;一样无法准确的衡量和定义，在大多数人的职业生涯里，你听到&amp;quot;烂&amp;quot;项目肯定比听到&amp;quot;好&amp;quot;项目的情况要多很多。&#xA;当你在一个维护型项目面前，一边嘴里跑出一万只草尼马，一边还在上面Coding，最后居然还如期交付了维护任务，你能说那是&amp;quot;烂&amp;quot;项目吗?&#xA;我自己也没有遇到过真正&amp;quot;烂&amp;quot;到无法维护的项目，因为我就是那个让项目慢慢变烂的人。&#xA;也许，烂项目的罪证无法像《如何编写无法维护的代码》那样容易罗列，所以你根本就不认为那是烂。&#xA;意识到项目的烂与闻到《代码的坏味道》一样是优秀开发人员的基本素养。&#xA;不过本文说的烂，只是从程序员的角度去看项目，与项目本身的创意，项目在公司层面的战略意义没有关系。&#xA;工具 在我刚毕业参加工作时（2006年左右），那时候的Java生态圈其实已经很强大了，但是我工作过的几家公司，几乎在项目部署上都没有使用太多的自动化工具。&#xA;有的是直接用开发工具Eclipse打包war文件，其中一家公司，甚至是在本地编译Java文件，然后上传class文件到线上服务器，就算那时已经有 Ant 这样的先进工具，可惜我们还是类人猿没有进化过来, 要知道制作和使用工具是智人起源的重要标志.&#xA;如今我们在一个最好的时代, 你有太多的选择， Ant，Maven，Gradle &amp;hellip;&amp;hellip;, 无论如何请把打造高可用自动化工具链与开发高可用系统提升到同样一个高度。&#xA;如果你的项目中使用到了工具，但是它却很脆弱：过多依赖环境，依赖复杂的配置，有时候还会有BUG。&#xA;如果你的项目还不能做到一键命令构建，打包。&#xA;如果你的测试环境和线上环境程序部署时间不在可控范围。&#xA;&amp;hellip;&amp;hellip;&#xA;如果你的项目中有一群还没有意识到低效，重复意味着着危险的开发人员，&#xA;那么你的项目，肯定会慢慢变烂, 因为效率太低。&#xA;框架 是的，从你找工作开始，就肯定听说了这个词，如果你在学校的时候就是一个勤奋好学的同志，那么你早就听说过了，在Java的世界里，你不会几种框架，还好意思出去混吗，于是很多招聘里面都提到，精通Spring,Hibernate,Struts,Mybatis &amp;hellip; 我入职的一家公司，甚至还有公司框架Demo代码学习这个环节。&#xA;So，当你到公司第一次接触到项目的时候，我想上面提到的这几个框架，至少有一个出现在你的项目中，先来看看我遇到的项目中使用框架的情况：&#xA;使用了框架，但是版本已经是上个世纪的了，却依然在线上跑着 依赖同一个第三方开源工具包，却有多个版本 有的地方用了框架的注解配置方式，有的地方却用的XML配置文件 一个本来只需要几十kb代码搞定的项目，最后把框架依赖一起打包，至少几十Mb 没看出来为什么这个项目需要用到这个框架 &amp;hellip;&amp;hellip; 框架一词原本来自建筑学，在软件行业里面，本人理解框架，就是解决特殊场景问题的抽象实现。本着娱乐的精神，这里就不引入太书面的文字，容易引起反感。&#xA;如果你的项目和我遇到的情况一样，满足了上面两点以上，我相信，只要这个项目还要继续，就会继续变烂，原因大概有以下几点：&#xA;你是一个有理想的男青年，你想把机械键盘砸在那个已经不知离职多久的前前前同事的脸上，然后大声喊出来“老子要重构”，然而老板说:可以，你先把这一堆需求实现了再说。 最后老板还是同意了，没事儿你就重构吧，但是，你敢把一个正在好好running的线上项目框架换成最新版本吗？（你的项目用到还不只一个框架，有些框架之间在版本上还有依赖的，你不可能只升级其中一个） 想到这里，再抬头看看周围Coding的同事，有的是已经工作了数年的老腊肉，还有一波刚入职的小鲜肉，他们是否和你一样有理想，有追求呢 &amp;hellip;&amp;hellip; 如果你学过PMP，那么上面这些问题可以概括为风险和成本。&#xA;引入了框架, 那么项目成员是否在框架上做足了技术储备? 如果仅仅是达到使用的地步,那么由于框架引发的问题,你是否能够在最短的时间内解决?&#xA;不然框架就成了项目的枷锁，即使不会让项目慢慢变烂，也不会让项目慢慢变好。&#xA;领域模型 对啊，没问题，我们项目里面的使用Spring，它为我们解决了大部分问题（解决了什么问题？反正我也不知道），Spring不是提倡面向接口编程吗，我们有完善的Service接口层。&#xA;是的，就像上面提到的，我曾经学习过公司的框架Demo代码，里面把Module都分好了，Domain, Dao，Manager（用于管理DAO层的事务），Service，Web。 真实的情况却是，Service里面，一个Service接口对应了一个Dao（大部分情况是这样的），你有几个数据表，大概就有多少个Service接口，如果有个新业务来了，添加了一张表，就再搞一个Service接口,Service，Dao基本都是在为数据库CRUD服务。&#xA;一个接口类从项目产生就没有出现过多个实现, 当时定义接口仅仅是为了遵循面向接口编程。&#xA;在充满疑惑的岁月里，我找到了真相，原来我把名词理解错了，“DDD”的含义有两种，一个是Data-Driven Design，一个是Domain-Driven Design&#xA;一个没有领域模型抽象的项目，迟早要慢慢变烂。&#xA;代码 框架和模型是让你站得更高的角度来看项目,最后还是得回到代码上,好的项目(应该说团队)一定能够找到一套规范(当前流行叫&amp;quot;军规&amp;rdquo;), 每个团队制定的规范可能有些不同,但还是能找到很多共性.&#xA;代码规范(Checkstyle, 方法名,类名规范,注释规范,代码格式规范&amp;hellip;&amp;hellip;) 工程规范(构建流程,版本发布&amp;hellip;&amp;hellip;) 设计规范(设计复杂度控制,模块依赖&amp;hellip;&amp;hellip;) 数据库表设计规范, SQL规范 &amp;hellip;&amp;hellip; 经过我多年的经验，制定规范这事儿，其实重点在如何让项目成员理解和认同，最后才是执行，很多项目成员对规范的抵触源自浮浅地认为规范只能让他们将时间消耗在非功能性需求上。</description>
+    </item>
+  </channel>
+</rss>

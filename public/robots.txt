@@ -1,0 +1,119 @@
+User-agent: *
+
+Disallow: /about/
+
+Disallow: /categories/
+
+Disallow: /
+
+Disallow: /tags/java/
+
+Disallow: /post/2024-01-08-java-mix-in/
+
+Disallow: /post/
+
+Disallow: /categories/programming/
+
+Disallow: /tags/
+
+Disallow: /categories/writing/
+
+Disallow: /post/2023-10-18-yichang/
+
+Disallow: /post/2023-08-29-how-to-do-great-work/
+
+Disallow: /categories/reading/
+
+Disallow: /categories/engineering/
+
+Disallow: /post/2023-08-16-how-to-draw-architectural-diagrams/
+
+Disallow: /post/2023-reading-list/
+
+Disallow: /post/2023-07-30-my-aunt-passed-away/
+
+Disallow: /tags/%E6%95%85%E4%B9%A1/
+
+Disallow: /post/2023-07-03-a-poem/
+
+Disallow: /tags/%E8%AF%97%E4%B8%8E%E8%BF%9C%E6%96%B9/
+
+Disallow: /post/2022-12-28-2022-is-the-ending/
+
+Disallow: /tags/life/
+
+Disallow: /categories/life/
+
+Disallow: /post/2022-07-31-no-title/
+
+Disallow: /tags/api-design/
+
+Disallow: /post/2022-04-09-api-design-versioning/
+
+Disallow: /categories/software-design/
+
+Disallow: /post/2022-01-08-a-philosophy-of-software-design/
+
+Disallow: /post/2021-12-28-2021/
+
+Disallow: /post/2021-12-10-meet-yourself/
+
+Disallow: /categories/documentation/
+
+Disallow: /post/2021-11-22-diagrams-as-code/
+
+Disallow: /categories/career/
+
+Disallow: /post/2021-09-30-i-am-quit/
+
+Disallow: /post/2020-10-22-indeterminacy/
+
+Disallow: /tags/concurrency/
+
+Disallow: /post/2020-08-21-locks-on-multicore2/
+
+Disallow: /post/2020-08-19-locks-on-multicore/
+
+Disallow: /tags/test/
+
+Disallow: /post/2020-01-21-untestable-code/
+
+Disallow: /post/2019-12-28-heuristics-for-hiring/
+
+Disallow: /post/2019-reading-list/
+
+Disallow: /post/2019-12-05-follow-your-heart/
+
+Disallow: /tags/clojure/
+
+Disallow: /post/2019-11-19-clojure-datatypes/
+
+Disallow: /tags/advanced-data-structure/
+
+Disallow: /tags/disruptor/
+
+Disallow: /tags/translate/
+
+Disallow: /post/2019-04-19-understanding-the-lmax-disruptor/
+
+Disallow: /post/2019-02-24-how-will-you-measure-your-life/
+
+Disallow: /tags/marathon/
+
+Disallow: /post/2017-02-18-how-to-run-half-marathons/
+
+Disallow: /tags/security/
+
+Disallow: /post/2017-02-04-how-to-encrypt-by-linux-command/
+
+Disallow: /categories/project-management/
+
+Disallow: /post/2016-08-08-how-to-make-projects-failed/
+
+Disallow: /post/2012-06-20-notification-pattern/
+
+Disallow: /tags/pattern/
+
+Disallow: /post/2023-12-19-get-to-know-the-bamboo-flute/
+
+Disallow: /status/

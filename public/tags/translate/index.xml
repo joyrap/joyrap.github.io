@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Translate on </title>
+    <link>//localhost:1313/tags/translate/</link>
+    <description>Recent content in Translate on </description>
+    <generator>Hugo 0.125.0</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 19 Apr 2019 21:24:47 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/translate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>翻译:Understanding the LMAX Disruptor</title>
+      <link>//localhost:1313/post/2019-04-19-understanding-the-lmax-disruptor/</link>
+      <pubDate>Fri, 19 Apr 2019 21:24:47 +0000</pubDate>
+      <guid>//localhost:1313/post/2019-04-19-understanding-the-lmax-disruptor/</guid>
+      <description>翻译前言 知道Disruptor这个代码库，是在Log4j 1.X升级版Log4j2中提到的，那时候就好奇它为何如此高效，关于Disruptor的文章在ifeve.com上已经有很多了，这一篇讲的更简单。&#xA;由于个人英文水平有限，更多是意译。&#xA;&amp;mdash;&amp;mdash; 我是分割线 &amp;mdash;&amp;mdash;&#xA;LMAX Disruptor 是由一家金融交易平台公司LMAX Exchange开源的Java包,它为线程间的通信问题提供了极其优雅，高效的解决方案。&#xA;在这篇博文中，我先描述关于传统排队系统在跨线程之间的内存共享问题，然后试图弄清楚LAMX Disruptor 在该问题上有什么特别方案，他们是如何做到的。&#xA;LMAX Disuptor 的解决方案比ArrayBlockingQueue和LinkedBlockingQueue要快。 Mechanical sympathy让你成为更好的开发人员。(更好地理解底层硬件) 在线程中共享内存很容易引发问题，你需要小心对待。 CPU缓存比主存更快，但是不懂得他们是如何工作的(行缓存，等等)反而会严重影响性能。 内存伪共享 举个例子，我们需要对一个计数循环递增到MAX:&#xA;public void simple() { int counter = 0; for (int i = 0; i &amp;lt; MAX; i++) { counter++; } System.out.println(&amp;#34;counter=&amp;#34; + counter); } 因为MAX值可能会很大，为了关注性能，我们决定在多核处理器上来跑这个程序，将这个任务分到两个独立的线程上执行，像这样:&#xA;public void multi() throws Exception { // First thread final Thread t1 = new Thread(() -&amp;gt; { for (int i = 0; i &amp;lt; MAX / 2; i++) { sharedCounter++; } }); // Second thread final Thread t2 = new Thread(() -&amp;gt; { for (int i = 0; i &amp;lt; MAX / 2; i++) { sharedCounter++; } }); // Start threads t1.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pattern on </title>
+    <link>//localhost:1313/tags/pattern/</link>
+    <description>Recent content in Pattern on </description>
+    <generator>Hugo 0.125.0</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 20 Jun 2012 11:24:47 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/pattern/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notification Pattern理解</title>
+      <link>//localhost:1313/post/2012-06-20-notification-pattern/</link>
+      <pubDate>Wed, 20 Jun 2012 11:24:47 +0000</pubDate>
+      <guid>//localhost:1313/post/2012-06-20-notification-pattern/</guid>
+      <description>场景 在MVC的架构中，我们想从Model层传递一些错误信息到View层，比如用户注册这个功能，用户填写了密码，邮箱，然后提交注册， 这时候我们后端需要对前端的数据做校验，同时将校验的结果返回给View层，这时候就能用到Notification模式.&#xA;思路 先定义Notification:&#xA;public class Notification { private List _errors; public Notification() { _errors = new ArrayList(); } public void clear() { _errors.clear(); } public boolean hasError() { if (this._errors != null &amp;amp;&amp;amp; this.errors().size() &amp;gt; 0) { return true; } return false; } public List errors() { return this._errors; } public class Error { private String _message; public Error(String messgae) { this._message = messgae; } public String getMessage() { return _message; } public void set_message(String _message) { this.</description>
+    </item>
+  </channel>
+</rss>

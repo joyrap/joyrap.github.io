@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Concurrency on </title>
+    <link>//localhost:1313/tags/concurrency/</link>
+    <description>Recent content in Concurrency on </description>
+    <generator>Hugo 0.125.0</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 21 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/concurrency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>计算机多内核平台上的并发锁优化(二)</title>
+      <link>//localhost:1313/post/2020-08-21-locks-on-multicore2/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/2020-08-21-locks-on-multicore2/</guid>
+      <description>申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。&#xA;在Algorithms for scalable synchronization on shared-memory multiprocessors这篇论文中，CLH锁之前还提到了另外一个锁算法。&#xA;凭证锁(The Ticket Lock) 这个算法也很形象，比如你去10元快剪理发(假设只有一个理发师)，你得先买票，出票机在出票的时候，会显示前面还有几位在等待，你需要等待多久呢？&#xA;假设一个人理发需要10分钟，如果你前面有两人，那么你就要等20分钟。&#xA;凭证锁有两个变量，一个表示当前服务的凭证，另外一个是下一个将被服务的凭证。&#xA;实现如下:&#xA;public class TicketLock { private final AtomicLong nextTicket = new AtomicLong(0); private final AtomicLong nowServing = new AtomicLong(0); public void lock() { long myTicket = nextTicket.getAndIncrement(); while (true) { //只为了表达算法，没catch异常 Thread.sleep(myTicket - nowServing.get()); if (nowServing.get() == myTicket) { return; } } } public void unlock() { nowServing.incrementAndGet(); } } 凭证锁在test_and_set锁的基础上，其实也是做到了FIFO的公平性，而且不会有饥饿的情况。&#xA;凭证锁相当于用事件计数和序号实现的信号量。&#xA;这种锁的缺点也很明显，需要循环读取nowServing变量，在多核CPU多级缓存架构下，同时读取共享变量，会带来大量的内存和带宽竞争，虽然sleep降低了内核之间的连续竞争,但随着获取锁的内核数量增加，会导致Exponential backoff。</description>
+    </item>
+    <item>
+      <title>计算机多内核平台上的并发锁优化(一)</title>
+      <link>//localhost:1313/post/2020-08-19-locks-on-multicore/</link>
+      <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/2020-08-19-locks-on-multicore/</guid>
+      <description>申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。&#xA;如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问题。 特别是随着云厂商按计算收费的当下，如何有效地利用计算资源变得更重要。&#xA;致富的途径只有两种：一种是拼命赚钱，另外一种就是有钱后节约花钱。&#xA;什么是锁 在计算机硬件层其实是没有锁这个概念的，计算机领域中的锁来源于现实生活中的锁，它的作用是保护某种资源同一时间不能被多人访问。现代计算机已经发展成了多核CPU处理器，我们需要通过锁机制来协调多个内核对资源的访问操作。&#xA;和现实中一样，在给资源上锁的时候，我们可能需要几个步骤：&#xA;拿出钥匙 锁上资源 解锁 计算机中对应的CPU操作就是执行几条指令(CPU每条执行指令都是原子级别的操作，要么成功，要么失败，这是二进制世界的规则)。&#xA;这里罗列几条与后面要讲到的锁相关的硬件同步汇编指令&#xA;test_and_set swap get_and_add test_and_set 由3条CPU原语组成&#xA;​ boolean test_and_set(*lock){ ​ boolean old=*lock; ​ *lock=true; ​ return old; } BTS 指令含义是在执行 BT 命令的同时, 把操作数的指定位置为 1&#xA;do{ //当*lock为false是跳出该循环 while(test_and_set(*lock)); critical section;//访问临界区 *lock=false; }while(true) swap也是由三条CPU原语组成: BSWAP指令含义是：把32/64位寄存器的值按照低和高的字节交换(下面代码实现其实就是0=false,1=true交换)&#xA;void swap(boolean *a,boolean *b){ boolean temp=*a; *a=*b; *b=temp; } do{ key=true; do{ swap(&amp;amp;lock,&amp;amp;key); }while(key) //上面初值为false cirtical section//访问临界资源 lock=false; }while(true) 上面简要地说明了通过CPU硬件同步原语，对某个内存地址标志位的修改，起到加锁的作用。&#xA;那么锁机制和性能有什么关系呢？这得从内存(Memory)，CPU缓存说起。&#xA;多核CPU多级缓存架构 早期的CPU架构基本上都采用SMP(Symmetric Multi-Processor)，这种对称多处理器结构，多个CPU内核共享内存资源，除了内存速度访问慢以外， 还可能导致访问冲突。</description>
+    </item>
+  </channel>
+</rss>

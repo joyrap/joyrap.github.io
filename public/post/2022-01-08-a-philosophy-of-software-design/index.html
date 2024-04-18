@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth dark">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A Philosophy Of Software Design-读书笔记</title>
+<meta
+  name="description"
+  content="《软件设计的哲学》这本书最早出版于2018年，2021年出了2nd Edition，目前国内还没有中文版，这本书是作者 在斯坦福大学开设的CS190课程大纲。 我专门搜索了一下国内软件专业的大学，基本上都没有关于软件设计的课程。
+市面很多关于软件设计的书籍，大部分都是基于某些特定编程语言或者技术，还没有一本全面讲解软件设计本身的书。
+软件设计本来是一种创造性活动，主观性极强，本书作者的基调还是鼓励利用一切手段来考虑系统的设计性，有些做法比较激进。
+这里尝试将其中精彩部分做点翻译，结合自己的理解便于学习。
+2. The Nature of Complexity &lt;复杂性的本质&gt; 这本书是关于如何设计软件系统并最小化复杂性，首先你得了解你的敌人，明确什么是“复杂性”？你如何描述一个系统复杂性？是什么让系统变得复杂？ 本章将在一个更高维度阐述这些问题。"
+/>
+<link rel="canonical" href="http://localhost:1313/post/2022-01-08-a-philosophy-of-software-design/" />
+<link rel="robots" href="/robots.txt" />
+
+<link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script>
+
+<link rel="stylesheet" href="http://localhost:1313/css/app.css" /></head>
+
+  <body class="max-w-screen-md mx-auto">
+    <div class="header">
+      <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+   
+
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+  <a href="http://localhost:1313/">
+    <img
+      srcset="/img/profile-picture_hucbf2afd9e62dc6021c155b0731b41164_625734_80x80_fill_q90_box_smart1.jpg 80w"
+      src="/img/profile-picture.jpg"
+      width="1080"
+      height="1080"
+      alt="Enhanced Lowkey Hugo"
+    />
+  </a>
+</div>
+
+  
+  <div class="flex flex-col gap-5">
+    <a href="http://localhost:1313/">
+  <h1 id="site-title">Enhanced Lowkey Hugo</h1>
+</a>
+ 
+    <nav>
+  <ul>
+     
+    
+    <li>
+      <a href="/" class="">
+        Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about" class="">
+        About me
+      </a>
+    </li>
+    
+    <li>
+      <a href="/categories" class="">
+        Categories
+      </a>
+    </li>
+    
+    <li>
+      <a href="/tags" class="">
+        Tags
+      </a>
+    </li>
+    
+    <li>
+      <a href="https://ko-fi.com/nixentric" class="">
+        Donate
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about/" class="">
+        About
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+  </div>
+</header>
+
+      <button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
+  <span class="theme-icon light"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+</svg> </span>
+  <span class="theme-icon dark"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg> </span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+
+    if (!theme || theme === 'light') {
+      setTheme('light');
+    } else {
+      setTheme(theme);
+    }
+  });
+
+  function setTheme(theme) {
+    const html = document.querySelector('html');
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'light') {
+      if (html.classList.contains('dark')) {
+        document.querySelector('html').classList.remove('dark');
+      }
+
+      document.querySelector('.theme-icon.light').style.display = 'none';
+      document.querySelector('.theme-icon.dark').style.display = 'block';
+    } else {
+      if (!html.classList.contains('dark')) {
+        document.querySelector('html').classList.add('dark');
+      }
+
+      document.querySelector('.theme-icon.dark').style.display = 'none';
+      document.querySelector('.theme-icon.light').style.display = 'block';
+    }
+  }
+
+  function toggleTheme() {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+</script>
+    </div>
+  
+    <main id="content">
+
+<article class="flex flex-col gap-10">
+  <header class="flex flex-col gap-2">
+    <h2 class="title-large">A Philosophy Of Software Design-读书笔记</h2>
+
+    <div class="meta">
+      
+      <time datetime="2022-01-08 00:00:00 &#43;0000 UTC" title='Sat, Jan 8, 2022, 12:00 AM UTC'>
+        08/01/2022 - Estimated reading time: 2 minutes
+      </time>
+
+       
+       — 
+        
+          <a class="categories" href="/categories/software-design/" alt="Software Design">
+            Software Design
+          </a>
+         
+      
+    </div>
+  </header>
+
+  
+
+  <section><blockquote>
+<p><a href="https://book.douban.com/subject/30218046/">《软件设计的哲学》</a>这本书最早出版于2018年，2021年出了<a href="https://web.stanford.edu/~ouster/cgi-bin/book.php">2nd Edition</a>，目前国内还没有中文版，这本书是<a href="https://twitter.com/johnousterhout">作者</a>
+在斯坦福大学开设的<a href="https://web.stanford.edu/~ouster/cgi-bin/cs190-winter21/index.php">CS190</a>课程大纲。
+我专门搜索了一下国内软件专业的大学，基本上都没有关于软件设计的课程。</p>
+<p>市面很多关于软件设计的书籍，大部分都是基于某些特定编程语言或者技术，还没有一本全面讲解软件设计本身的书。</p>
+<p>软件设计本来是一种创造性活动，主观性极强，本书作者的基调还是鼓励利用一切手段来考虑系统的设计性，有些做法比较激进。</p>
+<p>这里尝试将其中精彩部分做点翻译，结合自己的理解便于学习。</p>
+</blockquote>
+<h2 id="2-the-nature-of-complexity-复杂性的本质">2. The Nature of Complexity &lt;复杂性的本质&gt;</h2>
+<p>这本书是关于如何设计软件系统并最小化复杂性，首先你得了解你的敌人，明确什么是“复杂性”？你如何描述一个系统复杂性？是什么让系统变得复杂？
+本章将在一个更高维度阐述这些问题。</p>
+<p>识别复杂性是重要的设计技能，它让你在处理问题之前明确问题所在，让你在众多选择中作出好的选择。</p>
+<h3 id="21-complexity-defined-复杂性的定义">2.1 Complexity defined &lt;复杂性的定义&gt;</h3>
+<p><strong>任何使软件系统难于理解和修改的东西，即是复杂性</strong>。复杂性以不同方式存在，比如它可能是一段难于理解的代码，它可能是需要付出巨大努力才能实现一个很小的优化，
+它可能是错综复杂的关联中难于修复的BUG。</p>
+<p>复杂性是一个开发人员在某个时间点上试图完成某个特定目标的过程，它不一定是整个系统功能。人们直觉上认为具有大量功能的大型软件系统是”复杂“的，但是这样的系统如果容易实现
+，那么对于本书的定义来说，他就不算复杂。当然几乎所有的大型软件系统实际上都是复杂到难于实现，他们或多或少都会出现我定义的复杂性，也不是说没有复杂功能的简单系统就不可能出现复杂。</p>
+<p>复杂性是由大多数常见的活动决定的，如果一个系统只有很少一部分是复杂的，但它们不影响整个系统复杂性。</p>
+<p>我们可以用一个简单的数学公式来描述系统复杂性：</p>
+<p>$$ C=\sum_{p}c_{p}t_{p} $$</p>
+<p>（p为系统的组件数量，c为组件的复杂性，t为完成组件投入的时间）</p>
+<p>系统的整体复杂性由组成部分乘以开发人员在其投入的工作时间，将复杂性隔离在不容易被发现的地方不亚于完全消除复杂性。</p>
+<p>复杂性相对于作者而言对读者更显而易见，当事者总会觉得他们写的代码似乎很简单，但其他人却觉得复杂。如果你遇到这种情况，试着询问其他
+开发人员，为什么你写的代码在他们看来这样复杂，从交流中找到你与他们之间不同的想法。作为开发者你的工作不只是写你认为容易的代码，
+同时也要让其他人容易理解。</p>
+<h3 id="22-symptoms-of-complexity-复杂性的特征">2.2 Symptoms of complexity &lt;复杂性的特征&gt;</h3>
+<ol>
+<li>Change amplification&lt;变更放大&gt;</li>
+</ol>
+<p>有时候看上去是做一个小的改变，但是需要修改多处代码（功能散落在多处）。好设计的目标是降低每个设计中受影响的代码量。</p>
+<ol start="2">
+<li>Cognitive load&lt;认知负载&gt;</li>
+</ol>
+<p>高认知负载意味着开发人员需要花更多的时间去理解需求，这会导致产生BUG的风险，因为他们很容易遗漏一些重要的信息。</p>
+<blockquote>
+<p>作者用C语言分配内存函数举了一个例子，方法调用方需要自己关心内存释放。</p>
+</blockquote>
+<p>系统设计师有时候用代码行数来衡量复杂性，代码行数与复杂度并无关系，<strong>有时候用更多的代码去实现，也许才是更简单的方式，因为它降低了认知负载。</strong></p>
+<ol start="3">
+<li>
+<p>Unknown unknowns&lt;未知且不确定&gt;</p>
+<p>没人能够在一个不清楚来龙去脉的系统中完成开发任务，系统中太多不确定性关联，你无法定义自己应该了解到何种程度。</p>
+</li>
+</ol>
+<h3 id="23-causes-of-complexity-复杂性的原因">2.3 Causes of complexity &lt;复杂性的原因&gt;</h3>
+<p>复杂性由<strong>依赖</strong>和<strong>含糊不清</strong>导致。</p>
+<p>依赖是软件的基础部分并不能完全消除，实际上依赖贯穿整个软件设计过程，但是软件设计的一个重要的目标是降低依赖，使依赖尽可能地简单。</p>
+<p>很多时候，一个需要大量文档的系统通常是晦涩难懂的，说明它的设计不清晰，好的设计结果往往只需要少量文档。</p>
+<h3 id="25-complexity-is-incremental-复杂性的增长">2.5 Complexity is incremental &lt;复杂性的增长&gt;</h3>
+<p>复杂性在系统中是一个变量，它随着功能一起增长，当它积累到一定程度的时候，将会失去控制很难被消除，所以对于复杂性的增长要“零容忍”。</p>
+<h2 id="3-working-code-isnt-enough-能够工作的代码是不够的">3. Working Code isn&rsquo;t Enough &lt;能够工作的代码是不够的&gt;</h2>
+<h3 id="31-tactical-programming战术编程">3.1 Tactical programming&lt;战术编程&gt;</h3>
+<p><strong>不要怎么快实现就怎么来！</strong>，不然项目最后会变成<a href="/post/2016-08-08-how-to-make-projects-failed/">屎山</a>，
+战术编程在未来的代价和成本很高。</p>
+<h3 id="32-stategic-programming战略规划">3.2 Stategic programming&lt;战略规划&gt;</h3>
+<p>战略规划是一种投资心态，不要过早做决定，以交付最好设计为目标。</p>
+<h3 id="33-how-to-invest">3.3 How to invest?</h3>
+<p>把开发时间的10-20%时间投入到具有长期价值的事情上。</p>
+<h3 id="34-startups-and-investment">3.4 Startups and investment</h3>
+<p>为了加快交付，创业公司更容易陷入战术编程模式。长期的技术债会拖慢产品的发布，除非雇佣非常优秀的开发人员。</p>
+<h2 id="4-modules-should-be-deep">4. Modules Should be deep</h2>
+<h3 id="41-modular-design模块化设计">4.1 Modular design&lt;模块化设计&gt;</h3>
+<p>将系统拆解成多个模块，理想情况下，模块之间应该完全独立。这样，可以将复杂性屏蔽在模块内部。</p>
+<p>但这是理想情况很难做到，因为模块之间存在依赖或调用关系。</p>
+<p>管理依赖的方式：将模块拆分为 <em><em>接口</em></em> 和 <em><em>实现</em></em></p>
+<p>好的模块在 <em>接口</em> 实现上要尽量简单，这样的好处是模块在不修改接口的情况下，几乎不会给其他系统带来影响。</p>
+<h3 id="42-what-is-interface">4.2 What is interface?</h3>
+<p>接口由两部分组成：一部分是由编程语言语法决定，例如接口方法的参数，以及返回值的类型，方法可能抛出的异常。</p>
+<p>另外一部分则是编程语言无能为力的，这部分内容可能描述的是接口更高层次的行为，（比如你希望接口实现支持线程安全，在语法上无法控制实现，只能通过注释。），例如在调用接口某个方法前必须调用另外一个方法，这个部分内容会增加系统的复杂性，这就是第2章所说的<strong>Unknown unknowns&lt;未知且不确定&gt;</strong>，清晰且明确的接口定义有助于消除Unknown unknowns。</p>
+<h3 id="43-abstractions">4.3 Abstractions</h3>
+<p>抽象与模块设计密切相关，<strong>抽象是对实体的简化视角，它省略了不重要的细节。</strong></p>
+<p>通过抽象来管理复杂度，不仅仅存在编程中，在我们的生活中也很普遍。</p>
+<h3 id="44-deep-modules">4.4 Deep modules</h3>
+<p><img src="/images/2022-01-08/deep_shallow.jpeg" alt="Deep and shallow module"></p>
+<blockquote>
+<p>作者用了Deep和Shallow两个概念来描述模块接口与功能的设计，非常形象，我理解应该是：接口设计趋向于在解决领域问题内越抽象越好，这里的Deep应该就是指抽象的程度。</p>
+</blockquote>
+<p>在同等复杂度的情况下，Deep模块的接口简单，具备复杂的功能实现，Shallow模块（类似于领域驱动设计中的<strong>贫血模型</strong>）则相反。</p>
+<blockquote>
+<p>原文夸奖了一下Unix IO模块的接口设计，接口简单明了，内部实现细节对调用者来说完全不用关心。</p>
+</blockquote>
+<p>Deep模块设计另外一个很好的例子，就是Java的垃圾收集器，它有强大的功能，但对于研发人员来说完全是不可见的，所以垃圾收集器的变更不会影响到应用层开发人员。</p>
+<p>Unix IO和垃圾收集器易于使用，同时提供了良好的抽象，除此之外他们还将重要的实现复杂度做了很好的隐藏。</p>
+<h3 id="45-shallow-modules">4.5 Shallow modules</h3>
+<h3 id="46-classitis过度拆分">4.6 Classitis&lt;过度拆分&gt;</h3>
+<p>很不幸，Deep设计方式在今天并不被推崇。传统的编程智慧是“类应该设计得足够小”，而不是Deep。
+学生们被教导，将大类拆分成多个小类，或者建议他们“当方法代码行数达到多少行后，就应该拆分成多个子方法”，结果是整个系统充满了大量Shallow类和方法。</p>
+<h3 id="47-examples-java-and-unixio">4.7 Examples: Java and Unix/IO</h3>
+<h2 id="5-information-hidingand-leakage">5. Information Hiding(and leakage)</h2>
+<h3 id="51-information-hiding">5.1 information hiding</h3>
+<p>达到Deep模块设计的最重要的手段就是信息隐藏。基本思想是每个模块都应该封装一些代表设计决策的知识。</p>
+<h3 id="52-information-leakage信息泄露">5.2 information leakage&lt;信息泄露&gt;</h3>
+<h3 id="53-temporal-decomposition时间拆分">5.3 Temporal decomposition&lt;时间拆分&gt;</h3>
+<p>一个典型的信息泄露的设计风格，我称为”时间拆分“，系统结构对应操作时间顺序。</p>
+<p>想象一个应用对文件读，修改，最后被写入，如果利用时间拆分方法，应用会被拆分为三个类，一个是读文件，一个执行修改，另外一个写入新版本。</p>
+<p>读与写过程都必须知道文件格式，结果导致了信息泄露（文件格式相关的信息在读和写的代码中都存在），解决办法是将读与写逻辑放在一个类中。</p>
+<p>容易掉进时间拆分陷阱的原因是，在你写代码时操作的执行顺序通常在你的大脑中。</p>
+<p>顺序通常很重要，他总是反映在应用的某个角落，但是它不应该反映在模块结构上。</p>
+<p><strong>设计模块的时候，关注每个需要执行的任务上，而不是他们的执行顺序。</strong></p>
+<p>小心：在时间拆分中，执行顺序反映了代码结构，相同的操作发生在不同类或方法中的不同时间。如果相同的逻辑被用于不同地方，最终会导致信息泄露。</p>
+<h3 id="54-example-http-server">5.4 Example HTTP Server</h3>
+<h3 id="55-example-too-many-classes">5.5 Example too many classes</h3>
+<h3 id="56-information-hiding-within--a-class">5.6 Information hiding within  a class</h3>
+<h2 id="6-general-purpose-modules-are-deeper">6. General-Purpose Modules are Deeper</h2>
+<p>在设计一个新的模块时，你将面临的一个最常见的决定：是提供一个通用的解决方案，还是只解决当前问题。</p>
+<p>花时间开发通用解决方案对未来可能节约更多时间。</p>
+<h2 id="65questions-to-ask-yourself">6.5  Questions to ask yourself</h2>
+<p>什么样的接口既能满足我的所有需求，又是最简单的？</p>
+<p>如果你减少了API的方法，但并没有减少功能，那么你可能得到更通用的方法。</p>
+<h2 id="7-different-layerdifferent-abstraction">7. Different Layer,Different Abstraction</h2>
+<p>系统分层设计，每层有自己的抽象逻辑。</p>
+<h3 id="72-when-is-interface-duplication-is-ok什么时候接口重复没问题">7.2 When is interface duplication is OK?&lt;什么时候接口重复没问题？&gt;</h3>
+<h3 id="73-decorators装饰器">7.3 Decorators&lt;装饰器&gt;</h3>
+<p>装饰器设计模式可以起到串联多层之间API重复的作用，JDK中IO模块就是一个很好的例子。</p>
+<h2 id="8-pull-complexity-downwards">8. Pull Complexity Downwards</h2>
+<h2 id="9-better-together-or-better-apart">9. Better Together Or better Apart?</h2>
+<p>软件设计中一个最基本的问题就是，两个功能是应该分开实现，还是一起实现？</p>
+<p>这个问题适用于系统的各个方面，例如功能，方法，类和服务。</p>
+<h2 id="10-define-errors-out-of-existence定义不存在的错误">10. Define Errors Out Of Existence&lt;定义不存在的错误&gt;</h2>
+<h3 id="101why-exceptions-add-complexity">10.1  Why exceptions add complexity</h3>
+<p>我这里讲的异常，是指超出了控制流外的非正常条件，不是编程语言级别的异常，很多语言都有异常处理机制。</p>
+<p>抛出异常是容易的，处理异常却非常复杂，异常处理之间也经常包含关联，例如因为网络原因，客户端需要重试远程调用，
+但是如果只是网络延迟呢，那么接收端必须要处理重复调用的情况（幂等）。</p>
+<p>所以异常本身就具有很强的复杂性。</p>
+<h3 id="102too-many-exceptions">10.2 Too many exceptions</h3>
+<p>防止在设计中过度使用异常。</p>
+<h2 id="11-design-it-twice二次设计">11. Design it Twice&lt;二次设计&gt;</h2>
+<p>软件设计并不容易，很多时候你一开始的设计并不一定就是最好的。</p>
+<p>在设计的时候提供更多的选型，选择更好的那个，当你有了多个选择的时候，你就可以比较：</p>
+<ul>
+<li>哪个设计的接口更简单？</li>
+<li>哪个设计的接口更通用？</li>
+<li>哪个设计的接口更容易高效实现？</li>
+</ul>
+<p>二次设计可以运用于软件开发的所有阶段。</p>
+<h2 id="12-why-write-commentsthe-four-excuses">12. Why Write Comments?The Four Excuses</h2>
+<p>写注释的过程，如果运用得当，会提升系统的设计。相反一个好的软件设计如果没有文档辅助，它的价值会大打折扣。</p>
+<h3 id="121-good-code-is-self-documenting">12.1 Good code is self-documenting</h3>
+<p>一些人认为如果代码写得足够好，就不需要注释。真实情况并不是这样，代码并不能描述所有情况，有时候需要依赖注释。</p>
+<p>很不幸，这种观点并没有得到普遍认同，很多开发人员认为写注释是在浪费时间。</p>
+<p><strong>如果用户使用一个方法需要阅读代码，说明这里没有抽象</strong></p>
+<h3 id="122i-dont-have-time-to-write-comments">12.2  I don’t have time to write comments</h3>
+<h3 id="123comments-get-out-of-date-and-become-misleading">12.3  Comments get out of date and become misleading</h3>
+<h3 id="124all-the-comments-i-have-seen-are-worthless">12.4  All the comments I have seen are worthless</h3>
+<h2 id="13-comments-should-describe-things-that-arent-obvious-from-the-code">13. Comments Should Describe Things that Aren&rsquo;t Obvious from the Code</h2>
+<p>写注释的原因是，开发人员用来描述代码不能表达的想法，便于未来理解和修改代码。</p>
+<h2 id="14-choosing-names命名">14. Choosing Names&lt;命名&gt;</h2>
+<h3 id="142create-an-image">14.2  Create an image</h3>
+<h3 id="143names-should-be-precise">14.3  Names should be precise</h3>
+<h3 id="144use-names-consistently">14.4 Use names consistently</h3>
+<h2 id="15-write-the-comments-first">15. Write The Comments First</h2>
+<h3 id="151delayed-comments-are-bad-comments">15.1  Delayed comments are bad comments</h3>
+<p>写代码前先写注释，很多开发人员认为代码一直在改变，提前写文档毫无意义。</p>
+<p>推迟写文档的结果是，最后没有文档。</p>
+<h3 id="152write-the-comments-first">15.2  Write the comments first</h3>
+<p>我在一开始写注释</p>
+<ul>
+<li>先写接口注释</li>
+<li>然后写公共方法的注释</li>
+<li>在多个注释之间来回审查感觉没什么问题</li>
+<li>给重要的变量写注释</li>
+<li>然后才是去写实现，在实现中写上必要的注释。</li>
+<li></li>
+</ul>
+<h3 id="153comments-are-a-design-tool">15.3  Comments are a design tool</h3>
+<h2 id="16-modifying-existing-code">16. Modifying Existing Code</h2>
+<p>软件开发是一个迭代增加的过程，大型软件系统都有一系列演进阶段，每个阶段中存在修改或新增模块，这意味着系统设计持续演进，
+不可能一开始就相处最好的设计。一个成长中的系统设计是在系统演进中通过改变达成的。</p>
+<h2 id="17-consistency一致性">17. Consistency&lt;一致性&gt;</h2>
+<p>一致性是强有力的降低系统复杂性的工具。</p>
+<p>强调系统一致性，包括概念，解决问题的方式，</p>
+<h2 id="18-code-should-be-obvious">18. Code Should be Obvious</h2>
+<h2 id="19-software-trends软件趋势">19. Software Trends&lt;软件趋势&gt;</h2>
+<h3 id="191-object-oriented-programming-and-inheritance面向对象编程与继承">19.1 Object-oriented programming and inheritance&lt;面向对象编程与继承&gt;</h3>
+<p>在面向对象编程中，继承有两种形式：
+接口间继承：目的在于多个实现间复用相同接口，使解决方式适用于不用问题，从而降低复杂性。
+如果一个接口被更多地不同实现，那么说明这个接口会变得更Deep（抽象），这是抽象的核心概念。</p>
+<p>比如IO的读写接口被磁盘读写接口和网络读写接口继承。</p>
+<h3 id="192agile-development敏捷开发">19.2  Agile development&lt;敏捷开发&gt;</h3>
+<p>敏捷开发由于其快速迭代的特性，很容易陷入战术编程思维。</p>
+<h3 id="193unit-tests单元测试">19.3  Unit tests&lt;单元测试&gt;</h3>
+<p>过去，开发人员几乎不写测试。没有测试的系统很难被重构，单元测试在软件设计中扮演相当重要的角色。</p>
+<h3 id="194test-driven-development测试驱动开发">19.4  Test-driven development&lt;测试驱动开发&gt;</h3>
+<p>测试驱动开发的问题是他专注于可用特性开发工作上，而不是寻找更好的设计。</p>
+<h3 id="195design-patterns">19.5 Design patterns</h3>
+<p>设计模式最大的风险是过度使用，不是所有问题都能被现有模式完美解决。只有在系统适合某个模式的时候才使用。</p>
+<h2 id="20-designing-for-performance性能设计">20. Designing for Performance&lt;性能设计&gt;</h2>
+<h3 id="201how-to-think-about-performance如何看待性能">20.1  How to think about performance&lt;如何看待性能&gt;</h3>
+<h3 id="202measure-before-modifying">20.2  Measure before modifying</h3>
+<p>性能优化前，先想好衡量性能的方案，这样才能量化你做的性能优化。</p>
+<hr>
+<p>参考阅读：</p>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/g6f8-eSUjc_-fsLt0hKlZQ">系统困境与软件复杂度：为什么我们的系统会如此复杂？</a></li>
+</ul>
+</section>
+
+  
+    
+  
+
+    
+  
+
+
+  <footer>
+    
+  </footer>
+</article>
+
+
+    </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1">
+  © 2024 —
+  <a href="http://localhost:1313/">Enhanced Lowkey Hugo</a> 
+  <span class="font-normal">with</span>
+  <a
+    href="https://github.com/nixentric/Lowkey-Hugo-Theme"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Lowkey
+  </a>
+</div>
+
+    <div class="order-1 sm:order-2">
+  <ul class="flex sm:justify-end gap-5">
+    
+    
+    <li>    
+      <a href="#" target="_blank" rel="noopener noreferrer">Twitter</a>
+    </li>
+    
+    <li>    
+      <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </li>
+    
+    <li>    
+      <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+</footer></body>
+</html>

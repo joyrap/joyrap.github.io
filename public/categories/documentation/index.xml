@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentation on </title>
+    <link>//localhost:1313/categories/documentation/</link>
+    <description>Recent content in Documentation on </description>
+    <generator>Hugo 0.125.0</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 22 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/documentation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>图表即代码</title>
+      <link>//localhost:1313/post/2021-11-22-diagrams-as-code/</link>
+      <pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/2021-11-22-diagrams-as-code/</guid>
+      <description>为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件，以及如何在文档中嵌入图表。&#xA;软件开发时用到画图软件林林总总，差异化较大，但我们使用的大部分画图工具，都以独特的二进制文件存储，缺点不利于团队协作和分享，导致跟随代码的相关思维图不能更好地被管理，甚至无法与代码保持及时更新迭代，所以软件工程师们更希望通过像代码一样来管理图形化思维。&#xA;文本具有以下优点：&#xA;容易阅读（文本的优势） 版本管理（借助版本管理软件git） 易于编辑（任何文本编辑器） PlantUML PlantUML就是为以上这些优点存在的，它允许你通过一个简单的描述性语言（类似伪代码）来画UML图，最后通过graphviz生成图片格式（PNG，SVG）。当然PlantUML不仅仅支持UML图，还支持很多非UML图，几乎涵盖了软件开发所有标准图形，具体可以看官网介绍。&#xA;PlantUML扩展了很多语法来定义元素的的形状和属性，以及元素间的位置关系，整体布局（从上至下，或从左至右）顺序。刚开始使用PlantUML你肯定会感到不适，它不像图形化界面拖拽软件那样简单，但是作为软件开发工程师来说，学习PlantUML语法并不是难事，因为它已经做了简单化。&#xA;插件与平台支持 目前在两大主流编辑器VSCode和IDEA都有对应的插件（依赖graphviz），个人非常推荐VSCode。&#xA;由于PlantUML的普及，各大SaaS软件平台都支持将PlantUML代码嵌入到文档中（例如Confluence），直接生成图片，真正做到图形与文档同步。&#xA;C4 在工作中，很多软件工程师由于经验的不同，在表达非UML范畴的图形时，堆砌了很多线条和框图，并没有章法，鉴于这种乱象，Simon Brown 提出了 C4模型，他定义了标准化的软件架构图表达方式，将软件架构图由远及近，由粗到细，分为了4个层级：&#xA;上下文关系 容器 组件 代码 在UML基础上提出了更高层的抽象来描述软件架构。&#xA;原话是:&#xA;It&amp;#39;s a way to create maps of your code, at various levels of detail, in the same way you would use something like Google Maps to zoom in and out of an area you are interested in. 这种方法就像是地图软件上使用缩放功能一样来观察软件系统。&#xA;C4同时提供了一套基于PlantUML的模型定义，效果图如下：&#xA;PlantUML之外 Diagrams 相较于Diagrams，国内开发者用得最多的是ProcessOn，后者主要是商业化收费，在线协作存储，前者代码开源，提供本地桌面版本(主要开发语言是JavaScript)， 这类工具都提供拖拽的方式来绘制图形，支持导出图片，另外Diagrams存储的文件虽然是XML格式，但是也只有它自己的程序才能解析。&#xA;效果如下： Excalidraw 像Diagrams这些工具，并不是没有竞争对手，Excalidraw就是其中一个， PlantUML与C4模型构建了图形化的标准，但有时候我们又希望带点随性，更灵活地表达头脑风暴，Excalidraw这个工具提供了手绘风格样式，同时也支持外部导入样式。 Excalidraw也是代码开源,主要采用TypeScript语言开发，本质上和Diagrams的区别在于自由的模版风格。</description>
+    </item>
+  </channel>
+</rss>
