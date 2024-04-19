@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>计算机多内核平台上的并发锁优化(二) | 于川海的博客</title>
 <meta name="keywords" content="Concurrency">
 <meta name="description" content="申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。 在Algorithms for scalable synchronization on shared-memory multiprocessors这篇论文中，CL">
 <meta name="author" content="于川海">
-<link rel="canonical" href="https://joyrap.github.io/post/2020-08-21-locks-on-multicore2/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.03ad76fd9abbd83756c9d1fa36b616500096b087c69c868472078cd49d1f576f.css" integrity="sha256-A612/Zq72DdWydH6NrYWUACWsIfGnIaEcgeM1J0fV28=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://joyrap.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://joyrap.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://joyrap.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://joyrap.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://joyrap.github.io/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/post/2020-08-21-locks-on-multicore2/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.eab43c0e000c0ee100d60b3368a4baa123bc1e74fa2f99332427cd1bad95ad79.css" integrity="sha256-6rQ8DgAMDuEA1gszaKS6oSO8HnT6L5kzJCfNG62VrXk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://joyrap.github.io/post/2020-08-21-locks-on-multicore2/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/post/2020-08-21-locks-on-multicore2/">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,90 +56,6 @@
 
     </style>
 </noscript>
-  
-    
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMD3WCHRSY"></script>
-      <script>
-        var doNotTrack = false;
-        if ( false ) {
-          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
-          var doNotTrack = (dnt == "1" || dnt == "yes");
-        }
-        if (!doNotTrack) {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-FMD3WCHRSY');
-        }
-      </script>
-    
-  
-
-<meta property="og:title" content="计算机多内核平台上的并发锁优化(二)" />
-<meta property="og:description" content="申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。 在Algorithms for scalable synchronization on shared-memory multiprocessors这篇论文中，CL" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://joyrap.github.io/post/2020-08-21-locks-on-multicore2/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2020-08-21T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-08-21T00:00:00+00:00" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="计算机多内核平台上的并发锁优化(二)"/>
-<meta name="twitter:description" content="申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。 在Algorithms for scalable synchronization on shared-memory multiprocessors这篇论文中，CL"/>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://joyrap.github.io/post/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "计算机多内核平台上的并发锁优化(二)",
-      "item": "https://joyrap.github.io/post/2020-08-21-locks-on-multicore2/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "计算机多内核平台上的并发锁优化(二)",
-  "name": "计算机多内核平台上的并发锁优化(二)",
-  "description": "申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。 在Algorithms for scalable synchronization on shared-memory multiprocessors这篇论文中，CL",
-  "keywords": [
-    "Concurrency"
-  ],
-  "articleBody": " 申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。\n在Algorithms for scalable synchronization on shared-memory multiprocessors这篇论文中，CLH锁之前还提到了另外一个锁算法。\n凭证锁(The Ticket Lock) 这个算法也很形象，比如你去10元快剪理发(假设只有一个理发师)，你得先买票，出票机在出票的时候，会显示前面还有几位在等待，你需要等待多久呢？\n假设一个人理发需要10分钟，如果你前面有两人，那么你就要等20分钟。\n凭证锁有两个变量，一个表示当前服务的凭证，另外一个是下一个将被服务的凭证。\n实现如下:\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 public class TicketLock { private final AtomicLong nextTicket = new AtomicLong(0); private final AtomicLong nowServing = new AtomicLong(0); public void lock() { long myTicket = nextTicket.getAndIncrement(); while (true) { //只为了表达算法，没catch异常 Thread.sleep(myTicket - nowServing.get()); if (nowServing.get() == myTicket) { return; } } } public void unlock() { nowServing.incrementAndGet(); } } 凭证锁在test_and_set锁的基础上，其实也是做到了FIFO的公平性，而且不会有饥饿的情况。\n凭证锁相当于用事件计数和序号实现的信号量。\n这种锁的缺点也很明显，需要循环读取nowServing变量，在多核CPU多级缓存架构下，同时读取共享变量，会带来大量的内存和带宽竞争，虽然sleep降低了内核之间的连续竞争,但随着获取锁的内核数量增加，会导致Exponential backoff。\n“Exponential backoff is an algorithm that uses feedback to multiplicatively decrease the rate of some process, in order to gradually find an acceptable rate”\n很可能发生，当上一个内核已经从临界区退出并释放了锁，但其他的内核还在sleep。\n即便用固定的sleep时间也不合理，因为临界区执行的时间是未知的。\n另外一个细节就是，这个算法是建立在假设nextTicket.getAndIncrement()不会溢出的情况下。\n在The Ticket Lock之后还有Array-Based Queuing Locks，但由于基于数组的队列锁，性能更不理想，所以就略过了。\n在Array-Based Queuing Locks之后就是 List-Based Queuing Lock ，计算机多内核平台上的并发锁优化(一)中讲到的CLH锁和MCS锁都是基于链表队列实现的。\n栅栏(BARRIERS) 首先对Barrier这个中文翻译解释一下，实际上朗文词典对该词给出的英文翻译如下：\n1、a rule, problem etc that prevents people from doing something, or limits what they can do 2、a type of fence or gate that prevents people from moving in a particular direction 3、a physical object that keeps two areas, people etc apart 很多中文书籍用的是2条翻译，实际上第1条翻译才是在计算机领域中要表达的含义。\n这个对应现实生活中的例子就是，你和几个好友约定晚上7点去苍蝇馆子撸串，说好了人不齐不许开干，那么先到的只能看着烤串流口水。\n规则就这么简单。\n未完待续……\n相关阅读 计算机多内核平台上的并发锁优化(一) The ccNUMA Memory Profiler Overview of Recent Supercomputers A Hierarchical CLH Queue Lock A General Technique for Designing NUMA Locks ",
-  "wordCount" : "1068",
-  "inLanguage": "en",
-  "datePublished": "2020-08-21T00:00:00Z",
-  "dateModified": "2020-08-21T00:00:00Z",
-  "author":{
-    "@type": "Person",
-    "name": "于川海"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://joyrap.github.io/post/2020-08-21-locks-on-multicore2/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "于川海的博客",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://joyrap.github.io/favicon.ico"
-    }
-  }
-}
-</script>
 </head>
 
 <body class="" id="top">
@@ -157,7 +73,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://joyrap.github.io/" accesskey="h" title="于川海的博客 (Alt + H)">于川海的博客</a>
+            <a href="http://localhost:1313/" accesskey="h" title="于川海的博客 (Alt + H)">于川海的博客</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -185,27 +101,27 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://joyrap.github.io/" title="Home">
+                <a href="http://localhost:1313/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://joyrap.github.io/post/" title="Archives">
+                <a href="http://localhost:1313/post/" title="Archives">
                     <span>Archives</span>
                 </a>
             </li>
             <li>
-                <a href="https://joyrap.github.io/tags/" title="Tags">
+                <a href="http://localhost:1313/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
             <li>
-                <a href="https://joyrap.github.io/categories/" title="Categories">
+                <a href="http://localhost:1313/categories/" title="Categories">
                     <span>Categories</span>
                 </a>
             </li>
             <li>
-                <a href="https://joyrap.github.io/about/" title="About">
+                <a href="http://localhost:1313/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
@@ -315,14 +231,14 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://joyrap.github.io/tags/concurrency/">Concurrency</a></li>
+      <li><a href="http://localhost:1313/tags/concurrency/">Concurrency</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://joyrap.github.io/">于川海的博客</a></span>
+    <span>&copy; 2024 <a href="http://localhost:1313/">于川海的博客</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

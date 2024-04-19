@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Translate on 于川海的博客</title>
-    <link>https://joyrap.github.io/tags/translate/</link>
+    <link>http://localhost:1313/tags/translate/</link>
     <description>Recent content in Translate on 于川海的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 19 Apr 2019 21:24:47 +0000</lastBuildDate>
-    <atom:link href="https://joyrap.github.io/tags/translate/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/translate/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>翻译:Understanding the LMAX Disruptor</title>
-      <link>https://joyrap.github.io/post/2019-04-19-understanding-the-lmax-disruptor/</link>
+      <link>http://localhost:1313/post/2019-04-19-understanding-the-lmax-disruptor/</link>
       <pubDate>Fri, 19 Apr 2019 21:24:47 +0000</pubDate>
-      <guid>https://joyrap.github.io/post/2019-04-19-understanding-the-lmax-disruptor/</guid>
+      <guid>http://localhost:1313/post/2019-04-19-understanding-the-lmax-disruptor/</guid>
       <description>翻译前言 知道Disruptor这个代码库，是在Log4j 1.X升级版Log4j2中提到的，那时候就好奇它为何如此高效，关于Disruptor</description>
     </item>
   </channel>

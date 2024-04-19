@@ -2,73 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on 于川海的博客</title>
-    <link>https://joyrap.github.io/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on 于川海的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 08 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://joyrap.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Programming</title>
-      <link>https://joyrap.github.io/categories/programming/</link>
+      <link>http://localhost:1313/categories/programming/</link>
       <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://joyrap.github.io/categories/programming/</guid>
+      <guid>http://localhost:1313/categories/programming/</guid>
       <description></description>
     </item>
     <item>
       <title>Writing</title>
-      <link>https://joyrap.github.io/categories/writing/</link>
+      <link>http://localhost:1313/categories/writing/</link>
       <pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://joyrap.github.io/categories/writing/</guid>
+      <guid>http://localhost:1313/categories/writing/</guid>
       <description></description>
     </item>
     <item>
       <title>Reading</title>
-      <link>https://joyrap.github.io/categories/reading/</link>
+      <link>http://localhost:1313/categories/reading/</link>
       <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>https://joyrap.github.io/categories/reading/</guid>
+      <guid>http://localhost:1313/categories/reading/</guid>
       <description></description>
     </item>
     <item>
       <title>Engineering</title>
-      <link>https://joyrap.github.io/categories/engineering/</link>
+      <link>http://localhost:1313/categories/engineering/</link>
       <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>https://joyrap.github.io/categories/engineering/</guid>
+      <guid>http://localhost:1313/categories/engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>Life</title>
-      <link>https://joyrap.github.io/categories/life/</link>
+      <link>http://localhost:1313/categories/life/</link>
       <pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://joyrap.github.io/categories/life/</guid>
+      <guid>http://localhost:1313/categories/life/</guid>
       <description></description>
     </item>
     <item>
       <title>Software Design</title>
-      <link>https://joyrap.github.io/categories/software-design/</link>
+      <link>http://localhost:1313/categories/software-design/</link>
       <pubDate>Sat, 09 Apr 2022 00:00:00 +0000</pubDate>
-      <guid>https://joyrap.github.io/categories/software-design/</guid>
+      <guid>http://localhost:1313/categories/software-design/</guid>
       <description></description>
     </item>
     <item>
       <title>Documentation</title>
-      <link>https://joyrap.github.io/categories/documentation/</link>
+      <link>http://localhost:1313/categories/documentation/</link>
       <pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://joyrap.github.io/categories/documentation/</guid>
+      <guid>http://localhost:1313/categories/documentation/</guid>
       <description></description>
     </item>
     <item>
       <title>Career</title>
-      <link>https://joyrap.github.io/categories/career/</link>
+      <link>http://localhost:1313/categories/career/</link>
       <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
-      <guid>https://joyrap.github.io/categories/career/</guid>
+      <guid>http://localhost:1313/categories/career/</guid>
       <description></description>
     </item>
     <item>
       <title>Project Management</title>
-      <link>https://joyrap.github.io/categories/project-management/</link>
+      <link>http://localhost:1313/categories/project-management/</link>
       <pubDate>Mon, 08 Aug 2016 01:24:47 +0000</pubDate>
-      <guid>https://joyrap.github.io/categories/project-management/</guid>
+      <guid>http://localhost:1313/categories/project-management/</guid>
       <description></description>
     </item>
   </channel>

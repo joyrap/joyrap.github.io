@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>API设计之版本控制 | 于川海的博客</title>
 <meta name="keywords" content="API Design">
 <meta name="description" content="为了追求系统的健壮性，稳定性，越来越多的系统采用分布式软件架构，分布式意味着跨应用访问成为系统交互的一种特点，特别是微服务架构在商业系统中的">
 <meta name="author" content="于川海">
-<link rel="canonical" href="https://joyrap.github.io/post/2022-04-09-api-design-versioning/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.03ad76fd9abbd83756c9d1fa36b616500096b087c69c868472078cd49d1f576f.css" integrity="sha256-A612/Zq72DdWydH6NrYWUACWsIfGnIaEcgeM1J0fV28=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://joyrap.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://joyrap.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://joyrap.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://joyrap.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://joyrap.github.io/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/post/2022-04-09-api-design-versioning/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.eab43c0e000c0ee100d60b3368a4baa123bc1e74fa2f99332427cd1bad95ad79.css" integrity="sha256-6rQ8DgAMDuEA1gszaKS6oSO8HnT6L5kzJCfNG62VrXk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://joyrap.github.io/post/2022-04-09-api-design-versioning/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/post/2022-04-09-api-design-versioning/">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,90 +56,6 @@
 
     </style>
 </noscript>
-  
-    
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMD3WCHRSY"></script>
-      <script>
-        var doNotTrack = false;
-        if ( false ) {
-          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
-          var doNotTrack = (dnt == "1" || dnt == "yes");
-        }
-        if (!doNotTrack) {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-FMD3WCHRSY');
-        }
-      </script>
-    
-  
-
-<meta property="og:title" content="API设计之版本控制" />
-<meta property="og:description" content="为了追求系统的健壮性，稳定性，越来越多的系统采用分布式软件架构，分布式意味着跨应用访问成为系统交互的一种特点，特别是微服务架构在商业系统中的" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://joyrap.github.io/post/2022-04-09-api-design-versioning/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-04-09T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-04-09T00:00:00+00:00" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="API设计之版本控制"/>
-<meta name="twitter:description" content="为了追求系统的健壮性，稳定性，越来越多的系统采用分布式软件架构，分布式意味着跨应用访问成为系统交互的一种特点，特别是微服务架构在商业系统中的"/>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://joyrap.github.io/post/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "API设计之版本控制",
-      "item": "https://joyrap.github.io/post/2022-04-09-api-design-versioning/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "API设计之版本控制",
-  "name": "API设计之版本控制",
-  "description": "为了追求系统的健壮性，稳定性，越来越多的系统采用分布式软件架构，分布式意味着跨应用访问成为系统交互的一种特点，特别是微服务架构在商业系统中的",
-  "keywords": [
-    "API Design"
-  ],
-  "articleBody": "为了追求系统的健壮性，稳定性，越来越多的系统采用分布式软件架构，分布式意味着跨应用访问成为系统交互的一种特点，特别是微服务架构在商业系统中的大量运用。\nAPI作为应用之间交互协议，当单体应用演变为远程调用后，API持续变更成为一个跨应用或跨团队之间协作的常态，如何维护API，在研发过程中变得尤为重要，非常有必要将API版本控制作为设计的一部分来重视。\n目的 API版本控制的目的是为了降低API在迭代过程中对用户的影响，并提供一套对第三方开发者有利的演进规则，以及升级策略，尽可能避免用户功能被破坏。\n发布管理 变更管理 从服务提供方的视角来看，版本发布与服务实现变更是密切相关的，同时也会对第三方开发者带来影响，所以服务方需要严格管理API版本发布内容，每次发布对API做出不限于以下情况的说明：\n是否在协议不变更的情况，进行了服务优化？ 是否在老协议上新增了入参，新入参对内部业务逻辑有什么影响？ 新增协议与现有协议之间有什么关系，是否是独立的？ 新增协议接口与老接口哪些内容不兼容？告知第三方开发者如何升级。 有些较为庞大的组织，按系统维度进行了API划分，变更说明也应该以系统维度来说明。\n变更的影响说明可以大致分为以下三类：\n1、 API架构变化（影响范围较大，不能兼容） 2、 局部新特性变更（影响较小，提供兼容） 3、 问题修复（完全兼容） 变更说明应该以公开文档的形式公布给第三方开发者。\n生命周期管理 对于整个API来说，必须以两种视角来看到API版本，一种是第三方开发者视角，一种是API服务视角。\n尽管对API进行生命周期管理，好处在于一方面可以控制内部开发节奏，另一方面给第三方开发者提供调试和升级时间。但是在API版本号与API服务内部同时演进的情况下，第三方开发者并不关心API服务内部的演进路线， API服务方也应该尽量减少第三方开发者的理解负担，所以API版本号的变更不易过于频繁。\n不同的业务和产品，对API版本发布的周期管理会有所不同，主要有以下两种主流的版本化管理策略：\n1、基于时间发布 对不同的变更影响，定义不同的发布周期，例如，将API架构变化这种影响范围较大的场景，周期时间应该更长，其次是局部新特性变更，问题修复发布周期最短。\nAPI架构变化：每三个月发布一次，局部新特性变更：每三周发布一次，问题修复：每周一次。\n不同的业务，可以调整这个周期，但时间周期长短上应该遵循：问题修复 \u003c 局部新特性变更 \u003c API架构变化\n基于时间周期发布，对于第三方开发者来说的好处是可预知性，有明确的API支持时间范围，何时过期，何时被删除。\n1、基于语义化版本号发布 基于语义化版本号的三个维度来管理，例如，版本号:主版本号.次版本号.小版本号\n1、主版本号（对应API架构变化） 2、次版本号（对应局部新特性变更） 3、小版本号（对应问题修复） 版本号发布方式，常用于不需要周期发布的产品，或API在较长的时间范围内稳定的产品。\n同时需要注意：语义化版本号策略更多地是来至API服务方的视角，主要目标是跟踪API不同的兼容性问题。\n基于WEB的API版本发布方案 对于REST API可选的三种方案：\n方案1：将版本号放到路径中，例如：https://api.akulaku.com/v1.0/products/users 或使用不同的域名 https://apiv1.akulaku.com/products/users 方案2：将版本号放在HTTP header头中，例如，在header中放入：v=1.0 方案3：将版本号放到参数中，例如：https://api.akulaku.com/products/users?api-version=1.0 方案1和2都需要借助DNS或API网关对请求路由，不同版本的API路由到不同的API服务上。\n方案3则需要API服务内部管理版本号映射\nAPI版本号 API内部服务版本号 v1.0 v1.0.0，v1.0.1 v2.0 v2.0.0 …… …… 案例 Shopify Shopify作为全球最大的一站式商家平台，强大的API为其提供了核心竞争力。\nShopify的API管理区分了两类API，一类是非版本化的API，一类是版本化的API， 其中版本化的API是基于时间发布。\n例如官方给的REST API demo：/admin/api/2022-07/products.json\n同时官方也提供了API状态周期表：\nStable version Release date Date stable version is supported until 2021-01 January 1, 2021 January 1, 2022 2021-04 April 1, 2021 April 1, 2022 2021-07 July 1, 2021 July 1, 2022 2021-10 October 1, 2021 October 1, 2022 给第三方调用者提供了明确的API支持时间。\n参考 How to Design a Good API and Why it Matters Microsoft API Versioning Shopify API Versioning Google Cloud API Versioning ",
-  "wordCount" : "1809",
-  "inLanguage": "en",
-  "datePublished": "2022-04-09T00:00:00Z",
-  "dateModified": "2022-04-09T00:00:00Z",
-  "author":{
-    "@type": "Person",
-    "name": "于川海"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://joyrap.github.io/post/2022-04-09-api-design-versioning/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "于川海的博客",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://joyrap.github.io/favicon.ico"
-    }
-  }
-}
-</script>
 </head>
 
 <body class="" id="top">
@@ -157,7 +73,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://joyrap.github.io/" accesskey="h" title="于川海的博客 (Alt + H)">于川海的博客</a>
+            <a href="http://localhost:1313/" accesskey="h" title="于川海的博客 (Alt + H)">于川海的博客</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -185,27 +101,27 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://joyrap.github.io/" title="Home">
+                <a href="http://localhost:1313/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://joyrap.github.io/post/" title="Archives">
+                <a href="http://localhost:1313/post/" title="Archives">
                     <span>Archives</span>
                 </a>
             </li>
             <li>
-                <a href="https://joyrap.github.io/tags/" title="Tags">
+                <a href="http://localhost:1313/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
             <li>
-                <a href="https://joyrap.github.io/categories/" title="Categories">
+                <a href="http://localhost:1313/categories/" title="Categories">
                     <span>Categories</span>
                 </a>
             </li>
             <li>
-                <a href="https://joyrap.github.io/about/" title="About">
+                <a href="http://localhost:1313/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
@@ -349,14 +265,14 @@ API服务方也应该尽量减少第三方开发者的理解负担，所以API�
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://joyrap.github.io/tags/api-design/">API Design</a></li>
+      <li><a href="http://localhost:1313/tags/api-design/">API Design</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://joyrap.github.io/">于川海的博客</a></span>
+    <span>&copy; 2024 <a href="http://localhost:1313/">于川海的博客</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

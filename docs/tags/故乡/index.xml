@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>故乡 on 于川海的博客</title>
-    <link>https://joyrap.github.io/tags/%E6%95%85%E4%B9%A1/</link>
+    <link>http://localhost:1313/tags/%E6%95%85%E4%B9%A1/</link>
     <description>Recent content in 故乡 on 于川海的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 30 Jul 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://joyrap.github.io/tags/%E6%95%85%E4%B9%A1/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E6%95%85%E4%B9%A1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>我的姑姑</title>
-      <link>https://joyrap.github.io/post/2023-07-30-my-aunt-passed-away/</link>
+      <link>http://localhost:1313/post/2023-07-30-my-aunt-passed-away/</link>
       <pubDate>Sun, 30 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>https://joyrap.github.io/post/2023-07-30-my-aunt-passed-away/</guid>
+      <guid>http://localhost:1313/post/2023-07-30-my-aunt-passed-away/</guid>
       <description>姑姑已经去世了好几年，但想起她总有些特别的记忆，日子渐长，那些记忆却还停留在原处，总觉得写下来比较好。 山的那一边 姑姑和娘家就隔着一座山，山不</description>
     </item>
     <item>
       <title>诗一</title>
-      <link>https://joyrap.github.io/post/2023-07-03-a-poem/</link>
+      <link>http://localhost:1313/post/2023-07-03-a-poem/</link>
       <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>https://joyrap.github.io/post/2023-07-03-a-poem/</guid>
+      <guid>http://localhost:1313/post/2023-07-03-a-poem/</guid>
       <description>傍晚 我躺在丰收后的油菜壳里 仰望着故乡的天空 有几只飞鸟 吃掉了刚刚升起的星星 人们无数次带走大地的礼物 忘了汗水 那一夜 睡得很深，一直深到土里</description>
     </item>
   </channel>

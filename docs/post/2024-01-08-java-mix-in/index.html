@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Mixin in Java | 于川海的博客</title>
 <meta name="keywords" content="Java">
 <meta name="description" content="什么是Mixin 维基百科的解释是： In object-oriented programming languages, a mixin is a class that contains methods for use by other classes without having to be the parent class of those other classes. How those other classes gain access to the mixin&rsquo;s methods depends on the language. Mixins are sometimes described as being &ldquo;included&rdquo; rather than &ldquo;inherited&rdquo;. 简">
 <meta name="author" content="于川海">
-<link rel="canonical" href="https://joyrap.github.io/post/2024-01-08-java-mix-in/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.03ad76fd9abbd83756c9d1fa36b616500096b087c69c868472078cd49d1f576f.css" integrity="sha256-A612/Zq72DdWydH6NrYWUACWsIfGnIaEcgeM1J0fV28=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://joyrap.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://joyrap.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://joyrap.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://joyrap.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://joyrap.github.io/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/post/2024-01-08-java-mix-in/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.eab43c0e000c0ee100d60b3368a4baa123bc1e74fa2f99332427cd1bad95ad79.css" integrity="sha256-6rQ8DgAMDuEA1gszaKS6oSO8HnT6L5kzJCfNG62VrXk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://joyrap.github.io/post/2024-01-08-java-mix-in/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/post/2024-01-08-java-mix-in/">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,90 +56,6 @@
 
     </style>
 </noscript>
-  
-    
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMD3WCHRSY"></script>
-      <script>
-        var doNotTrack = false;
-        if ( false ) {
-          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
-          var doNotTrack = (dnt == "1" || dnt == "yes");
-        }
-        if (!doNotTrack) {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-FMD3WCHRSY');
-        }
-      </script>
-    
-  
-
-<meta property="og:title" content="Mixin in Java" />
-<meta property="og:description" content="什么是Mixin 维基百科的解释是： In object-oriented programming languages, a mixin is a class that contains methods for use by other classes without having to be the parent class of those other classes. How those other classes gain access to the mixin&rsquo;s methods depends on the language. Mixins are sometimes described as being &ldquo;included&rdquo; rather than &ldquo;inherited&rdquo;. 简" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://joyrap.github.io/post/2024-01-08-java-mix-in/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2024-01-08T00:00:00+00:00" />
-<meta property="article:modified_time" content="2024-01-08T00:00:00+00:00" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Mixin in Java"/>
-<meta name="twitter:description" content="什么是Mixin 维基百科的解释是： In object-oriented programming languages, a mixin is a class that contains methods for use by other classes without having to be the parent class of those other classes. How those other classes gain access to the mixin&rsquo;s methods depends on the language. Mixins are sometimes described as being &ldquo;included&rdquo; rather than &ldquo;inherited&rdquo;. 简"/>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://joyrap.github.io/post/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Mixin in Java",
-      "item": "https://joyrap.github.io/post/2024-01-08-java-mix-in/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Mixin in Java",
-  "name": "Mixin in Java",
-  "description": "什么是Mixin 维基百科的解释是： In object-oriented programming languages, a mixin is a class that contains methods for use by other classes without having to be the parent class of those other classes. How those other classes gain access to the mixin\u0026rsquo;s methods depends on the language. Mixins are sometimes described as being \u0026ldquo;included\u0026rdquo; rather than \u0026ldquo;inherited\u0026rdquo;. 简",
-  "keywords": [
-    "Java"
-  ],
-  "articleBody": "什么是Mixin 维基百科的解释是：\nIn object-oriented programming languages, a mixin is a class that contains methods for use by other classes without having to be the parent class of those other classes. How those other classes gain access to the mixin’s methods depends on the language. Mixins are sometimes described as being “included” rather than “inherited”.\n简而言之就是：通过组合而不是继承的方式获得其他类所提供的功能。\nJava中是如何做到的 面向对象编程语言可以通过继承来达到功能复用目的，但继承也会有不少陷阱，或者说有时候他们并不满足设计上的需求。\n例如我们想让类具备另外多个已经存在于其他类中的功能，那么通过继承就无法实现，因为Java不允许多重继承。而且子类会全部继承父类的开放功能，也不是我们期望的，在Effective Java中也推荐优先选择复合而不是继承。\n从关系类型上来说，我们也不希望为了获得某个功能，让类之间成为IS-A的关系。\n这时候我们自然想到的就是接口，接口作为开放的协议约定，所有类都可以实现接口，同时类可以实现多个接口。为了让类可以实现接口同时又能获得默认实现，Java在接口中设计了default默认实现方法，这样子类可以在不需要自己实现的情况下获得接口中默认提供的功能（这里的default方法还解决了新增接口方法导致实现类变更的问题），变相地实现了多继承。\n例如下面这种情况：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 class A{ ... } interface B{ ... default void show(){}; ... } class C extend A implements B{ ... } 我们可以说C继承了A，同时具备了B功能，这就是Mixin的场景。\n不过这里有个例外的情况：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 interface A{ ... default void show(){}; ... } interface B{ ... default void show(){}; ... } class C implements A,B{ ... void show(){};//必须重写void show(); } 这里的C必须自己实现show()方法，因为接口A和B的show()方法重复，逻辑上无法区分。\n参考 Mixin an-example-of-a-mixin-in-java ",
-  "wordCount" : "679",
-  "inLanguage": "en",
-  "datePublished": "2024-01-08T00:00:00Z",
-  "dateModified": "2024-01-08T00:00:00Z",
-  "author":{
-    "@type": "Person",
-    "name": "于川海"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://joyrap.github.io/post/2024-01-08-java-mix-in/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "于川海的博客",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://joyrap.github.io/favicon.ico"
-    }
-  }
-}
-</script>
 </head>
 
 <body class="" id="top">
@@ -157,7 +73,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://joyrap.github.io/" accesskey="h" title="于川海的博客 (Alt + H)">于川海的博客</a>
+            <a href="http://localhost:1313/" accesskey="h" title="于川海的博客 (Alt + H)">于川海的博客</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -185,27 +101,27 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://joyrap.github.io/" title="Home">
+                <a href="http://localhost:1313/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://joyrap.github.io/post/" title="Archives">
+                <a href="http://localhost:1313/post/" title="Archives">
                     <span>Archives</span>
                 </a>
             </li>
             <li>
-                <a href="https://joyrap.github.io/tags/" title="Tags">
+                <a href="http://localhost:1313/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
             <li>
-                <a href="https://joyrap.github.io/categories/" title="Categories">
+                <a href="http://localhost:1313/categories/" title="Categories">
                     <span>Categories</span>
                 </a>
             </li>
             <li>
-                <a href="https://joyrap.github.io/about/" title="About">
+                <a href="http://localhost:1313/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
@@ -324,14 +240,14 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://joyrap.github.io/tags/java/">Java</a></li>
+      <li><a href="http://localhost:1313/tags/java/">Java</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://joyrap.github.io/">于川海的博客</a></span>
+    <span>&copy; 2024 <a href="http://localhost:1313/">于川海的博客</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
