@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Concurrency on 于川海的博客</title>
-    <link>http://localhost:1313/tags/concurrency/</link>
+    <link>https://joyrap.github.io/tags/concurrency/</link>
     <description>Recent content in Concurrency on 于川海的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 21 Aug 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/concurrency/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://joyrap.github.io/tags/concurrency/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>计算机多内核平台上的并发锁优化(二)</title>
-      <link>http://localhost:1313/post/2020-08-21-locks-on-multicore2/</link>
+      <link>https://joyrap.github.io/post/2020-08-21-locks-on-multicore2/</link>
       <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2020-08-21-locks-on-multicore2/</guid>
+      <guid>https://joyrap.github.io/post/2020-08-21-locks-on-multicore2/</guid>
       <description>申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。 在Algorithms for scalable synchronization on shared-memory multiprocessors这篇论文中，CL</description>
     </item>
     <item>
       <title>计算机多内核平台上的并发锁优化(一)</title>
-      <link>http://localhost:1313/post/2020-08-19-locks-on-multicore/</link>
+      <link>https://joyrap.github.io/post/2020-08-19-locks-on-multicore/</link>
       <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2020-08-19-locks-on-multicore/</guid>
+      <guid>https://joyrap.github.io/post/2020-08-19-locks-on-multicore/</guid>
       <description>申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。 如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问</description>
     </item>
   </channel>

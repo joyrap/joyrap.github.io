@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Marathon on 于川海的博客</title>
-    <link>http://localhost:1313/tags/marathon/</link>
+    <link>https://joyrap.github.io/tags/marathon/</link>
     <description>Recent content in Marathon on 于川海的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 18 Feb 2017 18:24:47 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/marathon/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://joyrap.github.io/tags/marathon/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>如何跑完半程马拉松</title>
-      <link>http://localhost:1313/post/2017-02-18-how-to-run-half-marathons/</link>
+      <link>https://joyrap.github.io/post/2017-02-18-how-to-run-half-marathons/</link>
       <pubDate>Sat, 18 Feb 2017 18:24:47 +0000</pubDate>
-      <guid>http://localhost:1313/post/2017-02-18-how-to-run-half-marathons/</guid>
+      <guid>https://joyrap.github.io/post/2017-02-18-how-to-run-half-marathons/</guid>
       <description>是的。 如果你想先喝一碗高质量鸡汤，来加强跑马拉松的决心，那么你可以读读村上春树的《当我谈跑步时,我谈些什么》。 然而我觉得那对你真正跑起来并没</description>
     </item>
   </channel>

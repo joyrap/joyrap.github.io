@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Career on 于川海的博客</title>
-    <link>http://localhost:1313/categories/career/</link>
+    <link>https://joyrap.github.io/categories/career/</link>
     <description>Recent content in Career on 于川海的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/career/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://joyrap.github.io/categories/career/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>不要急于奔赴未来，未来总会如期而至</title>
-      <link>http://localhost:1313/post/2021-09-30-i-am-quit/</link>
+      <link>https://joyrap.github.io/post/2021-09-30-i-am-quit/</link>
       <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2021-09-30-i-am-quit/</guid>
+      <guid>https://joyrap.github.io/post/2021-09-30-i-am-quit/</guid>
       <description>在京东工作的第9个年头，我决定离职，这并不是一个艰难的决定。 回首过往，很难相信在这里待了如此长的时间。 至今还记得刚来成都的样子， 阴冷的天空，</description>
     </item>
     <item>
       <title>对技术招聘的一些启发</title>
-      <link>http://localhost:1313/post/2019-12-28-heuristics-for-hiring/</link>
+      <link>https://joyrap.github.io/post/2019-12-28-heuristics-for-hiring/</link>
       <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2019-12-28-heuristics-for-hiring/</guid>
+      <guid>https://joyrap.github.io/post/2019-12-28-heuristics-for-hiring/</guid>
       <description>国外一家自由职业招聘平台 Gun.io ，最近针对问题“当招聘高级工程师时最看中哪些方面？”，采访了38名CTO， 最后出了一份报告。 在招聘开发工程师上，国</description>
     </item>
   </channel>

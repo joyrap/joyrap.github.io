@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>图表即代码 | 于川海的博客</title>
 <meta name="keywords" content="">
 <meta name="description" content="为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件，以及如何在文档中嵌入图表。 软件开发时">
 <meta name="author" content="于川海">
-<link rel="canonical" href="http://localhost:1313/post/2021-11-22-diagrams-as-code/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.eab43c0e000c0ee100d60b3368a4baa123bc1e74fa2f99332427cd1bad95ad79.css" integrity="sha256-6rQ8DgAMDuEA1gszaKS6oSO8HnT6L5kzJCfNG62VrXk=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="canonical" href="https://joyrap.github.io/post/2021-11-22-diagrams-as-code/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.352068c0b1f2ec12dfd593c4e0ea83c83e691efd7bbae06793067ad0f4cf52db.css" integrity="sha256-NSBowLHy7BLf1ZPE4OqDyD5pHv17uuBnkwZ60PTPUts=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://joyrap.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://joyrap.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://joyrap.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://joyrap.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://joyrap.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/post/2021-11-22-diagrams-as-code/">
+<link rel="alternate" hreflang="en" href="https://joyrap.github.io/post/2021-11-22-diagrams-as-code/">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,6 +56,90 @@
 
     </style>
 </noscript>
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMD3WCHRSY"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-FMD3WCHRSY');
+        }
+      </script>
+    
+  
+
+<meta property="og:title" content="图表即代码" />
+<meta property="og:description" content="为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件，以及如何在文档中嵌入图表。 软件开发时" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://joyrap.github.io/post/2021-11-22-diagrams-as-code/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-11-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-11-22T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="图表即代码"/>
+<meta name="twitter:description" content="为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件，以及如何在文档中嵌入图表。 软件开发时"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://joyrap.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "图表即代码",
+      "item": "https://joyrap.github.io/post/2021-11-22-diagrams-as-code/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "图表即代码",
+  "name": "图表即代码",
+  "description": "为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件，以及如何在文档中嵌入图表。 软件开发时",
+  "keywords": [
+    
+  ],
+  "articleBody": "为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件，以及如何在文档中嵌入图表。\n软件开发时用到画图软件林林总总，差异化较大，但我们使用的大部分画图工具，都以独特的二进制文件存储，缺点不利于团队协作和分享，导致跟随代码的相关思维图不能更好地被管理，甚至无法与代码保持及时更新迭代，所以软件工程师们更希望通过像代码一样来管理图形化思维。\n文本具有以下优点：\n容易阅读（文本的优势） 版本管理（借助版本管理软件git） 易于编辑（任何文本编辑器） PlantUML PlantUML就是为以上这些优点存在的，它允许你通过一个简单的描述性语言（类似伪代码）来画UML图，最后通过graphviz生成图片格式（PNG，SVG）。当然PlantUML不仅仅支持UML图，还支持很多非UML图，几乎涵盖了软件开发所有标准图形，具体可以看官网介绍。\nPlantUML扩展了很多语法来定义元素的的形状和属性，以及元素间的位置关系，整体布局（从上至下，或从左至右）顺序。刚开始使用PlantUML你肯定会感到不适，它不像图形化界面拖拽软件那样简单，但是作为软件开发工程师来说，学习PlantUML语法并不是难事，因为它已经做了简单化。\n插件与平台支持 目前在两大主流编辑器VSCode和IDEA都有对应的插件（依赖graphviz），个人非常推荐VSCode。\n由于PlantUML的普及，各大SaaS软件平台都支持将PlantUML代码嵌入到文档中（例如Confluence），直接生成图片，真正做到图形与文档同步。\nC4 在工作中，很多软件工程师由于经验的不同，在表达非UML范畴的图形时，堆砌了很多线条和框图，并没有章法，鉴于这种乱象，Simon Brown 提出了 C4模型，他定义了标准化的软件架构图表达方式，将软件架构图由远及近，由粗到细，分为了4个层级：\n上下文关系 容器 组件 代码 在UML基础上提出了更高层的抽象来描述软件架构。\n原话是:\n1 2 3 It's a way to create maps of your code, at various levels of detail, in the same way you would use something like Google Maps to zoom in and out of an area you are interested in. 这种方法就像是地图软件上使用缩放功能一样来观察软件系统。\nC4同时提供了一套基于PlantUML的模型定义，效果图如下：\nPlantUML之外 Diagrams 相较于Diagrams，国内开发者用得最多的是ProcessOn，后者主要是商业化收费，在线协作存储，前者代码开源，提供本地桌面版本(主要开发语言是JavaScript)， 这类工具都提供拖拽的方式来绘制图形，支持导出图片，另外Diagrams存储的文件虽然是XML格式，但是也只有它自己的程序才能解析。\n效果如下： Excalidraw 像Diagrams这些工具，并不是没有竞争对手，Excalidraw就是其中一个， PlantUML与C4模型构建了图形化的标准，但有时候我们又希望带点随性，更灵活地表达头脑风暴，Excalidraw这个工具提供了手绘风格样式，同时也支持外部导入样式。 Excalidraw也是代码开源,主要采用TypeScript语言开发，本质上和Diagrams的区别在于自由的模版风格。\n效果如下：\nTldraw tldraw似乎是另外一个Excalidraw？待观察。\nAsciiflow 另外一种场景就是，有时候我们想在代码中放一些简单的流程图，例如：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 +----------+ +----------+ | | | | | A | | B | | | | | +----+-----+ +-----+----+ | | | | | | | | | | | +----------+ | | | | | +----\u003e| C |\u003c-----+ | | +----------+ 这类包含在代码注释中的图形出现在很多开源项目中(Java JDK源码中也在使用)。 手动输入这些符号肯定不科学，Asciiflow这个工具专门解决这类问题。\nGoogle Drawings Google Drawings算是微软PowerPoint的替代品。\n最后 回到C4模型在讲Level 4: Code的时候提到一个概念，对表达代码级别的图形来说，其生命周期相对来说比较短，也就是说这类图你画完后，随着需求以及代码的变更会慢慢过期。\n所以并不是所有架构图都值得维护其有效性，往往越具体的架构图越容易过期， 可以选择先用PlantUML之外的工具来画，再将具有长期价值的架构想法转化成PlantUML代码。\n— 相关连接 —\n开源白板工具 手绘白板工具 PlantUML C4 model C4 PlantUML插件库 PlantUML美化 graphviz Excalidraw Asciiflow AsciiDoctor Diagram WebSequenceDiagrams ",
+  "wordCount" : "1712",
+  "inLanguage": "en",
+  "datePublished": "2021-11-22T00:00:00Z",
+  "dateModified": "2021-11-22T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "于川海"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://joyrap.github.io/post/2021-11-22-diagrams-as-code/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "于川海的博客",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://joyrap.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -73,7 +157,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="于川海的博客 (Alt + H)">于川海的博客</a>
+            <a href="https://joyrap.github.io/" accesskey="h" title="于川海的博客 (Alt + H)">于川海的博客</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -101,27 +185,27 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/" title="Home">
+                <a href="https://joyrap.github.io/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/post/" title="Archives">
+                <a href="https://joyrap.github.io/post/" title="Archives">
                     <span>Archives</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/tags/" title="Tags">
+                <a href="https://joyrap.github.io/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/categories/" title="Categories">
+                <a href="https://joyrap.github.io/categories/" title="Categories">
                     <span>Categories</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/about/" title="About">
+                <a href="https://joyrap.github.io/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
@@ -275,7 +359,7 @@ Excalidraw也是<a href="https://github.com/excalidraw/excalidraw">代码开源<
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="http://localhost:1313/">于川海的博客</a></span>
+    <span>&copy; 2024 <a href="https://joyrap.github.io/">于川海的博客</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

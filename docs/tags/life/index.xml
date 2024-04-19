@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Life on 于川海的博客</title>
-    <link>http://localhost:1313/tags/life/</link>
+    <link>https://joyrap.github.io/tags/life/</link>
     <description>Recent content in Life on 于川海的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 28 Dec 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/life/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://joyrap.github.io/tags/life/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2022结束了吗</title>
-      <link>http://localhost:1313/post/2022-12-28-2022-is-the-ending/</link>
+      <link>https://joyrap.github.io/post/2022-12-28-2022-is-the-ending/</link>
       <pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2022-12-28-2022-is-the-ending/</guid>
+      <guid>https://joyrap.github.io/post/2022-12-28-2022-is-the-ending/</guid>
       <description>我理解的结束，一种是生命的终结，另一种是绝望。 疫情 三年多来，疫情已经变成了一个复杂的社会话题，在这场洪流中个人体到了，国际阴谋论，封城，囤积</description>
     </item>
     <item>
       <title>不确定性</title>
-      <link>http://localhost:1313/post/2020-10-22-indeterminacy/</link>
+      <link>https://joyrap.github.io/post/2020-10-22-indeterminacy/</link>
       <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2020-10-22-indeterminacy/</guid>
+      <guid>https://joyrap.github.io/post/2020-10-22-indeterminacy/</guid>
       <description>这个世界有没有看起来是确定的事情？ 可能没有， 不确定才是这个世界最值得探索的奥秘。 但如果非要让一件事情变得更接近确定，那么有没有一套经得住考验</description>
     </item>
   </channel>

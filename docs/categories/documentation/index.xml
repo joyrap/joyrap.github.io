@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Documentation on 于川海的博客</title>
-    <link>http://localhost:1313/categories/documentation/</link>
+    <link>https://joyrap.github.io/categories/documentation/</link>
     <description>Recent content in Documentation on 于川海的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 22 Nov 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/documentation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://joyrap.github.io/categories/documentation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>图表即代码</title>
-      <link>http://localhost:1313/post/2021-11-22-diagrams-as-code/</link>
+      <link>https://joyrap.github.io/post/2021-11-22-diagrams-as-code/</link>
       <pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2021-11-22-diagrams-as-code/</guid>
+      <guid>https://joyrap.github.io/post/2021-11-22-diagrams-as-code/</guid>
       <description>为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件，以及如何在文档中嵌入图表。 软件开发时</description>
     </item>
   </channel>

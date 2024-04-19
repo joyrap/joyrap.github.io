@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Clojure on 于川海的博客</title>
-    <link>http://localhost:1313/tags/clojure/</link>
+    <link>https://joyrap.github.io/tags/clojure/</link>
     <description>Recent content in Clojure on 于川海的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 19 Nov 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/clojure/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://joyrap.github.io/tags/clojure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Clojure中的数据类型</title>
-      <link>http://localhost:1313/post/2019-11-19-clojure-datatypes/</link>
+      <link>https://joyrap.github.io/post/2019-11-19-clojure-datatypes/</link>
       <pubDate>Tue, 19 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2019-11-19-clojure-datatypes/</guid>
+      <guid>https://joyrap.github.io/post/2019-11-19-clojure-datatypes/</guid>
       <description>Clojure作为一款基于JVM的LISP语言，我个人从创造者Rich Hickey身上吸收了很多编程的观点，尽管作者提出了很多面向对象编程语</description>
     </item>
   </channel>
