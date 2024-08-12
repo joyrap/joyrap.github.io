@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Document on 于川海的博客</title>
-    <link>http://localhost:1313/tags/document/</link>
+    <link>http://localhost:59718/tags/document/</link>
     <description>Recent content in Document on 于川海的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 31 Aug 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/document/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:59718/tags/document/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Asciidoc,Markdown,reStructuredText文档格式比较</title>
-      <link>http://localhost:1313/post/2020-08-31-document-format-compare/</link>
+      <link>http://localhost:59718/post/2020-08-31-document-format-compare/</link>
       <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/2020-08-31-document-format-compare/</guid>
+      <guid>http://localhost:59718/post/2020-08-31-document-format-compare/</guid>
       <description>-Asciidoc -Markdown -reStructuredText -LaTeX -Lightweight Markup</description>
     </item>
   </channel>

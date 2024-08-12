@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Bloom Filter on 于川海的博客</title>
-    <link>http://localhost:1313/tags/bloom-filter/</link>
+    <link>http://localhost:59718/tags/bloom-filter/</link>
     <description>Recent content in Bloom Filter on 于川海的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 26 Apr 2019 21:24:47 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/bloom-filter/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:59718/tags/bloom-filter/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>翻译:What are Bloom filters?</title>
-      <link>http://localhost:1313/post/2019-04-26-what-are-bloom-filters/</link>
+      <link>http://localhost:59718/post/2019-04-26-what-are-bloom-filters/</link>
       <pubDate>Fri, 26 Apr 2019 21:24:47 +0000</pubDate>
-      <guid>http://localhost:1313/post/2019-04-26-what-are-bloom-filters/</guid>
+      <guid>http://localhost:59718/post/2019-04-26-what-are-bloom-filters/</guid>
       <description>翻译前言 原文连接: https://blog.medium.com/what-are-bloom-filters-1ec2a50c68ff Bloom Filters by Example</description>
     </item>
   </channel>

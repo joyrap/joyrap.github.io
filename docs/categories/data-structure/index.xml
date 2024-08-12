@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Data Structure on 于川海的博客</title>
+    <link>http://localhost:59718/categories/data-structure/</link>
+    <description>Recent content in Data Structure on 于川海的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:59718/categories/data-structure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>白话数据结构之树</title>
+      <link>http://localhost:59718/post/2024-05-20/</link>
+      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:59718/post/2024-05-20/</guid>
+      <description>数组与链表 计算机数据结构两种最基本的存储结构：数组和链表。 由于数组存储的数据的连续的，所以查找效率较高（时间复杂度为O(1)），但如果在某个</description>
+    </item>
+  </channel>
+</rss>

@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Diagram on 戒掉幻想，认清现实。</title>
-    <link>https://joyrap.github.io/categories/diagram/</link>
-    <description>Recent content in Diagram on 戒掉幻想，认清现实。</description>
+    <title>Diagram on 于川海的博客</title>
+    <link>http://localhost:59718/categories/diagram/</link>
+    <description>Recent content in Diagram on 于川海的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>语言是一生的枷锁。</copyright>
-    <lastBuildDate>Wed, 16 Aug 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://joyrap.github.io/categories/diagram/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:59718/categories/diagram/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>如何画软件系统架构图</title>
-      <link>https://joyrap.github.io/post/2023-08-16-how-to-draw-architectural-diagrams/</link>
-      <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>https://joyrap.github.io/post/2023-08-16-how-to-draw-architectural-diagrams/</guid>
-      <description>最近看了一篇如何画软件架构图的博客，结合个人的一些经验，整理总结一下。 一图胜千言 当你要描述一个复杂系统中各个组件之间的交互关系，组件之间还存</description>
+      <title>如何通过绘图来头脑风暴</title>
+      <link>http://localhost:59718/post/2023-08-21-how-to-brainstorming-by-draw-diagrams/</link>
+      <pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:59718/post/2023-08-21-how-to-brainstorming-by-draw-diagrams/</guid>
+      <description>前面整理了两篇画架构图的博客，突然想到一个问题：为何我们对图像信息更敏感？或者说，为何大脑更容易优先处理图像信息？ 大脑负载 阅读一下以下几段信</description>
     </item>
   </channel>
 </rss>

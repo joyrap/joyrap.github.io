@@ -2,7 +2,7 @@
 title: 图表即代码
 date: 2021-11-22
 layout: post
-categories: ["documentation"]
+categories: ["Documentation"]
 draft: false
 ---
 
