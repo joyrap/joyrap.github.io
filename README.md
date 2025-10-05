@@ -8,6 +8,7 @@
 ### 2.github上配置公钥
 ### 3.设置~/.ssh/config
 
+
 ```
 
 Host xiebiao.github.com #github账号域名
