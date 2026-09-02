@@ -3,10 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="于川海的个人网站，记录摄影、阅读、诗歌、软件开发与生活。">
+  <meta name="author" content="于川海">
+  <meta name="robots" content="index, follow">
   <title>于川海</title>
-  <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+  <link rel="canonical" href="https://joyrap.github.io/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#faf8f5">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="于川海">
+  <meta property="og:description" content="于川海的个人网站，记录摄影、阅读、诗歌、软件开发与生活。">
+  <meta property="og:url" content="https://joyrap.github.io/">
+  <meta property="og:site_name" content="于川海">
+  <meta property="og:image" content="https://joyrap.github.io/images/photo-1920w.jpg">
+  <meta property="og:image:alt" content="于川海个人网站首页摄影作品">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@joyrap">
+  <meta name="twitter:title" content="于川海">
+  <meta name="twitter:description" content="于川海的个人网站，记录摄影、阅读、诗歌、软件开发与生活。">
+  <meta name="twitter:image" content="https://joyrap.github.io/images/photo-1920w.jpg">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "于川海",
+      "alternateName": "Bill Xie",
+      "url": "https://joyrap.github.io/",
+      "sameAs": [
+        "https://x.com/joyrap",
+        "https://www.threads.com/@pushbeat.app",
+        "https://www.instagram.com/pushbeat.app",
+        "https://www.douban.com/people/xiebiao80/",
+        "https://xiebiao.com/"
+      ]
+    }
+  </script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css">
   <link rel="stylesheet" href="style.css">
@@ -21,7 +57,7 @@
               <picture>
                 <source media="(max-width: 600px)" srcset="images/photo-480w.jpg 1x, images/photo-960w.jpg 2x">
                 <source srcset="images/photo-960w.jpg 1x, images/photo-1920w.jpg 2x">
-                <img src="images/photo-960w.jpg" alt="photo" loading="lazy">
+                <img src="images/photo-960w.jpg" alt="山野风景摄影作品" width="720" height="960">
               </picture>
             </a>
           </figure>
@@ -38,18 +74,28 @@
       </div>
       <div class="grid-x grid-margin-x">
         <div class="cell small-12">
-          <footer>
-            <a href="https://x.com/joyrap" target="_blank" rel="noopener noreferrer">
+          <footer aria-label="社交媒体链接">
+            <a href="https://x.com/joyrap" target="_blank" rel="noopener noreferrer me" aria-label="X">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
               </svg>
             </a>
-            <a href="https://www.douban.com/people/xiebiao80/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.threads.com/@pushbeat.app" target="_blank" rel="noopener noreferrer me" aria-label="Threads">
+              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/pushbeat.app" target="_blank" rel="noopener noreferrer me" aria-label="Instagram">
+              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
+              </svg>
+            </a>
+            <a href="https://www.douban.com/people/xiebiao80/" target="_blank" rel="noopener noreferrer me" aria-label="豆瓣">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M.51 3.06h22.98V.755H.51V3.06Zm20.976 2.537v9.608h-2.137l-1.669 5.76H24v2.28H0v-2.28h6.32l-1.67-5.76H2.515V5.597h18.972Zm-5.066 9.608H7.58l1.67 5.76h5.501l1.67-5.76ZM18.367 7.9H5.634v5.025h12.733V7.9Z"/>
               </svg>
             </a>
-            <a href="https://xiebiao.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://xiebiao.com" target="_blank" rel="noopener noreferrer me" aria-label="xiebiao.com">
               <img src="https://xiebiao.com/favicon-16x16.png" alt="xiebiao.com" width="14" height="14" class="favicon-link">
             </a>
           </footer>
