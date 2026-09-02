@@ -4,8 +4,13 @@
     <title>Project Management on 于川海的博客</title>
     <link>https://joyrap.github.io/categories/project-management/</link>
     <description>Recent content in Project Management on 于川海的博客</description>
+    <image>
+      <title>于川海的博客</title>
+      <url>https://joyrap.github.io/images/me_400x400.jpg</url>
+      <link>https://joyrap.github.io/images/me_400x400.jpg</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-CN</language>
     <lastBuildDate>Mon, 08 Aug 2016 01:24:47 +0000</lastBuildDate>
     <atom:link href="https://joyrap.github.io/categories/project-management/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,7 +18,12 @@
       <link>https://joyrap.github.io/post/2016-08-08-how-to-make-projects-failed/</link>
       <pubDate>Mon, 08 Aug 2016 01:24:47 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2016-08-08-how-to-make-projects-failed/</guid>
-      <description>在你读到这篇牢骚的时候，无数个项目正在慢慢变烂。 既然标题都用到了&amp;quot;烂&amp;quot;这个词，那什么才是烂呢？ 在你的项目里，&amp;ldquo</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;在你读到这篇牢骚的时候，无数个项目正在慢慢变烂。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://blog.xiebiao.com/images/2016-08-08-how-to-make-projects-failed/wenchuan_512.jpg&#34; alt=&#34;图片来源于网络 - 2008汶川大地震&#34;  title=&#34;图片来源于网络 - 2008汶川大地震&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;既然标题都用到了&amp;quot;烂&amp;quot;这个词，那什么才是烂呢？&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

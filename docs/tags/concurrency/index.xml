@@ -4,8 +4,13 @@
     <title>Concurrency on 于川海的博客</title>
     <link>https://joyrap.github.io/tags/concurrency/</link>
     <description>Recent content in Concurrency on 于川海的博客</description>
+    <image>
+      <title>于川海的博客</title>
+      <url>https://joyrap.github.io/images/me_400x400.jpg</url>
+      <link>https://joyrap.github.io/images/me_400x400.jpg</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-CN</language>
     <lastBuildDate>Fri, 21 Aug 2020 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://joyrap.github.io/tags/concurrency/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,14 +18,21 @@
       <link>https://joyrap.github.io/post/2020-08-21-locks-on-multicore2/</link>
       <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2020-08-21-locks-on-multicore2/</guid>
-      <description>申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。 在Algorithms for scalable synchronization on shared-memory multiprocessors这篇论文中，CL</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在&lt;a href=&#34;https://www.cs.rice.edu/~johnmc/papers/tocs91.pdf&#34;&gt;&lt;strong&gt;&lt;em&gt;Algorithms for scalable synchronization on shared-memory multiprocessors&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;这篇论文中，CLH锁之前还提到了另外一个锁算法。&lt;/p&gt;</description>
     </item>
     <item>
       <title>计算机多内核平台上的并发锁优化(一)</title>
       <link>https://joyrap.github.io/post/2020-08-19-locks-on-multicore/</link>
       <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2020-08-19-locks-on-multicore/</guid>
-      <description>申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。 如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问题。
+特别是随着云厂商按计算收费的当下，如何有效地利用计算资源变得更重要。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

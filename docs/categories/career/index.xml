@@ -4,8 +4,13 @@
     <title>Career on 于川海的博客</title>
     <link>https://joyrap.github.io/categories/career/</link>
     <description>Recent content in Career on 于川海的博客</description>
+    <image>
+      <title>于川海的博客</title>
+      <url>https://joyrap.github.io/images/me_400x400.jpg</url>
+      <link>https://joyrap.github.io/images/me_400x400.jpg</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-CN</language>
     <lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://joyrap.github.io/categories/career/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,14 +18,23 @@
       <link>https://joyrap.github.io/post/2021-09-30-i-am-quit/</link>
       <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2021-09-30-i-am-quit/</guid>
-      <description>在京东工作的第9个年头，我决定离职，这并不是一个艰难的决定。 回首过往，很难相信在这里待了如此长的时间。 至今还记得刚来成都的样子， 阴冷的天空，</description>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://joyrap.github.io/images/2021-09-30-i-am-quit/qinglonghu.jpeg&#34; alt=&#34;成都-青龙湖公园&#34;  title=&#34;成都-青龙湖公园&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;在京东工作的第9个年头，我决定离职，这并不是一个艰难的决定。&lt;/p&gt;
+&lt;p&gt;回首过往，很难相信在这里待了如此长的时间。&lt;/p&gt;
+&lt;p&gt;至今还记得刚来成都的样子，&lt;/p&gt;
+&lt;p&gt;阴冷的天空，&lt;/p&gt;
+&lt;p&gt;夹杂火锅味儿的雾霾，&lt;/p&gt;</description>
     </item>
     <item>
       <title>对技术招聘的一些启发</title>
       <link>https://joyrap.github.io/post/2019-12-28-heuristics-for-hiring/</link>
       <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2019-12-28-heuristics-for-hiring/</guid>
-      <description>国外一家自由职业招聘平台 Gun.io ，最近针对问题“当招聘高级工程师时最看中哪些方面？”，采访了38名CTO， 最后出了一份报告。 在招聘开发工程师上，国</description>
+      <description>&lt;p&gt;国外一家自由职业招聘平台 &lt;a href=&#34;https://www.gun.io/&#34;&gt;Gun.io &lt;/a&gt; ，最近针对问题“&lt;strong&gt;当招聘高级工程师时最看中哪些方面？&lt;/strong&gt;”，采访了38名CTO，
+最后出了一份报告。&lt;/p&gt;
+&lt;p&gt;在招聘开发工程师上，国内很多大厂在面试的时候，基本上都是先通过算法来考察候选人，过分强调算法这一部分的功力，导致很多人打趣的说，现在面试都已经
+内卷起来了，没刷够几百道Leetcode题都不好出去面试。这充分说明了算法在软件开发中的重要性。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

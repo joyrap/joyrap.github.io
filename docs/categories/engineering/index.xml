@@ -4,8 +4,13 @@
     <title>Engineering on 于川海的博客</title>
     <link>https://joyrap.github.io/categories/engineering/</link>
     <description>Recent content in Engineering on 于川海的博客</description>
+    <image>
+      <title>于川海的博客</title>
+      <url>https://joyrap.github.io/images/me_400x400.jpg</url>
+      <link>https://joyrap.github.io/images/me_400x400.jpg</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-CN</language>
     <lastBuildDate>Wed, 16 Aug 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://joyrap.github.io/categories/engineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,7 +18,9 @@
       <link>https://joyrap.github.io/post/2023-08-16-how-to-draw-architectural-diagrams/</link>
       <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2023-08-16-how-to-draw-architectural-diagrams/</guid>
-      <description>最近看了一篇如何画软件架构图的博客，结合个人的一些经验，整理总结一下。 一图胜千言 当你要描述一个复杂系统中各个组件之间的交互关系，组件之间还存</description>
+      <description>&lt;p&gt;最近看了一篇&lt;a href=&#34;https://nulab.com/learn/software-development/architectural-diagrams-what-to-know-and-how-to-draw-one/&#34;&gt;如何画软件架构图&lt;/a&gt;的博客，结合个人的一些经验，整理总结一下。&lt;/p&gt;
+&lt;h3 id=&#34;一图胜千言&#34;&gt;一图胜千言&lt;/h3&gt;
+&lt;p&gt;当你要描述一个复杂系统中各个组件之间的交互关系，组件之间还存在复杂的数据流转，仅仅只用文字很难对主题快速地树立形象的表达，这时候就需要用到架构图，架构图可以应用于很多领域，例如建筑，工程，IT，产品，销售等等。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

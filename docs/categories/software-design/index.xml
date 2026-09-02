@@ -4,8 +4,13 @@
     <title>Software Design on 于川海的博客</title>
     <link>https://joyrap.github.io/categories/software-design/</link>
     <description>Recent content in Software Design on 于川海的博客</description>
+    <image>
+      <title>于川海的博客</title>
+      <url>https://joyrap.github.io/images/me_400x400.jpg</url>
+      <link>https://joyrap.github.io/images/me_400x400.jpg</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-CN</language>
     <lastBuildDate>Sat, 09 Apr 2022 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://joyrap.github.io/categories/software-design/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,21 +18,26 @@
       <link>https://joyrap.github.io/post/2022-04-09-api-design-versioning/</link>
       <pubDate>Sat, 09 Apr 2022 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2022-04-09-api-design-versioning/</guid>
-      <description>为了追求系统的健壮性，稳定性，越来越多的系统采用分布式软件架构，分布式意味着跨应用访问成为系统交互的一种特点，特别是微服务架构在商业系统中的</description>
+      <description>&lt;p&gt;为了追求系统的健壮性，稳定性，越来越多的系统采用分布式软件架构，分布式意味着跨应用访问成为系统交互的一种特点，特别是微服务架构在商业系统中的大量运用。&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Philosophy Of Software Design-读书笔记</title>
       <link>https://joyrap.github.io/post/2022-01-08-a-philosophy-of-software-design/</link>
       <pubDate>Sat, 08 Jan 2022 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2022-01-08-a-philosophy-of-software-design/</guid>
-      <description>《软件设计的哲学》这本书最早出版于2018年，2021年出了2nd Edition，目前国内还没有中文版，这本书是作者 在斯坦福大学开设的CS1</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://book.douban.com/subject/30218046/&#34;&gt;《软件设计的哲学》&lt;/a&gt;这本书最早出版于2018年，2021年出了&lt;a href=&#34;https://web.stanford.edu/~ouster/cgi-bin/book.php&#34;&gt;2nd Edition&lt;/a&gt;，目前国内还没有中文版，这本书是&lt;a href=&#34;https://twitter.com/johnousterhout&#34;&gt;作者&lt;/a&gt;
+在斯坦福大学开设的&lt;a href=&#34;https://web.stanford.edu/~ouster/cgi-bin/cs190-winter21/index.php&#34;&gt;CS190&lt;/a&gt;课程大纲。
+我专门搜索了一下国内软件专业的大学，基本上都没有关于软件设计的课程。&lt;/p&gt;
+&lt;p&gt;市面很多关于软件设计的书籍，大部分都是基于某些特定编程语言或者技术，还没有一本全面讲解软件设计本身的书。&lt;/p&gt;</description>
     </item>
     <item>
       <title>翻译:Understanding the LMAX Disruptor</title>
       <link>https://joyrap.github.io/post/2019-04-19-understanding-the-lmax-disruptor/</link>
       <pubDate>Fri, 19 Apr 2019 21:24:47 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2019-04-19-understanding-the-lmax-disruptor/</guid>
-      <description>翻译前言 知道Disruptor这个代码库，是在Log4j 1.X升级版Log4j2中提到的，那时候就好奇它为何如此高效，关于Disruptor</description>
+      <description>&lt;h3 id=&#34;翻译前言&#34;&gt;翻译前言&lt;/h3&gt;
+&lt;p&gt;知道Disruptor这个代码库，是在Log4j 1.X升级版Log4j2中提到的，那时候就好奇它为何如此高效，关于Disruptor的文章在&lt;a href=&#34;http://ifeve.com/disruptor/&#34;&gt;ifeve.com&lt;/a&gt;上已经有很多了，这一篇讲的更简单。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

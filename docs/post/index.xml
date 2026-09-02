@@ -4,8 +4,13 @@
     <title>Posts on 于川海的博客</title>
     <link>https://joyrap.github.io/post/</link>
     <description>Recent content in Posts on 于川海的博客</description>
+    <image>
+      <title>于川海的博客</title>
+      <url>https://joyrap.github.io/images/me_400x400.jpg</url>
+      <link>https://joyrap.github.io/images/me_400x400.jpg</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-CN</language>
     <lastBuildDate>Mon, 12 Aug 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://joyrap.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,217 +18,319 @@
       <link>https://joyrap.github.io/post/2024-08-12-a-poem/</link>
       <pubDate>Mon, 12 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2024-08-12-a-poem/</guid>
-      <description>潮起，日落 日出，潮又退场 懒春潮夏，凉秋寒冬 这世界，凹凸不平 就像你起伏的胸脯</description>
+      <description>&lt;p&gt;潮起，日落&lt;/p&gt;
+&lt;p&gt;日出，潮又退场&lt;/p&gt;
+&lt;p&gt;懒春潮夏，凉秋寒冬&lt;/p&gt;
+&lt;p&gt;这世界，凹凸不平&lt;/p&gt;
+&lt;p&gt;就像你起伏的胸脯&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mixin in Java</title>
       <link>https://joyrap.github.io/post/2024-01-08-java-mixin/</link>
       <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2024-01-08-java-mixin/</guid>
-      <description>什么是Mixin 维基百科的解释是： In object-oriented programming languages, a mixin is a class that contains methods for use by other classes without having to be the parent class of those other classes. How those other classes gain access to the mixin&amp;rsquo;s methods depends on the language. Mixins are sometimes described as being &amp;ldquo;included&amp;rdquo; rather than &amp;ldquo;inherited&amp;rdquo;. 简</description>
+      <description>&lt;h2 id=&#34;什么是mixin&#34;&gt;什么是Mixin&lt;/h2&gt;
+&lt;p&gt;维基百科的解释是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In object-oriented programming languages, a mixin is a class that contains methods for use by other classes without having to be the parent class of those other classes. How those other classes gain access to the mixin&amp;rsquo;s methods depends on the language. Mixins are sometimes described as being &amp;ldquo;included&amp;rdquo; rather than &amp;ldquo;inherited&amp;rdquo;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;简而言之就是：通过组合而不是继承的方式获得其他类所提供的功能。&lt;/p&gt;</description>
     </item>
     <item>
       <title>诗二(你的江河)</title>
       <link>https://joyrap.github.io/post/2023-10-18-yichang/</link>
       <pubDate>Tue, 17 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2023-10-18-yichang/</guid>
-      <description>我愿化作江河，在你的城市 默默流过这一生 用浪头敲打彼岸，拍醒礁石 待你来我身边，赶在最后一日斑驳黄昏 数一遍碎云 洗一次长发 落一回脚 我是你的江河，在</description>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://joyrap.github.io/images/2023-10-18_Three_Gorges_Dam/yichang.jpg&#34; alt=&#34;宜昌&#34;  title=&#34;宜昌，一座来电的城市&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;我愿化作江河，在你的城市&lt;/p&gt;
+&lt;p&gt;默默流过这一生&lt;/p&gt;
+&lt;p&gt;用浪头敲打彼岸，拍醒礁石&lt;/p&gt;
+&lt;p&gt;待你来我身边，赶在最后一日斑驳黄昏&lt;/p&gt;
+&lt;p&gt;数一遍碎云&lt;/p&gt;
+&lt;p&gt;洗一次长发&lt;/p&gt;
+&lt;p&gt;落一回脚&lt;/p&gt;
+&lt;p&gt;我是你的江河，在你的城市&lt;/p&gt;
+&lt;p&gt;把岁月流得好长，好长&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Do great work</title>
       <link>https://joyrap.github.io/post/2023-08-29-how-to-do-great-work/</link>
       <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2023-08-29-how-to-do-great-work/</guid>
-      <description>最近Paul Graham写了一篇博客，阐述了他对“如何做事（工作）”的一些观点，致于你做的事情是否是Great的， 我想对普通人来说可能并不重</description>
+      <description>&lt;p&gt;最近&lt;a href=&#34;http://www.paulgraham.com/&#34;&gt;Paul Graham&lt;/a&gt;写了一篇博客，阐述了他对“如何做事（工作）”的一些观点，致于你做的事情是否是Great的，
+我想对普通人来说可能并不重要。&lt;/p&gt;
+&lt;p&gt;这篇文章太长，还没读完，我提取了其中一些感兴趣的观点，原文链接放在了最后。&lt;/p&gt;</description>
     </item>
     <item>
       <title>如何画软件系统架构图</title>
       <link>https://joyrap.github.io/post/2023-08-16-how-to-draw-architectural-diagrams/</link>
       <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2023-08-16-how-to-draw-architectural-diagrams/</guid>
-      <description>最近看了一篇如何画软件架构图的博客，结合个人的一些经验，整理总结一下。 一图胜千言 当你要描述一个复杂系统中各个组件之间的交互关系，组件之间还存</description>
+      <description>&lt;p&gt;最近看了一篇&lt;a href=&#34;https://nulab.com/learn/software-development/architectural-diagrams-what-to-know-and-how-to-draw-one/&#34;&gt;如何画软件架构图&lt;/a&gt;的博客，结合个人的一些经验，整理总结一下。&lt;/p&gt;
+&lt;h3 id=&#34;一图胜千言&#34;&gt;一图胜千言&lt;/h3&gt;
+&lt;p&gt;当你要描述一个复杂系统中各个组件之间的交互关系，组件之间还存在复杂的数据流转，仅仅只用文字很难对主题快速地树立形象的表达，这时候就需要用到架构图，架构图可以应用于很多领域，例如建筑，工程，IT，产品，销售等等。&lt;/p&gt;</description>
     </item>
     <item>
       <title>2023阅读清单</title>
       <link>https://joyrap.github.io/post/2023-reading-list/</link>
       <pubDate>Sun, 30 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2023-reading-list/</guid>
-      <description>大部分书都只是选读了其中部分章节。 生命是什么 - 薛定谔 科学家从物理角度解释生命是什么，非常有趣且有深度的视角，很多章节看不懂，后面再找其他翻译</description>
+      <description>&lt;p&gt;大部分书都只是选读了其中部分章节。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://book.douban.com/subject/1317485/&#34;&gt;生命是什么 - 薛定谔&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;科学家从物理角度解释生命是什么，非常有趣且有深度的视角，很多章节看不懂，后面再找其他翻译版本来看看。&lt;/p&gt;</description>
     </item>
     <item>
       <title>我的姑姑</title>
       <link>https://joyrap.github.io/post/2023-07-30-my-aunt-passed-away/</link>
       <pubDate>Sun, 30 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2023-07-30-my-aunt-passed-away/</guid>
-      <description>姑姑已经去世了好几年，但想起她总有些特别的记忆，日子渐长，那些记忆却还停留在原处，总觉得写下来比较好。 山的那一边 姑姑和娘家就隔着一座山，山不</description>
+      <description>&lt;p&gt;姑姑已经去世了好几年，但想起她总有些特别的记忆，日子渐长，那些记忆却还停留在原处，总觉得写下来比较好。&lt;/p&gt;
+&lt;h3 id=&#34;山的那一边&#34;&gt;山的那一边&lt;/h3&gt;
+&lt;p&gt;姑姑和娘家就隔着一座山，山不算高走小路最多不过四十分钟的路程，那时候真是通讯基本靠吼的年代，有什么消息要互相转告，就站在山头上喊对方的名字，喊声响彻山谷，有人听到就帮忙传达，我在山头喊过无数次姑姑。&lt;/p&gt;</description>
     </item>
     <item>
       <title>诗一</title>
       <link>https://joyrap.github.io/post/2023-07-03-a-poem/</link>
       <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2023-07-03-a-poem/</guid>
-      <description>傍晚 我躺在丰收后的油菜地里 仰望着故乡的天空 有几只飞鸟 吃掉了刚刚升起的星星 人们无数次带走大地的礼物 忘了汗水 那一夜 睡得很深，一直深到土里 修改于：</description>
+      <description>&lt;p&gt;傍晚&lt;/p&gt;
+&lt;p&gt;我躺在丰收后的油菜地里&lt;/p&gt;
+&lt;p&gt;仰望着故乡的天空&lt;/p&gt;
+&lt;p&gt;有几只飞鸟&lt;/p&gt;
+&lt;p&gt;吃掉了刚刚升起的星星&lt;/p&gt;
+&lt;p&gt;人们无数次带走大地的礼物&lt;/p&gt;
+&lt;p&gt;忘了汗水&lt;/p&gt;
+&lt;p&gt;那一夜&lt;/p&gt;
+&lt;p&gt;睡得很深，一直深到土里&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;修改于：2024.04.30&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>2022结束了吗</title>
       <link>https://joyrap.github.io/post/2022-12-28-2022-is-the-ending/</link>
       <pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2022-12-28-2022-is-the-ending/</guid>
-      <description>我理解的结束，一种是生命的终结，另一种是绝望。 疫情 三年多来，疫情已经变成了一个复杂的社会话题，在这场洪流中个人体到了，国际阴谋论，封城，囤积</description>
+      <description>&lt;p&gt;我理解的结束，一种是生命的终结，另一种是绝望。&lt;/p&gt;
+&lt;h3 id=&#34;疫情&#34;&gt;疫情&lt;/h3&gt;
+&lt;p&gt;三年多来，疫情已经变成了一个复杂的社会话题，在这场洪流中个人体到了，国际阴谋论，封城，囤积物质，地域歧视，隔离，祖国统一，火速支援，生死离别&amp;hellip;&amp;hellip;等等，尽显人生百态。&lt;/p&gt;</description>
     </item>
     <item>
       <title>无题</title>
       <link>https://joyrap.github.io/post/2022-07-31-no-title/</link>
       <pubDate>Sun, 31 Jul 2022 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2022-07-31-no-title/</guid>
-      <description>盛夏，酷热。 &amp;ldquo;发一份辣椒酱制作菜谱给你，可好&amp;rdquo; &amp;ldquo;你不在，我不想把时间花在做饭上&amp;hellip;&amp;hell</description>
+      <description>&lt;p&gt;盛夏，酷热。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;发一份辣椒酱制作菜谱给你，可好&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;你不在，我不想把时间花在做饭上&amp;hellip;&amp;hellip;&amp;rdquo;&lt;/p&gt;</description>
     </item>
     <item>
       <title>API设计之版本控制</title>
       <link>https://joyrap.github.io/post/2022-04-09-api-design-versioning/</link>
       <pubDate>Sat, 09 Apr 2022 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2022-04-09-api-design-versioning/</guid>
-      <description>为了追求系统的健壮性，稳定性，越来越多的系统采用分布式软件架构，分布式意味着跨应用访问成为系统交互的一种特点，特别是微服务架构在商业系统中的</description>
+      <description>&lt;p&gt;为了追求系统的健壮性，稳定性，越来越多的系统采用分布式软件架构，分布式意味着跨应用访问成为系统交互的一种特点，特别是微服务架构在商业系统中的大量运用。&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Philosophy Of Software Design-读书笔记</title>
       <link>https://joyrap.github.io/post/2022-01-08-a-philosophy-of-software-design/</link>
       <pubDate>Sat, 08 Jan 2022 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2022-01-08-a-philosophy-of-software-design/</guid>
-      <description>《软件设计的哲学》这本书最早出版于2018年，2021年出了2nd Edition，目前国内还没有中文版，这本书是作者 在斯坦福大学开设的CS1</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://book.douban.com/subject/30218046/&#34;&gt;《软件设计的哲学》&lt;/a&gt;这本书最早出版于2018年，2021年出了&lt;a href=&#34;https://web.stanford.edu/~ouster/cgi-bin/book.php&#34;&gt;2nd Edition&lt;/a&gt;，目前国内还没有中文版，这本书是&lt;a href=&#34;https://twitter.com/johnousterhout&#34;&gt;作者&lt;/a&gt;
+在斯坦福大学开设的&lt;a href=&#34;https://web.stanford.edu/~ouster/cgi-bin/cs190-winter21/index.php&#34;&gt;CS190&lt;/a&gt;课程大纲。
+我专门搜索了一下国内软件专业的大学，基本上都没有关于软件设计的课程。&lt;/p&gt;
+&lt;p&gt;市面很多关于软件设计的书籍，大部分都是基于某些特定编程语言或者技术，还没有一本全面讲解软件设计本身的书。&lt;/p&gt;</description>
     </item>
     <item>
       <title>2021</title>
       <link>https://joyrap.github.io/post/2021-12-28-2021/</link>
       <pubDate>Tue, 28 Dec 2021 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2021-12-28-2021/</guid>
-      <description>歌与诗 2021年12月26日，歌手刘森出了一首新歌:《和小葛去石家庄》 你已不满只是在楼下喝几杯小酒 我多加的那盘小毛豆 你也觉得不太够 感叹世界乱</description>
+      <description>&lt;h2 id=&#34;歌与诗&#34;&gt;歌与诗&lt;/h2&gt;
+&lt;p&gt;2021年12月26日，歌手刘森出了一首新歌:《和小葛去石家庄》&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你已不满只是在楼下喝几杯小酒&lt;/p&gt;
+&lt;p&gt;我多加的那盘小毛豆 你也觉得不太够&lt;/p&gt;
+&lt;p&gt;感叹世界乱成一锅粥 更没人懂你那些烦忧&lt;/p&gt;</description>
     </item>
     <item>
       <title>翻越了这座山，你有没有遇到过自己</title>
       <link>https://joyrap.github.io/post/2021-12-10-meet-yourself/</link>
       <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2021-12-10-meet-yourself/</guid>
-      <description>一 2003年，向北出川，翻越秦岭， 绿皮火车走走停停，对于没有出过川的人来说，那是一段极其漫长的路程。 虽都是外出谋生，但北上和南下的两类人，有</description>
+      <description>&lt;h2 id=&#34;一&#34;&gt;一&lt;/h2&gt;
+&lt;p&gt;2003年，向北出川，翻越秦岭，&lt;/p&gt;
+&lt;p&gt;绿皮火车走走停停，对于没有出过川的人来说，那是一段极其漫长的路程。&lt;/p&gt;
+&lt;p&gt;虽都是外出谋生，但北上和南下的两类人，有着截然不同的面容和心境，我正好是南下过，又将北上的人。&lt;/p&gt;</description>
     </item>
     <item>
       <title>图表即代码</title>
       <link>https://joyrap.github.io/post/2021-11-22-diagrams-as-code/</link>
       <pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2021-11-22-diagrams-as-code/</guid>
-      <description>为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件，以及如何在文档中嵌入图表。 软件开发时</description>
+      <description>&lt;h3 id=&#34;为何要用文本的方式记录&#34;&gt;为何要用文本的方式记录&lt;/h3&gt;
+&lt;p&gt;最近工作中开始重度使用&lt;a href=&#34;https://plantuml.com&#34;&gt;PlantUML&lt;/a&gt;，于是就总结一下软件开发中使用到的画图软件，以及如何在文档中嵌入图表。&lt;/p&gt;
+&lt;p&gt;软件开发时用到画图软件林林总总，差异化较大，但我们使用的大部分画图工具，都以独特的二进制文件存储，缺点不利于团队协作和分享，导致跟随代码的相关思维图不能更好地被管理，甚至无法与代码保持及时更新迭代，所以软件工程师们更希望通过像代码一样来管理图形化思维。&lt;/p&gt;</description>
     </item>
     <item>
       <title>不要急于奔赴未来，未来总会如期而至</title>
       <link>https://joyrap.github.io/post/2021-09-30-i-am-quit/</link>
       <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2021-09-30-i-am-quit/</guid>
-      <description>在京东工作的第9个年头，我决定离职，这并不是一个艰难的决定。 回首过往，很难相信在这里待了如此长的时间。 至今还记得刚来成都的样子， 阴冷的天空，</description>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://joyrap.github.io/images/2021-09-30-i-am-quit/qinglonghu.jpeg&#34; alt=&#34;成都-青龙湖公园&#34;  title=&#34;成都-青龙湖公园&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;在京东工作的第9个年头，我决定离职，这并不是一个艰难的决定。&lt;/p&gt;
+&lt;p&gt;回首过往，很难相信在这里待了如此长的时间。&lt;/p&gt;
+&lt;p&gt;至今还记得刚来成都的样子，&lt;/p&gt;
+&lt;p&gt;阴冷的天空，&lt;/p&gt;
+&lt;p&gt;夹杂火锅味儿的雾霾，&lt;/p&gt;</description>
     </item>
     <item>
       <title>不确定性</title>
       <link>https://joyrap.github.io/post/2020-10-22-indeterminacy/</link>
       <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2020-10-22-indeterminacy/</guid>
-      <description>这个世界有没有看起来是确定的事情？ 可能没有， 不确定才是这个世界最值得探索的奥秘。 但如果非要让一件事情变得更接近确定，那么有没有一套经得住考验</description>
+      <description>&lt;p&gt;这个世界有没有看起来是确定的事情？&lt;/p&gt;
+&lt;p&gt;可能没有，&lt;/p&gt;
+&lt;p&gt;不确定才是这个世界最值得探索的奥秘。&lt;/p&gt;
+&lt;p&gt;但如果非要让一件事情变得更接近确定，那么有没有一套经得住考验的方法论呢？&lt;/p&gt;</description>
     </item>
     <item>
       <title>计算机多内核平台上的并发锁优化(二)</title>
       <link>https://joyrap.github.io/post/2020-08-21-locks-on-multicore2/</link>
       <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2020-08-21-locks-on-multicore2/</guid>
-      <description>申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。 在Algorithms for scalable synchronization on shared-memory multiprocessors这篇论文中，CL</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在&lt;a href=&#34;https://www.cs.rice.edu/~johnmc/papers/tocs91.pdf&#34;&gt;&lt;strong&gt;&lt;em&gt;Algorithms for scalable synchronization on shared-memory multiprocessors&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;这篇论文中，CLH锁之前还提到了另外一个锁算法。&lt;/p&gt;</description>
     </item>
     <item>
       <title>计算机多内核平台上的并发锁优化(一)</title>
       <link>https://joyrap.github.io/post/2020-08-19-locks-on-multicore/</link>
       <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2020-08-19-locks-on-multicore/</guid>
-      <description>申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。 如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问题。
+特别是随着云厂商按计算收费的当下，如何有效地利用计算资源变得更重要。&lt;/p&gt;</description>
     </item>
     <item>
       <title>不可测试的代码</title>
       <link>https://joyrap.github.io/post/2020-01-21-untestable-code/</link>
       <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2020-01-21-untestable-code/</guid>
-      <description>故事是这样的，我最近深陷在一个刚接手不久的项目中，经过完成两轮需求上线后， 我迫切地告诉自己，需要给这个项目完善一下测试用例（原工程测试用例几</description>
+      <description>&lt;p&gt;故事是这样的，我最近深陷在一个刚接手不久的项目中，经过完成两轮需求上线后，
+我迫切地告诉自己，需要给这个项目完善一下测试用例（原工程测试用例几乎为零），
+然而事情并不是我想象的那么简单。&lt;/p&gt;</description>
     </item>
     <item>
       <title>对技术招聘的一些启发</title>
       <link>https://joyrap.github.io/post/2019-12-28-heuristics-for-hiring/</link>
       <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2019-12-28-heuristics-for-hiring/</guid>
-      <description>国外一家自由职业招聘平台 Gun.io ，最近针对问题“当招聘高级工程师时最看中哪些方面？”，采访了38名CTO， 最后出了一份报告。 在招聘开发工程师上，国</description>
+      <description>&lt;p&gt;国外一家自由职业招聘平台 &lt;a href=&#34;https://www.gun.io/&#34;&gt;Gun.io &lt;/a&gt; ，最近针对问题“&lt;strong&gt;当招聘高级工程师时最看中哪些方面？&lt;/strong&gt;”，采访了38名CTO，
+最后出了一份报告。&lt;/p&gt;
+&lt;p&gt;在招聘开发工程师上，国内很多大厂在面试的时候，基本上都是先通过算法来考察候选人，过分强调算法这一部分的功力，导致很多人打趣的说，现在面试都已经
+内卷起来了，没刷够几百道Leetcode题都不好出去面试。这充分说明了算法在软件开发中的重要性。&lt;/p&gt;</description>
     </item>
     <item>
       <title>2019阅读清单</title>
       <link>https://joyrap.github.io/post/2019-reading-list/</link>
       <pubDate>Wed, 25 Dec 2019 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2019-reading-list/</guid>
-      <description>人们经常说这个时代物欲横流，信息爆炸，有人自带优越感，有人贩卖焦虑&amp;hellip;&amp;hellip; 但无论如何，这都不是你看到的那个世界，唯有</description>
+      <description>&lt;p&gt;人们经常说这个时代物欲横流，信息爆炸，有人自带优越感，有人贩卖焦虑&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;但无论如何，这都不是你看到的那个世界，唯有当你探索未知时，才是真实。&lt;/p&gt;</description>
     </item>
     <item>
       <title>执命向西的人</title>
       <link>https://joyrap.github.io/post/2019-12-05-follow-your-heart/</link>
       <pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2019-12-05-follow-your-heart/</guid>
-      <description>老婆自行车环游大半个中国回来后的那段日子，我无意中听到一首歌《一个西藏》 一座高原 一个西藏 …… 我和世界只有一个西藏 我没有去过西藏，所以对西藏并</description>
+      <description>&lt;p&gt;老婆自行车环游大半个中国回来后的那段日子，我无意中听到一首歌《一个西藏》&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一座高原&lt;/p&gt;
+&lt;p&gt;一个西藏&lt;/p&gt;
+&lt;p&gt;……&lt;/p&gt;
+&lt;p&gt;我和世界只有一个西藏&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我没有去过西藏，所以对西藏并没有特殊的情感，但从那时起知道了一位诗人:张子选。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Clojure中的数据类型</title>
       <link>https://joyrap.github.io/post/2019-11-19-clojure-datatypes/</link>
       <pubDate>Tue, 19 Nov 2019 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2019-11-19-clojure-datatypes/</guid>
-      <description>Clojure作为一款基于JVM的LISP语言，我个人从创造者Rich Hickey身上吸收了很多编程的观点，尽管作者提出了很多面向对象编程语</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://clojure.org&#34;&gt;Clojure&lt;/a&gt;作为一款基于JVM的LISP语言，我个人从创造者&lt;a href=&#34;https://twitter.com/richhickey&#34;&gt;Rich Hickey&lt;/a&gt;身上吸收了很多编程的观点，尽管作者提出了很多面向对象编程语言的缺陷，但单从语言本身来说，作者更希望通过JVM这个平台对寄主语言(Java)提供一种补充，只不过是通过LISP的方式。&lt;/p&gt;</description>
     </item>
     <item>
       <title>翻译:Understanding the LMAX Disruptor</title>
       <link>https://joyrap.github.io/post/2019-04-19-understanding-the-lmax-disruptor/</link>
       <pubDate>Fri, 19 Apr 2019 21:24:47 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2019-04-19-understanding-the-lmax-disruptor/</guid>
-      <description>翻译前言 知道Disruptor这个代码库，是在Log4j 1.X升级版Log4j2中提到的，那时候就好奇它为何如此高效，关于Disruptor</description>
+      <description>&lt;h3 id=&#34;翻译前言&#34;&gt;翻译前言&lt;/h3&gt;
+&lt;p&gt;知道Disruptor这个代码库，是在Log4j 1.X升级版Log4j2中提到的，那时候就好奇它为何如此高效，关于Disruptor的文章在&lt;a href=&#34;http://ifeve.com/disruptor/&#34;&gt;ifeve.com&lt;/a&gt;上已经有很多了，这一篇讲的更简单。&lt;/p&gt;</description>
     </item>
     <item>
       <title>读书:How Will You Measure Your Life?</title>
       <link>https://joyrap.github.io/post/2019-02-24-how-will-you-measure-your-life/</link>
       <pubDate>Sun, 24 Feb 2019 18:24:47 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2019-02-24-how-will-you-measure-your-life/</guid>
-      <description>在读到《How Will You Measure Your Life? 》 这本书之前，是看到一篇辞去亚马逊年薪500万工作的文章，大概是讲随着工作中升职，加薪，工作激情却在逐渐降低，于是就</description>
+      <description>&lt;p&gt;在读到&lt;a href=&#34;https://www.amazon.com/gp/product/0062102419&#34;&gt;《How Will You Measure Your Life? 》&lt;/a&gt; 这本书之前，是看到一篇&lt;a href=&#34;https://danielvassallo.com/only-intrinsic-motivation-lasts/&#34;&gt;辞去亚马逊年薪500万工作的文章&lt;/a&gt;，大概是讲随着工作中升职，加薪，工作激情却在逐渐降低，于是就辞去了高薪工作。&lt;/p&gt;
+&lt;p&gt;在作者推文评论中有人说到了这本书，我以为这本书会讲如何提高在工作中的激情，于是就下载了电子版。&lt;/p&gt;
+&lt;p&gt;但这本书更像是一本生活指南:&lt;/p&gt;</description>
     </item>
     <item>
       <title>如何跑完半程马拉松</title>
       <link>https://joyrap.github.io/post/2017-02-18-how-to-run-half-marathons/</link>
       <pubDate>Sat, 18 Feb 2017 18:24:47 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2017-02-18-how-to-run-half-marathons/</guid>
-      <description>是的。 如果你想先喝一碗高质量鸡汤，来加强跑马拉松的决心，那么你可以读读村上春树的《当我谈跑步时,我谈些什么》。 然而我觉得那对你真正跑起来并没</description>
+      <description>&lt;p&gt;是的。&lt;/p&gt;
+&lt;p&gt;如果你想先喝一碗高质量鸡汤，来加强跑马拉松的决心，那么你可以读读村上春树的&lt;a href=&#34;https://item.jd.com/11754532.html&#34;&gt;《当我谈跑步时,我谈些什么》&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;然而我觉得那对你真正跑起来并没有什么卵用。&lt;/p&gt;
+&lt;p&gt;如果你对 &lt;strong&gt;马拉松&lt;/strong&gt; 的定义还仅仅停留在跑步这个层面上，那么你是应该好好在网络上搜索一下。&lt;/p&gt;</description>
     </item>
     <item>
       <title>如何利用Linux命令简单加密文本</title>
       <link>https://joyrap.github.io/post/2017-02-04-how-to-encrypt-by-linux-command/</link>
       <pubDate>Sat, 04 Feb 2017 18:24:47 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2017-02-04-how-to-encrypt-by-linux-command/</guid>
-      <description>在web上无论企业还是个人网站，总会发布一些邮箱的联系方式，由于邮箱地址置于html页面中，很容易被 爬虫获取，导致邮箱被垃圾邮件挤满。 所以，</description>
+      <description>&lt;p&gt;在web上无论企业还是个人网站，总会发布一些邮箱的联系方式，由于邮箱地址置于html页面中，很容易被
+爬虫获取，导致邮箱被垃圾邮件挤满。&lt;/p&gt;
+&lt;p&gt;所以，如果你确定要暴露你的邮箱到互联网上，那么你至少应该使用一种加密方式。&lt;/p&gt;</description>
     </item>
     <item>
       <title>我们是如何将一个项目做烂的</title>
       <link>https://joyrap.github.io/post/2016-08-08-how-to-make-projects-failed/</link>
       <pubDate>Mon, 08 Aug 2016 01:24:47 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2016-08-08-how-to-make-projects-failed/</guid>
-      <description>在你读到这篇牢骚的时候，无数个项目正在慢慢变烂。 既然标题都用到了&amp;quot;烂&amp;quot;这个词，那什么才是烂呢？ 在你的项目里，&amp;ldquo</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;在你读到这篇牢骚的时候，无数个项目正在慢慢变烂。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://blog.xiebiao.com/images/2016-08-08-how-to-make-projects-failed/wenchuan_512.jpg&#34; alt=&#34;图片来源于网络 - 2008汶川大地震&#34;  title=&#34;图片来源于网络 - 2008汶川大地震&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;既然标题都用到了&amp;quot;烂&amp;quot;这个词，那什么才是烂呢？&lt;/p&gt;</description>
     </item>
     <item>
       <title>Notification Pattern理解</title>
       <link>https://joyrap.github.io/post/2012-06-20-notification-pattern/</link>
       <pubDate>Wed, 20 Jun 2012 11:24:47 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2012-06-20-notification-pattern/</guid>
-      <description>场景 在MVC的架构中，我们想从Model层传递一些错误信息到View层，比如用户注册这个功能，用户填写了密码，邮箱，然后提交注册， 这时候我们</description>
+      <description>&lt;h2 id=&#34;场景&#34;&gt;场景&lt;/h2&gt;
+&lt;p&gt;在MVC的架构中，我们想从Model层传递一些错误信息到View层，比如用户注册这个功能，用户填写了密码，邮箱，然后提交注册，
+这时候我们后端需要对前端的数据做校验，同时将校验的结果返回给View层，这时候就能用到Notification模式.&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
       <link>https://joyrap.github.io/post/2023-12-19-get-to-know-the-bamboo-flute/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2023-12-19-get-to-know-the-bamboo-flute/</guid>
-      <description>https://zhuanlan.zhihu.com/p/457436924</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/457436924&#34;&gt;https://zhuanlan.zhihu.com/p/457436924&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

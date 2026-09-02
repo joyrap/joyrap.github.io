@@ -4,8 +4,13 @@
     <title>Documentation on 于川海的博客</title>
     <link>https://joyrap.github.io/categories/documentation/</link>
     <description>Recent content in Documentation on 于川海的博客</description>
+    <image>
+      <title>于川海的博客</title>
+      <url>https://joyrap.github.io/images/me_400x400.jpg</url>
+      <link>https://joyrap.github.io/images/me_400x400.jpg</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-CN</language>
     <lastBuildDate>Mon, 22 Nov 2021 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://joyrap.github.io/categories/documentation/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,7 +18,9 @@
       <link>https://joyrap.github.io/post/2021-11-22-diagrams-as-code/</link>
       <pubDate>Mon, 22 Nov 2021 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2021-11-22-diagrams-as-code/</guid>
-      <description>为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件，以及如何在文档中嵌入图表。 软件开发时</description>
+      <description>&lt;h3 id=&#34;为何要用文本的方式记录&#34;&gt;为何要用文本的方式记录&lt;/h3&gt;
+&lt;p&gt;最近工作中开始重度使用&lt;a href=&#34;https://plantuml.com&#34;&gt;PlantUML&lt;/a&gt;，于是就总结一下软件开发中使用到的画图软件，以及如何在文档中嵌入图表。&lt;/p&gt;
+&lt;p&gt;软件开发时用到画图软件林林总总，差异化较大，但我们使用的大部分画图工具，都以独特的二进制文件存储，缺点不利于团队协作和分享，导致跟随代码的相关思维图不能更好地被管理，甚至无法与代码保持及时更新迭代，所以软件工程师们更希望通过像代码一样来管理图形化思维。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

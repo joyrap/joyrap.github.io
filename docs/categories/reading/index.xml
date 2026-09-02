@@ -4,8 +4,13 @@
     <title>Reading on 于川海的博客</title>
     <link>https://joyrap.github.io/categories/reading/</link>
     <description>Recent content in Reading on 于川海的博客</description>
+    <image>
+      <title>于川海的博客</title>
+      <url>https://joyrap.github.io/images/me_400x400.jpg</url>
+      <link>https://joyrap.github.io/images/me_400x400.jpg</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-CN</language>
     <lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://joyrap.github.io/categories/reading/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,35 +18,47 @@
       <link>https://joyrap.github.io/post/2023-08-29-how-to-do-great-work/</link>
       <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2023-08-29-how-to-do-great-work/</guid>
-      <description>最近Paul Graham写了一篇博客，阐述了他对“如何做事（工作）”的一些观点，致于你做的事情是否是Great的， 我想对普通人来说可能并不重</description>
+      <description>&lt;p&gt;最近&lt;a href=&#34;http://www.paulgraham.com/&#34;&gt;Paul Graham&lt;/a&gt;写了一篇博客，阐述了他对“如何做事（工作）”的一些观点，致于你做的事情是否是Great的，
+我想对普通人来说可能并不重要。&lt;/p&gt;
+&lt;p&gt;这篇文章太长，还没读完，我提取了其中一些感兴趣的观点，原文链接放在了最后。&lt;/p&gt;</description>
     </item>
     <item>
       <title>2023阅读清单</title>
       <link>https://joyrap.github.io/post/2023-reading-list/</link>
       <pubDate>Sun, 30 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2023-reading-list/</guid>
-      <description>大部分书都只是选读了其中部分章节。 生命是什么 - 薛定谔 科学家从物理角度解释生命是什么，非常有趣且有深度的视角，很多章节看不懂，后面再找其他翻译</description>
+      <description>&lt;p&gt;大部分书都只是选读了其中部分章节。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://book.douban.com/subject/1317485/&#34;&gt;生命是什么 - 薛定谔&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;科学家从物理角度解释生命是什么，非常有趣且有深度的视角，很多章节看不懂，后面再找其他翻译版本来看看。&lt;/p&gt;</description>
     </item>
     <item>
       <title>不确定性</title>
       <link>https://joyrap.github.io/post/2020-10-22-indeterminacy/</link>
       <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2020-10-22-indeterminacy/</guid>
-      <description>这个世界有没有看起来是确定的事情？ 可能没有， 不确定才是这个世界最值得探索的奥秘。 但如果非要让一件事情变得更接近确定，那么有没有一套经得住考验</description>
+      <description>&lt;p&gt;这个世界有没有看起来是确定的事情？&lt;/p&gt;
+&lt;p&gt;可能没有，&lt;/p&gt;
+&lt;p&gt;不确定才是这个世界最值得探索的奥秘。&lt;/p&gt;
+&lt;p&gt;但如果非要让一件事情变得更接近确定，那么有没有一套经得住考验的方法论呢？&lt;/p&gt;</description>
     </item>
     <item>
       <title>2019阅读清单</title>
       <link>https://joyrap.github.io/post/2019-reading-list/</link>
       <pubDate>Wed, 25 Dec 2019 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2019-reading-list/</guid>
-      <description>人们经常说这个时代物欲横流，信息爆炸，有人自带优越感，有人贩卖焦虑&amp;hellip;&amp;hellip; 但无论如何，这都不是你看到的那个世界，唯有</description>
+      <description>&lt;p&gt;人们经常说这个时代物欲横流，信息爆炸，有人自带优越感，有人贩卖焦虑&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;但无论如何，这都不是你看到的那个世界，唯有当你探索未知时，才是真实。&lt;/p&gt;</description>
     </item>
     <item>
       <title>读书:How Will You Measure Your Life?</title>
       <link>https://joyrap.github.io/post/2019-02-24-how-will-you-measure-your-life/</link>
       <pubDate>Sun, 24 Feb 2019 18:24:47 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2019-02-24-how-will-you-measure-your-life/</guid>
-      <description>在读到《How Will You Measure Your Life? 》 这本书之前，是看到一篇辞去亚马逊年薪500万工作的文章，大概是讲随着工作中升职，加薪，工作激情却在逐渐降低，于是就</description>
+      <description>&lt;p&gt;在读到&lt;a href=&#34;https://www.amazon.com/gp/product/0062102419&#34;&gt;《How Will You Measure Your Life? 》&lt;/a&gt; 这本书之前，是看到一篇&lt;a href=&#34;https://danielvassallo.com/only-intrinsic-motivation-lasts/&#34;&gt;辞去亚马逊年薪500万工作的文章&lt;/a&gt;，大概是讲随着工作中升职，加薪，工作激情却在逐渐降低，于是就辞去了高薪工作。&lt;/p&gt;
+&lt;p&gt;在作者推文评论中有人说到了这本书，我以为这本书会讲如何提高在工作中的激情，于是就下载了电子版。&lt;/p&gt;
+&lt;p&gt;但这本书更像是一本生活指南:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

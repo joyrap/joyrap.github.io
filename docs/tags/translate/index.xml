@@ -4,8 +4,13 @@
     <title>Translate on 于川海的博客</title>
     <link>https://joyrap.github.io/tags/translate/</link>
     <description>Recent content in Translate on 于川海的博客</description>
+    <image>
+      <title>于川海的博客</title>
+      <url>https://joyrap.github.io/images/me_400x400.jpg</url>
+      <link>https://joyrap.github.io/images/me_400x400.jpg</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-CN</language>
     <lastBuildDate>Fri, 19 Apr 2019 21:24:47 +0000</lastBuildDate>
     <atom:link href="https://joyrap.github.io/tags/translate/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,7 +18,8 @@
       <link>https://joyrap.github.io/post/2019-04-19-understanding-the-lmax-disruptor/</link>
       <pubDate>Fri, 19 Apr 2019 21:24:47 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2019-04-19-understanding-the-lmax-disruptor/</guid>
-      <description>翻译前言 知道Disruptor这个代码库，是在Log4j 1.X升级版Log4j2中提到的，那时候就好奇它为何如此高效，关于Disruptor</description>
+      <description>&lt;h3 id=&#34;翻译前言&#34;&gt;翻译前言&lt;/h3&gt;
+&lt;p&gt;知道Disruptor这个代码库，是在Log4j 1.X升级版Log4j2中提到的，那时候就好奇它为何如此高效，关于Disruptor的文章在&lt;a href=&#34;http://ifeve.com/disruptor/&#34;&gt;ifeve.com&lt;/a&gt;上已经有很多了，这一篇讲的更简单。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

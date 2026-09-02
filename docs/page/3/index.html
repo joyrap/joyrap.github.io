@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="zh-cn" dir="auto">
 
 <head>
-	<meta name="generator" content="Hugo 0.125.4"><meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.165.0"><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>于川海的博客</title>
-<meta name="keywords" content="于川海, 于昼夜，思山川湖海|语言是一生的枷锁">
-<meta name="description" content="来自山川湖海，却囿于昼夜，厨房与爱。|语言是一生的枷锁">
+<meta name="keywords" content="于川海, 个人博客, 软件开发, 摄影, 诗歌">
+<meta name="description" content="于川海的个人博客，记录软件开发、摄影、阅读、诗歌与生活。">
 <meta name="author" content="于川海">
 <link rel="canonical" href="https://joyrap.github.io/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.26eb5ed1ac3501184801febf1eea1cc3e987b5cad19880792a8f6d1a6e11e821.css" integrity="sha256-Jute0aw1ARhIAf6/Huocw&#43;mHtcrRmIB5Ko9tGm4R6CE=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a2e8cd1d0e801fc3f5d8ac86fbacf505e175a9c754d915f37946e4b03f670752.css" integrity="sha256-oujNHQ6AH8P12KyG&#43;6z1BeF1qcdU2RXzeUbksD9nB1I=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://joyrap.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://joyrap.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://joyrap.github.io/favicon-32x32.png">
@@ -20,7 +20,7 @@
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <link rel="alternate" type="application/rss+xml" href="https://joyrap.github.io/index.xml">
-<link rel="alternate" hreflang="en" href="https://joyrap.github.io/">
+<link rel="alternate" hreflang="zh-cn" href="https://joyrap.github.io/">
 <noscript>
     <style>
         #theme-toggle,
@@ -57,13 +57,13 @@
         }
 
     </style>
-</noscript>
-  
-    
+</noscript><link rel="manifest" href="https://joyrap.github.io/site.webmanifest">
+<meta property="og:locale" content="zh_CN">
+
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMD3WCHRSY"></script>
       <script>
         var doNotTrack = false;
-        if ( false ) {
+        if ( true ) {
           var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
           var doNotTrack = (dnt == "1" || dnt == "yes");
         }
@@ -73,29 +73,28 @@
           gtag('js', new Date());
           gtag('config', 'G-FMD3WCHRSY');
         }
-      </script>
-    
-  
-
-<meta property="og:title" content="于川海的博客" />
-<meta property="og:description" content="来自山川湖海，却囿于昼夜，厨房与爱。|语言是一生的枷锁" />
+      </script><meta property="og:title" content="于川海的博客" />
+<meta property="og:description" content="于川海的个人博客，记录软件开发、摄影、阅读、诗歌与生活。" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://joyrap.github.io/" />
+<meta property="og:url" content="https://joyrap.github.io/" /><meta property="og:image" content="https://joyrap.github.io/images/me_400x400.jpg"/><meta property="og:site_name" content="于川海的博客" />
 
-<meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://joyrap.github.io/images/me_400x400.jpg"/>
+
 <meta name="twitter:title" content="于川海的博客"/>
-<meta name="twitter:description" content="来自山川湖海，却囿于昼夜，厨房与爱。|语言是一生的枷锁"/>
+<meta name="twitter:description" content="于川海的个人博客，记录软件开发、摄影、阅读、诗歌与生活。"/>
+<meta name="twitter:site" content="@joyrap"/>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "Person",
   "name": "于川海的博客",
   "url": "https://joyrap.github.io/",
-  "description": "来自山川湖海，却囿于昼夜，厨房与爱。|语言是一生的枷锁",
+  "description": "于川海的个人博客，记录软件开发、摄影、阅读、诗歌与生活。",
   "thumbnailUrl": "https://joyrap.github.io/favicon.ico",
   "sameAs": [
-      
+      "https://x.com/joyrap", "https://www.threads.com/@pushbeat.app", "https://www.instagram.com/pushbeat.app", "https://www.douban.com/people/xiebiao80/"
   ]
 }
 </script>
@@ -175,76 +174,160 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">API设计之版本控制
+    <h2 class="entry-hint-parent">对技术招聘的一些启发
     </h2>
   </header>
   <div class="entry-content">
-    <p>为了追求系统的健壮性，稳定性，越来越多的系统采用分布式软件架构，分布式意味着跨应用访问成为系统交互的一种特点，特别是微服务架构在商业系统中的...</p>
+    <p>国外一家自由职业招聘平台 Gun.io ，最近针对问题“当招聘高级工程师时最看中哪些方面？”，采访了38名CTO， 最后出了一份报告。
+在招聘开发工程师上，国内很多大厂在面试的时候，基本上都是先通过算法来考察候选人，过分强调算法这一部分的功力，导致很多人打趣的说，现在面试都已经 内卷起来了，没刷够几百道Leetcode题都不好出去面试。这充分说明了算法在软件开发中的重要性。
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2022-04-09 00:00:00 +0000 UTC'>2022-04-09</span>&nbsp;·&nbsp;于川海</footer>
-  <a class="entry-link" aria-label="post link to API设计之版本控制" href="https://joyrap.github.io/post/2022-04-09-api-design-versioning/"></a>
+  <footer class="entry-footer"><span title='2019-12-28 00:00:00 +0000 UTC'>2019-12-28</span>&nbsp;·&nbsp;于川海</footer>
+  <a class="entry-link" aria-label="post link to 对技术招聘的一些启发" href="https://joyrap.github.io/post/2019-12-28-heuristics-for-hiring/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">A Philosophy Of Software Design-读书笔记
+    <h2 class="entry-hint-parent">2019阅读清单
     </h2>
   </header>
   <div class="entry-content">
-    <p>《软件设计的哲学》这本书最早出版于2018年，2021年出了2nd Edition，目前国内还没有中文版，这本书是作者 在斯坦福大学开设的CS1...</p>
+    <p>人们经常说这个时代物欲横流，信息爆炸，有人自带优越感，有人贩卖焦虑……
+但无论如何，这都不是你看到的那个世界，唯有当你探索未知时，才是真实。
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2022-01-08 00:00:00 +0000 UTC'>2022-01-08</span>&nbsp;·&nbsp;于川海</footer>
-  <a class="entry-link" aria-label="post link to A Philosophy Of Software Design-读书笔记" href="https://joyrap.github.io/post/2022-01-08-a-philosophy-of-software-design/"></a>
+  <footer class="entry-footer"><span title='2019-12-25 00:00:00 +0000 UTC'>2019-12-25</span>&nbsp;·&nbsp;于川海</footer>
+  <a class="entry-link" aria-label="post link to 2019阅读清单" href="https://joyrap.github.io/post/2019-reading-list/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">2021
+    <h2 class="entry-hint-parent">执命向西的人
     </h2>
   </header>
   <div class="entry-content">
-    <p>歌与诗 2021年12月26日，歌手刘森出了一首新歌:《和小葛去石家庄》 你已不满只是在楼下喝几杯小酒 我多加的那盘小毛豆 你也觉得不太够 感叹世界乱...</p>
+    <p>老婆自行车环游大半个中国回来后的那段日子，我无意中听到一首歌《一个西藏》
+一座高原
+一个西藏
+……
+我和世界只有一个西藏
+我没有去过西藏，所以对西藏并没有特殊的情感，但从那时起知道了一位诗人:张子选。
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2021-12-28 00:00:00 +0000 UTC'>2021-12-28</span>&nbsp;·&nbsp;于川海</footer>
-  <a class="entry-link" aria-label="post link to 2021" href="https://joyrap.github.io/post/2021-12-28-2021/"></a>
+  <footer class="entry-footer"><span title='2019-12-05 00:00:00 +0000 UTC'>2019-12-05</span>&nbsp;·&nbsp;于川海</footer>
+  <a class="entry-link" aria-label="post link to 执命向西的人" href="https://joyrap.github.io/post/2019-12-05-follow-your-heart/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">翻越了这座山，你有没有遇到过自己
+    <h2 class="entry-hint-parent">Clojure中的数据类型
     </h2>
   </header>
   <div class="entry-content">
-    <p>一 2003年，向北出川，翻越秦岭， 绿皮火车走走停停，对于没有出过川的人来说，那是一段极其漫长的路程。 虽都是外出谋生，但北上和南下的两类人，有...</p>
+    <p>Clojure作为一款基于JVM的LISP语言，我个人从创造者Rich Hickey身上吸收了很多编程的观点，尽管作者提出了很多面向对象编程语言的缺陷，但单从语言本身来说，作者更希望通过JVM这个平台对寄主语言(Java)提供一种补充，只不过是通过LISP的方式。
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2021-12-10 00:00:00 +0000 UTC'>2021-12-10</span>&nbsp;·&nbsp;于川海</footer>
-  <a class="entry-link" aria-label="post link to 翻越了这座山，你有没有遇到过自己" href="https://joyrap.github.io/post/2021-12-10-meet-yourself/"></a>
+  <footer class="entry-footer"><span title='2019-11-19 00:00:00 +0000 UTC'>2019-11-19</span>&nbsp;·&nbsp;于川海</footer>
+  <a class="entry-link" aria-label="post link to Clojure中的数据类型" href="https://joyrap.github.io/post/2019-11-19-clojure-datatypes/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">图表即代码
+    <h2 class="entry-hint-parent">翻译:Understanding the LMAX Disruptor
     </h2>
   </header>
   <div class="entry-content">
-    <p>为何要用文本的方式记录 最近工作中开始重度使用PlantUML，于是就总结一下软件开发中使用到的画图软件，以及如何在文档中嵌入图表。 软件开发时...</p>
+    <p>翻译前言 知道Disruptor这个代码库，是在Log4j 1.X升级版Log4j2中提到的，那时候就好奇它为何如此高效，关于Disruptor的文章在ifeve.com上已经有很多了，这一篇讲的更简单。
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2021-11-22 00:00:00 +0000 UTC'>2021-11-22</span>&nbsp;·&nbsp;于川海</footer>
-  <a class="entry-link" aria-label="post link to 图表即代码" href="https://joyrap.github.io/post/2021-11-22-diagrams-as-code/"></a>
+  <footer class="entry-footer"><span title='2019-04-19 21:24:47 +0000 UTC'>2019-04-19</span>&nbsp;·&nbsp;于川海</footer>
+  <a class="entry-link" aria-label="post link to 翻译:Understanding the LMAX Disruptor" href="https://joyrap.github.io/post/2019-04-19-understanding-the-lmax-disruptor/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">读书:How Will You Measure Your Life?
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>在读到《How Will You Measure Your Life? 》 这本书之前，是看到一篇辞去亚马逊年薪500万工作的文章，大概是讲随着工作中升职，加薪，工作激情却在逐渐降低，于是就辞去了高薪工作。
+在作者推文评论中有人说到了这本书，我以为这本书会讲如何提高在工作中的激情，于是就下载了电子版。
+但这本书更像是一本生活指南:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2019-02-24 18:24:47 +0000 UTC'>2019-02-24</span>&nbsp;·&nbsp;于川海</footer>
+  <a class="entry-link" aria-label="post link to 读书:How Will You Measure Your Life?" href="https://joyrap.github.io/post/2019-02-24-how-will-you-measure-your-life/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">如何跑完半程马拉松
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>是的。
+如果你想先喝一碗高质量鸡汤，来加强跑马拉松的决心，那么你可以读读村上春树的《当我谈跑步时,我谈些什么》。
+然而我觉得那对你真正跑起来并没有什么卵用。
+如果你对 马拉松 的定义还仅仅停留在跑步这个层面上，那么你是应该好好在网络上搜索一下。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2017-02-18 18:24:47 +0000 UTC'>2017-02-18</span>&nbsp;·&nbsp;于川海</footer>
+  <a class="entry-link" aria-label="post link to 如何跑完半程马拉松" href="https://joyrap.github.io/post/2017-02-18-how-to-run-half-marathons/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">如何利用Linux命令简单加密文本
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>在web上无论企业还是个人网站，总会发布一些邮箱的联系方式，由于邮箱地址置于html页面中，很容易被 爬虫获取，导致邮箱被垃圾邮件挤满。
+所以，如果你确定要暴露你的邮箱到互联网上，那么你至少应该使用一种加密方式。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2017-02-04 18:24:47 +0000 UTC'>2017-02-04</span>&nbsp;·&nbsp;于川海</footer>
+  <a class="entry-link" aria-label="post link to 如何利用Linux命令简单加密文本" href="https://joyrap.github.io/post/2017-02-04-how-to-encrypt-by-linux-command/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">我们是如何将一个项目做烂的
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 在你读到这篇牢骚的时候，无数个项目正在慢慢变烂。
+既然标题都用到了&#34;烂&#34;这个词，那什么才是烂呢？
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2016-08-08 01:24:47 +0000 UTC'>2016-08-08</span>&nbsp;·&nbsp;于川海</footer>
+  <a class="entry-link" aria-label="post link to 我们是如何将一个项目做烂的" href="https://joyrap.github.io/post/2016-08-08-how-to-make-projects-failed/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Notification Pattern理解
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>场景 在MVC的架构中，我们想从Model层传递一些错误信息到View层，比如用户注册这个功能，用户填写了密码，邮箱，然后提交注册， 这时候我们后端需要对前端的数据做校验，同时将校验的结果返回给View层，这时候就能用到Notification模式.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2012-06-20 11:24:47 +0000 UTC'>2012-06-20</span>&nbsp;·&nbsp;于川海</footer>
+  <a class="entry-link" aria-label="post link to Notification Pattern理解" href="https://joyrap.github.io/post/2012-06-20-notification-pattern/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://joyrap.github.io/page/2/">
-      «&nbsp;Prev&nbsp;
+      «&nbsp;&nbsp;
     </a>
-    <a class="next" href="https://joyrap.github.io/page/4/">Next&nbsp;&nbsp;»
+    <a class="next" href="https://joyrap.github.io/page/4/">&nbsp;&nbsp;»
     </a>
   </nav>
 </footer>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://joyrap.github.io/">于川海的博客</a></span>
+    <span>&copy; 2026 <a href="https://joyrap.github.io/">于川海的博客</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

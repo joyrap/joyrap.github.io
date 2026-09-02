@@ -4,8 +4,13 @@
     <title>Categories on 于川海的博客</title>
     <link>https://joyrap.github.io/categories/</link>
     <description>Recent content in Categories on 于川海的博客</description>
+    <image>
+      <title>于川海的博客</title>
+      <url>https://joyrap.github.io/images/me_400x400.jpg</url>
+      <link>https://joyrap.github.io/images/me_400x400.jpg</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-CN</language>
     <lastBuildDate>Mon, 12 Aug 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://joyrap.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>

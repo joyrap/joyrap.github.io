@@ -4,8 +4,13 @@
     <title>Pattern on 于川海的博客</title>
     <link>https://joyrap.github.io/tags/pattern/</link>
     <description>Recent content in Pattern on 于川海的博客</description>
+    <image>
+      <title>于川海的博客</title>
+      <url>https://joyrap.github.io/images/me_400x400.jpg</url>
+      <link>https://joyrap.github.io/images/me_400x400.jpg</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-CN</language>
     <lastBuildDate>Wed, 20 Jun 2012 11:24:47 +0000</lastBuildDate>
     <atom:link href="https://joyrap.github.io/tags/pattern/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,7 +18,9 @@
       <link>https://joyrap.github.io/post/2012-06-20-notification-pattern/</link>
       <pubDate>Wed, 20 Jun 2012 11:24:47 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2012-06-20-notification-pattern/</guid>
-      <description>场景 在MVC的架构中，我们想从Model层传递一些错误信息到View层，比如用户注册这个功能，用户填写了密码，邮箱，然后提交注册， 这时候我们</description>
+      <description>&lt;h2 id=&#34;场景&#34;&gt;场景&lt;/h2&gt;
+&lt;p&gt;在MVC的架构中，我们想从Model层传递一些错误信息到View层，比如用户注册这个功能，用户填写了密码，邮箱，然后提交注册，
+这时候我们后端需要对前端的数据做校验，同时将校验的结果返回给View层，这时候就能用到Notification模式.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

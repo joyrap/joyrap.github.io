@@ -4,8 +4,13 @@
     <title>Programming on 于川海的博客</title>
     <link>https://joyrap.github.io/categories/programming/</link>
     <description>Recent content in Programming on 于川海的博客</description>
+    <image>
+      <title>于川海的博客</title>
+      <url>https://joyrap.github.io/images/me_400x400.jpg</url>
+      <link>https://joyrap.github.io/images/me_400x400.jpg</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-CN</language>
     <lastBuildDate>Mon, 08 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://joyrap.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,49 +18,67 @@
       <link>https://joyrap.github.io/post/2024-01-08-java-mixin/</link>
       <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2024-01-08-java-mixin/</guid>
-      <description>什么是Mixin 维基百科的解释是： In object-oriented programming languages, a mixin is a class that contains methods for use by other classes without having to be the parent class of those other classes. How those other classes gain access to the mixin&amp;rsquo;s methods depends on the language. Mixins are sometimes described as being &amp;ldquo;included&amp;rdquo; rather than &amp;ldquo;inherited&amp;rdquo;. 简</description>
+      <description>&lt;h2 id=&#34;什么是mixin&#34;&gt;什么是Mixin&lt;/h2&gt;
+&lt;p&gt;维基百科的解释是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In object-oriented programming languages, a mixin is a class that contains methods for use by other classes without having to be the parent class of those other classes. How those other classes gain access to the mixin&amp;rsquo;s methods depends on the language. Mixins are sometimes described as being &amp;ldquo;included&amp;rdquo; rather than &amp;ldquo;inherited&amp;rdquo;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;简而言之就是：通过组合而不是继承的方式获得其他类所提供的功能。&lt;/p&gt;</description>
     </item>
     <item>
       <title>计算机多内核平台上的并发锁优化(二)</title>
       <link>https://joyrap.github.io/post/2020-08-21-locks-on-multicore2/</link>
       <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2020-08-21-locks-on-multicore2/</guid>
-      <description>申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。 在Algorithms for scalable synchronization on shared-memory multiprocessors这篇论文中，CL</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在&lt;a href=&#34;https://www.cs.rice.edu/~johnmc/papers/tocs91.pdf&#34;&gt;&lt;strong&gt;&lt;em&gt;Algorithms for scalable synchronization on shared-memory multiprocessors&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;这篇论文中，CLH锁之前还提到了另外一个锁算法。&lt;/p&gt;</description>
     </item>
     <item>
       <title>计算机多内核平台上的并发锁优化(一)</title>
       <link>https://joyrap.github.io/post/2020-08-19-locks-on-multicore/</link>
       <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2020-08-19-locks-on-multicore/</guid>
-      <description>申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。 如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;申明: 大部分内容来源于网络，我不生产知识，我只是字符串搬运工。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如何在高并发的情况下，提高多核CPU的性能，一直是在并发编程领域中非常重要的问题。
+特别是随着云厂商按计算收费的当下，如何有效地利用计算资源变得更重要。&lt;/p&gt;</description>
     </item>
     <item>
       <title>不可测试的代码</title>
       <link>https://joyrap.github.io/post/2020-01-21-untestable-code/</link>
       <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2020-01-21-untestable-code/</guid>
-      <description>故事是这样的，我最近深陷在一个刚接手不久的项目中，经过完成两轮需求上线后， 我迫切地告诉自己，需要给这个项目完善一下测试用例（原工程测试用例几</description>
+      <description>&lt;p&gt;故事是这样的，我最近深陷在一个刚接手不久的项目中，经过完成两轮需求上线后，
+我迫切地告诉自己，需要给这个项目完善一下测试用例（原工程测试用例几乎为零），
+然而事情并不是我想象的那么简单。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Clojure中的数据类型</title>
       <link>https://joyrap.github.io/post/2019-11-19-clojure-datatypes/</link>
       <pubDate>Tue, 19 Nov 2019 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2019-11-19-clojure-datatypes/</guid>
-      <description>Clojure作为一款基于JVM的LISP语言，我个人从创造者Rich Hickey身上吸收了很多编程的观点，尽管作者提出了很多面向对象编程语</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://clojure.org&#34;&gt;Clojure&lt;/a&gt;作为一款基于JVM的LISP语言，我个人从创造者&lt;a href=&#34;https://twitter.com/richhickey&#34;&gt;Rich Hickey&lt;/a&gt;身上吸收了很多编程的观点，尽管作者提出了很多面向对象编程语言的缺陷，但单从语言本身来说，作者更希望通过JVM这个平台对寄主语言(Java)提供一种补充，只不过是通过LISP的方式。&lt;/p&gt;</description>
     </item>
     <item>
       <title>如何利用Linux命令简单加密文本</title>
       <link>https://joyrap.github.io/post/2017-02-04-how-to-encrypt-by-linux-command/</link>
       <pubDate>Sat, 04 Feb 2017 18:24:47 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2017-02-04-how-to-encrypt-by-linux-command/</guid>
-      <description>在web上无论企业还是个人网站，总会发布一些邮箱的联系方式，由于邮箱地址置于html页面中，很容易被 爬虫获取，导致邮箱被垃圾邮件挤满。 所以，</description>
+      <description>&lt;p&gt;在web上无论企业还是个人网站，总会发布一些邮箱的联系方式，由于邮箱地址置于html页面中，很容易被
+爬虫获取，导致邮箱被垃圾邮件挤满。&lt;/p&gt;
+&lt;p&gt;所以，如果你确定要暴露你的邮箱到互联网上，那么你至少应该使用一种加密方式。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Notification Pattern理解</title>
       <link>https://joyrap.github.io/post/2012-06-20-notification-pattern/</link>
       <pubDate>Wed, 20 Jun 2012 11:24:47 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2012-06-20-notification-pattern/</guid>
-      <description>场景 在MVC的架构中，我们想从Model层传递一些错误信息到View层，比如用户注册这个功能，用户填写了密码，邮箱，然后提交注册， 这时候我们</description>
+      <description>&lt;h2 id=&#34;场景&#34;&gt;场景&lt;/h2&gt;
+&lt;p&gt;在MVC的架构中，我们想从Model层传递一些错误信息到View层，比如用户注册这个功能，用户填写了密码，邮箱，然后提交注册，
+这时候我们后端需要对前端的数据做校验，同时将校验的结果返回给View层，这时候就能用到Notification模式.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

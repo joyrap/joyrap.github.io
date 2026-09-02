@@ -4,8 +4,13 @@
     <title>Life on 于川海的博客</title>
     <link>https://joyrap.github.io/tags/life/</link>
     <description>Recent content in Life on 于川海的博客</description>
+    <image>
+      <title>于川海的博客</title>
+      <url>https://joyrap.github.io/images/me_400x400.jpg</url>
+      <link>https://joyrap.github.io/images/me_400x400.jpg</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-CN</language>
     <lastBuildDate>Wed, 28 Dec 2022 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://joyrap.github.io/tags/life/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,14 +18,19 @@
       <link>https://joyrap.github.io/post/2022-12-28-2022-is-the-ending/</link>
       <pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2022-12-28-2022-is-the-ending/</guid>
-      <description>我理解的结束，一种是生命的终结，另一种是绝望。 疫情 三年多来，疫情已经变成了一个复杂的社会话题，在这场洪流中个人体到了，国际阴谋论，封城，囤积</description>
+      <description>&lt;p&gt;我理解的结束，一种是生命的终结，另一种是绝望。&lt;/p&gt;
+&lt;h3 id=&#34;疫情&#34;&gt;疫情&lt;/h3&gt;
+&lt;p&gt;三年多来，疫情已经变成了一个复杂的社会话题，在这场洪流中个人体到了，国际阴谋论，封城，囤积物质，地域歧视，隔离，祖国统一，火速支援，生死离别&amp;hellip;&amp;hellip;等等，尽显人生百态。&lt;/p&gt;</description>
     </item>
     <item>
       <title>不确定性</title>
       <link>https://joyrap.github.io/post/2020-10-22-indeterminacy/</link>
       <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
       <guid>https://joyrap.github.io/post/2020-10-22-indeterminacy/</guid>
-      <description>这个世界有没有看起来是确定的事情？ 可能没有， 不确定才是这个世界最值得探索的奥秘。 但如果非要让一件事情变得更接近确定，那么有没有一套经得住考验</description>
+      <description>&lt;p&gt;这个世界有没有看起来是确定的事情？&lt;/p&gt;
+&lt;p&gt;可能没有，&lt;/p&gt;
+&lt;p&gt;不确定才是这个世界最值得探索的奥秘。&lt;/p&gt;
+&lt;p&gt;但如果非要让一件事情变得更接近确定，那么有没有一套经得住考验的方法论呢？&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
