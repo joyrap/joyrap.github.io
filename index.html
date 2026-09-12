@@ -50,42 +50,44 @@
   <button class="language-toggle" id="language-toggle" type="button" aria-label="Switch to English">EN</button>
 
   <main class="definition-page">
-    <article class="definition-card" data-language-panel="zh" aria-labelledby="page-title-zh">
-      <header class="definition-header">
-        <h1 id="page-title-zh">汉语新解</h1>
-      </header>
+    <div class="content-stack">
+      <article class="definition-card" data-language-panel="zh" aria-labelledby="page-title-zh">
+        <header class="definition-header">
+          <h1 id="page-title-zh">汉语新解</h1>
+        </header>
 
-      <section class="word" aria-labelledby="word-title">
-        <h2 id="word-title">博客</h2>
-        <p lang="zh-Latn-pinyin">bó kè</p>
-        <p lang="en">blog</p>
-        <p lang="ja">ブログ</p>
-      </section>
+        <section class="word" aria-labelledby="word-title">
+          <h2 id="word-title">博客</h2>
+          <p lang="zh-Latn-pinyin">bó kè</p>
+          <p lang="en">blog</p>
+          <p lang="ja">ブログ</p>
+        </section>
 
-      <p class="definition">
-        互联网时代的<br>
-        数字化自恋展览馆，<br>
-        人人都是馆长，<br>
-        却鲜有参观者。
-      </p>
-    </article>
+        <p class="definition">
+          “互联网时代的<br>
+          数字化自恋展览馆，<br>
+          人人都是馆长，<br>
+          却鲜有参观者。”
+        </p>
+      </article>
 
-    <article class="definition-card definition-card-en" data-language-panel="en" aria-labelledby="page-title-en" hidden>
-      <header class="definition-header">
-        <h1 id="page-title-en">A New Definition</h1>
-      </header>
+      <article class="definition-card definition-card-en" data-language-panel="en" aria-labelledby="page-title-en" hidden>
+        <header class="definition-header">
+          <h1 id="page-title-en">A New Definition</h1>
+        </header>
 
-      <p class="definition english-definition">
-        Blog,<br>
-        a digital museum of self-admiration—<br>
-        everyone’s the curator,<br>
-        and no one bought a ticket.
-      </p>
-    </article>
+        <p class="definition english-definition">
+          “A blog in the internet era:<br>
+          a digital museum of self-admiration—<br>
+          everyone’s the curator,<br>
+          and no one bought a ticket.”
+        </p>
+      </article>
 
-    <nav class="home-link" aria-label="Home">
-      <a id="home-link" href="https://xiebiao.com">← 返回 Home</a>
-    </nav>
+      <nav class="home-link" aria-label="About me">
+        <a id="home-link" href="https://xiebiao.com">认识我</a>
+      </nav>
+    </div>
 
     <footer aria-label="社交媒体链接">
             <a href="https://x.com/joyrap" target="_blank" rel="noopener noreferrer me" aria-label="X">
@@ -127,7 +129,7 @@
         });
         toggle.textContent = language === 'en' ? '中' : 'EN';
         toggle.setAttribute('aria-label', language === 'en' ? '切换到中文' : 'Switch to English');
-        document.getElementById('home-link').textContent = language === 'en' ? '← Back Home' : '← 返回 Home';
+        document.getElementById('home-link').textContent = language === 'en' ? 'About Me' : '认识我';
       };
 
       toggle.addEventListener('click', () => {

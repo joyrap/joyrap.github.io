@@ -52,15 +52,22 @@ html[lang^="en"] body {
 
 .definition-page {
   box-sizing: border-box;
+  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: clamp(2rem, 7vh, 4.5rem) 1.5rem 1.5rem;
 }
 
-.definition-card {
+.content-stack {
   width: min(100%, 32rem);
+  text-align: center;
+}
+
+.definition-card {
+  width: 100%;
   text-align: center;
 }
 
@@ -141,8 +148,10 @@ html[lang^="en"] body {
 }
 
 footer {
-  margin-top: auto;
-  padding-top: 3rem;
+  position: absolute;
+  right: 0;
+  bottom: 1.5rem;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,6 +186,10 @@ footer a:hover .favicon-link {
   }
 
   .definition-card {
+    width: 100%;
+  }
+
+  .content-stack {
     width: min(100%, 20rem);
   }
 }
