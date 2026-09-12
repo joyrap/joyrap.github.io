@@ -1,70 +1,70 @@
 body {
   min-width: 320px;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #faf8f5;
-  color: #2c2c2c;
-  font-size: clamp(14px, 1vw + 0.5rem, 20px);
+  background-color: #f4f1e8;
+  color: #454440;
   font-family: 'LXGW WenKai', 'STKaiti', 'KaiTi', Georgia, serif;
   -webkit-font-smoothing: antialiased;
   margin: 0;
-  padding: 0;
 }
 
-main {
-  flex: 1;
+.definition-page {
+  box-sizing: border-box;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding-top: 10vh;
-  width: 100%;
+  padding: clamp(2rem, 7vh, 4.5rem) 1.5rem 1.5rem;
 }
 
-figure {
-  margin: 0;
-}
-
-figure img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  background-color: #e8e4df;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-}
-
-.hero {
-  min-height: 40vh;
-}
-
-.quote {
-  color: #6b6b6b;
-  line-height: 2;
-  letter-spacing: 0.05em;
-  text-align: left;
-  padding-left: 1rem;
-}
-
-.quote p {
-  font-size: clamp(0.875rem, 0.8vw + 0.5rem, 1.125rem);
-  margin: 0;
-}
-
-.quote .author {
-  font-size: clamp(0.75rem, 0.5vw + 0.5rem, 0.95rem);
-  color: #999;
-}
-
-footer {
-  padding: 2rem 0;
+.definition-card {
+  width: min(100%, 32rem);
   text-align: center;
-  margin-top: 3rem;
 }
 
+.definition-header {
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid #454440;
+}
+
+.definition-header h1 {
+  margin: 0;
+  font-size: clamp(1.9rem, 5vw, 2.5rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.word {
+  margin-top: 1rem;
+}
+
+.word h2 {
+  margin: 0 0 0.25rem;
+  font-size: clamp(1.45rem, 4vw, 1.8rem);
+  font-weight: 400;
+}
+
+.word p {
+  margin: 0.3rem 0;
+  color: #77746e;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+}
+
+.word p[lang="ja"] {
+  font-family: 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+}
+
+.definition {
+  margin: clamp(2.5rem, 7vh, 4rem) 0 0;
+  font-size: clamp(1.25rem, 3.8vw, 1.65rem);
+  line-height: 1.55;
+  letter-spacing: 0.045em;
+}
 
 footer {
+  margin-top: auto;
+  padding-top: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,13 +94,11 @@ footer a:hover .favicon-link {
 }
 
 @media (max-width: 639px) {
-  main {
-    padding-top: 8vh;
+  .definition-page {
+    padding-top: 2rem;
   }
 
-  .quote {
-    margin-top: 1.5rem;
-    text-align: center;
-    padding-left: 0;
+  .definition-card {
+    width: min(100%, 20rem);
   }
 }
