@@ -100,10 +100,6 @@ html[lang^="en"] body {
   font-size: 1rem;
 }
 
-.word p[lang="ja"] {
-  font-family: 'Hiragino Mincho ProN', 'Yu Mincho', serif;
-}
-
 .definition {
   margin: clamp(2.5rem, 7vh, 4rem) 0 0;
   font-size: clamp(1.25rem, 3.8vw, 1.65rem);
