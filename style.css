@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Source Serif 4';
+  src: url('fonts/source-serif-4/SourceSerif4-Variable.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+}
+
 body {
   min-width: 320px;
   min-height: 100vh;
@@ -6,6 +14,40 @@ body {
   font-family: 'LXGW WenKai', 'STKaiti', 'KaiTi', Georgia, serif;
   -webkit-font-smoothing: antialiased;
   margin: 0;
+}
+
+html[lang^="en"] body {
+  font-family: 'Source Serif 4', 'Iowan Old Style', Palatino, serif;
+}
+
+.language-toggle {
+  position: fixed;
+  top: clamp(1rem, 3vw, 1.5rem);
+  right: clamp(1rem, 4vw, 2rem);
+  z-index: 10;
+  min-width: 2.65rem;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid rgba(69, 68, 64, 0.35);
+  border-radius: 10px;
+  background: rgba(244, 241, 232, 0.78);
+  color: #77746e;
+  font: 0.8rem/1 Georgia, 'Times New Roman', serif;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: border-color 160ms ease, color 160ms ease, background-color 160ms ease;
+}
+
+.language-toggle:hover,
+.language-toggle:focus-visible {
+  border-color: #454440;
+  background: #f4f1e8;
+  color: #454440;
+}
+
+.language-toggle:focus-visible {
+  outline: 2px solid rgba(69, 68, 64, 0.35);
+  outline-offset: 3px;
 }
 
 .definition-page {
@@ -60,6 +102,42 @@ body {
   font-size: clamp(1.25rem, 3.8vw, 1.65rem);
   line-height: 1.55;
   letter-spacing: 0.045em;
+}
+
+.definition-card-en {
+  font-family: 'Source Serif 4', 'Iowan Old Style', Palatino, serif;
+}
+
+.definition-card-en .definition-header h1 {
+  font-size: clamp(1.65rem, 4.5vw, 2.15rem);
+  letter-spacing: 0.01em;
+}
+
+.english-definition {
+  margin-top: clamp(3.5rem, 9vh, 5.5rem);
+  font-size: clamp(1.05rem, 2.7vw, 1.4rem);
+  line-height: 1.7;
+  letter-spacing: 0;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.home-link {
+  margin-top: 2.75rem;
+  font-size: 0.9rem;
+}
+
+.home-link a {
+  color: #7d2942;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.home-link a:hover,
+.home-link a:focus-visible {
+  color: #4f182a;
 }
 
 footer {
